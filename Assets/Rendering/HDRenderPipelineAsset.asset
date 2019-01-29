@@ -149,9 +149,9 @@ MonoBehaviour:
       isFptlEnabled: 1
   renderPipelineSettings:
     supportShadowMask: 1
-    supportSSR: 0
+    supportSSR: 1
     supportSSAO: 0
-    supportSubsurfaceScattering: 0
+    supportSubsurfaceScattering: 1
     increaseSssSampleCount: 0
     supportVolumetrics: 1
     increaseResolutionOfVolumetrics: 0
