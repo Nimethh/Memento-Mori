@@ -20,7 +20,7 @@ MonoBehaviour:
     enableShadow: 1
     enableContactShadows: 1
     enableShadowMask: 1
-    enableSSR: 0
+    enableSSR: 1
     enableSSAO: 1
     enableSubsurfaceScattering: 1
     enableTransmission: 1
@@ -33,7 +33,7 @@ MonoBehaviour:
     shaderLitMode: 1
     enableDepthPrepassWithDeferredRendering: 0
     enableTransparentPrepass: 1
-    enableMotionVectors: 1
+    enableMotionVectors: 0
     enableObjectMotionVectors: 1
     enableDecals: 1
     enableRoughRefraction: 1
@@ -155,7 +155,7 @@ MonoBehaviour:
     increaseSssSampleCount: 0
     supportVolumetrics: 1
     increaseResolutionOfVolumetrics: 0
-    supportLightLayers: 0
+    supportLightLayers: 1
     supportDistortion: 1
     supportTransparentBackface: 1
     supportTransparentDepthPrepass: 1
@@ -172,7 +172,7 @@ MonoBehaviour:
       cookieTexArraySize: 16
       pointCookieSize: 128
       cubeCookieTexArraySize: 16
-      planarReflectionProbeCacheSize: 2
+      planarReflectionProbeCacheSize: 128
       planarReflectionTextureSize: 1024
       reflectionProbeCacheSize: 64
       reflectionCubemapSize: 256
