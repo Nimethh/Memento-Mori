@@ -2,10 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TestControllerScript : MonoBehaviour {
+
+public class TestControllerScript : MonoBehaviour
+{
 
 	void Start ()
     {
+       
 	}
 	
 	void Update ()
