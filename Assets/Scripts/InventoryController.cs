@@ -44,7 +44,7 @@ public class InventoryController : MonoBehaviour
 
     private bool StandingCloseToAnUpgrade()
     {
-        upgradeColliders = Physics2D.OverlapCircle(transform.position, 3, pickUpItemLayerMask);
+        upgradeColliders = Physics2D.OverlapCircle(transform.position, 1, pickUpItemLayerMask);
 
         if (upgradeColliders != null)
         {
