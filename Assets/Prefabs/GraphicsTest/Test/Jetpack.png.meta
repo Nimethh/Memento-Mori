@@ -1,0 +1,1430 @@
+fileFormatVersion: 2
+guid: cb7254791930fc9418db1bb264ba3d3a
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Jetpack_0
+    21300002: Jetpack_1
+    21300004: Jetpack_2
+    21300006: Jetpack_3
+    21300008: Jetpack_4
+    21300010: Jetpack_5
+    21300012: Jetpack_6
+    21300014: Jetpack_7
+    21300016: Jetpack_8
+    21300018: Jetpack_9
+    21300020: Jetpack_10
+    21300022: Jetpack_11
+    21300024: Jetpack_12
+    21300026: Jetpack_13
+    21300028: Jetpack_14
+    21300030: Jetpack_15
+    21300032: Jetpack_16
+    21300034: Jetpack_17
+    21300036: Jetpack_18
+    21300038: Jetpack_19
+    21300040: Jetpack_20
+    21300042: Jetpack_21
+    21300044: Jetpack_22
+    21300046: Jetpack_23
+    21300048: Jetpack_24
+    21300050: Jetpack_25
+    21300052: Jetpack_26
+    21300054: Jetpack_27
+    21300056: Jetpack_28
+    21300058: Jetpack_29
+    21300060: Jetpack_30
+    21300062: Jetpack_31
+    21300064: Jetpack_32
+    21300066: Jetpack_33
+    21300068: Jetpack_34
+    21300070: Jetpack_35
+    21300072: Jetpack_36
+    21300074: Jetpack_37
+    21300076: Jetpack_38
+    21300078: Jetpack_39
+    21300080: Jetpack_40
+  externalObjects: {}
+  serializedVersion: 7
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 15
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: 0
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 1
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 1
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Jetpack_0
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 862
+        width: 90
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c879cc5ebccc0764d90e8df6a9eb8c80
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jetpack_1
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 858
+        width: 89
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f0f80cb6d4c11547854196e867bdd81
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jetpack_2
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 859
+        width: 90
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e95e31f5414062147811c5acd7733a79
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jetpack_3
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 858
+        width: 96
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7db1a6616b22444b96a6ffe0277bc5e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jetpack_4
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 861
+        width: 88
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 052d53cda9328ed4782fa111e4abb772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jetpack_5
+      rect:
+        serializedVersion: 2
+        x: 639
+        y: 861
+        width: 88
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af8eb19d9fc62bf488ba67766a85d8d3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jetpack_6
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 721
+        width: 104
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cf5683b04cff4f4e87c4831a4ce87f1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jetpack_7
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 721
+        width: 104
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f63b826de377b254b86a7d9834b76aa8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jetpack_8
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 721
+        width: 103
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1c9f07084a3e5b429068f48359a0655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jetpack_9
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 721
+        width: 114
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03b2719e942880242b1387224d65681f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jetpack_10
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 721
+        width: 103
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8f172a73ae51f44681033514f3b1651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jetpack_11
+      rect:
+        serializedVersion: 2
+        x: 631
+        y: 721
+        width: 104
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdc5609e98b5db04cbd6d2e0d5ae5767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jetpack_12
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 577
+        width: 90
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 433de091c684cb34e968d57d923cc267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jetpack_13
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 577
+        width: 101
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d04ad4018f6cbbd40945af8281cf08ba
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jetpack_14
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 577
+        width: 100
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f715a11e6633ab4eb7ebb8803456fa8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jetpack_15
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 589
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51654c3fbb04229448463dc104269a88
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jetpack_16
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 577
+        width: 92
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c940c146c254034db11ad195ff84bf4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jetpack_17
+      rect:
+        serializedVersion: 2
+        x: 519
+        y: 577
+        width: 104
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ad5b6194ea5a5046b152ac84ffa0a26
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jetpack_18
+      rect:
+        serializedVersion: 2
+        x: 631
+        y: 577
+        width: 96
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 275417d5a2b0aa140b5ed0ba06030b4b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jetpack_19
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 456
+        width: 154
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f363b94843039e64cbc1f9670317c466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jetpack_20
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 456
+        width: 186
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2291ba01355b751419f81894bd0685e3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jetpack_21
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 456
+        width: 208
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7768195924ea40c47bf9554010b0ec60
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jetpack_22
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 321
+        width: 147
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 702821d3b51edea478f231fc7444dc0d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jetpack_23
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 323
+        width: 177
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f79ec8e7e1066344ae45cffa8f80f3d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jetpack_24
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 327
+        width: 242
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d34fa188598a91b42acf18aafbfd9713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jetpack_25
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 161
+        width: 132
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2508f7d365eeb6488619ca288d9a2de
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jetpack_26
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 167
+        width: 129
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 735f5eb1889748c4e9fc0ad06892f1a5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jetpack_27
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 177
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5512e56cc00eb47468a67ab006518bc8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jetpack_28
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 177
+        width: 87
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 016e6e6fdcbe8c1438af1fc7d246f287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jetpack_29
+      rect:
+        serializedVersion: 2
+        x: 559
+        y: 177
+        width: 80
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 442aaabb21b7a4e43af9f7e92b56b38c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jetpack_30
+      rect:
+        serializedVersion: 2
+        x: 634
+        y: 234
+        width: 7
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e59f363ba780c2468c435a68203f52a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jetpack_31
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 177
+        width: 80
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb8337acfcf6b884fb053cdaac7a9267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jetpack_32
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 0
+        width: 750
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb6926100e19b8e43a87ef7c6d8e158e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jetpack_33
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 39
+        width: 80
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d9ad747ba85bca4d92315f6d8c44475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jetpack_34
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 103
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca26efb0ff51b054d86e668a24587cd6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jetpack_35
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 41
+        width: 89
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9380a7b9ed4959340939d761c1a0c941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jetpack_36
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 39
+        width: 92
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27f9ab2f847277a4fa7eb2819f84dfbe
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jetpack_37
+      rect:
+        serializedVersion: 2
+        x: 519
+        y: 41
+        width: 96
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8907778cc98516c40b85ecff86046d16
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jetpack_38
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 42
+        width: 103
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f040c9ef3cfd2bd4e8272f930fffd1f7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jetpack_39
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 89
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35cc054bac588484081f82e5ef371429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jetpack_40
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 59
+        width: 4
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 560f7117f816da44f8ddc95e34bddfc6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline:
+    - - {x: 357.5, y: -505.5}
+      - {x: 356.5, y: -502.5}
+      - {x: -395.5, y: -502.5}
+      - {x: -396.5, y: -505.5}
+    - - {x: -210.5, y: -367.5}
+      - {x: -236.5, y: -429.5}
+      - {x: -236.5, y: -465.5}
+      - {x: -222.5, y: -470.5}
+      - {x: -182.5, y: -470.5}
+      - {x: -136.5, y: -461.5}
+      - {x: -136.5, y: -370.5}
+      - {x: -151.5, y: -367.5}
+    - - {x: -308.5, y: -468.5}
+      - {x: -284.5, y: -468.5}
+      - {x: -256.5, y: -456.5}
+      - {x: -256.5, y: -388.5}
+      - {x: -275.5, y: -367.5}
+      - {x: -308.5, y: -367.5}
+      - {x: -340.5, y: -427.5}
+      - {x: -340.5, y: -468.5}
+      - {x: -328.5, y: -468.5}
+      - {x: -311.5, y: -460.5}
+      - {x: -312.5, y: -455.5}
+      - {x: -313.5, y: -452.5}
+      - {x: -309.5, y: -452.5}
+    - - {x: 62.5, y: -368.5}
+      - {x: 24.5, y: -368.5}
+      - {x: -12.5, y: -402.5}
+      - {x: -12.5, y: -426.5}
+      - {x: 13.5, y: -464.5}
+      - {x: 36.5, y: -468.5}
+      - {x: 59.5, y: -468.5}
+      - {x: 67.5, y: -465.5}
+      - {x: 83.5, y: -421.5}
+      - {x: 83.5, y: -390.5}
+      - {x: 79.5, y: -372.5}
+    - - {x: -57.5, y: -370.5}
+      - {x: -82.5, y: -370.5}
+      - {x: -125.5, y: -406.5}
+      - {x: -125.5, y: -451.5}
+      - {x: -109.5, y: -466.5}
+      - {x: -36.5, y: -466.5}
+      - {x: -32.5, y: -434.5}
+      - {x: -32.5, y: -401.5}
+      - {x: -37.5, y: -377.5}
+    - - {x: 145.5, y: -373.5}
+      - {x: 128.5, y: -377.5}
+      - {x: 91.5, y: -389.5}
+      - {x: 91.5, y: -425.5}
+      - {x: 104.5, y: -458.5}
+      - {x: 113.5, y: -466.5}
+      - {x: 153.5, y: -466.5}
+      - {x: 191.5, y: -427.5}
+      - {x: 191.5, y: -377.5}
+      - {x: 188.5, y: -373.5}
+    - - {x: 196.5, y: -374.5}
+      - {x: 196.5, y: -455.5}
+      - {x: 241.5, y: -465.5}
+      - {x: 301.5, y: -465.5}
+      - {x: 303.5, y: -457.5}
+      - {x: 303.5, y: -374.5}
+    - - {x: 220.5, y: -442.5}
+      - {x: 223.5, y: -441.5}
+      - {x: 223.5, y: -438.5}
+      - {x: 220.5, y: -437.5}
+      - {x: 218.5, y: -439.5}
+    - - {x: 180.5, y: -379.5}
+      - {x: 183.5, y: -378.5}
+      - {x: 183.5, y: -375.5}
+      - {x: 180.5, y: -374.5}
+      - {x: 178.5, y: -376.5}
+    - - {x: -229.5, y: -282.5}
+      - {x: -257.5, y: -222.5}
+      - {x: -284.5, y: -206.5}
+      - {x: -323.5, y: -206.5}
+      - {x: -327.5, y: -209.5}
+      - {x: -333.5, y: -217.5}
+      - {x: -361.5, y: -210.5}
+      - {x: -365.5, y: -220.5}
+      - {x: -365.5, y: -283.5}
+      - {x: -359.5, y: -293.5}
+      - {x: -337.5, y: -293.5}
+      - {x: -343.5, y: -299.5}
+      - {x: -344.5, y: -301.5}
+      - {x: -343.5, y: -301.5}
+      - {x: -344.5, y: -300.5}
+      - {x: -341.5, y: -297.5}
+      - {x: -341.5, y: -295.5}
+      - {x: -344.5, y: -294.5}
+      - {x: -348.5, y: -298.5}
+      - {x: -350.5, y: -302.5}
+      - {x: -338.5, y: -311.5}
+      - {x: -332.5, y: -330.5}
+      - {x: -321.5, y: -333.5}
+      - {x: -317.5, y: -330.5}
+      - {x: -313.5, y: -325.5}
+      - {x: -316.5, y: -329.5}
+      - {x: -319.5, y: -339.5}
+      - {x: -282.5, y: -346.5}
+      - {x: -275.5, y: -346.5}
+      - {x: -272.5, y: -343.5}
+      - {x: -246.5, y: -330.5}
+      - {x: -229.5, y: -316.5}
+    - - {x: -139.5, y: -206.5}
+      - {x: -206.5, y: -206.5}
+      - {x: -229.5, y: -219.5}
+      - {x: -229.5, y: -289.5}
+      - {x: -195.5, y: -340.5}
+      - {x: -122.5, y: -340.5}
+      - {x: -96.5, y: -326.5}
+      - {x: -96.5, y: -265.5}
+      - {x: -100.5, y: -246.5}
+    - - {x: -155.5, y: -332.5}
+      - {x: -155.5, y: -331.5}
+      - {x: -153.5, y: -331.5}
+      - {x: -153.5, y: -333.5}
+    - - {x: -44.5, y: -328.5}
+      - {x: -42.5, y: -330.5}
+      - {x: -39.5, y: -329.5}
+      - {x: -39.5, y: -326.5}
+      - {x: -41.5, y: -324.5}
+      - {x: -44.5, y: -325.5}
+    - - {x: -59.5, y: -230.5}
+      - {x: -88.5, y: -241.5}
+      - {x: -90.5, y: -245.5}
+      - {x: -90.5, y: -283.5}
+      - {x: -49.5, y: -330.5}
+      - {x: -8.5, y: -330.5}
+      - {x: -3.5, y: -327.5}
+      - {x: 9.5, y: -307.5}
+      - {x: 9.5, y: -277.5}
+      - {x: -36.5, y: -230.5}
+    - - {x: 49.5, y: -230.5}
+      - {x: 20.5, y: -274.5}
+      - {x: 20.5, y: -330.5}
+      - {x: 111.5, y: -330.5}
+      - {x: 111.5, y: -249.5}
+      - {x: 86.5, y: -230.5}
+    - - {x: 204.5, y: -256.5}
+      - {x: 205.5, y: -255.5}
+      - {x: 205.5, y: -249.5}
+      - {x: 206.5, y: -240.5}
+      - {x: 193.5, y: -230.5}
+      - {x: 150.5, y: -230.5}
+      - {x: 131.5, y: -286.5}
+      - {x: 131.5, y: -329.5}
+      - {x: 133.5, y: -330.5}
+      - {x: 137.5, y: -330.5}
+      - {x: 140.5, y: -329.5}
+      - {x: 143.5, y: -327.5}
+      - {x: 146.5, y: -330.5}
+      - {x: 189.5, y: -330.5}
+      - {x: 217.5, y: -316.5}
+      - {x: 217.5, y: -257.5}
+      - {x: 216.5, y: -255.5}
+      - {x: 209.5, y: -253.5}
+      - {x: 206.5, y: -255.5}
+    - - {x: 264.5, y: -230.5}
+      - {x: 243.5, y: -284.5}
+      - {x: 243.5, y: -330.5}
+      - {x: 327.5, y: -330.5}
+      - {x: 327.5, y: -252.5}
+      - {x: 319.5, y: -230.5}
+    - - {x: -270.5, y: -323.5}
+      - {x: -268.5, y: -324.5}
+      - {x: -267.5, y: -323.5}
+    - - {x: 205.5, y: -275.5}
+      - {x: 203.5, y: -276.5}
+      - {x: 204.5, y: -279.5}
+      - {x: 206.5, y: -279.5}
+    - - {x: 38.5, y: -276.5}
+      - {x: 41.5, y: -275.5}
+      - {x: 41.5, y: -272.5}
+      - {x: 38.5, y: -271.5}
+      - {x: 36.5, y: -273.5}
+    - - {x: 205.5, y: -269.5}
+      - {x: 203.5, y: -266.5}
+      - {x: 204.5, y: -267.5}
+      - {x: 207.5, y: -267.5}
+    - - {x: -212.5, y: -264.5}
+      - {x: -213.5, y: -262.5}
+      - {x: -214.5, y: -263.5}
+      - {x: -212.5, y: -265.5}
+    - - {x: -134.5, y: -240.5}
+      - {x: -134.5, y: -239.5}
+      - {x: -135.5, y: -240.5}
+      - {x: -133.5, y: -243.5}
+      - {x: -131.5, y: -243.5}
+      - {x: -134.5, y: -242.5}
+      - {x: -136.5, y: -242.5}
+    - - {x: -315.5, y: -219.5}
+      - {x: -312.5, y: -218.5}
+      - {x: -312.5, y: -215.5}
+      - {x: -315.5, y: -214.5}
+      - {x: -317.5, y: -216.5}
+    - - {x: -175.5, y: -211.5}
+      - {x: -172.5, y: -210.5}
+      - {x: -172.5, y: -207.5}
+      - {x: -175.5, y: -206.5}
+      - {x: -177.5, y: -208.5}
+    - - {x: -347.5, y: -81.5}
+      - {x: -348.5, y: -82.5}
+      - {x: -348.5, y: -127.5}
+      - {x: -320.5, y: -186.5}
+      - {x: -201.5, y: -186.5}
+      - {x: -197.5, y: -166.5}
+      - {x: -197.5, y: -104.5}
+      - {x: -229.5, y: -81.5}
+    - - {x: -148.5, y: -79.5}
+      - {x: -156.5, y: -81.5}
+      - {x: -156.5, y: -143.5}
+      - {x: -150.5, y: -180.5}
+      - {x: -140.5, y: -184.5}
+      - {x: 24.5, y: -184.5}
+      - {x: 24.5, y: -98.5}
+      - {x: 9.5, y: -79.5}
+    - - {x: 58.5, y: -81.5}
+      - {x: 58.5, y: -145.5}
+      - {x: 65.5, y: -180.5}
+      - {x: 294.5, y: -180.5}
+      - {x: 304.5, y: -175.5}
+      - {x: 304.5, y: -83.5}
+      - {x: 295.5, y: -81.5}
+    - - {x: -130.5, y: -170.5}
+      - {x: -127.5, y: -169.5}
+      - {x: -127.5, y: -166.5}
+      - {x: -130.5, y: -165.5}
+      - {x: -132.5, y: -167.5}
+    - - {x: 178.5, y: -166.5}
+      - {x: 178.5, y: -168.5}
+      - {x: 179.5, y: -168.5}
+      - {x: 179.5, y: -167.5}
+    - - {x: -321.5, y: -168.5}
+      - {x: -318.5, y: -167.5}
+      - {x: -318.5, y: -164.5}
+      - {x: -321.5, y: -163.5}
+      - {x: -323.5, y: -165.5}
+    - - {x: 270.5, y: -162.5}
+      - {x: 275.5, y: -156.5}
+      - {x: 273.5, y: -157.5}
+      - {x: 273.5, y: -163.5}
+    - - {x: -305.5, y: 33.5}
+      - {x: -332.5, y: 4.5}
+      - {x: -332.5, y: -42.5}
+      - {x: -315.5, y: -51.5}
+      - {x: -174.5, y: -51.5}
+      - {x: -174.5, y: 11.5}
+      - {x: -189.5, y: 33.5}
+    - - {x: 13.5, y: 33.5}
+      - {x: -77.5, y: 33.5}
+      - {x: -95.5, y: 32.5}
+      - {x: -105.5, y: 25.5}
+      - {x: -142.5, y: -8.5}
+      - {x: -142.5, y: -25.5}
+      - {x: -128.5, y: -44.5}
+      - {x: -116.5, y: -51.5}
+      - {x: 28.5, y: -51.5}
+      - {x: 47.5, y: -47.5}
+      - {x: 47.5, y: -13.5}
+      - {x: 27.5, y: 23.5}
+    - - {x: 271.5, y: 33.5}
+      - {x: 113.5, y: 33.5}
+      - {x: 83.5, y: -15.5}
+      - {x: 85.5, y: -18.5}
+      - {x: 89.5, y: -19.5}
+      - {x: 93.5, y: -24.5}
+      - {x: 99.5, y: -24.5}
+      - {x: 95.5, y: -24.5}
+      - {x: 89.5, y: -23.5}
+      - {x: 83.5, y: -25.5}
+      - {x: 83.5, y: -40.5}
+      - {x: 92.5, y: -51.5}
+      - {x: 275.5, y: -51.5}
+      - {x: 295.5, y: -38.5}
+      - {x: 295.5, y: -6.5}
+      - {x: 283.5, y: 27.5}
+    - - {x: -262.5, y: 166.5}
+      - {x: -311.5, y: 166.5}
+      - {x: -318.5, y: 152.5}
+      - {x: -342.5, y: 92.5}
+      - {x: -342.5, y: 75.5}
+      - {x: -333.5, y: 69.5}
+      - {x: -284.5, y: 69.5}
+      - {x: -251.5, y: 94.5}
+      - {x: -248.5, y: 96.5}
+      - {x: -248.5, y: 122.5}
+    - - {x: -222.5, y: 166.5}
+      - {x: -230.5, y: 126.5}
+      - {x: -230.5, y: 69.5}
+      - {x: -158.5, y: 69.5}
+      - {x: -125.5, y: 98.5}
+      - {x: -125.5, y: 117.5}
+      - {x: -154.5, y: 166.5}
+    - - {x: -90.5, y: 166.5}
+      - {x: -118.5, y: 105.5}
+      - {x: -118.5, y: 75.5}
+      - {x: -111.5, y: 69.5}
+      - {x: -49.5, y: 69.5}
+      - {x: -16.5, y: 98.5}
+      - {x: -16.5, y: 126.5}
+      - {x: -48.5, y: 166.5}
+    - - {x: -20.5, y: 77.5}
+      - {x: -18.5, y: 75.5}
+      - {x: -11.5, y: 69.5}
+      - {x: 44.5, y: 69.5}
+      - {x: 78.5, y: 81.5}
+      - {x: 78.5, y: 135.5}
+      - {x: 60.5, y: 167.5}
+      - {x: 14.5, y: 167.5}
+      - {x: -20.5, y: 108.5}
+    - - {x: 111.5, y: 164.5}
+      - {x: 91.5, y: 105.5}
+      - {x: 91.5, y: 72.5}
+      - {x: 94.5, y: 69.5}
+      - {x: 151.5, y: 69.5}
+      - {x: 186.5, y: 81.5}
+      - {x: 199.5, y: 100.5}
+      - {x: 199.5, y: 113.5}
+      - {x: 172.5, y: 164.5}
+    - - {x: 261.5, y: 167.5}
+      - {x: 239.5, y: 167.5}
+      - {x: 223.5, y: 152.5}
+      - {x: 203.5, y: 91.5}
+      - {x: 203.5, y: 72.5}
+      - {x: 206.5, y: 69.5}
+      - {x: 267.5, y: 69.5}
+      - {x: 303.5, y: 82.5}
+      - {x: 303.5, y: 124.5}
+      - {x: 278.5, y: 163.5}
+    - - {x: 187.5, y: 115.5}
+      - {x: 190.5, y: 116.5}
+      - {x: 190.5, y: 119.5}
+      - {x: 187.5, y: 120.5}
+      - {x: 185.5, y: 118.5}
+    - - {x: -285.5, y: 311.5}
+      - {x: -348.5, y: 311.5}
+      - {x: -348.5, y: 213.5}
+      - {x: -255.5, y: 213.5}
+      - {x: -243.5, y: 221.5}
+      - {x: -240.5, y: 231.5}
+      - {x: -240.5, y: 267.5}
+      - {x: -273.5, y: 303.5}
+    - - {x: -209.5, y: 312.5}
+      - {x: -236.5, y: 253.5}
+      - {x: -236.5, y: 224.5}
+      - {x: -227.5, y: 220.5}
+      - {x: -224.5, y: 225.5}
+      - {x: -218.5, y: 213.5}
+      - {x: -171.5, y: 213.5}
+      - {x: -128.5, y: 229.5}
+      - {x: -128.5, y: 277.5}
+      - {x: -154.5, y: 312.5}
+    - - {x: -98.5, y: 313.5}
+      - {x: -124.5, y: 270.5}
+      - {x: -124.5, y: 213.5}
+      - {x: -40.5, y: 213.5}
+      - {x: -19.5, y: 218.5}
+      - {x: -16.5, y: 222.5}
+      - {x: -16.5, y: 270.5}
+      - {x: -40.5, y: 313.5}
+    - - {x: 10.5, y: 312.5}
+      - {x: -19.5, y: 246.5}
+      - {x: -19.5, y: 213.5}
+      - {x: 64.5, y: 213.5}
+      - {x: 95.5, y: 230.5}
+      - {x: 95.5, y: 273.5}
+      - {x: 57.5, y: 312.5}
+    - - {x: 115.5, y: 312.5}
+      - {x: 91.5, y: 262.5}
+      - {x: 91.5, y: 225.5}
+      - {x: 94.5, y: 221.5}
+      - {x: 100.5, y: 223.5}
+      - {x: 102.5, y: 225.5}
+      - {x: 101.5, y: 224.5}
+      - {x: 101.5, y: 222.5}
+      - {x: 104.5, y: 221.5}
+      - {x: 109.5, y: 219.5}
+      - {x: 112.5, y: 219.5}
+      - {x: 109.5, y: 217.5}
+      - {x: 105.5, y: 215.5}
+      - {x: 108.5, y: 213.5}
+      - {x: 164.5, y: 213.5}
+      - {x: 199.5, y: 237.5}
+      - {x: 199.5, y: 266.5}
+      - {x: 156.5, y: 312.5}
+    - - {x: 263.5, y: 311.5}
+      - {x: 229.5, y: 311.5}
+      - {x: 203.5, y: 264.5}
+      - {x: 203.5, y: 213.5}
+      - {x: 274.5, y: 213.5}
+      - {x: 310.5, y: 225.5}
+      - {x: 311.5, y: 228.5}
+      - {x: 311.5, y: 266.5}
+      - {x: 267.5, y: 310.5}
+    - - {x: -131.5, y: 258.5}
+      - {x: -128.5, y: 259.5}
+      - {x: -128.5, y: 262.5}
+      - {x: -131.5, y: 263.5}
+      - {x: -133.5, y: 261.5}
+    - - {x: -206.5, y: 449.5}
+      - {x: -230.5, y: 384.5}
+      - {x: -230.5, y: 358.5}
+      - {x: -217.5, y: 359.5}
+      - {x: -216.5, y: 362.5}
+      - {x: -213.5, y: 353.5}
+      - {x: -211.5, y: 350.5}
+      - {x: -198.5, y: 350.5}
+      - {x: -180.5, y: 352.5}
+      - {x: -137.5, y: 374.5}
+      - {x: -137.5, y: 409.5}
+      - {x: -150.5, y: 449.5}
+    - - {x: 21.5, y: 449.5}
+      - {x: 16.5, y: 434.5}
+      - {x: -12.5, y: 378.5}
+      - {x: -12.5, y: 350.5}
+      - {x: 36.5, y: 350.5}
+      - {x: 87.5, y: 382.5}
+      - {x: 87.5, y: 404.5}
+      - {x: 59.5, y: 449.5}
+    - - {x: -118.5, y: 360.5}
+      - {x: -106.5, y: 351.5}
+      - {x: -73.5, y: 351.5}
+      - {x: -24.5, y: 373.5}
+      - {x: -24.5, y: 408.5}
+      - {x: -40.5, y: 449.5}
+      - {x: -93.5, y: 449.5}
+      - {x: -118.5, y: 393.5}
+    - - {x: 124.5, y: 449.5}
+      - {x: 99.5, y: 384.5}
+      - {x: 99.5, y: 355.5}
+      - {x: 106.5, y: 353.5}
+      - {x: 158.5, y: 353.5}
+      - {x: 191.5, y: 371.5}
+      - {x: 191.5, y: 410.5}
+      - {x: 177.5, y: 449.5}
+    - - {x: 286.5, y: 449.5}
+      - {x: 239.5, y: 449.5}
+      - {x: 237.5, y: 442.5}
+      - {x: 234.5, y: 420.5}
+      - {x: 219.5, y: 392.5}
+      - {x: 211.5, y: 372.5}
+      - {x: 211.5, y: 361.5}
+      - {x: 228.5, y: 353.5}
+      - {x: 249.5, y: 353.5}
+      - {x: 263.5, y: 355.5}
+      - {x: 303.5, y: 380.5}
+      - {x: 303.5, y: 412.5}
+    - - {x: -315.5, y: 449.5}
+      - {x: -342.5, y: 381.5}
+      - {x: -342.5, y: 354.5}
+      - {x: -284.5, y: 354.5}
+      - {x: -248.5, y: 371.5}
+      - {x: -248.5, y: 421.5}
+      - {x: -275.5, y: 449.5}
+    - - {x: -286.5, y: 358.5}
+      - {x: -283.5, y: 359.5}
+      - {x: -283.5, y: 362.5}
+      - {x: -286.5, y: 363.5}
+      - {x: -288.5, y: 361.5}
+    - - {x: -314.5, y: 444.5}
+      - {x: -311.5, y: 445.5}
+      - {x: -311.5, y: 448.5}
+      - {x: -314.5, y: 449.5}
+      - {x: -316.5, y: 447.5}
+    - - {x: 123.5, y: 447.5}
+      - {x: 124.5, y: 444.5}
+      - {x: 128.5, y: 444.5}
+      - {x: 130.5, y: 446.5}
+      - {x: 129.5, y: 449.5}
+      - {x: 125.5, y: 449.5}
+    physicsShape: []
+    bones: []
+    spriteID: 913885851d92b6a4ab34e0cebf370de2
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

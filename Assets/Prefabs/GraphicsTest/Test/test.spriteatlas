@@ -1,0 +1,133 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: test
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 2
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: cb7254791930fc9418db1bb264ba3d3a, type: 3}
+    totalSpriteSurfaceArea: 476876
+    bindAsDefault: 1
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300048, guid: cb7254791930fc9418db1bb264ba3d3a, type: 3}
+  - {fileID: 21300050, guid: cb7254791930fc9418db1bb264ba3d3a, type: 3}
+  - {fileID: 21300052, guid: cb7254791930fc9418db1bb264ba3d3a, type: 3}
+  - {fileID: 21300054, guid: cb7254791930fc9418db1bb264ba3d3a, type: 3}
+  - {fileID: 21300074, guid: cb7254791930fc9418db1bb264ba3d3a, type: 3}
+  - {fileID: 21300040, guid: cb7254791930fc9418db1bb264ba3d3a, type: 3}
+  - {fileID: 21300072, guid: cb7254791930fc9418db1bb264ba3d3a, type: 3}
+  - {fileID: 21300042, guid: cb7254791930fc9418db1bb264ba3d3a, type: 3}
+  - {fileID: 21300070, guid: cb7254791930fc9418db1bb264ba3d3a, type: 3}
+  - {fileID: 21300044, guid: cb7254791930fc9418db1bb264ba3d3a, type: 3}
+  - {fileID: 21300068, guid: cb7254791930fc9418db1bb264ba3d3a, type: 3}
+  - {fileID: 21300046, guid: cb7254791930fc9418db1bb264ba3d3a, type: 3}
+  - {fileID: 21300066, guid: cb7254791930fc9418db1bb264ba3d3a, type: 3}
+  - {fileID: 21300064, guid: cb7254791930fc9418db1bb264ba3d3a, type: 3}
+  - {fileID: 21300062, guid: cb7254791930fc9418db1bb264ba3d3a, type: 3}
+  - {fileID: 21300060, guid: cb7254791930fc9418db1bb264ba3d3a, type: 3}
+  - {fileID: 21300056, guid: cb7254791930fc9418db1bb264ba3d3a, type: 3}
+  - {fileID: 21300058, guid: cb7254791930fc9418db1bb264ba3d3a, type: 3}
+  - {fileID: 21300038, guid: cb7254791930fc9418db1bb264ba3d3a, type: 3}
+  - {fileID: 21300036, guid: cb7254791930fc9418db1bb264ba3d3a, type: 3}
+  - {fileID: 21300078, guid: cb7254791930fc9418db1bb264ba3d3a, type: 3}
+  - {fileID: 21300030, guid: cb7254791930fc9418db1bb264ba3d3a, type: 3}
+  - {fileID: 21300076, guid: cb7254791930fc9418db1bb264ba3d3a, type: 3}
+  - {fileID: 21300028, guid: cb7254791930fc9418db1bb264ba3d3a, type: 3}
+  - {fileID: 21300034, guid: cb7254791930fc9418db1bb264ba3d3a, type: 3}
+  - {fileID: 21300032, guid: cb7254791930fc9418db1bb264ba3d3a, type: 3}
+  - {fileID: 21300022, guid: cb7254791930fc9418db1bb264ba3d3a, type: 3}
+  - {fileID: 21300020, guid: cb7254791930fc9418db1bb264ba3d3a, type: 3}
+  - {fileID: 21300026, guid: cb7254791930fc9418db1bb264ba3d3a, type: 3}
+  - {fileID: 21300024, guid: cb7254791930fc9418db1bb264ba3d3a, type: 3}
+  - {fileID: 21300016, guid: cb7254791930fc9418db1bb264ba3d3a, type: 3}
+  - {fileID: 21300018, guid: cb7254791930fc9418db1bb264ba3d3a, type: 3}
+  - {fileID: 21300012, guid: cb7254791930fc9418db1bb264ba3d3a, type: 3}
+  - {fileID: 21300014, guid: cb7254791930fc9418db1bb264ba3d3a, type: 3}
+  - {fileID: 21300008, guid: cb7254791930fc9418db1bb264ba3d3a, type: 3}
+  - {fileID: 21300010, guid: cb7254791930fc9418db1bb264ba3d3a, type: 3}
+  - {fileID: 21300004, guid: cb7254791930fc9418db1bb264ba3d3a, type: 3}
+  - {fileID: 21300006, guid: cb7254791930fc9418db1bb264ba3d3a, type: 3}
+  - {fileID: 21300000, guid: cb7254791930fc9418db1bb264ba3d3a, type: 3}
+  - {fileID: 21300002, guid: cb7254791930fc9418db1bb264ba3d3a, type: 3}
+  - {fileID: 21300080, guid: cb7254791930fc9418db1bb264ba3d3a, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - Jetpack_24
+  - Jetpack_25
+  - Jetpack_26
+  - Jetpack_27
+  - Jetpack_37
+  - Jetpack_20
+  - Jetpack_36
+  - Jetpack_21
+  - Jetpack_35
+  - Jetpack_22
+  - Jetpack_34
+  - Jetpack_23
+  - Jetpack_33
+  - Jetpack_32
+  - Jetpack_31
+  - Jetpack_30
+  - Jetpack_28
+  - Jetpack_29
+  - Jetpack_19
+  - Jetpack_18
+  - Jetpack_39
+  - Jetpack_15
+  - Jetpack_38
+  - Jetpack_14
+  - Jetpack_17
+  - Jetpack_16
+  - Jetpack_11
+  - Jetpack_10
+  - Jetpack_13
+  - Jetpack_12
+  - Jetpack_8
+  - Jetpack_9
+  - Jetpack_6
+  - Jetpack_7
+  - Jetpack_4
+  - Jetpack_5
+  - Jetpack_2
+  - Jetpack_3
+  - Jetpack_0
+  - Jetpack_1
+  - Jetpack_40
+  m_Tag: test
+  m_IsVariant: 0
