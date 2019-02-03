@@ -223,10 +223,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 8692342588957997579, guid: 66918cae20d909b4fb71bb727c374263, type: 3}
+  minion1: {fileID: 4185441438980989160, guid: 4e934f1f24c68964c85420d93260cb82, type: 3}
   minion2: {fileID: 2842162685594509257, guid: e66fa377f062e8747becc8092aab7524, type: 3}
   minion3: {fileID: 6503396846667062680, guid: 430a92c399367d6489e7b41b706f80d4, type: 3}
   spawnValues: {x: 10, y: 4, z: 0}
-  enemyCounter: 10
+  enemyCounter: 5
   spawnWait: 2
   startWait: 3
 --- !u!4 &169490352
@@ -1030,7 +1031,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4016678336604176, guid: 031429604e8c5b9459a515850e33849c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.66
+      value: -8
       objectReference: {fileID: 0}
     - target: {fileID: 4016678336604176, guid: 031429604e8c5b9459a515850e33849c, type: 3}
       propertyPath: m_LocalPosition.y

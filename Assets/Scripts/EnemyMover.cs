@@ -38,9 +38,6 @@ public class EnemyMover : MonoBehaviour
     void FixedUpdate()
     {
         rb.velocity = new Vector3(moveHorizontal * speed, 0.0f, 0.0f);
-        //transform.position = transform.position + transform.forward * Time.deltaTime;
-        //Vector3 enemyMovement = new Vector3(moveHorizontal, 0.0f, 0.0f);
-        //rb.AddForce(enemyMovement * speed);
     }
 
 }

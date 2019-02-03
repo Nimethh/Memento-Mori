@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameControllerTest : MonoBehaviour
 {
     public GameObject enemy;
+    public GameObject minion1;
     public GameObject minion2;
     public GameObject minion3;
     public Vector3 spawnValues;
@@ -43,6 +44,14 @@ public class GameControllerTest : MonoBehaviour
                 yield return new WaitForSeconds(spawnWait);
             }
             yield return new WaitForSeconds(startWait);
+            for (int i = 0; i < enemyCounter; i++)
+            {
+                Vector3 spawnPosition = new Vector3(spawnValues.x, Random.Range(-spawnValues.y, spawnValues.y), spawnValues.z);
+                Quaternion spawnRotation = Quaternion.identity;
+                Instantiate(minion1, spawnPosition, spawnRotation);
+                yield return new WaitForSeconds(spawnWait);
+            }
+            yield return new WaitForSeconds(startWait);
 
             for (int i = 0; i < enemyCounter; i++)
             {
@@ -51,6 +60,7 @@ public class GameControllerTest : MonoBehaviour
                 Instantiate(minion2, spawnPosition, spawnRotation);
                 yield return new WaitForSeconds(spawnWait);
             }
+            yield return new WaitForSeconds(startWait);
 
             for (int i = 0; i < enemyCounter; i++)
             {
