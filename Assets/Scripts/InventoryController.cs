@@ -7,48 +7,85 @@ using UnityEngine.UI;
 public class InventoryController : MonoBehaviour
 {
     [SerializeField]
-    private LayerMask pickUpItemLayerMask;
+    private LayerMask pickUpWeaponLayerMask;
 
     [SerializeField]
-    private GameObject pickUpItemUI;
+    private GameObject pickUpWeaponUI;
 
     [SerializeField]
-    private Text itemText;
+    private Text itemDescription;
+    [SerializeField]
+    private Text itemName;
     [SerializeField]
     private Image itemIcon;
 
     [SerializeField]
-    private Collider2D upgradeColliders;
+    private Collider2D upgradeCollider;
+
+    [SerializeField]
+    private PlayerWeaponController weaponController;
 
     void Start ()
     {
-        pickUpItemLayerMask = LayerMask.GetMask("PickUpItem");
-        pickUpItemUI = GameObject.FindGameObjectWithTag("PickUpItemUI").gameObject; //Not sure if this is correct.
-        itemText = pickUpItemUI.transform.GetChild(0).GetComponent<Text>();
-        itemIcon = pickUpItemUI.transform.GetChild(1).GetComponent<Image>();
+        weaponController = GetComponent<PlayerWeaponController>();
+        pickUpWeaponLayerMask = LayerMask.GetMask("PickUpWeapon");
+        pickUpWeaponUI = GameObject.FindGameObjectWithTag("PickUpWeaponUI").gameObject; //Not sure if this is correct.
+        itemName = pickUpWeaponUI.transform.GetChild(0).GetComponent<Text>();
+        itemIcon = pickUpWeaponUI.transform.GetChild(1).GetComponent<Image>();
+        itemDescription = pickUpWeaponUI.transform.GetChild(2).GetComponent<Text>();
+
+
     }
-	
-	void Update ()
+
+    void Update ()
     {
         //search for nearby items that can be picked up.
-        if (StandingCloseToAnUpgrade() == true)
+        if (StandingCloseToAWeapon() == true)
         {
-            pickUpItemUI.SetActive(true);
+            pickUpWeaponUI.SetActive(true);
         }
         else
         {
-            pickUpItemUI.SetActive(false);
+            pickUpWeaponUI.SetActive(false);
         }
     }
 
 
-    private bool StandingCloseToAnUpgrade()
+    private bool StandingCloseToAWeapon()
     {
-        upgradeColliders = Physics2D.OverlapCircle(transform.position, 1, pickUpItemLayerMask);
+        upgradeCollider = Physics2D.OverlapCircle(transform.position, 1, pickUpWeaponLayerMask);
 
-        if (upgradeColliders != null)
+        if (upgradeCollider != null)
         {
+
+            itemIcon.sprite = upgradeCollider.transform.Find("WeaponIcon").GetComponent<SpriteRenderer>().sprite;
+            if (itemIcon.sprite == null)
+            {
+                Debug.Log("Could not find itemIcon.sprite - called from StandingCloseToAWeapon() in InventoryController");
+            }
+            itemName.text = upgradeCollider.GetComponent<IWeaponCrate>().objectSlug;
+            if(itemName.text == null)
+            {
+                Debug.Log("itemName.text is null - called from StandingCloseToAWeapon() in InventoryController");
+            }
+
             //Change the itemName and itemIcon
+            if (Input.GetKeyDown(KeyCode.X))
+            {
+                IWeaponCrate weaponToEquip = upgradeCollider.GetComponent<IWeaponCrate>();
+                if(weaponToEquip == null)
+                {
+                    Debug.Log("Could not find IWeaponCrate - called from StandingCloseToAWeapon() in InventoryController");
+                }
+                else
+                {
+                    Debug.Log("Equipped weapon from crate - called from StandingCloseToAWeapon() in InventoryController");
+                    weaponController.EquipWeapon(weaponToEquip);
+                    Destroy(upgradeCollider.gameObject);
+                    upgradeCollider = null;
+                }
+            }
+
             return true;
         }
         else

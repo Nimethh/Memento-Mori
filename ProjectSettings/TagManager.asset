@@ -4,9 +4,11 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - PickUpItemUI
   - PlayerCube
   - Boundary
+  - PickUpWeaponUI
+  - Enemy
+  - PlayerHand
   layers:
   - Default
   - TransparentFX
@@ -17,7 +19,7 @@ TagManager:
   - 
   - 
   - 
-  - PickUpItem
+  - PickUpWeapon
   - 
   - 
   - 
