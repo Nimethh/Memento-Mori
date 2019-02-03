@@ -1,0 +1,126 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6503396846667062680
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1097455578337462733}
+  - component: {fileID: 8082773560816784570}
+  - component: {fileID: 8400719141006064626}
+  - component: {fileID: 8054022114729126326}
+  - component: {fileID: 2852632553516960538}
+  m_Layer: 0
+  m_Name: MinionBehavior3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1097455578337462733
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6503396846667062680}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &8082773560816784570
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6503396846667062680}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &8400719141006064626
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6503396846667062680}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: abfa9eca37c3f4d4d827569b4fab9f4f, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!65 &8054022114729126326
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6503396846667062680}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2852632553516960538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6503396846667062680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47f5656269830c3419bcc8772c4bef5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 2
+  movingSpots:
+  - {fileID: 722641148226861681, guid: 87128f62eea5d574f8fc71b83dcda39a, type: 3}
+  - {fileID: 4025300767574998950, guid: 171ee9c473c2a6842b5acc20689df24d, type: 3}
+  - {fileID: 641471317192377524, guid: 81fc8664c5ea48d44a10c915b6ffb734, type: 3}
+  - {fileID: 9146831169854836563, guid: 4174b6256e48f7049bc7bfd3063a1cad, type: 3}
+  - {fileID: 3906365910708231353, guid: 5d9dadd3b1765604995cfa137cd0bbc8, type: 3}
+  - {fileID: 2022141468381704660, guid: d395f5451e0ff294ba83ecc0885de3ae, type: 3}
+  - {fileID: 7662846131205771138, guid: 435ce7784f44ad541b500ea6e55b84dd, type: 3}
+  - {fileID: 7953562633105396181, guid: 3c04ac80be6dc1d40808687986ecdb32, type: 3}
+  - {fileID: 1567343831496669428, guid: fab2978a689837b49984713dd7c089e7, type: 3}
+  - {fileID: 2294406980145842897, guid: 05048175e63a6a94e8e4909623446171, type: 3}
+  - {fileID: 315543637921140483, guid: f9161ebd1b23c0341a01f5a63ddf99fa, type: 3}
+  - {fileID: 8417599628945619983, guid: d1875239341933b409e3cff8ca60bb71, type: 3}
+  - {fileID: 2076566802393584293, guid: 9494b19e921515b41b6337b3a2462508, type: 3}
+  - {fileID: 5228283037402052960, guid: 63f5e47e26c9cb545b0d44aa3ac447be, type: 3}
+  projectile: {fileID: 3476799222084589752, guid: 5ed5038db99c38648b5de563d911b293,
+    type: 3}
+  startWaitingTime: 1
+  fireDelay: 1
