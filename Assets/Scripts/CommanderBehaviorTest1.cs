@@ -2,12 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PatrolMovement : MonoBehaviour
+public class CommanderBehaviorTest1 : MonoBehaviour
 {
     public float speed;
 
-    public Transform[] movingSpots;
-    private int randomSpot;
+    public Transform movingSpot;
+    public float minX;
+    public float maxX;
+    public float minY;
+    public float maxY;
 
     public GameObject projectile;
 
@@ -19,20 +22,20 @@ public class PatrolMovement : MonoBehaviour
 
     void Start()
     {
-        randomSpot = Random.Range(0, movingSpots.Length);
+        movingSpot.position = new Vector3(Random.Range(minX, maxX), Random.Range(minY, maxY),0);
         waitTime = startWaitingTime;
         timeBetweenShots = fireDelay;
     }
-    
+
     void Update()
     {
-        transform.position = Vector2.MoveTowards(transform.position, movingSpots[randomSpot].position, speed * Time.deltaTime);
+        transform.position = Vector2.MoveTowards(transform.position, movingSpot.position, speed * Time.deltaTime);
 
-        if(Vector2.Distance(transform.position, movingSpots[randomSpot].position) < 0.2f)
+        if (Vector2.Distance(transform.position, movingSpot.position) < 0.2f)
         {
             if (waitTime <= 0)
             {
-                randomSpot = Random.Range(0, movingSpots.Length);
+                movingSpot.position = new Vector3(Random.Range(minX, maxX), Random.Range(minY, maxY));
                 waitTime = startWaitingTime;
             }
             else

@@ -226,8 +226,10 @@ MonoBehaviour:
   minion1: {fileID: 4185441438980989160, guid: 4e934f1f24c68964c85420d93260cb82, type: 3}
   minion2: {fileID: 2842162685594509257, guid: e66fa377f062e8747becc8092aab7524, type: 3}
   minion3: {fileID: 6503396846667062680, guid: 430a92c399367d6489e7b41b706f80d4, type: 3}
+  commander1: {fileID: 3663997759674552886, guid: bf656c1bbe1d3254ebc7bf92d2c5acd9,
+    type: 3}
   spawnValues: {x: 10, y: 4, z: 0}
-  enemyCounter: 5
+  enemyCounter: 3
   spawnWait: 2
   startWait: 3
 --- !u!4 &169490352
@@ -1110,7 +1112,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1042364853
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1786,7 +1788,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}

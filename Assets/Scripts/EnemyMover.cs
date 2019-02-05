@@ -11,27 +11,27 @@ public class EnemyMover : MonoBehaviour
 
     public GameObject projectile;
 
-    private float fireProjectile;
+    private float timeBetweenShots;
     public float fireDelay;
 
 	void Start ()
     {
         rb = GetComponent<Rigidbody>();
         moveHorizontal = -1;
-        fireProjectile = fireDelay;
+        timeBetweenShots = fireDelay;
         //Physics.IgnoreCollision(GetComponent<Collider>(), projectile.GetComponent<Collider>());
 	}
 
     public void Update()
     {
-       if(fireProjectile <= 0)
+       if(timeBetweenShots <= 0)
         {
             Instantiate(projectile, transform.position, Quaternion.identity);
-            fireProjectile = fireDelay;
+            timeBetweenShots = fireDelay;
         }
        else
         {
-            fireProjectile -= Time.deltaTime;
+            timeBetweenShots -= Time.deltaTime;
         }
     }
 
