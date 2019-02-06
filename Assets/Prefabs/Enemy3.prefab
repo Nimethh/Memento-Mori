@@ -30,8 +30,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2679186436022377212}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.459145, y: -1.0874369, z: 0.11413832}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 4.459145, y: -1.0874369, z: 0}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_Children:
   - {fileID: 2679186436312319698}
   m_Father: {fileID: 0}
@@ -108,9 +108,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
-  dropSpot: {fileID: 5312553284644819639, guid: 9679219d87de1224990ef0e671d73c9a,
+  dropSpot: {fileID: 6036392009115623116, guid: 9679219d87de1224990ef0e671d73c9a,
     type: 3}
-  exitSpot: {fileID: 4882181405682474836, guid: 11bcdbf179cdeb64a985a7c9286b0fdf,
+  exitSpot: {fileID: 7816141851299521653, guid: 11bcdbf179cdeb64a985a7c9286b0fdf,
     type: 3}
   eggPosition: {fileID: 2679186436312319698}
   dragonEgg: {fileID: 1410827171517259369, guid: a7e9d822bd8c8524fb276f6dc7b27739,
@@ -164,8 +164,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2679186436312319699}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.05000019, y: -1.5, z: -0.11413832}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.05, y: -1.5, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 2679186436022377095}
   m_RootOrder: 0

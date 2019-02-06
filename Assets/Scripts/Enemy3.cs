@@ -29,15 +29,21 @@ public class Enemy3 : MonoBehaviour
 
     void Update()
     {
-        transform.position = Vector2.MoveTowards(transform.position, dropSpot.position, speed * Time.deltaTime);
+        if (Vector2.Distance(transform.position, dropSpot.position) > 0.2f && eggDroped == false)
+        {
+            transform.position = Vector2.MoveTowards(transform.position, dropSpot.position, speed * Time.deltaTime);
+        }
 
         if (Vector2.Distance(transform.position, dropSpot.position) < 0.2f && eggDroped == false)
         {
             Instantiate(dragonEgg, eggPosition.transform.position, Quaternion.identity);
             eggDroped = true;
+        }
+        if (eggDroped == true)
+        {
             transform.position = Vector2.MoveTowards(transform.position, exitSpot.position, speed * Time.deltaTime);
         }
-      
+
 
         //if (timeBetweenShots <= 0)
         //{
