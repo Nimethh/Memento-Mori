@@ -226,11 +226,13 @@ MonoBehaviour:
   minion1: {fileID: 4185441438980989160, guid: 4e934f1f24c68964c85420d93260cb82, type: 3}
   minion2: {fileID: 2842162685594509257, guid: e66fa377f062e8747becc8092aab7524, type: 3}
   minion3: {fileID: 6503396846667062680, guid: 430a92c399367d6489e7b41b706f80d4, type: 3}
+  enemy3: {fileID: 2679186436022377212, guid: 268a3490120506144a6e6ed576eb58fa, type: 3}
   commander1: {fileID: 3663997759674552886, guid: bf656c1bbe1d3254ebc7bf92d2c5acd9,
     type: 3}
   spawnValues: {x: 10, y: 4, z: 0}
   enemyCounter: 3
   spawnWait: 2
+  waveWait: 5
   startWait: 3
 --- !u!4 &169490352
 Transform:
