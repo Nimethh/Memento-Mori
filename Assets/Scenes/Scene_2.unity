@@ -233,7 +233,7 @@ MonoBehaviour:
   enemyCounter: 3
   spawnWait: 2
   waveWait: 5
-  startWait: 3
+  startWait: 2
 --- !u!4 &169490352
 Transform:
   m_ObjectHideFlags: 0

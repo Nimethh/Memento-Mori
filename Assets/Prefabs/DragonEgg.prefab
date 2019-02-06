@@ -176,7 +176,7 @@ MonoBehaviour:
   dragon2Spot: {fileID: 1410827171748177278}
   dragon3Spot: {fileID: 1410827170395989685}
   dragon4Spot: {fileID: 1410827171707726966}
-  instantiatingSpot: {fileID: 1983579823374195939, guid: 979dd49c4f028d54f8f8cba485a4663d,
+  instantiatingSpot: {fileID: 5707003295514209574, guid: 979dd49c4f028d54f8f8cba485a4663d,
     type: 3}
   dragon1: {fileID: 8534032748719946187, guid: 1ba315a39b1a05b448ae89d70b5ba0dd, type: 3}
   dragon2: {fileID: 8534032748719946187, guid: 1ba315a39b1a05b448ae89d70b5ba0dd, type: 3}

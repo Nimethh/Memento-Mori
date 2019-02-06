@@ -107,7 +107,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79ed273a226ec3e4cb84016ab32f09a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  speed: 1.5
   dropSpot: {fileID: 6036392009115623116, guid: 9679219d87de1224990ef0e671d73c9a,
     type: 3}
   exitSpot: {fileID: 7816141851299521653, guid: 11bcdbf179cdeb64a985a7c9286b0fdf,
