@@ -20,6 +20,10 @@ public class DestroyByContact : MonoBehaviour {
         {
             return;
         }
+        if (other.tag == "Projectile")
+        {
+            return;
+        }
         if (other.tag == "PlayerCube")
         {
             Destroy(gameObject);

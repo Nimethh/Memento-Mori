@@ -6,6 +6,7 @@ TagManager:
   tags:
   - PlayerCube
   - Boundary
+  - Projectile
   - PickUpWeaponUI
   - Enemy
   - PlayerHand
