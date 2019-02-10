@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyMover : MonoBehaviour
 {
-    Rigidbody rb;
+    Rigidbody2D rb;
 
     public float speed;
     private float moveHorizontal;
@@ -16,10 +16,9 @@ public class EnemyMover : MonoBehaviour
 
 	void Start ()
     {
-        rb = GetComponent<Rigidbody>();
+        rb = GetComponent<Rigidbody2D>();
         moveHorizontal = -1;
         timeBetweenShots = fireDelay;
-        //Physics.IgnoreCollision(GetComponent<Collider>(), projectile.GetComponent<Collider>());
 	}
 
     public void Update()
@@ -37,7 +36,7 @@ public class EnemyMover : MonoBehaviour
 
     void FixedUpdate()
     {
-        rb.velocity = new Vector3(moveHorizontal * speed, 0.0f, 0.0f);
+        rb.velocity = new Vector2(moveHorizontal * speed, 0.0f);
     }
 
 }

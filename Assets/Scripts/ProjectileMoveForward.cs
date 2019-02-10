@@ -7,17 +7,17 @@ public class ProjectileMoveForward : MonoBehaviour
     public float speed;
     private float moveHorizontal;
 
-    Rigidbody rb;
+    Rigidbody2D rb;
 
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
+        rb = GetComponent<Rigidbody2D>();
         moveHorizontal = -1;
     }
 
 
     void Update()
     {
-        rb.velocity = new Vector3(moveHorizontal * speed, 0.0f, 0.0f);
+        rb.velocity = new Vector2(moveHorizontal * speed, 0.0f);
     }
 }

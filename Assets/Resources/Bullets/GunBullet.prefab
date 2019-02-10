@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4421982417200871695}
   m_Layer: 0
   m_Name: GunBullet
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -92,7 +92,7 @@ GameObject:
   - component: {fileID: 694646941440823684}
   m_Layer: 0
   m_Name: GunBullet
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -140,6 +140,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7269bae864de8aa40aba63cbe4940ce7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transform: {fileID: 0}
   speed: 0.3
   damage: 50

@@ -14,11 +14,11 @@ public class PlayerController : MonoBehaviour
 
     public Boundary boundary;
 
-    Rigidbody rb;
+    Rigidbody2D rb;
 	// Use this for initialization
 	void Start ()
     {
-        rb = GetComponent<Rigidbody>();
+        rb = GetComponent<Rigidbody2D>();
 	}
 	
 	// Update is called once per frame
@@ -26,11 +26,10 @@ public class PlayerController : MonoBehaviour
     {
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
-        Vector3 movement = new Vector3(moveHorizontal, moveVertical, 0.0f);
+        Vector2 movement = new Vector2(moveHorizontal, moveVertical);
 
         rb.velocity = movement * speed;
-        rb.position = new Vector3(Mathf.Clamp(rb.position.x, boundary.xMin, boundary.xMax),
-                                  Mathf.Clamp(rb.position.y, boundary.yMin, boundary.yMax),
-                                  0.0f );
+        rb.position = new Vector2(Mathf.Clamp(rb.position.x, boundary.xMin, boundary.xMax),
+                                  Mathf.Clamp(rb.position.y, boundary.yMin, boundary.yMax) );
 	}
 }

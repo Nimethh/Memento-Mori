@@ -22,7 +22,7 @@ public class CommanderBehaviorTest1 : MonoBehaviour
 
     void Start()
     {
-        movingSpot.position = new Vector3(Random.Range(minX, maxX), Random.Range(minY, maxY),0);
+        movingSpot.position = new Vector2(Random.Range(minX, maxX), Random.Range(minY, maxY));
         waitTime = startWaitingTime;
         timeBetweenShots = fireDelay;
     }
@@ -35,7 +35,7 @@ public class CommanderBehaviorTest1 : MonoBehaviour
         {
             if (waitTime <= 0)
             {
-                movingSpot.position = new Vector3(Random.Range(minX, maxX), Random.Range(minY, maxY));
+                movingSpot.position = new Vector2(Random.Range(minX, maxX), Random.Range(minY, maxY));
                 waitTime = startWaitingTime;
             }
             else
