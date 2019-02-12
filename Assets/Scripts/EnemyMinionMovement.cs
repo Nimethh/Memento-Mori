@@ -17,4 +17,5 @@ public class EnemyMinionMovement : MonoBehaviour
     {
         transform.position = transform.position + (transform.right * -1 * speed);
     }
+
 }
