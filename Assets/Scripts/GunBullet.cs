@@ -5,7 +5,7 @@ using UnityEngine;
 public class GunBullet : MonoBehaviour
 {
 
-    private Transform transform;
+//    private Transform transform;
     [SerializeField]
     private float speed;
     [SerializeField]
@@ -15,7 +15,7 @@ public class GunBullet : MonoBehaviour
 
     void Start()
     {
-        transform = GetComponent<Transform>();
+        //transform = GetComponent<Transform>();
     }
 
     void Update()
@@ -37,7 +37,7 @@ public class GunBullet : MonoBehaviour
         {
             if (collision.gameObject.GetComponent<IHealth>() == null)
             {
-                Debug.Log("No IHealth interface found on the object with an Enemy tag");
+                Debug.Log("No IHealth interface found on the object with an Enemy tag - Called from GunBullet");
                 return;
             }
 
