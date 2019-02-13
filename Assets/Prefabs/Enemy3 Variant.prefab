@@ -1,5 +1,40 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!50 &5533737762546512033
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2963512202480069283}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &2166278387898863986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2963512202480069283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a6162458088f154486d7ba5997577dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 0
+  currentHealth: 0
 --- !u!1001 &868881898946211935
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11,6 +46,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Enemy3 Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 2679186436022377212, guid: 268a3490120506144a6e6ed576eb58fa,
+        type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 2679186436022377095, guid: 268a3490120506144a6e6ed576eb58fa,
         type: 3}
@@ -79,6 +119,12 @@ PrefabInstance:
       objectReference: {fileID: 2963512202759534221}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 268a3490120506144a6e6ed576eb58fa, type: 3}
+--- !u!1 &2963512202480069283 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2679186436022377212, guid: 268a3490120506144a6e6ed576eb58fa,
+    type: 3}
+  m_PrefabInstance: {fileID: 868881898946211935}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2963512202480069336 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2679186436022377095, guid: 268a3490120506144a6e6ed576eb58fa,

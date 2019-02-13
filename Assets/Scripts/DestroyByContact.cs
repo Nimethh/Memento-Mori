@@ -16,11 +16,6 @@ public class DestroyByContact : MonoBehaviour
             return;
         }
 
-        if (other.tag == "Bullet")
-        {
-            Destroy(gameObject);
-        }
-
         if (other.tag == "PlayerCube")
         {
             Destroy(gameObject);
