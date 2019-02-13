@@ -12,6 +12,12 @@ TagManager:
   - PlayerHand
   - PickUpItemUI
   - Bullet
+  - FollowMinion
+  - MinionProjectile
+  - Dragon
+  - RandomMinion
+  - Enemy1
+  - Commander
   layers:
   - Default
   - TransparentFX

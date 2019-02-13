@@ -550,6 +550,7 @@ GameObject:
   - component: {fileID: 318975083}
   - component: {fileID: 318975085}
   - component: {fileID: 318975086}
+  - component: {fileID: 318975088}
   m_Layer: 0
   m_Name: AnimTest
   m_TagString: PlayerCube
@@ -565,7 +566,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 318975080}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.36, y: 0, z: 0}
+  m_LocalPosition: {x: -7.137, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1902472197}
@@ -665,6 +666,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerHand: {fileID: 2080398202}
+--- !u!70 &318975088
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 318975080}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 0.8, y: 1.3}
+  m_Direction: 0
 --- !u!1 &392703721
 GameObject:
   m_ObjectHideFlags: 0

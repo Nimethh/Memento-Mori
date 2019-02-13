@@ -13,11 +13,12 @@ GameObject:
   - component: {fileID: 9006736949857036103}
   - component: {fileID: 1909657679686469768}
   - component: {fileID: 4420356046029213162}
+  - component: {fileID: 9117155707793368400}
   - component: {fileID: 628108008086355155}
   - component: {fileID: 8563842057537198753}
   m_Layer: 0
   m_Name: MinionBehavior1
-  m_TagString: Untagged
+  m_TagString: RandomMinion
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -109,6 +110,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a39a9d5b213af374a927afc497ad8125, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &9117155707793368400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8692342588957997579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d84aadf4eb3ba749a09f1d904fb5872, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 20
 --- !u!50 &628108008086355155
 Rigidbody2D:
   serializedVersion: 4

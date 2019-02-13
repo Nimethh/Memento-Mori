@@ -30,6 +30,7 @@ public class GameControllerTest : MonoBehaviour
 	
 	void Update ()
     {
+        if (restart)
         if (Input.GetKeyDown(KeyCode.R))
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);

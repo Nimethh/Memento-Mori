@@ -13,11 +13,12 @@ GameObject:
   - component: {fileID: 2568286718219814230}
   - component: {fileID: 5844736572432998834}
   - component: {fileID: 3530115928941550704}
+  - component: {fileID: 7920385426593185048}
   - component: {fileID: 7688443521987810180}
   - component: {fileID: 2125561828658329543}
   m_Layer: 0
   m_Name: MinionBehavior4
-  m_TagString: Untagged
+  m_TagString: FollowMinion
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -106,6 +107,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a39a9d5b213af374a927afc497ad8125, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7920385426593185048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4185441438980989160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d84aadf4eb3ba749a09f1d904fb5872, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 10
 --- !u!50 &7688443521987810180
 Rigidbody2D:
   serializedVersion: 4
@@ -137,7 +151,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
