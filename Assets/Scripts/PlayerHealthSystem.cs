@@ -4,9 +4,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class PlayerHealth : MonoBehaviour/*, IHealth*/
+public class PlayerHealthSystem : MonoBehaviour, IHealth
 {
-    
     [SerializeField]
     private int lives;
     [SerializeField]
@@ -15,12 +14,14 @@ public class PlayerHealth : MonoBehaviour/*, IHealth*/
     private float invulnerabilityCounter;
     [SerializeField]
     private float invulnerabilityTime;
+
+
     [SerializeField]
     private int maxHealth;
     [SerializeField]
     private int currentHealth;
-
-    public Image healthBar;
+    [SerializeField]
+    private Slider healthBar;
 
     void Start()
     {
@@ -29,6 +30,7 @@ public class PlayerHealth : MonoBehaviour/*, IHealth*/
         invulnerabilityTime = 3f;
         maxHealth = 100;
         currentHealth = maxHealth;
+        
     }
 
     void Update()
@@ -45,9 +47,9 @@ public class PlayerHealth : MonoBehaviour/*, IHealth*/
             else
             {
                 lives--;
+                currentHealth = maxHealth;
                 isInvulnerable = true;
                 invulnerabilityCounter = invulnerabilityTime;
-                currentHealth = maxHealth;
             }
         }
 
@@ -73,7 +75,8 @@ public class PlayerHealth : MonoBehaviour/*, IHealth*/
         else
         {
             currentHealth = currentHealth - damage;
-            healthBar.fillAmount = currentHealth / maxHealth;
+            healthBar.maxValue = maxHealth;
+            healthBar.value = currentHealth;
         }
     }
 }

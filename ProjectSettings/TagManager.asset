@@ -18,6 +18,7 @@ TagManager:
   - RandomMinion
   - Enemy1
   - Commander
+  - spawningPoint
   layers:
   - Default
   - TransparentFX

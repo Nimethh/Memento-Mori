@@ -33,7 +33,7 @@ public class GunBullet : MonoBehaviour
     {
         Debug.Log("OnTriggerEnter2D() - GunBullet");
 
-        if (collision.gameObject.tag == "Enemy")
+        if (collision.tag == "Enemy")
         {
             if (collision.gameObject.GetComponent<IHealth>() == null)
             {
@@ -42,7 +42,7 @@ public class GunBullet : MonoBehaviour
             }
 
             collision.gameObject.GetComponent<IHealth>().TakeDamage(damage);
-            Destroy(this.gameObject);
+            Destroy(gameObject);
 
         }
     }

@@ -73,10 +73,11 @@ GameObject:
   - component: {fileID: 1410827171517259364}
   - component: {fileID: 1247753674942276958}
   - component: {fileID: 1410827171517259366}
-  - component: {fileID: 4637854515894684042}
+  - component: {fileID: 4255549851360191234}
+  - component: {fileID: 5602960769180205100}
   m_Layer: 0
   m_Name: DragonEgg
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -185,7 +186,7 @@ MonoBehaviour:
   dragon2: {fileID: 8534032748719946187, guid: 1ba315a39b1a05b448ae89d70b5ba0dd, type: 3}
   dragon3: {fileID: 8534032748719946187, guid: 1ba315a39b1a05b448ae89d70b5ba0dd, type: 3}
   dragon4: {fileID: 8534032748719946187, guid: 1ba315a39b1a05b448ae89d70b5ba0dd, type: 3}
---- !u!114 &4637854515894684042
+--- !u!114 &4255549851360191234
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -194,9 +195,32 @@ MonoBehaviour:
   m_GameObject: {fileID: 1410827171517259369}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a39a9d5b213af374a927afc497ad8125, type: 3}
+  m_Script: {fileID: 11500000, guid: 3d84aadf4eb3ba749a09f1d904fb5872, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentHealth: 0
+  healthBar: {fileID: 0}
+--- !u!50 &5602960769180205100
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1410827171517259369}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1410827171707726969
 GameObject:
   m_ObjectHideFlags: 0

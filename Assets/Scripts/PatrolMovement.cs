@@ -17,6 +17,9 @@ public class PatrolMovement : MonoBehaviour
     private float timeBetweenShots;
     public float fireDelay;
 
+    [SerializeField]
+    private int damage;
+
     void Start()
     {
         randomSpot = Random.Range(0, movingSpots.Length);
@@ -47,6 +50,21 @@ public class PatrolMovement : MonoBehaviour
         else
         {
             timeBetweenShots -= Time.deltaTime;
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag == "PlayerCube")
+        {
+            //if (other.gameObject.GetComponent<IHealth>() == null)
+            //{
+            //    Debug.Log("No IHealth interface found on the object with an Enemy tag");
+            //    return;
+            //}
+
+            other.gameObject.GetComponent<IHealth>().TakeDamage(damage);
+            Destroy(gameObject);
         }
     }
 }

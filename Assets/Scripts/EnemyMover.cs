@@ -14,6 +14,9 @@ public class EnemyMover : MonoBehaviour
     private float timeBetweenShots;
     public float fireDelay;
 
+    [SerializeField]
+    private int damage;
+
 	void Start ()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -37,6 +40,21 @@ public class EnemyMover : MonoBehaviour
     void FixedUpdate()
     {
         rb.velocity = new Vector2(moveHorizontal * speed, 0.0f);
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag == "PlayerCube")
+        {
+            //if (other.gameObject.GetComponent<IHealth>() == null)
+            //{
+            //    Debug.Log("No IHealth interface found on the object with an Enemy tag");
+            //    return;
+            //}
+
+            other.gameObject.GetComponent<IHealth>().TakeDamage(damage);
+            Destroy(gameObject);
+        }
     }
 
 }

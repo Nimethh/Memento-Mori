@@ -7,6 +7,9 @@ public class ProjectileMoveForward : MonoBehaviour
     public float speed;
     private float moveHorizontal;
 
+    [SerializeField]
+    private int damage;
+
     Rigidbody2D rb;
 
     void Start()
@@ -20,4 +23,31 @@ public class ProjectileMoveForward : MonoBehaviour
     {
         rb.velocity = new Vector2(moveHorizontal * speed, 0.0f);
     }
+
+
+    //void Damage(Transform player)
+    //{
+    //    PlayerHealthSystem p = player.GetComponent<PlayerHealthSystem>();
+
+    //    if (p != null)
+    //    {
+    //        p.TakeDamage(damage);
+    //        Destroy(gameObject);
+    //    }
+    //}
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag == "PlayerCube")
+        {
+            if (other.gameObject.GetComponent<IHealth>() == null)
+            {
+                Debug.Log("No IHealth interface found on the object with an Enemy tag");
+                return;
+            }
+
+            other.gameObject.GetComponent<IHealth>().TakeDamage(damage);
+            Destroy(gameObject);
+        }
+    }
 }
+

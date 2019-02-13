@@ -13,12 +13,11 @@ GameObject:
   - component: {fileID: 8400719141006064626}
   - component: {fileID: 2852632553516960538}
   - component: {fileID: 4530243625720729789}
-  - component: {fileID: 7360378033358717567}
   - component: {fileID: 5231533215100215876}
   - component: {fileID: 5908667163434721246}
   m_Layer: 0
   m_Name: MinionBehavior3
-  m_TagString: RandomMinion
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -114,6 +113,7 @@ MonoBehaviour:
     type: 3}
   startWaitingTime: 1
   fireDelay: 1
+  damage: 40
 --- !u!114 &4530243625720729789
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -127,18 +127,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 40
---- !u!114 &7360378033358717567
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6503396846667062680}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a39a9d5b213af374a927afc497ad8125, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &5231533215100215876
 BoxCollider2D:
   m_ObjectHideFlags: 0
