@@ -23,11 +23,11 @@ public class TestShotgun : MonoBehaviour, IWeapon
     public void Start()
     {
         playerHand = GameObject.FindGameObjectWithTag("PlayerHand").gameObject;
-        attackCooldown = 1.5f;
+        attackCooldown = 1.0f;
         attackCooldownTimer = 0f;
         attackIsOnCooldown = false;
         numberOfBullets = 8;
-        maxBulletSpreadAngle = 20f;
+        maxBulletSpreadAngle = 15f;
     }
 
     public void Update()

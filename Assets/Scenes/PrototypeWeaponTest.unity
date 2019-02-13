@@ -667,6 +667,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4959955710144138768, guid: d94681099ae9289489b5ff867f5c6b46,
         type: 3}
+    - target: {fileID: 4002143765936945816, guid: c22209c7aa56dc04ab99c2c2b0222eac,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c22209c7aa56dc04ab99c2c2b0222eac, type: 3}
 --- !u!1 &595516110
@@ -1801,6 +1806,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4959955710144138768, guid: c0dea7e93f725a94bb02733091ff8261,
         type: 3}
+    - target: {fileID: 4002143765936945816, guid: c22209c7aa56dc04ab99c2c2b0222eac,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c22209c7aa56dc04ab99c2c2b0222eac, type: 3}
 --- !u!1 &1460441567
@@ -2148,6 +2158,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4959955710144138768, guid: f8ef3f09fb685624b815574b83aba2c1,
         type: 3}
+    - target: {fileID: 4002143765936945816, guid: c22209c7aa56dc04ab99c2c2b0222eac,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c22209c7aa56dc04ab99c2c2b0222eac, type: 3}
 --- !u!1 &1656074232
@@ -2377,6 +2392,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4002143765936945816, guid: c22209c7aa56dc04ab99c2c2b0222eac,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c22209c7aa56dc04ab99c2c2b0222eac, type: 3}
 --- !u!1 &1792607893
@@ -2561,7 +2581,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1935067817
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2755,6 +2775,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4959955710144138768, guid: dc4fcc784be7fd14abf093c1b1edca6a,
         type: 3}
+    - target: {fileID: 4002143765936945816, guid: c22209c7aa56dc04ab99c2c2b0222eac,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c22209c7aa56dc04ab99c2c2b0222eac, type: 3}
 --- !u!1 &2090196188
