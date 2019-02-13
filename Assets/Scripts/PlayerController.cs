@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 [System.Serializable]
 public class Boundary
@@ -10,6 +11,7 @@ public class Boundary
 
 public class PlayerController : MonoBehaviour
 {
+    
     public float speed;
 
     public Boundary boundary;
