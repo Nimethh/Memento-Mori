@@ -1628,7 +1628,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   boundary:
-    xMin: -10.5
+    xMin: -8
     xMax: 0
     yMin: -4.2
     yMax: 4.2
@@ -1680,7 +1680,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1372311975}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.36, y: 0, z: 0}
+  m_LocalPosition: {x: -8, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 595516111}
@@ -2595,18 +2595,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 021842fc62d563547a369baa2367e6d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 8692342588957997579, guid: 66918cae20d909b4fb71bb727c374263, type: 3}
-  minion1: {fileID: 4185441438980989160, guid: 4e934f1f24c68964c85420d93260cb82, type: 3}
-  minion2: {fileID: 2842162685594509257, guid: e66fa377f062e8747becc8092aab7524, type: 3}
-  minion3: {fileID: 6503396846667062680, guid: 430a92c399367d6489e7b41b706f80d4, type: 3}
-  enemy3: {fileID: 2679186436022377212, guid: 268a3490120506144a6e6ed576eb58fa, type: 3}
-  commander1: {fileID: 3663997759674552886, guid: bf656c1bbe1d3254ebc7bf92d2c5acd9,
-    type: 3}
+  waves:
+  - enemies:
+    - {fileID: 8692342588957997579, guid: 66918cae20d909b4fb71bb727c374263, type: 3}
+    - {fileID: 2842162685594509257, guid: e66fa377f062e8747becc8092aab7524, type: 3}
+    numberOfEnemies: 10
+    spawnWait: 1
+  - enemies:
+    - {fileID: 6503396846667062680, guid: 430a92c399367d6489e7b41b706f80d4, type: 3}
+    - {fileID: 4185441438980989160, guid: 4e934f1f24c68964c85420d93260cb82, type: 3}
+    - {fileID: 0}
+    numberOfEnemies: 10
+    spawnWait: 1
+  timeBetweenWaves: 4
+  nextWaveCountDown: 0
   spawnValues: {x: 10, y: 4}
-  enemyCounter: 5
-  spawnWait: 1.5
-  waveWait: 3
-  startWait: 2
+  minion: {fileID: 0}
 --- !u!4 &1935067818
 Transform:
   m_ObjectHideFlags: 0
@@ -2910,7 +2914,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2100974800}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.02, y: -8.3, z: 0}
+  m_LocalPosition: {x: -4.4, y: -8.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1520392312}

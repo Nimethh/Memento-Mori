@@ -3,113 +3,110 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+[System.Serializable]
+public class Wave
+{
+    public GameObject[] enemies;
+    public int numberOfEnemies;
+    public float spawnWait;
+}
+
+public enum SpawnState { COUNTING, SPAWNING, SWITCHINGWAVES }
+
 public class GameControllerTest : MonoBehaviour
 {
-    public GameObject enemy;
-    public GameObject minion1;
-    public GameObject minion2;
-    public GameObject minion3;
-    public GameObject enemy3;
-    public GameObject commander1;
-    
+    public Wave[] waves;
+    private int nextWave = 0;
+    private int currentWave;
+    private int enemyType;
+    private int enemyNum;
+    public float timeBetweenWaves;
+    [SerializeField]
+    private float nextWaveCountDown; 
     public Vector2 spawnValues;
-    public int enemyCounter;
-    public float spawnWait;
-    public float waveWait;
-    public float startWait;
+    public GameObject minion;
 
-    private bool restart;
-    private bool noEnemiesLeft;
+    private SpawnState state = SpawnState.COUNTING;
 
     void Start ()
     {
-        restart = false;
-        noEnemiesLeft = false;
-        StartCoroutine(SpawnWaves());
+        nextWaveCountDown = timeBetweenWaves;
+
     }
 	
 	void Update ()
     {
-        //if (Input.GetKeyDown(KeyCode.R))
-        //{
-        //    SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        //}
+        if (state == SpawnState.SWITCHINGWAVES)
+        {
+            WaveCompleted();
+        }
+
+        if (nextWaveCountDown <= 0)
+        {
+            if (state != SpawnState.SPAWNING)
+            {
+                StartCoroutine(SpawnWaves(waves[nextWave]));
+            }
+        }
+        else
+            nextWaveCountDown -= Time.deltaTime;
     }
 
-    IEnumerator SpawnWaves()
+    IEnumerator SpawnWaves(Wave p_wave)
     {
+        enemyNum = 0;
+        state = SpawnState.SPAWNING;
         Quaternion spawnRotation = Quaternion.identity;
-
-        yield return new WaitForSeconds(startWait);
-        //while (noEnemiesLeft == false)
-        while (true)
+       
+        for(int i = 0; i < p_wave.numberOfEnemies; i++)
         {
-
-            for (int i = 0; i < enemyCounter; i++)
+            enemyType = Random.Range(0, p_wave.enemies.Length);
+            Vector2 spawnPosition = new Vector2(spawnValues.x, Random.Range(-spawnValues.y, spawnValues.y));
+            if (enemyType == 0)
             {
-                Vector3 spawnPosition = new Vector2(spawnValues.x, Random.Range(-spawnValues.y, spawnValues.y));
-                Instantiate(enemy, spawnPosition, spawnRotation);
-                yield return new WaitForSeconds(spawnWait);
+                Instantiate(p_wave.enemies[enemyType], spawnPosition, spawnRotation);
             }
-            yield return new WaitForSeconds(waveWait);
-
-            for (int i = 0; i < enemyCounter; i++) // follow the position of the player.
+            else if (enemyType == 1 )
             {
-                Vector3 spawnPosition = new Vector2(spawnValues.x, Random.Range(-spawnValues.y, spawnValues.y));
-                //Quaternion spawnRotation = Quaternion.identity;
-                Instantiate(minion1, spawnPosition, spawnRotation);
-                yield return new WaitForSeconds(spawnWait);
+                Instantiate(p_wave.enemies[enemyType], spawnPosition, spawnRotation);
             }
-            yield return new WaitForSeconds(waveWait);
-
-            for (int i = 0; i < 1; i++) // enemy3.
+            else if (enemyType == 2)
             {
-                Vector3 spawnPosition = new Vector2(spawnValues.x, spawnValues.y);
-                //Quaternion spawnRotation = Quaternion.identity;
-                Instantiate(enemy3, spawnPosition, spawnRotation);
-                yield return new WaitForSeconds(spawnWait);
+                Instantiate(p_wave.enemies[enemyType], spawnPosition, spawnRotation);
             }
-            yield return new WaitForSeconds(waveWait);
-
-            for (int i = 0; i < enemyCounter; i++) // moves forward and shoots at the position of the player.
+            else if (enemyType == 3)
             {
-                Vector3 spawnPosition = new Vector2(spawnValues.x, Random.Range(-spawnValues.y, spawnValues.y));
-                //Quaternion spawnRotation = Quaternion.identity;
-                Instantiate(minion2, spawnPosition, spawnRotation);
-                yield return new WaitForSeconds(spawnWait);
+                Instantiate(p_wave.enemies[enemyType], spawnPosition, spawnRotation);
             }
-            yield return new WaitForSeconds(waveWait);
-
-            for (int i = 0; i < 1; i++) // enemy3.
+            else if (enemyType == 4)
             {
-                Vector3 spawnPosition = new Vector2(spawnValues.x, spawnValues.y);
-                //Quaternion spawnRotation = Quaternion.identity;
-                Instantiate(enemy3, spawnPosition, spawnRotation);
-                yield return new WaitForSeconds(spawnWait);
+                Instantiate(p_wave.enemies[enemyType], spawnPosition, spawnRotation);
             }
-            yield return new WaitForSeconds(waveWait);
-
-            for (int i = 0; i < enemyCounter; i++) // movest into random spots in the screen.
+            else if (enemyType == 5)
             {
-                Vector3 spawnPosition = new Vector2(spawnValues.x, Random.Range(-spawnValues.y, spawnValues.y));
-                //Quaternion spawnRotation = Quaternion.identity;
-                Instantiate(minion3, spawnPosition, spawnRotation);
-                yield return new WaitForSeconds(spawnWait);
+                Instantiate(p_wave.enemies[enemyType], spawnPosition, spawnRotation);
             }
-            yield return new WaitForSeconds(waveWait);
-
-
-
-            for (int i = 0; i < 1; i++) // commander.
+            else
             {
-                Vector3 spawnPosition = new Vector2(spawnValues.x, Random.Range(-spawnValues.y, spawnValues.y));
-                //Quaternion spawnRotation = Quaternion.identity;
-                Instantiate(commander1, spawnPosition, spawnRotation);
-                yield return new WaitForSeconds(spawnWait);
+                Instantiate(minion, spawnPosition, spawnRotation);
             }
-            yield return new WaitForSeconds(waveWait);
-
-            noEnemiesLeft = true;
+            state = SpawnState.SWITCHINGWAVES;
+            yield return new WaitForSeconds(p_wave.spawnWait);
         }
+
+       
+        yield break;
+   
+    }
+
+    void WaveCompleted()
+    {
+        state = SpawnState.COUNTING;
+        nextWaveCountDown = timeBetweenWaves;
+        if (nextWave + 1 > waves.Length - 1)
+        {
+            nextWave = 0;
+        }
+        nextWave++;
     }
 }
