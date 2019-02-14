@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/PrototypeWeaponTest.unity
     guid: 40183be1f81a753439060745473c029d
+  - enabled: 1
+    path: Assets/Scenes/Scene_2.unity
+    guid: 067553b7329c3a8438bd85b9f820f79d
   m_configObjects: {}

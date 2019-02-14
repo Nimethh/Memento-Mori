@@ -41,7 +41,8 @@ public class GameControllerTest : MonoBehaviour
         Quaternion spawnRotation = Quaternion.identity;
 
         yield return new WaitForSeconds(startWait);
-        while (noEnemiesLeft == false)
+        //while (noEnemiesLeft == false)
+        while (true)
         {
 
             for (int i = 0; i < enemyCounter; i++)

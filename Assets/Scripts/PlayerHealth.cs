@@ -2,11 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour, IHealth
 {
-
-
     [SerializeField]
     private int lives;
     [SerializeField]
@@ -15,11 +14,14 @@ public class PlayerHealth : MonoBehaviour, IHealth
     private float invulnerabilityCounter;
     [SerializeField]
     private float invulnerabilityTime;
+
+
     [SerializeField]
-    private float maxHealth;
+    private int maxHealth;
     [SerializeField]
     private float currentHealth;
-
+    [SerializeField]
+    private Slider healthBar;
 
     void Start()
     {
@@ -28,14 +30,16 @@ public class PlayerHealth : MonoBehaviour, IHealth
         invulnerabilityTime = 3f;
         maxHealth = 100;
         currentHealth = maxHealth;
+        healthBar.value = currentHealth;
+
     }
 
     void Update()
     {
-        if(currentHealth <= 0)
+        if (currentHealth <= 0)
         {
             Debug.Log("Player has died");
-            if(lives == 0)
+            if (lives == 0)
             {
                 Debug.Log("GameOver");
                 SceneManager.LoadScene("DeathScreen");
@@ -44,16 +48,18 @@ public class PlayerHealth : MonoBehaviour, IHealth
             else
             {
                 lives--;
+                currentHealth = maxHealth;
                 isInvulnerable = true;
                 invulnerabilityCounter = invulnerabilityTime;
-                currentHealth = maxHealth;
+                healthBar.value = currentHealth;
+
             }
         }
 
-        if(invulnerabilityCounter > 0)
+        if (invulnerabilityCounter > 0)
         {
-            invulnerabilityCounter -= Time.deltaTime; 
-            if(invulnerabilityCounter <= 0)
+            invulnerabilityCounter -= Time.deltaTime;
+            if (invulnerabilityCounter <= 0)
             {
                 Debug.Log("invulnerability ran out");
                 invulnerabilityCounter = 0; //looks cleaner in the inspector
@@ -65,18 +71,6 @@ public class PlayerHealth : MonoBehaviour, IHealth
 
     public void TakeDamage(int damage)
     {
-        if(isInvulnerable)
-        {
-            return;
-        }
-        else
-        {
-            currentHealth = currentHealth - damage;
-        }
-    }
-
-    public void TakeDamage(float damage)
-    {
         if (isInvulnerable)
         {
             return;
@@ -84,7 +78,23 @@ public class PlayerHealth : MonoBehaviour, IHealth
         else
         {
             currentHealth = currentHealth - damage;
+            healthBar.maxValue = maxHealth;
+            healthBar.value = currentHealth;
         }
     }
 
+    public void TakeDamage(float damage)
+    {
+
+        if (isInvulnerable)
+        {
+            return;
+        }
+        else
+        {
+            currentHealth = currentHealth - damage;
+            healthBar.maxValue = maxHealth;
+            healthBar.value = currentHealth;
+        }
+    }
 }

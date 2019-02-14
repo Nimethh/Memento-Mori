@@ -49,6 +49,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
+  damage: 10
   projectile: {fileID: 3676647416337642317, guid: 88da1b916690a304ead91a04443d50ee,
     type: 3}
   fireDelay: 1
@@ -102,7 +103,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 10.36, y: 7.42}
+    oldSize: {x: 2.072, y: 1.484}
     newSize: {x: 10.36, y: 7.42}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -123,8 +124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a6162458088f154486d7ba5997577dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 500
-  currentHealth: 0
+  health: 50
 --- !u!212 &7415305309979959494
 SpriteRenderer:
   m_ObjectHideFlags: 0

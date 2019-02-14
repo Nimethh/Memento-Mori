@@ -49,6 +49,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
+  damage: 10
   projectile: {fileID: 3476799222084589752, guid: 5ed5038db99c38648b5de563d911b293,
     type: 3}
   fireDelay: 1
@@ -123,8 +124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a6162458088f154486d7ba5997577dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 0
-  currentHealth: 0
+  health: 50
 --- !u!212 &5584338397337892003
 SpriteRenderer:
   m_ObjectHideFlags: 0

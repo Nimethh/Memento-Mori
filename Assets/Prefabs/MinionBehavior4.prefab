@@ -49,6 +49,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 7
+  damage: 10
 --- !u!114 &3530115928941550704
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -120,8 +121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a6162458088f154486d7ba5997577dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 0
-  currentHealth: 0
+  health: 50
 --- !u!212 &5886622860028828022
 SpriteRenderer:
   m_ObjectHideFlags: 0
