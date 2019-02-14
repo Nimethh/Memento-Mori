@@ -21,10 +21,18 @@ public class Enemy3 : MonoBehaviour
     //private float timeBetweenShots;
     //public float fireDelay;
 
+    //Added 2019-02-13
+    private Animator anim;
+
+
     void Start()
     {
         waitTime = startWaitingTime;
         eggDroped = false;
+
+        //Added 2019-02-13
+        anim = GetComponent<Animator>();
+
     }
 
     void Update()
@@ -38,6 +46,8 @@ public class Enemy3 : MonoBehaviour
         {
             Instantiate(dragonEgg, eggPosition.transform.position, Quaternion.identity);
             eggDroped = true;
+            //Added 2019-02-13
+            anim.Play("HasDropped");
         }
         if (eggDroped == true)
         {

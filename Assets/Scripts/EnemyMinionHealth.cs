@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class EnemyMinionHealth : MonoBehaviour, IHealth
 {
-    private int maxHealth;
     [SerializeField]
-    private int currentHealth;
+    private float maxHealth;
+    [SerializeField]
+    private float currentHealth;
 
     void Start()
     {
@@ -28,6 +29,11 @@ public class EnemyMinionHealth : MonoBehaviour, IHealth
     }
 
     public void TakeDamage(int damage)
+    {
+        currentHealth = currentHealth - damage;
+    }
+
+    public void TakeDamage(float damage)
     {
         currentHealth = currentHealth - damage;
     }
