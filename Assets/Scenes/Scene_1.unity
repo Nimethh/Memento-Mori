@@ -883,12 +883,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 021842fc62d563547a369baa2367e6d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 8692342588957997579, guid: 66918cae20d909b4fb71bb727c374263, type: 3}
-  minion1: {fileID: 4185441438980989160, guid: 4e934f1f24c68964c85420d93260cb82, type: 3}
-  minion2: {fileID: 2842162685594509257, guid: e66fa377f062e8747becc8092aab7524, type: 3}
-  minion3: {fileID: 6503396846667062680, guid: 430a92c399367d6489e7b41b706f80d4, type: 3}
-  enemy3: {fileID: 2679186436022377212, guid: 268a3490120506144a6e6ed576eb58fa, type: 3}
-  commander1: {fileID: 3663997759674552886, guid: bf656c1bbe1d3254ebc7bf92d2c5acd9,
+  enemy: {fileID: 5070331608393156620, guid: 85d0bed128f4de04fbf454f681f694f0, type: 3}
+  minion1: {fileID: 5237859437876715391, guid: a98a3481c4fadaf499797d3dd2ca6b73, type: 3}
+  minion2: {fileID: 2167633401430756738, guid: ec0cf196ff5e02e44aee2c6ac26213b3, type: 3}
+  minion3: {fileID: 2664549025557504467, guid: f6eb9b1a0a233174982bdfe5693ff546, type: 3}
+  enemy3: {fileID: 3426970033804032858, guid: ede28a57ecf270d438a29188cfa7bb3e, type: 3}
+  commander1: {fileID: 5862804564507581468, guid: c960f1f5204ae2f4d86e8e2b4ccd331f,
     type: 3}
   spawnValues: {x: 10, y: 4}
   enemyCounter: 3

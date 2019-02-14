@@ -67,16 +67,27 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2679186436022377090, guid: 268a3490120506144a6e6ed576eb58fa,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2679186436022377091, guid: 268a3490120506144a6e6ed576eb58fa,
         type: 3}
       propertyPath: eggPosition
       value: 
       objectReference: {fileID: 2963512202759534221}
+    - target: {fileID: 2679186436022377091, guid: 268a3490120506144a6e6ed576eb58fa,
+        type: 3}
+      propertyPath: dragonEgg
+      value: 
+      objectReference: {fileID: 8652264112582142495, guid: 5c9d6b97b5a1cf347b566f8db2814d7a,
+        type: 3}
+    - target: {fileID: 4334994041467574777, guid: 268a3490120506144a6e6ed576eb58fa,
+        type: 3}
+      propertyPath: health
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 2679186436022377090, guid: 268a3490120506144a6e6ed576eb58fa,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 268a3490120506144a6e6ed576eb58fa, type: 3}
 --- !u!4 &2963512202480069336 stripped
@@ -106,17 +117,17 @@ PrefabInstance:
     - target: {fileID: 1410827171517259362, guid: a7e9d822bd8c8524fb276f6dc7b27739,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.04085493
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1410827171517259362, guid: a7e9d822bd8c8524fb276f6dc7b27739,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.4125631
+      value: -1.5
       objectReference: {fileID: 0}
     - target: {fileID: 1410827171517259362, guid: a7e9d822bd8c8524fb276f6dc7b27739,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.11413832
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1410827171517259362, guid: a7e9d822bd8c8524fb276f6dc7b27739,
         type: 3}
@@ -178,6 +189,30 @@ PrefabInstance:
       propertyPath: dragon4Spot
       value: 
       objectReference: {fileID: 3859929653048751833}
+    - target: {fileID: 1410827171517259366, guid: a7e9d822bd8c8524fb276f6dc7b27739,
+        type: 3}
+      propertyPath: dragon1
+      value: 
+      objectReference: {fileID: 698765682735540853, guid: ed5072b46806c3946a240572d6d3f473,
+        type: 3}
+    - target: {fileID: 1410827171517259366, guid: a7e9d822bd8c8524fb276f6dc7b27739,
+        type: 3}
+      propertyPath: dragon2
+      value: 
+      objectReference: {fileID: 698765682735540853, guid: ed5072b46806c3946a240572d6d3f473,
+        type: 3}
+    - target: {fileID: 1410827171517259366, guid: a7e9d822bd8c8524fb276f6dc7b27739,
+        type: 3}
+      propertyPath: dragon3
+      value: 
+      objectReference: {fileID: 698765682735540853, guid: ed5072b46806c3946a240572d6d3f473,
+        type: 3}
+    - target: {fileID: 1410827171517259366, guid: a7e9d822bd8c8524fb276f6dc7b27739,
+        type: 3}
+      propertyPath: dragon4
+      value: 
+      objectReference: {fileID: 698765682735540853, guid: ed5072b46806c3946a240572d6d3f473,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a7e9d822bd8c8524fb276f6dc7b27739, type: 3}
 --- !u!4 &3859929654842755119 stripped
