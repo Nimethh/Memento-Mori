@@ -21,9 +21,20 @@ public class PlayerWeaponController : MonoBehaviour
             PreformWeaponAttack();
         }
 
-        if(Input.GetMouseButtonDown(1))
+
+
+        if (Input.GetMouseButtonDown(1))
         {
             PreformWeaponSpecialAttack();
+        }
+    }
+
+    private void FixedUpdate()
+    {
+        //Added 2019-02-14
+        if (Input.GetMouseButton(0))
+        {
+            PreformWeaponAttack();
         }
     }
 

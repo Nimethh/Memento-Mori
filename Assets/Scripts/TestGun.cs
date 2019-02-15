@@ -16,6 +16,10 @@ public class TestGun : MonoBehaviour, IWeapon
     private float specialAttackActiveCounter;
     [SerializeField]
     private bool specialAttackActivated;
+    [SerializeField]
+    private float attackCooldown;
+    [SerializeField]
+    private float attackCooldownCounter;
 
 
 
@@ -25,11 +29,17 @@ public class TestGun : MonoBehaviour, IWeapon
         specialAttackCooldown = 10f;
         specialAttackActiveTime = 3f;
         specialAttackActiveCounter = 0f;
+        attackCooldown = 0.1f;
     }
 
     public void Update()
     {
-        if(specialAttackCooldownCounter > 0)
+        if (attackCooldownCounter > 0)
+        {
+            attackCooldownCounter = attackCooldownCounter - Time.deltaTime;
+        }
+
+        if (specialAttackCooldownCounter > 0)
         {
             specialAttackCooldownCounter -= Time.deltaTime;
         }
@@ -46,7 +56,11 @@ public class TestGun : MonoBehaviour, IWeapon
 
     public void PreformAttack()
     {
-        Debug.Log("preformAttack - gun");
+        if(attackCooldownCounter > 0)
+        {
+            return;
+        }
+
         if(specialAttackActivated == false)
         {
             GameObject bullet = (GameObject)Instantiate(Resources.Load<GameObject>("Bullets/GunBullet"), playerHand.transform.position, playerHand.transform.rotation);
@@ -57,7 +71,7 @@ public class TestGun : MonoBehaviour, IWeapon
             GameObject bullet = (GameObject)Instantiate(Resources.Load<GameObject>("Bullets/GunSpecialBullet"), playerHand.transform.position, playerHand.transform.rotation);
             bullet.transform.rotation = playerHand.transform.GetChild(0).gameObject.transform.rotation;
         }
-
+        attackCooldownCounter = attackCooldown;
     }
 
     public void PreformSpecialAttack()

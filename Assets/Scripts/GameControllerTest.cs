@@ -28,13 +28,13 @@ public class GameControllerTest : MonoBehaviour
 
     private SpawnState state = SpawnState.COUNTING;
 
-    void Start ()
+    void Start()
     {
         nextWaveCountDown = timeBetweenWaves;
 
     }
-	
-	void Update ()
+
+    void Update()
     {
         if (state == SpawnState.SWITCHINGWAVES)
         {
