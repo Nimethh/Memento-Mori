@@ -89,7 +89,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2664196300870457102}
   - component: {fileID: 3995145569487150279}
-  - component: {fileID: 694646941440823684}
+  - component: {fileID: 2672975378929449330}
+  - component: {fileID: 3867714657513904854}
   m_Layer: 0
   m_Name: ShotgunBullet
   m_TagString: Untagged
@@ -128,7 +129,28 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.1, y: 0.1}
   m_Direction: 1
---- !u!114 &694646941440823684
+--- !u!50 &2672975378929449330
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8820331758049687994}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &3867714657513904854
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -137,8 +159,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 8820331758049687994}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7269bae864de8aa40aba63cbe4940ce7, type: 3}
+  m_Script: {fileID: 11500000, guid: 34c653b0a82b65c47a3c0aa82faae843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.3
-  damage: 30
+  speed: 0
+  damage: 20
+  lifetime: 5

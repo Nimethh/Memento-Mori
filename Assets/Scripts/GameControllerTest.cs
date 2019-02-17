@@ -90,11 +90,10 @@ public class GameControllerTest : MonoBehaviour
             {
                 Instantiate(minion, spawnPosition, spawnRotation);
             }
-            state = SpawnState.SWITCHINGWAVES;
             yield return new WaitForSeconds(p_wave.spawnWait);
         }
+        state = SpawnState.SWITCHINGWAVES;
 
-       
         yield break;
    
     }
@@ -107,6 +106,9 @@ public class GameControllerTest : MonoBehaviour
         {
             nextWave = 0;
         }
-        nextWave++;
+        else
+        {
+            nextWave++;
+        }
     }
 }

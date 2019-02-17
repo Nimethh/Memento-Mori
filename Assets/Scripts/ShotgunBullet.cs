@@ -2,23 +2,25 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RailGunBullet : MonoBehaviour
+public class ShotgunBullet : MonoBehaviour
 {
 
-//  private Transform transform;
+//    private Transform transform;
     [SerializeField]
     private float speed;
     [SerializeField]
     private int damage;
+    [SerializeField]
+    private float lifetime = 0.3f;
+
     private Rigidbody2D rigid;
 
-    private float lifetime = 5f;
 
     void Start()
     {
         //transform = GetComponent<Transform>();
         rigid = GetComponent<Rigidbody2D>();
-        speed = 50f;
+        speed = 20f;
         rigid.velocity = transform.right * speed;
 
     }
@@ -26,8 +28,6 @@ public class RailGunBullet : MonoBehaviour
     void Update()
     {
         //transform.position = transform.position + (transform.right * speed);
-        //rigid.velocity = transform.right * speed;
-
         lifetime -= Time.deltaTime;
 
         if(lifetime <= 0)
@@ -49,7 +49,12 @@ public class RailGunBullet : MonoBehaviour
             }
 
             collision.gameObject.GetComponent<IHealth>().TakeDamage(damage);
+            damage -= 5; 
 
+            if(damage < 0)
+            {
+                Destroy(this.gameObject);
+            }
         }
     }
 }

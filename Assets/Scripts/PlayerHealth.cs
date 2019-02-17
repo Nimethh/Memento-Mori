@@ -38,10 +38,10 @@ public class PlayerHealth : MonoBehaviour, IHealth
     {
         if (currentHealth <= 0)
         {
-            Debug.Log("Player has died");
+            //Debug.Log("Player has died");
             if (lives == 0)
             {
-                Debug.Log("GameOver");
+                //Debug.Log("GameOver");
                 SceneManager.LoadScene("DeathScreen");
 
             }
@@ -61,7 +61,7 @@ public class PlayerHealth : MonoBehaviour, IHealth
             invulnerabilityCounter -= Time.deltaTime;
             if (invulnerabilityCounter <= 0)
             {
-                Debug.Log("invulnerability ran out");
+                //Debug.Log("invulnerability ran out");
                 invulnerabilityCounter = 0; //looks cleaner in the inspector
                 isInvulnerable = false;
             }

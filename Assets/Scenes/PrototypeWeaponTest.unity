@@ -2599,18 +2599,26 @@ MonoBehaviour:
   - enemies:
     - {fileID: 8692342588957997579, guid: 66918cae20d909b4fb71bb727c374263, type: 3}
     - {fileID: 2842162685594509257, guid: e66fa377f062e8747becc8092aab7524, type: 3}
-    numberOfEnemies: 10
-    spawnWait: 1
+    numberOfEnemies: 20
+    spawnWait: 0.2
   - enemies:
     - {fileID: 6503396846667062680, guid: 430a92c399367d6489e7b41b706f80d4, type: 3}
     - {fileID: 4185441438980989160, guid: 4e934f1f24c68964c85420d93260cb82, type: 3}
-    - {fileID: 0}
-    numberOfEnemies: 10
-    spawnWait: 1
+    numberOfEnemies: 20
+    spawnWait: 0.2
+  - enemies:
+    - {fileID: 3663997759674552886, guid: bf656c1bbe1d3254ebc7bf92d2c5acd9, type: 3}
+    numberOfEnemies: 4
+    spawnWait: 0.2
+  - enemies:
+    - {fileID: 8692342588957997579, guid: 66918cae20d909b4fb71bb727c374263, type: 3}
+    - {fileID: 6503396846667062680, guid: 430a92c399367d6489e7b41b706f80d4, type: 3}
+    numberOfEnemies: 20
+    spawnWait: 0.2
   timeBetweenWaves: 4
-  nextWaveCountDown: 0
+  nextWaveCountDown: 50
   spawnValues: {x: 10, y: 4}
-  minion: {fileID: 0}
+  minion: {fileID: 6503396846667062680, guid: 430a92c399367d6489e7b41b706f80d4, type: 3}
 --- !u!4 &1935067818
 Transform:
   m_ObjectHideFlags: 0

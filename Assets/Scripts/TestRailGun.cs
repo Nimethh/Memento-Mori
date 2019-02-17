@@ -5,6 +5,7 @@ using UnityEngine;
 public class TestRailGun : MonoBehaviour, IWeapon
 {
     public GameObject playerHand;
+    private GameObject particle;
     private Animator anim;
 
     [SerializeField]
@@ -30,9 +31,15 @@ public class TestRailGun : MonoBehaviour, IWeapon
     [SerializeField]
     private bool hasPlayedPerfectTimeAnim;
 
+    //Added 2019-02-17
+    [SerializeField]
+    private float minScale = 1;
+
     public void Start()
     {
         playerHand = GameObject.FindGameObjectWithTag("PlayerHand").gameObject;
+        particle = transform.Find("Particle").gameObject;
+
         anim = GetComponent<Animator>();
 
         chargeTime = 0f;
@@ -50,6 +57,7 @@ public class TestRailGun : MonoBehaviour, IWeapon
 
 private void Update()
     {
+
         if(attackIsOnCooldown == true)
         {
             attackCooldownTimer = attackCooldownTimer - Time.deltaTime;
@@ -61,6 +69,14 @@ private void Update()
 
         if(increaseChargeTimer == true)
         {
+            //Added 2019-02-17
+            minScale += 3.0f * Time.deltaTime;
+            if(minScale > 7)
+            {
+                minScale = 7;
+            }
+
+            particle.SetActive(true);
             chargeTime += Time.deltaTime;
             if(chargeTime >= perfectChargeTime)
             {
@@ -73,8 +89,12 @@ private void Update()
 
             }
         }
+        else
+        {
+            particle.SetActive(false);
+        }
 
-       if(Input.GetMouseButtonUp(0) && attackIsOnCooldown == false && chargeTime > 0)
+        if (Input.GetMouseButtonUp(0) && attackIsOnCooldown == false && chargeTime > 0)
         {
             FireLaser();
             chargeTime = 0f;
@@ -106,19 +126,25 @@ private void Update()
 
         if (chargeTime >= perfectChargeTime && chargeTime <= perfectChargeTime+perfectChargeDuration)
         {
-            Debug.Log("Perfect attack!");
+            //Debug.Log("Perfect attack!");
             GameObject bullet = (GameObject)Instantiate(Resources.Load<GameObject>("Bullets/RailGunBulletPerfect"), playerHand.transform.position, playerHand.transform.rotation);
             bullet.transform.rotation = playerHand.transform.GetChild(0).gameObject.transform.rotation;
+            //bullet.transform.localScale = new Vector3(1, 6, 1);
             attackIsOnCooldown = true;
             attackCooldownTimer = attackCooldown;
+            minScale = 1;
+
         }
         else
         {
-            Debug.Log("Normal attack");
+            //Debug.Log("Normal attack");
             GameObject bullet = (GameObject)Instantiate(Resources.Load<GameObject>("Bullets/RailGunBullet"), playerHand.transform.position, playerHand.transform.rotation);
             bullet.transform.rotation = playerHand.transform.GetChild(0).gameObject.transform.rotation;
+            bullet.transform.localScale = new Vector3(1, minScale, 1);
+
             attackIsOnCooldown = true;
             attackCooldownTimer = attackCooldown;
+            minScale = 1;
         }
 
         hasPlayedPerfectTimeAnim = false;

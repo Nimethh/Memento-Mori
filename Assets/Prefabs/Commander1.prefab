@@ -73,7 +73,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a6162458088f154486d7ba5997577dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  health: 600
 --- !u!114 &2560954135285637417
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -86,17 +86,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e6730a570df64843bcd307745623c00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  speed: 1.5
   movingSpot: {fileID: 722641148226861681, guid: 87128f62eea5d574f8fc71b83dcda39a,
     type: 3}
   minX: 1
   maxX: 8
   minY: -4
   maxY: 4
-  projectile: {fileID: 3476799222084589752, guid: 5ed5038db99c38648b5de563d911b293,
+  projectile: {fileID: 3476799222084589752, guid: 75a5cdc9aad29f344ba7b7465b0d9539,
     type: 3}
   startWaitingTime: 0
-  fireDelay: 1
+  fireDelay: 1.2
 --- !u!50 &1786070151057720433
 Rigidbody2D:
   serializedVersion: 4

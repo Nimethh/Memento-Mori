@@ -48,11 +48,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 254757f8e33c8ad4492705fa4e337aa6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
+  speed: 2
   damage: 10
   projectile: {fileID: 3676647416337642317, guid: 88da1b916690a304ead91a04443d50ee,
     type: 3}
-  fireDelay: 1
+  fireDelay: 1.5
 --- !u!114 &4420356046029213162
 MonoBehaviour:
   m_ObjectHideFlags: 0

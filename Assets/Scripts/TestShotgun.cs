@@ -16,36 +16,57 @@ public class TestShotgun : MonoBehaviour, IWeapon
     private int numberOfBullets;
     [SerializeField]
     private float maxBulletSpreadAngle;
-
-
-
+    [SerializeField]
+    private int shotsLeft;
+    [SerializeField]
+    private float ammoRechargeTimer;
 
     public void Start()
     {
         playerHand = GameObject.FindGameObjectWithTag("PlayerHand").gameObject;
-        attackCooldown = 0.5f;
+        attackCooldown = 0.8f;
         attackCooldownTimer = 0f;
         attackIsOnCooldown = false;
-        numberOfBullets = 8;
-        maxBulletSpreadAngle = 7f;
+        numberOfBullets = 10;
+        maxBulletSpreadAngle = 13f;
+        shotsLeft = 6;
+        ammoRechargeTimer = 0f;
     }
 
     public void Update()
     {
         if(attackIsOnCooldown == true)
         {
+            //if(shotsLeft == 0)
+            //{
+            //    attackCooldownTimer += 5f;
+            //    shotsLeft = 6;
+            //    ammoRechargeTimer = 0;
+            //}
+
             attackCooldownTimer = attackCooldownTimer - Time.deltaTime;
             if(attackCooldownTimer <= 0)
             {
                 attackIsOnCooldown = false;
             }
         }
+
+        ammoRechargeTimer += 0.2f * Time.deltaTime;
+        if(ammoRechargeTimer > 0.3f)
+        {
+            if(shotsLeft < 6)
+            {
+                shotsLeft++;
+                ammoRechargeTimer = 0f;
+            }
+
+        }
     }
 
 
     public void PreformAttack()
     {
-        Debug.Log("preformAttack - shotgun");
+        //Debug.Log("preformAttack - shotgun");
 
         if(attackIsOnCooldown == false)
         {
@@ -57,22 +78,20 @@ public class TestShotgun : MonoBehaviour, IWeapon
                 difference.Normalize();
                 float rotationZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg; //Finding the angle in degrees
 
-                GameObject bullet = (GameObject)Instantiate(Resources.Load<GameObject>("Bullets/ShotgunBullet"), playerHand.transform.position, playerHand.transform.rotation);
+                GameObject bullet = (GameObject)Instantiate(Resources.Load<GameObject>("Bullets/ShotgunBullet"), playerHand.transform.position + new Vector3(Random.Range(0.2f,0.8f), 0,0), playerHand.transform.rotation);
                 bullet.transform.rotation = Quaternion.Euler(0f, 0f, rotationZ + randomAngle);
-
             }
 
             attackIsOnCooldown = true;
             attackCooldownTimer = attackCooldown;
+            shotsLeft--;
         }
-
-
 
     }
 
     public void PreformSpecialAttack()
     {
-        Debug.Log("preformSpecialAttack - shotgun");
+        //Debug.Log("preformSpecialAttack - shotgun");
     }
 
 }

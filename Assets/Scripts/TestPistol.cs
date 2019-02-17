@@ -32,7 +32,7 @@ public class TestPistol : MonoBehaviour, IWeapon
             return;
         }
 
-        Debug.Log("preformAttack - pistol ");
+        //Debug.Log("preformAttack - pistol ");
         GameObject bullet = (GameObject)Instantiate(Resources.Load<GameObject>("Bullets/GunBullet"), playerHand.transform.position, playerHand.transform.rotation);
         bullet.transform.rotation = playerHand.transform.GetChild(0).gameObject.transform.rotation;
         attackCooldownCounter = attackCooldown;
@@ -40,6 +40,6 @@ public class TestPistol : MonoBehaviour, IWeapon
 
     public void PreformSpecialAttack()
     {
-        Debug.Log("preformSpecialAttack - pistol");
+        //Debug.Log("preformSpecialAttack - pistol");
     }
 }
