@@ -12,7 +12,7 @@ public class CommanderBehaviorTest1 : MonoBehaviour
     public float minY;
     public float maxY;
 
-    public GameObject projectile;
+    public GameObject projectile; //Changed in the inspector 2019-02-18
 
     private float waitTime;
     public float startWaitingTime;
@@ -44,7 +44,8 @@ public class CommanderBehaviorTest1 : MonoBehaviour
 
         if (timeBetweenShots <= 0)
         {
-            Instantiate(projectile, transform.position, Quaternion.identity);
+            //Instantiate(projectile, transform.position, Quaternion.identity);
+            StartCoroutine("FireBurst"); //Added 2019-02-18
             timeBetweenShots = fireDelay;
         }
         else
@@ -52,4 +53,16 @@ public class CommanderBehaviorTest1 : MonoBehaviour
             timeBetweenShots -= Time.deltaTime;
         }
     }
+
+    //Added 2019-02-18
+    IEnumerator FireBurst()
+    {
+        for (int i = 0; i < 3; i++)
+        {
+            Instantiate(projectile, transform.position, Quaternion.identity);
+
+            yield return new WaitForSeconds(.3f);
+        }
+    }
+
 }

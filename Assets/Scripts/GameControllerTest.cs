@@ -31,7 +31,6 @@ public class GameControllerTest : MonoBehaviour
     void Start()
     {
         nextWaveCountDown = timeBetweenWaves;
-
     }
 
     void Update()

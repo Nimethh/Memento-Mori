@@ -93,10 +93,10 @@ MonoBehaviour:
   maxX: 8
   minY: -4
   maxY: 4
-  projectile: {fileID: 3476799222084589752, guid: 75a5cdc9aad29f344ba7b7465b0d9539,
+  projectile: {fileID: 3476799222084589752, guid: feb7f1c50f5f3ba459b0797b04eb5572,
     type: 3}
   startWaitingTime: 0
-  fireDelay: 1.2
+  fireDelay: 5
 --- !u!50 &1786070151057720433
 Rigidbody2D:
   serializedVersion: 4
