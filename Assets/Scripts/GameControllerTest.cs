@@ -24,8 +24,8 @@ public class FixedWave
     public float spawnWait;
 }
 
-public enum SpawnState { COUNTING, SPAWNING, SWITCHINGWAVES }
-public enum FixedSpawnState { COUNTING, SPAWNING, SWITCHINGWAVES }
+public enum SpawnState { COUNTING, SPAWNING, SWITCHINGWAVES, DONESPAWNING }
+public enum FixedSpawnState { COUNTING, SPAWNING, SWITCHINGWAVES, DONESPAWNING }
 
 public class GameControllerTest : MonoBehaviour
 {
@@ -59,14 +59,14 @@ public class GameControllerTest : MonoBehaviour
         {
             WaveCompleted();
         }
-        if (fixedState == FixedSpawnState.SWITCHINGWAVES)
+        if (fixedState == FixedSpawnState.SWITCHINGWAVES && fixedWaves.Length != 0)
         {
             FixedWaveCompleted();
         }
         
-        if (nextFixedWaveCountDown <= 0)
+        if (nextFixedWaveCountDown <= 0 && fixedState != FixedSpawnState.DONESPAWNING)
         {
-            if (fixedState != FixedSpawnState.SPAWNING)
+            if (fixedState != FixedSpawnState.SPAWNING && fixedWaves.Length != 0 )
             {
                 StartCoroutine(SpawnFixedWaves(fixedWaves[nextFixedWave]));
             }
@@ -74,7 +74,7 @@ public class GameControllerTest : MonoBehaviour
         else
             nextFixedWaveCountDown -= Time.deltaTime;
 
-        if (nextWaveCountDown <= 0)
+        if (nextWaveCountDown <= 0 && state != SpawnState.DONESPAWNING)
         {
             if (state != SpawnState.SPAWNING)
             {
@@ -107,6 +107,7 @@ public class GameControllerTest : MonoBehaviour
 
     IEnumerator SpawnFixedWaves(FixedWave p_fixedWave)
     {
+       
         fixedState = FixedSpawnState.SPAWNING;
         Quaternion spawnRotation = Quaternion.identity;
 
@@ -131,7 +132,8 @@ public class GameControllerTest : MonoBehaviour
         nextWaveCountDown = timeBetweenWaves;
         if (nextWave + 1 > waves.Length - 1)
         {
-            nextWave = 0;
+            state = SpawnState.DONESPAWNING;
+            //nextWave = 0;
         }
         else
         {
@@ -143,7 +145,7 @@ public class GameControllerTest : MonoBehaviour
     {
         fixedState = FixedSpawnState.COUNTING;
         nextFixedWaveCountDown = timeBetweenFixedWaves;
-        if (nextFixedWave + 1 > fixedWaves.Length - 1)
+        if (nextFixedWave + 1 > fixedWaves.Length - 1 || fixedWaves.Length == 0)
         {
             nextFixedWave = 0;
         }
