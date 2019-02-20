@@ -3,35 +3,54 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
 [System.Serializable]
 public class Wave
 {
+    public string name;
     public GameObject[] enemies;
+    public string enemyName;
+    public int numberOfEnemies;
+    public float spawnWait;
+}
+
+[System.Serializable]
+public class FixedWave
+{
+    public string name;
+    public GameObject[] enemies;
+    public Transform[] spawnPosition;
     public int numberOfEnemies;
     public float spawnWait;
 }
 
 public enum SpawnState { COUNTING, SPAWNING, SWITCHINGWAVES }
+public enum FixedSpawnState { COUNTING, SPAWNING, SWITCHINGWAVES }
 
 public class GameControllerTest : MonoBehaviour
 {
     public Wave[] waves;
+    public FixedWave[] fixedWaves;
     private int nextWave = 0;
-    private int currentWave;
+    private int nextFixedWave = 0;
     private int enemyType;
-    private int enemyNum;
     public float timeBetweenWaves;
+    public float timeBetweenFixedWaves;
     [SerializeField]
-    private float nextWaveCountDown; 
+    private float nextWaveCountDown;
+    [SerializeField]
+    private float nextFixedWaveCountDown;
     public Vector2 spawnValues;
     public GameObject minion;
 
     private SpawnState state = SpawnState.COUNTING;
+    private FixedSpawnState fixedState = FixedSpawnState.COUNTING;
+
 
     void Start()
     {
         nextWaveCountDown = timeBetweenWaves;
-
+        nextFixedWaveCountDown = timeBetweenFixedWaves;
     }
 
     void Update()
@@ -40,6 +59,20 @@ public class GameControllerTest : MonoBehaviour
         {
             WaveCompleted();
         }
+        if (fixedState == FixedSpawnState.SWITCHINGWAVES)
+        {
+            FixedWaveCompleted();
+        }
+        
+        if (nextFixedWaveCountDown <= 0)
+        {
+            if (fixedState != FixedSpawnState.SPAWNING)
+            {
+                StartCoroutine(SpawnFixedWaves(fixedWaves[nextFixedWave]));
+            }
+        }
+        else
+            nextFixedWaveCountDown -= Time.deltaTime;
 
         if (nextWaveCountDown <= 0)
         {
@@ -54,48 +87,42 @@ public class GameControllerTest : MonoBehaviour
 
     IEnumerator SpawnWaves(Wave p_wave)
     {
-        enemyNum = 0;
         state = SpawnState.SPAWNING;
         Quaternion spawnRotation = Quaternion.identity;
-       
-        for(int i = 0; i < p_wave.numberOfEnemies; i++)
+
+        for (int i = 0; i < p_wave.numberOfEnemies; i++)
         {
             enemyType = Random.Range(0, p_wave.enemies.Length);
             Vector2 spawnPosition = new Vector2(spawnValues.x, Random.Range(-spawnValues.y, spawnValues.y));
-            if (enemyType == 0)
-            {
-                Instantiate(p_wave.enemies[enemyType], spawnPosition, spawnRotation);
-            }
-            else if (enemyType == 1 )
-            {
-                Instantiate(p_wave.enemies[enemyType], spawnPosition, spawnRotation);
-            }
-            else if (enemyType == 2)
-            {
-                Instantiate(p_wave.enemies[enemyType], spawnPosition, spawnRotation);
-            }
-            else if (enemyType == 3)
-            {
-                Instantiate(p_wave.enemies[enemyType], spawnPosition, spawnRotation);
-            }
-            else if (enemyType == 4)
-            {
-                Instantiate(p_wave.enemies[enemyType], spawnPosition, spawnRotation);
-            }
-            else if (enemyType == 5)
-            {
-                Instantiate(p_wave.enemies[enemyType], spawnPosition, spawnRotation);
-            }
-            else
-            {
-                Instantiate(minion, spawnPosition, spawnRotation);
-            }
+            Instantiate(p_wave.enemies[enemyType], spawnPosition, spawnRotation);
+
             yield return new WaitForSeconds(p_wave.spawnWait);
+
         }
         state = SpawnState.SWITCHINGWAVES;
 
         yield break;
-   
+
+    }
+
+    IEnumerator SpawnFixedWaves(FixedWave p_fixedWave)
+    {
+        fixedState = FixedSpawnState.SPAWNING;
+        Quaternion spawnRotation = Quaternion.identity;
+
+        for (int i = 0; i < p_fixedWave.numberOfEnemies; i++)
+        {
+            for (int j = 0; j < p_fixedWave.enemies.Length; j++)
+            {
+                Vector2 spawnPos = p_fixedWave.spawnPosition[j].position;
+                Instantiate(p_fixedWave.enemies[j], spawnPos, spawnRotation);
+            }
+            yield return new WaitForSeconds(p_fixedWave.spawnWait);
+        }
+        fixedState = FixedSpawnState.SWITCHINGWAVES;
+
+        yield break;
+
     }
 
     void WaveCompleted()
@@ -109,6 +136,20 @@ public class GameControllerTest : MonoBehaviour
         else
         {
             nextWave++;
+        }
+    }
+
+    void FixedWaveCompleted()
+    {
+        fixedState = FixedSpawnState.COUNTING;
+        nextFixedWaveCountDown = timeBetweenFixedWaves;
+        if (nextFixedWave + 1 > fixedWaves.Length - 1)
+        {
+            nextFixedWave = 0;
+        }
+        else
+        {
+            nextFixedWave++;
         }
     }
 }
