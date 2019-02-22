@@ -26,7 +26,7 @@ public class TestLaserGun : MonoBehaviour, IWeapon
         beam = transform.Find("Beam").gameObject;
         beam.SetActive(false);
 
-        attackCooldown = 1.7f;
+        attackCooldown = 10f;
         attackCooldownCounter = 0;
         attackActiveTime = 1.0f;
         attackActiveCounter = 0f;

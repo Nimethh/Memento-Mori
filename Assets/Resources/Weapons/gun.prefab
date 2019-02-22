@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7873687154383247529}
   m_Layer: 0
   m_Name: gun
-  m_TagString: Untagged
+  m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -93,7 +93,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a9f41f7ab011ee4f822e7a823411d32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationOffset: 0
+  minAngle: 0
+  maxAngle: 0
 --- !u!114 &7873687154383247529
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -106,3 +107,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b7b8a0a00507d144a79b0cf3c2b3fcf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerHand: {fileID: 0}
+  specialAttackCooldown: 0
+  specialAttackCooldownCounter: 0
+  specialAttackActiveTime: 0
+  specialAttackActiveCounter: 0
+  specialAttackActivated: 0
+  attackCooldown: 0
+  attackCooldownCounter: 0

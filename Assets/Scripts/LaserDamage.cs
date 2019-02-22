@@ -6,10 +6,16 @@ public class LaserDamage : MonoBehaviour
 {
 
     private float damage;
+    private Collider2D col;
 
     void Start()
     {
-        damage = 200f;
+        damage = 400f;
+        col = GetComponent<Collider2D>();
+        if(col == null)
+        {
+            Debug.Log("No collider found on gameObject");
+        }
     }
 
 

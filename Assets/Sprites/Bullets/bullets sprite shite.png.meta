@@ -1,18 +1,16 @@
 fileFormatVersion: 2
-guid: 1151cb1ffa5d9cd4eb9818d7c0d17df1
+guid: b919e56df349b6849a5280a5a2097cc8
 TextureImporter:
   fileIDToRecycleName:
-    21300000: sprite sheet avatar_0
-    21300002: sprite sheet avatar_1
-    21300004: sprite sheet avatar_2
-    21300006: sprite sheet avatar_3
-    21300008: sprite sheet avatar_4
-    21300010: sprite sheet avatar_5
-    21300012: sprite sheet avatar_6
-    21300014: sprite sheet avatar_7
-    21300016: sprite sheet avatar_8
-    21300018: sprite sheet avatar_9
-    21300020: sprite sheet avatar_10
+    21300000: bullets sprite shite_0
+    21300002: bullets sprite shite_1
+    21300004: bullets sprite shite_2
+    21300006: bullets sprite shite_3
+    21300008: bullets sprite shite_4
+    21300010: bullets sprite shite_5
+    21300012: bullets sprite shite_6
+    21300014: bullets sprite shite_7
+    21300016: bullets sprite shite_8
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -74,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -85,7 +83,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -95,221 +93,181 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sprite sheet avatar_0
+      name: bullets sprite shite_0
       rect:
         serializedVersion: 2
-        x: 296
-        y: 3431
-        width: 520
-        height: 417
+        x: 157
+        y: 3585
+        width: 953
+        height: 194
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fe0bd01fc0b713d44afcdd501a3c87be
+      spriteID: 65710400a126e5c47a1fd5219f50533b
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sprite sheet avatar_1
+      name: bullets sprite shite_1
       rect:
         serializedVersion: 2
-        x: 1987
-        y: 2187
-        width: 1405
-        height: 1402
+        x: 2297
+        y: 3738
+        width: 309
+        height: 216
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 37a34a4914154a3459c452f9ef5e02cf
+      spriteID: 70e6e932465adc544a14a58578daafd9
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sprite sheet avatar_2
+      name: bullets sprite shite_2
       rect:
         serializedVersion: 2
-        x: 297
-        y: 2909
-        width: 552
-        height: 414
+        x: 200
+        y: 2863
+        width: 655
+        height: 444
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 98dd54675dc9272498fb4e269b848170
+      spriteID: 48ecc33b91010a84c8f6240f57049dfe
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sprite sheet avatar_3
+      name: bullets sprite shite_3
       rect:
         serializedVersion: 2
-        x: 296
-        y: 2355
-        width: 973
-        height: 364
-      alignment: 9
-      pivot: {x: 0.043330666, y: 0.8144263}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 004f93da1ddbf7b479ab0288a5c58531
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sprite sheet avatar_4
-      rect:
-        serializedVersion: 2
-        x: 296
-        y: 1949
-        width: 257
-        height: 202
+        x: 2128
+        y: 3196
+        width: 532
+        height: 290
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3695aa1803b60fe4c891088e9634d34d
+      spriteID: 68a3c8210b91c7c4fbb906c7c84214c6
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sprite sheet avatar_5
+      name: bullets sprite shite_4
       rect:
         serializedVersion: 2
-        x: 629
-        y: 1936
-        width: 196
-        height: 223
+        x: 1754
+        y: 2716
+        width: 894
+        height: 275
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b74b8ebc39e387841b07d1e8f8374f7d
+      spriteID: 6d804acc5c3faf648a681222ac675eb9
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sprite sheet avatar_6
+      name: bullets sprite shite_5
       rect:
         serializedVersion: 2
-        x: 305
-        y: 179
-        width: 664
-        height: 1310
-      alignment: 9
-      pivot: {x: 0.4999592, y: 0.6732219}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 06669b7710df90b4f96c3171ed7d3183
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sprite sheet avatar_7
-      rect:
-        serializedVersion: 2
-        x: 1221
-        y: 201
-        width: 640
-        height: 1288
-      alignment: 9
-      pivot: {x: 0.49061698, y: 0.66765857}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 92c238fcc730c6843840f879ef867c8e
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sprite sheet avatar_8
-      rect:
-        serializedVersion: 2
-        x: 2127
-        y: 208
-        width: 664
-        height: 1281
-      alignment: 9
-      pivot: {x: 0.45772028, y: 0.6658563}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4ce48669a8aaa4f42862a0e00c26d1fd
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sprite sheet avatar_9
-      rect:
-        serializedVersion: 2
-        x: 3107
-        y: 1263
-        width: 434
-        height: 224
+        x: 341
+        y: 2242
+        width: 955
+        height: 372
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 25424c0aefb22994aa4b40bae1a88e7c
+      spriteID: 9367f4a0176b7cd4db76037a5672fa41
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sprite sheet avatar_10
+      name: bullets sprite shite_6
       rect:
         serializedVersion: 2
-        x: 3107
-        y: 1003
-        width: 434
-        height: 220
+        x: 625
+        y: 1526
+        width: 617
+        height: 410
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 28816ce0b556fe845bf3ccff6152678f
+      spriteID: eaaa98fb93d6e274bbe3f24afbeb45cc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bullets sprite shite_7
+      rect:
+        serializedVersion: 2
+        x: 615
+        y: 826
+        width: 573
+        height: 396
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee64e2f0688abd24f99141247757d84b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bullets sprite shite_8
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 180
+        width: 968
+        height: 452
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c7cb007a60dc554baf0a7042e1f2acd
       vertices: []
       indices: 
       edges: []
@@ -317,7 +275,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 3fb852a6b01bc9243b5511ea91417e54
+    spriteID: d4f3e68c821b31a4a8a66033ed72b37e
     vertices: []
     indices: 
     edges: []
