@@ -59,7 +59,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.5, y: 0.4}
   m_EdgeRadius: 0
 --- !u!50 &6196530653250210852
 Rigidbody2D:
@@ -94,7 +94,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a6162458088f154486d7ba5997577dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 50
+  health: 100
 --- !u!212 &2306211045654176654
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -132,7 +132,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f72fdce20bb4a0a48b979fab58057d4a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4e79066e096148b4189ebb1c16fd107e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -170,4 +170,4 @@ MonoBehaviour:
   - {fileID: 8950542583330804294, guid: d086d5cc77819e8498a3b164a88de7a9, type: 3}
   projectile: {fileID: 3676647416337642317, guid: 88da1b916690a304ead91a04443d50ee,
     type: 3}
-  startWaitingTime: 2
+  startWaitingTime: 0

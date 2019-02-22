@@ -4,43 +4,43 @@ using UnityEngine;
 
 public class CommanderBehaviorTest1 : MonoBehaviour
 {
-    public float speed;
+    //public float speed;
 
-    public Transform movingSpot;
-    public float minX;
-    public float maxX;
-    public float minY;
-    public float maxY;
+    //public Transform movingSpot;
+    //public float minX;
+    //public float maxX;
+    //public float minY;
+    //public float maxY;
 
     public GameObject projectile; //Changed in the inspector 2019-02-18
 
-    private float waitTime;
-    public float startWaitingTime;
+    //private float waitTime;
+    //public float startWaitingTime;
 
     private float timeBetweenShots;
     public float fireDelay;
 
     void Start()
     {
-        movingSpot.position = new Vector2(Random.Range(minX, maxX), Random.Range(minY, maxY));
-        waitTime = startWaitingTime;
+        //movingSpot.position = new Vector2(Random.Range(minX, maxX), Random.Range(minY, maxY));
+        //waitTime = startWaitingTime;
         timeBetweenShots = fireDelay;
     }
 
     void Update()
     {
-        transform.position = Vector2.MoveTowards(transform.position, movingSpot.position, speed * Time.deltaTime);
+        //transform.position = Vector2.MoveTowards(transform.position, movingSpot.position, speed * Time.deltaTime);
 
-        if (Vector2.Distance(transform.position, movingSpot.position) < 0.2f)
-        {
-            if (waitTime <= 0)
-            {
-                movingSpot.position = new Vector2(Random.Range(minX, maxX), Random.Range(minY, maxY));
-                waitTime = startWaitingTime;
-            }
-            else
-                waitTime -= Time.deltaTime;
-        }
+        //if (Vector2.Distance(transform.position, movingSpot.position) < 0.2f)
+        //{
+        //    if (waitTime <= 0)
+        //    {
+        //        movingSpot.position = new Vector2(Random.Range(minX, maxX), Random.Range(minY, maxY));
+        //        waitTime = startWaitingTime;
+        //    }
+        //    else
+        //        waitTime -= Time.deltaTime;
+        //}
 
         if (timeBetweenShots <= 0)
         {
