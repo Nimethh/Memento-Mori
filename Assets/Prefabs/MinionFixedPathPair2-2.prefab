@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2306211045654176654}
   - component: {fileID: 1853601237430367998}
   m_Layer: 0
-  m_Name: MinionFixedPathPair2
+  m_Name: MinionFixedPathPair2-2
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -94,7 +94,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a6162458088f154486d7ba5997577dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  health: 50
 --- !u!212 &2306211045654176654
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -155,19 +155,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2b545e401d149d4f95013273cd142b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 3.5
   damage: 10
   movingSpots:
-  - {fileID: 8950542583330804294, guid: b93d846fdfcc6214e9ecde2788d4ef21, type: 3}
-  - {fileID: 8950542583330804294, guid: 7633381319f3e3345b33ae319274bbdc, type: 3}
-  - {fileID: 8950542583330804294, guid: 22c715041e1bc7242b5a648e554d7248, type: 3}
-  - {fileID: 8950542583330804294, guid: 2cc82387d43faf2449fca29e5ed27802, type: 3}
-  - {fileID: 8950542583330804294, guid: d086d5cc77819e8498a3b164a88de7a9, type: 3}
-  - {fileID: 5228283037402052960, guid: fefe05dd8f83a4342b8ff2dbcd8bae0d, type: 3}
-  - {fileID: 5228283037402052960, guid: 0369eba2987369046ae15cc6573b8c8d, type: 3}
-  - {fileID: 5228283037402052960, guid: 1119aa606c672d5499094771340194d7, type: 3}
-  - {fileID: 5228283037402052960, guid: d42a7e853b168254f95306f9f4e4d1ce, type: 3}
-  - {fileID: 5228283037402052960, guid: 58c6aa21f824e9340be0052979323a69, type: 3}
+  - {fileID: 8950542583330804294, guid: 06e00d58df5b951428d93dd0c72bbe0e, type: 3}
+  - {fileID: 8950542583330804294, guid: a0ac83447e36cd74ca0a59978d30663c, type: 3}
+  - {fileID: 8950542583330804294, guid: 4568d5b299be6a04bb4f6f83d2b6bd4f, type: 3}
+  - {fileID: 8950542583330804294, guid: 293aa2bfc50f3314b9c4b36fdd66695a, type: 3}
+  - {fileID: 5228283037402052960, guid: 144f3ef548df397468ef2d96c104394e, type: 3}
+  - {fileID: 5228283037402052960, guid: dfe8deb52bd4fe549967eaccf983bcfa, type: 3}
+  - {fileID: 5228283037402052960, guid: 382d007f2b232f84793d5e34b1825285, type: 3}
+  - {fileID: 5228283037402052960, guid: 6727839e51ccac44d80440f8502f84dc, type: 3}
   projectile: {fileID: 3676647416337642317, guid: 88da1b916690a304ead91a04443d50ee,
     type: 3}
   startWaitingTime: 0
+  fireDelay: 5
+  maxRandomFireDelayModifier: 10
+  minRandomFireDelayModifier: 0

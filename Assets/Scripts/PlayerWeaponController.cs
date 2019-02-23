@@ -45,7 +45,8 @@ public class PlayerWeaponController : MonoBehaviour
     {
         if(equippedWeapon != null)
         {
-            Destroy(playerHand.transform.GetChild(0).gameObject); //Destroy the currently equipped weapon
+            UnequipWeapon();
+            //Destroy(playerHand.transform.GetChild(0).gameObject); //Destroy the currently equipped weapon
         }
 
         //Loading the weapon from the resources folder -> "Weapons" and then which weapon by its objectslug

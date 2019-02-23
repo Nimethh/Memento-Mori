@@ -69,25 +69,13 @@ public class PlayerUpgradeController : MonoBehaviour
 
                     if (equippedArmUpgrade != null)
                     {
-                        
-                        Destroy(playerHand.transform.GetChild(3).gameObject); //Destroy the currently equipped weapon
-
-                        //playerArmUpgrade = GameObject.FindGameObjectWithTag("PlayerArmUpgrade").gameObject; //Check if this works
-                        //Should change this to actually find the weapon instead of assuming it.
+                        Debug.Log("Trying to add an arm upgrade when we already have one! This should never happen");
+                        //Destroy(playerHand.transform.GetChild(3).gameObject);
                     }
                     else
                     {
                         weaponController.UnequipWeapon();
-
-                        //Destroy the weapon the player is currently holding.
-
-                        //GameObject currentlyEquippedWeapon = GameObject.FindGameObjectWithTag("Weapon").gameObject;
-                        //if(currentlyEquippedWeapon != null)
-                        //{
-                        //    Destroy(currentlyEquippedWeapon);
-
-                        //}
-
+                        Debug.Log("Should have unequipped the weapon if we held one");
                     }
                     //Loading the weapon from the resources folder -> "Weapons" and then which weapon by its objectslug
                     GameObject equippedArm = (GameObject)Instantiate(Resources.Load<GameObject>("Upgrades/" + upgradeSlug), playerHand.transform.position, playerHand.transform.rotation);

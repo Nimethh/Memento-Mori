@@ -87,7 +87,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 400
+  spritePixelsToUnits: 800
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -469,7 +469,7 @@ TextureImporter:
       name: laser sprite sheet_17
       rect:
         serializedVersion: 2
-        x: 366
+        x: 372
         y: 2580
         width: 3407
         height: 536

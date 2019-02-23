@@ -15,14 +15,18 @@ public class EnemyFixedPathMovement : MonoBehaviour
     private float waitTime;
     public float startWaitingTime;
 
-    //private float timeBetweenShots;
-    //public float fireDelay;
+    private float timeBetweenShots;
+    public float fireDelay;
+    public float maxRandomFireDelayModifier;
+    public float minRandomFireDelayModifier;
 
     void Start()
     {
         fixedSpot = 0;
         waitTime = startWaitingTime;
         //timeBetweenShots = fireDelay;
+        timeBetweenShots = fireDelay + Random.Range(minRandomFireDelayModifier, maxRandomFireDelayModifier);
+
     }
 
     void Update()
@@ -34,7 +38,7 @@ public class EnemyFixedPathMovement : MonoBehaviour
             if (waitTime <= 0)
             {
                 fixedSpot++;
-                Instantiate(projectile, transform.position, Quaternion.identity);
+                //Instantiate(projectile, transform.position, Quaternion.identity);
 
                 if (fixedSpot + 1 > movingSpots.Length)
                 {
@@ -49,15 +53,16 @@ public class EnemyFixedPathMovement : MonoBehaviour
             }
         }
 
-        //if (timeBetweenShots <= 0)
-        //{
-        //    Instantiate(projectile, transform.position, Quaternion.identity);
-        //    timeBetweenShots = fireDelay;
-        //}
-        //else
-        //{
-        //    timeBetweenShots -= Time.deltaTime;
-        //}
+        if (timeBetweenShots <= 0)
+        {
+            Instantiate(projectile, transform.position, Quaternion.identity);
+            timeBetweenShots = fireDelay + Random.Range(minRandomFireDelayModifier,maxRandomFireDelayModifier);
+            Debug.Log(timeBetweenShots);
+        }
+        else
+        {
+            timeBetweenShots -= Time.deltaTime;
+        }
     }
 
     void OnTriggerEnter2D(Collider2D other)

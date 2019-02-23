@@ -11,7 +11,7 @@ public class ShotgunBullet : MonoBehaviour
     [SerializeField]
     private int damage;
     [SerializeField]
-    private float lifetime = 0.3f;
+    private float lifetime;
 
     private Rigidbody2D rigid;
 
@@ -22,7 +22,7 @@ public class ShotgunBullet : MonoBehaviour
         rigid = GetComponent<Rigidbody2D>();
         speed = 20f;
         rigid.velocity = transform.right * speed;
-
+        lifetime = 0.7f;
     }
 
     void Update()
@@ -49,7 +49,7 @@ public class ShotgunBullet : MonoBehaviour
             }
 
             collision.gameObject.GetComponent<IHealth>().TakeDamage(damage);
-            damage -= 5; 
+            damage -= 25; 
 
             if(damage < 0)
             {

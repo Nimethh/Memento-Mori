@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7114359561310626102}
   m_Layer: 0
   m_Name: railgun
-  m_TagString: Untagged
+  m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -95,7 +95,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a9f41f7ab011ee4f822e7a823411d32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationOffset: 0
+  minAngle: 0
+  maxAngle: 0
 --- !u!114 &1650205314330212544
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -120,6 +121,7 @@ MonoBehaviour:
   attackCooldownTimer: 0
   attackIsOnCooldown: 0
   hasPlayedPerfectTimeAnim: 0
+  minScale: 1
 --- !u!95 &7114359561310626102
 Animator:
   serializedVersion: 3

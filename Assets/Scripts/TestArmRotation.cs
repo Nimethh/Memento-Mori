@@ -15,7 +15,7 @@ public class TestArmRotation : MonoBehaviour
     private void Start()
     {
         minAngle = -70;
-        maxAngle = 30;
+        maxAngle = 50;
     }
 
     void Update()

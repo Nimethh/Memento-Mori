@@ -21,6 +21,11 @@ public class TestShotgun : MonoBehaviour, IWeapon
     [SerializeField]
     private float ammoRechargeTimer;
 
+    [SerializeField]
+    private float minAngle;
+    [SerializeField]
+    private float maxAngle;
+
     public void Start()
     {
         playerHand = GameObject.FindGameObjectWithTag("PlayerHand").gameObject;
@@ -31,6 +36,10 @@ public class TestShotgun : MonoBehaviour, IWeapon
         maxBulletSpreadAngle = 13f;
         shotsLeft = 6;
         ammoRechargeTimer = 0f;
+
+        minAngle = -70;
+        maxAngle = 50;
+
     }
 
     public void Update()
@@ -77,6 +86,7 @@ public class TestShotgun : MonoBehaviour, IWeapon
                 Vector3 difference = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
                 difference.Normalize();
                 float rotationZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg; //Finding the angle in degrees
+                rotationZ = Mathf.Clamp(rotationZ, minAngle, maxAngle);
 
                 GameObject bullet = (GameObject)Instantiate(Resources.Load<GameObject>("Bullets/ShotgunBullet"), playerHand.transform.position + new Vector3(Random.Range(0.2f,0.8f), 0,0), playerHand.transform.rotation);
                 bullet.transform.rotation = Quaternion.Euler(0f, 0f, rotationZ + randomAngle);

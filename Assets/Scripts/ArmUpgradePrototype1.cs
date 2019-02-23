@@ -95,6 +95,6 @@ public class ArmUpgradePrototype1 : MonoBehaviour, IArmUpgrade
         laserAttackCooldownCounter = laserAttackCooldown;
 
         //weeapon overheat
-        attackCooldownCounter += 3.0f;
+        attackCooldownCounter += 7.0f;
     }
 }

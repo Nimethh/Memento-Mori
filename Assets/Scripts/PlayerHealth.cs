@@ -6,6 +6,12 @@ using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour, IHealth
 {
+
+    [SerializeField]
+    private Animator anim;
+    [SerializeField]
+    private CameraShake cameraShake;
+
     [SerializeField]
     private int lives;
     [SerializeField]
@@ -25,7 +31,8 @@ public class PlayerHealth : MonoBehaviour, IHealth
 
     void Start()
     {
-        lives = 3;
+        anim = GetComponent<Animator>();
+        lives = 30;
         isInvulnerable = false;
         invulnerabilityTime = 3f;
         maxHealth = 100;
@@ -52,6 +59,7 @@ public class PlayerHealth : MonoBehaviour, IHealth
                 isInvulnerable = true;
                 invulnerabilityCounter = invulnerabilityTime;
                 healthBar.value = currentHealth;
+                anim.SetTrigger("LostALife");
 
             }
         }
@@ -80,6 +88,9 @@ public class PlayerHealth : MonoBehaviour, IHealth
             currentHealth = currentHealth - damage;
             healthBar.maxValue = maxHealth;
             healthBar.value = currentHealth;
+
+            StartCoroutine(cameraShake.Shake(0.2f, 0.1f));
+
         }
     }
 
@@ -95,6 +106,9 @@ public class PlayerHealth : MonoBehaviour, IHealth
             currentHealth = currentHealth - damage;
             healthBar.maxValue = maxHealth;
             healthBar.value = currentHealth;
+
+            StartCoroutine(cameraShake.Shake(0.2f, 0.1f));
+
         }
     }
 }
