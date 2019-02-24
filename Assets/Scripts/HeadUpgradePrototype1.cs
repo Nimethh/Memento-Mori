@@ -16,12 +16,17 @@ public class HeadUpgradePrototype1 : MonoBehaviour, IUpgrade
     [SerializeField]
     private float slowDownScale;
 
+    [SerializeField]
+    BackgroundColorChanger backgroundChanger;
+
     private void Start()
     {
+        backgroundChanger = GameObject.FindGameObjectWithTag("Background").gameObject.GetComponent<BackgroundColorChanger>();
+
         abilityCooldown = 15f;
         abilityCooldownCounter = 0f;
-        slowDownDuration = 5f;
-        slowDownScale = 0.4f;
+        slowDownDuration = 10f;
+        slowDownScale = 0.3f;
     }
 
     void Update()
@@ -34,9 +39,9 @@ public class HeadUpgradePrototype1 : MonoBehaviour, IUpgrade
         if (slowDownTimeRemaining > 0)
         {
             slowDownTimeRemaining -= Time.unscaledDeltaTime; //This might be wrong.
-            if(slowDownTimeRemaining <= 0)
+            if (slowDownTimeRemaining <= 0)
             {
-                Time.timeScale = 1;
+                backgroundChanger.ChangeBackToNormal();
             }
         }
     }
@@ -56,8 +61,51 @@ public class HeadUpgradePrototype1 : MonoBehaviour, IUpgrade
 
     private void SlowDownTime()
     {
-        Time.timeScale = slowDownScale;
+        //Time.timeScale = slowDownScale;
         slowDownTimeRemaining = slowDownDuration;
+
+        StartCoroutine(SlowDown());
+
+        backgroundChanger.ChangeHueToRed();
     }
 
+
+    public IEnumerator SlowDown()
+    {
+        //float duration = 10.0f;
+        float elapsedTime = 0.0f;
+        float easeIntoSlowMotionTime = 2f;
+        float easeBackToNormalSpeed = 2f;
+        float easeFactor = 0.01f;
+
+        while(elapsedTime < slowDownDuration)
+        {
+            if (elapsedTime < easeIntoSlowMotionTime)
+            {
+                Time.timeScale -= easeFactor;
+                if (Time.timeScale < slowDownScale)
+                {
+                    Time.timeScale = slowDownScale;
+                }
+            }
+
+            //if (elapsedTime > (duration - easeBackToNormalSpeed))
+            if (elapsedTime > (slowDownDuration - easeBackToNormalSpeed))
+            {
+                Time.timeScale += easeFactor;
+                if (Time.timeScale > 1)
+                {
+                    Time.timeScale = 1;
+                }
+            }
+
+            elapsedTime += Time.unscaledDeltaTime;
+            //Debug.Log(elapsedTime + " " + Time.timeScale);
+
+            yield return null;
+        }
+
+        Time.timeScale = 1;
+
+    }
 }

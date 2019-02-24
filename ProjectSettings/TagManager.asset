@@ -13,6 +13,7 @@ TagManager:
   - PickUpItemUI
   - Bullet
   - Weapon
+  - Background
   - ControlRobot
   layers:
   - Default

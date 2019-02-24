@@ -92,6 +92,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8af3ebc6f2a1fb44db14c44eafccbf77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  abilityCooldown: 0
+  abilityCooldownCounter: 0
   slowDownDuration: 0
   slowDownTimeRemaining: 0
   slowDownScale: 0
+  backgroundSprites: []
