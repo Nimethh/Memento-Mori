@@ -9,7 +9,6 @@ public class Wave
 {
     public string name;
     public GameObject[] enemies;
-    public string enemyName;
     public int numberOfEnemies;
     public float spawnWait;
 }

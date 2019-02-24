@@ -2,22 +2,28 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SwitchState : StateMachineBehaviour
+public class ControlRobotIntro : StateMachineBehaviour
 {
-    public float timer;
-    private float timerCountDown;
+    public Transform introSpot;
+    public float speed;
+
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        timerCountDown = timer;
+
     }
-    
+
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        animator.SetTrigger("moving");
+        animator.transform.position = Vector2.MoveTowards(animator.transform.position, introSpot.position, speed * Time.deltaTime);
+        if (Vector2.Distance(animator.transform.position, introSpot.transform.position) < 0.2f)
+        {
+            animator.SetTrigger("Attack1");
+        }
     }
-    
+
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        
+
     }
+    
 }

@@ -2,22 +2,26 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SwitchState : StateMachineBehaviour
+public class SelectAttack : StateMachineBehaviour
 {
-    public float timer;
-    private float timerCountDown;
+    private int rand;
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        timerCountDown = timer;
+        rand = Random.Range(0, 2);
     }
-    
+
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        animator.SetTrigger("moving");
+        if (rand == 0)
+        {
+            animator.SetTrigger("Attack2");
+        }
+        else
+            animator.SetTrigger("Attack3");
     }
-    
+
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        
+
     }
 }
