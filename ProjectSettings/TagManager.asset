@@ -12,6 +12,9 @@ TagManager:
   - PlayerHand
   - PickUpItemUI
   - Bullet
+  - Weapon
+  - Background
+  - ControlRobot
   layers:
   - Default
   - TransparentFX

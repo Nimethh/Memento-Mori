@@ -5,6 +5,7 @@ using UnityEngine;
 public class PatrolMovement : MonoBehaviour
 {
     public float speed;
+    public float damage;
 
     public Transform[] movingSpots;
     private int randomSpot;
@@ -49,4 +50,14 @@ public class PatrolMovement : MonoBehaviour
             timeBetweenShots -= Time.deltaTime;
         }
     }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag == "PlayerCube")
+        {
+            other.gameObject.GetComponent<IHealth>().TakeDamage(damage);
+            Destroy(gameObject);
+        }
+    }
+
 }

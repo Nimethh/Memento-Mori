@@ -4,31 +4,26 @@ using UnityEngine;
 
 public class EnemyMinionHealth : MonoBehaviour, IHealth
 {
-    private int maxHealth;
-    [SerializeField]
-    private int currentHealth;
-
-    void Start()
-    {
-        maxHealth = 100;
-        currentHealth = maxHealth;
-    }
+    public float health;
 
     void Update()
     {
-        if(currentHealth <= 0)
+        if (health <= 0)
         {
-            Die();
+            Destroy(gameObject);
         }
     }
 
-    private void Die()
-    {
-        Destroy(this.gameObject);
-    }
 
     public void TakeDamage(int damage)
     {
-        currentHealth = currentHealth - damage;
+        health = health - damage;
+        //healthBar.maxValue = maxHealth;
+        //healthBar.value = currentHealth;
+    }
+
+    public void TakeDamage(float damage)
+    {
+        health = health - damage;
     }
 }

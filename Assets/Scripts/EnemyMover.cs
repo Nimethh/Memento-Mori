@@ -7,6 +7,7 @@ public class EnemyMover : MonoBehaviour
     Rigidbody2D rb;
 
     public float speed;
+    public float damage;
     private float moveHorizontal;
 
     public GameObject projectile;
@@ -37,6 +38,15 @@ public class EnemyMover : MonoBehaviour
     void FixedUpdate()
     {
         rb.velocity = new Vector2(moveHorizontal * speed, 0.0f);
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag == "PlayerCube")
+        {
+            other.gameObject.GetComponent<IHealth>().TakeDamage(damage);
+            Destroy(gameObject);
+        }
     }
 
 }

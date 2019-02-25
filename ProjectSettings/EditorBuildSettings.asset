@@ -8,7 +8,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainScreen.unity
     guid: 8eca468209082d840abc91546f0a2697
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/DeathScreen.unity
+    guid: 00fc4af6d4fef6243ae39802cb0f5a78
   - enabled: 1
     path: Assets/Scenes/Scene_1.unity
-    guid: 76b471df736099d4c809207815f9ba15
+    guid: 355d967fec320cf46a3684b230f0d01a
+  - enabled: 1
+    path: Assets/Scenes/PrototypeWeaponTest.unity
+    guid: 40183be1f81a753439060745473c029d
+  - enabled: 1
+    path: Assets/Scenes/Scene_2.unity
+    guid: 067553b7329c3a8438bd85b9f820f79d
   m_configObjects: {}

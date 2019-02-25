@@ -3,111 +3,154 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
+[System.Serializable]
+public class Wave
+{
+    public string name;
+    public GameObject[] enemies;
+    public int numberOfEnemies;
+    public float spawnWait;
+}
+
+[System.Serializable]
+public class FixedWave
+{
+    public string name;
+    public GameObject[] enemies;
+    public Transform[] spawnPosition;
+    public int numberOfEnemies;
+    public float spawnWait;
+}
+
+public enum SpawnState { COUNTING, SPAWNING, SWITCHINGWAVES, DONESPAWNING }
+public enum FixedSpawnState { COUNTING, SPAWNING, SWITCHINGWAVES, DONESPAWNING }
+
 public class GameControllerTest : MonoBehaviour
 {
-    public GameObject enemy;
-    public GameObject minion1;
-    public GameObject minion2;
-    public GameObject minion3;
-    public GameObject enemy3;
-    public GameObject commander1;
-    
+    public Wave[] waves;
+    public FixedWave[] fixedWaves;
+    private int nextWave = 0;
+    private int nextFixedWave = 0;
+    private int enemyType;
+    public float timeBetweenWaves;
+    public float timeBetweenFixedWaves;
+    [SerializeField]
+    private float nextWaveCountDown;
+    [SerializeField]
+    private float nextFixedWaveCountDown;
     public Vector2 spawnValues;
-    public int enemyCounter;
-    public float spawnWait;
-    public float waveWait;
-    public float startWait;
+    public GameObject minion;
 
-    private bool restart;
-    private bool noEnemiesLeft;
+    private SpawnState state = SpawnState.COUNTING;
+    private FixedSpawnState fixedState = FixedSpawnState.COUNTING;
 
-    void Start ()
+
+    void Start()
     {
-        restart = false;
-        noEnemiesLeft = false;
-        StartCoroutine(SpawnWaves());
+        nextWaveCountDown = timeBetweenWaves;
+        nextFixedWaveCountDown = timeBetweenFixedWaves;
     }
-	
-	void Update ()
+
+    void Update()
     {
-        if (Input.GetKeyDown(KeyCode.R))
+        if (state == SpawnState.SWITCHINGWAVES)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            WaveCompleted();
+        }
+        if (fixedState == FixedSpawnState.SWITCHINGWAVES && fixedWaves.Length != 0)
+        {
+            FixedWaveCompleted();
+        }
+        
+        if (nextFixedWaveCountDown <= 0 && fixedState != FixedSpawnState.DONESPAWNING)
+        {
+            if (fixedState != FixedSpawnState.SPAWNING && fixedWaves.Length != 0 )
+            {
+                StartCoroutine(SpawnFixedWaves(fixedWaves[nextFixedWave]));
+            }
+        }
+        else
+            nextFixedWaveCountDown -= Time.deltaTime;
+
+        if (nextWaveCountDown <= 0 && state != SpawnState.DONESPAWNING)
+        {
+            if (state != SpawnState.SPAWNING)
+            {
+                StartCoroutine(SpawnWaves(waves[nextWave]));
+            }
+        }
+        else
+            nextWaveCountDown -= Time.deltaTime;
+    }
+
+    IEnumerator SpawnWaves(Wave p_wave)
+    {
+        state = SpawnState.SPAWNING;
+        Quaternion spawnRotation = Quaternion.identity;
+
+        for (int i = 0; i < p_wave.numberOfEnemies; i++)
+        {
+            enemyType = Random.Range(0, p_wave.enemies.Length);
+            Vector2 spawnPosition = new Vector2(spawnValues.x, Random.Range(-spawnValues.y, spawnValues.y));
+            Instantiate(p_wave.enemies[enemyType], spawnPosition, spawnRotation);
+
+            yield return new WaitForSeconds(p_wave.spawnWait);
+
+        }
+        state = SpawnState.SWITCHINGWAVES;
+
+        yield break;
+
+    }
+
+    IEnumerator SpawnFixedWaves(FixedWave p_fixedWave)
+    {
+       
+        fixedState = FixedSpawnState.SPAWNING;
+        Quaternion spawnRotation = Quaternion.identity;
+
+        for (int i = 0; i < p_fixedWave.numberOfEnemies; i++)
+        {
+            for (int j = 0; j < p_fixedWave.enemies.Length; j++)
+            {
+                Vector2 spawnPos = p_fixedWave.spawnPosition[j].position;
+                Instantiate(p_fixedWave.enemies[j], spawnPos, spawnRotation);
+            }
+            yield return new WaitForSeconds(p_fixedWave.spawnWait);
+        }
+        fixedState = FixedSpawnState.SWITCHINGWAVES;
+
+        yield break;
+
+    }
+
+    void WaveCompleted()
+    {
+        state = SpawnState.COUNTING;
+        nextWaveCountDown = timeBetweenWaves;
+        if (nextWave + 1 > waves.Length - 1)
+        {
+            state = SpawnState.DONESPAWNING;
+            //nextWave = 0;
+        }
+        else
+        {
+            nextWave++;
         }
     }
 
-    IEnumerator SpawnWaves()
+    void FixedWaveCompleted()
     {
-        yield return new WaitForSeconds(startWait);
-        while (noEnemiesLeft == false)
+        fixedState = FixedSpawnState.COUNTING;
+        nextFixedWaveCountDown = timeBetweenFixedWaves;
+        if (nextFixedWave + 1 > fixedWaves.Length - 1 || fixedWaves.Length == 0)
         {
-
-            for (int i = 0; i < enemyCounter; i++)
-            {
-                Vector3 spawnPosition = new Vector2(spawnValues.x, Random.Range(-spawnValues.y, spawnValues.y));
-                Quaternion spawnRotation = Quaternion.identity;
-                Instantiate(enemy, spawnPosition, spawnRotation);
-                yield return new WaitForSeconds(spawnWait);
-            }
-            yield return new WaitForSeconds(waveWait);
-
-            for (int i = 0; i < enemyCounter; i++) // follow the position of the player.
-            {
-                Vector3 spawnPosition = new Vector2(spawnValues.x, Random.Range(-spawnValues.y, spawnValues.y));
-                Quaternion spawnRotation = Quaternion.identity;
-                Instantiate(minion1, spawnPosition, spawnRotation);
-                yield return new WaitForSeconds(spawnWait);
-            }
-            yield return new WaitForSeconds(waveWait);
-
-            for (int i = 0; i < 1; i++) // enemy3.
-            {
-                Vector3 spawnPosition = new Vector2(spawnValues.x, spawnValues.y);
-                Quaternion spawnRotation = Quaternion.identity;
-                Instantiate(enemy3, spawnPosition, spawnRotation);
-                yield return new WaitForSeconds(spawnWait);
-            }
-            yield return new WaitForSeconds(waveWait);
-
-            for (int i = 0; i < enemyCounter; i++) // moves forward and shoots at the position of the player.
-            {
-                Vector3 spawnPosition = new Vector2(spawnValues.x, Random.Range(-spawnValues.y, spawnValues.y));
-                Quaternion spawnRotation = Quaternion.identity;
-                Instantiate(minion2, spawnPosition, spawnRotation);
-                yield return new WaitForSeconds(spawnWait);
-            }
-            yield return new WaitForSeconds(waveWait);
-
-            for (int i = 0; i < 1; i++) // enemy3.
-            {
-                Vector3 spawnPosition = new Vector2(spawnValues.x, spawnValues.y);
-                Quaternion spawnRotation = Quaternion.identity;
-                Instantiate(enemy3, spawnPosition, spawnRotation);
-                yield return new WaitForSeconds(spawnWait);
-            }
-            yield return new WaitForSeconds(waveWait);
-
-            for (int i = 0; i < enemyCounter; i++) // movest into random spots in the screen.
-            {
-                Vector3 spawnPosition = new Vector2(spawnValues.x, Random.Range(-spawnValues.y, spawnValues.y));
-                Quaternion spawnRotation = Quaternion.identity;
-                Instantiate(minion3, spawnPosition, spawnRotation);
-                yield return new WaitForSeconds(spawnWait);
-            }
-            yield return new WaitForSeconds(waveWait);
-
-
-
-            for (int i = 0; i < 1; i++) // commander.
-            {
-                Vector3 spawnPosition = new Vector2(spawnValues.x, Random.Range(-spawnValues.y, spawnValues.y));
-                Quaternion spawnRotation = Quaternion.identity;
-                Instantiate(commander1, spawnPosition, spawnRotation);
-                yield return new WaitForSeconds(spawnWait);
-            }
-            yield return new WaitForSeconds(waveWait);
-
-            noEnemiesLeft = true;
+            nextFixedWave = 0;
+        }
+        else
+        {
+            nextFixedWave++;
         }
     }
 }

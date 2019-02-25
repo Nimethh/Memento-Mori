@@ -9,6 +9,9 @@ public class ProjectileTowards : MonoBehaviour
     private Transform player;
     private Vector2 playerPos;
 
+    [SerializeField]
+    private int damage;
+
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("PlayerCube").transform;
@@ -21,6 +24,15 @@ public class ProjectileTowards : MonoBehaviour
 
         if (transform.position.x == playerPos.x && transform.position.y == playerPos.y)
         {
+            Destroy(gameObject);
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag == "PlayerCube")
+        {
+            other.gameObject.GetComponent<IHealth>().TakeDamage(damage);
             Destroy(gameObject);
         }
     }

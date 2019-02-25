@@ -9,9 +9,11 @@ public class PlayerWeaponController : MonoBehaviour
     public GameObject equippedWeapon { get; set; }
     public IWeapon equippedWeaponInterface;
 
+    public bool hasWeaponEquipped;
+
     void Start()
     {
-        
+        hasWeaponEquipped = false;   
     }
 
     private void Update()
@@ -21,9 +23,20 @@ public class PlayerWeaponController : MonoBehaviour
             PreformWeaponAttack();
         }
 
-        if(Input.GetMouseButtonDown(1))
+
+
+        if (Input.GetMouseButtonDown(1))
         {
             PreformWeaponSpecialAttack();
+        }
+    }
+
+    private void FixedUpdate()
+    {
+        //Added 2019-02-14
+        if (Input.GetMouseButton(0))
+        {
+            PreformWeaponAttack();
         }
     }
 
@@ -32,20 +45,35 @@ public class PlayerWeaponController : MonoBehaviour
     {
         if(equippedWeapon != null)
         {
-            Destroy(playerHand.transform.GetChild(0).gameObject); //Destroy the currently equipped weapon
+            UnequipWeapon();
+            //Destroy(playerHand.transform.GetChild(0).gameObject); //Destroy the currently equipped weapon
         }
 
         //Loading the weapon from the resources folder -> "Weapons" and then which weapon by its objectslug
         equippedWeapon = (GameObject)Instantiate(Resources.Load<GameObject>("Weapons/" + weaponToEquip.objectSlug), playerHand.transform.position, playerHand.transform.rotation); 
         equippedWeapon.transform.SetParent(playerHand.transform); //Setting the weapon in our playerhand 
         equippedWeaponInterface = equippedWeapon.GetComponent<IWeapon>();
+
+        hasWeaponEquipped = true;
     }
+
+    public void UnequipWeapon()
+    {
+        Debug.Log("UnequippedWeapon() called");
+
+        if(hasWeaponEquipped == true)
+        {
+            equippedWeaponInterface = null;
+            Destroy(equippedWeapon);
+        }
+    }
+
 
     public void PreformWeaponAttack()
     {
         if(equippedWeaponInterface == null)
         {
-            Debug.Log("equippedWeaponInterface equals null");
+            //Debug.Log("equippedWeaponInterface equals null");
             return;
         }
 
