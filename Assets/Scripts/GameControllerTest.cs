@@ -58,11 +58,11 @@ public class GameControllerTest : MonoBehaviour
         {
             WaveCompleted();
         }
-        if (fixedState == FixedSpawnState.SWITCHINGWAVES && fixedWaves.Length != 0)
+        if (fixedState == FixedSpawnState.SWITCHINGWAVES && fixedWaves.Length != 0 )
         {
             FixedWaveCompleted();
         }
-        
+
         if (nextFixedWaveCountDown <= 0 && fixedState != FixedSpawnState.DONESPAWNING)
         {
             if (fixedState != FixedSpawnState.SPAWNING && fixedWaves.Length != 0 )
@@ -144,9 +144,10 @@ public class GameControllerTest : MonoBehaviour
     {
         fixedState = FixedSpawnState.COUNTING;
         nextFixedWaveCountDown = timeBetweenFixedWaves;
-        if (nextFixedWave + 1 > fixedWaves.Length - 1 || fixedWaves.Length == 0)
+        if (nextFixedWave + 1 > fixedWaves.Length - 1 || GameObject.FindGameObjectWithTag("ControlRobot") != null)
         {
-            nextFixedWave = 0;
+            fixedState = FixedSpawnState.DONESPAWNING;
+            //nextFixedWave = 0;
         }
         else
         {

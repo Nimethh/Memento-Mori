@@ -40,7 +40,7 @@ public class GunBullet : MonoBehaviour
     {
         //Debug.Log("OnTriggerEnter2D() - GunBullet");
 
-        if (collision.gameObject.tag == "Enemy")
+        if (collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "Commander" || collision.gameObject.tag == "ControlRobot")
         {
             if (collision.gameObject.GetComponent<IHealth>() == null)
             {
