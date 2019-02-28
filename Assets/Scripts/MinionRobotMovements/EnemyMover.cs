@@ -39,7 +39,6 @@ public class EnemyMover : MonoBehaviour
     void FixedUpdate()
     {
         rb.velocity = new Vector2(moveHorizontal * speed, 0.0f);
-        
     }
 
     void OnTriggerEnter2D(Collider2D other)

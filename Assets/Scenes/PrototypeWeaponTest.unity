@@ -442,6 +442,103 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 197288056}
   m_CullTransparentMesh: 0
+--- !u!1 &283836093
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 283836095}
+  - component: {fileID: 283836094}
+  m_Layer: 0
+  m_Name: EnemySpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &283836094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 283836093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49a33961bec84304f8ba9408ebf012f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  randomWaves:
+  - _name: 
+    _enemies:
+    - {fileID: 2842162685594509257, guid: e66fa377f062e8747becc8092aab7524, type: 3}
+    _numberOfEnemies: 3
+    _spawnWait: 1
+    _nextWaveWait: 10
+  - _name: 
+    _enemies:
+    - {fileID: 4185441438980989160, guid: 4e934f1f24c68964c85420d93260cb82, type: 3}
+    _numberOfEnemies: 3
+    _spawnWait: 1
+    _nextWaveWait: 20
+  - _name: 
+    _enemies:
+    - {fileID: 8692342588957997579, guid: 66918cae20d909b4fb71bb727c374263, type: 3}
+    _numberOfEnemies: 3
+    _spawnWait: 1
+    _nextWaveWait: 30
+  nextWaveCountDown: 0
+  fixedWaves:
+  - _name: 
+    _enemies:
+    - {fileID: 6503396846667062680, guid: c14e7bd2bb5fd09408af15569d82d59b, type: 3}
+    - {fileID: 6503396846667062680, guid: bbb9312c8b81c284397be685088c9186, type: 3}
+    _spawnPosition:
+    - {fileID: 6231993013841224117, guid: 62a8f798e80f3e644b5cd4500a65d3c7, type: 3}
+    - {fileID: 3362369562031019362, guid: cdeb21582136b0344b92264257f3deae, type: 3}
+    _numberOfEnemies: 4
+    _spawnWait: 1
+    _nextFixedWaveWait: 10
+  - _name: 
+    _enemies:
+    - {fileID: 8692342588957997579, guid: 66918cae20d909b4fb71bb727c374263, type: 3}
+    - {fileID: 2842162685594509257, guid: e66fa377f062e8747becc8092aab7524, type: 3}
+    _spawnPosition:
+    - {fileID: 9047504251098390283, guid: e9348bbc524c1b549afc56778fb8ad01, type: 3}
+    - {fileID: 3362369562031019362, guid: cdeb21582136b0344b92264257f3deae, type: 3}
+    _numberOfEnemies: 4
+    _spawnWait: 1
+    _nextFixedWaveWait: 20
+  - _name: 
+    _enemies:
+    - {fileID: 6503396846667062680, guid: 5e7d727bd9bcf2d47bc4aee794e13da0, type: 3}
+    - {fileID: 6503396846667062680, guid: bdbcc31a9a94b1a4f816029f56fb66e5, type: 3}
+    _spawnPosition:
+    - {fileID: 6231993013841224117, guid: 62a8f798e80f3e644b5cd4500a65d3c7, type: 3}
+    - {fileID: 3362369562031019362, guid: cdeb21582136b0344b92264257f3deae, type: 3}
+    _numberOfEnemies: 4
+    _spawnWait: 1
+    _nextFixedWaveWait: 30
+  nextFixedWaveCountDown: 0
+  spawnValues: {x: 10, y: 4.5}
+  minion: {fileID: 4185441438980989160, guid: 4e934f1f24c68964c85420d93260cb82, type: 3}
+--- !u!4 &283836095
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 283836093}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &316630000
 GameObject:
   m_ObjectHideFlags: 0
@@ -3526,11 +3623,13 @@ MonoBehaviour:
     - {fileID: 8692342588957997579, guid: 66918cae20d909b4fb71bb727c374263, type: 3}
     numberOfEnemies: 2
     spawnWait: 0.5
+    nextWaveWait: 0
   - name: 
     enemies:
     - {fileID: 8692342588957997579, guid: 66918cae20d909b4fb71bb727c374263, type: 3}
     numberOfEnemies: 4
     spawnWait: 0.5
+    nextWaveWait: 0
   - name: 
     enemies:
     - {fileID: 8692342588957997579, guid: 66918cae20d909b4fb71bb727c374263, type: 3}
@@ -3539,16 +3638,21 @@ MonoBehaviour:
     - {fileID: 8692342588957997579, guid: 66918cae20d909b4fb71bb727c374263, type: 3}
     numberOfEnemies: 3
     spawnWait: 0.5
+    nextWaveWait: 0
   - name: 
     enemies:
     - {fileID: 8692342588957997579, guid: 66918cae20d909b4fb71bb727c374263, type: 3}
     numberOfEnemies: 6
     spawnWait: 1
+    nextWaveWait: 0
   - name: 
     enemies:
     - {fileID: 178612081, guid: 45255b346e77a83479db86fae5f03c55, type: 3}
     numberOfEnemies: 1
     spawnWait: 1
+    nextWaveWait: 0
+  timeBetweenWaves: 5
+  nextWaveCountDown: 0
   fixedWaves:
   - name: 
     enemies:
@@ -3657,10 +3761,8 @@ MonoBehaviour:
     - {fileID: 6231993013841224117, guid: 62a8f798e80f3e644b5cd4500a65d3c7, type: 3}
     numberOfEnemies: 3
     spawnWait: 3
-  timeBetweenWaves: 2
   timeBetweenFixedWaves: 10
-  nextWaveCountDown: 7
-  nextFixedWaveCountDown: 5
+  nextFixedWaveCountDown: 0
   spawnValues: {x: 10, y: 4.5}
   minion: {fileID: 8692342588957997579, guid: 66918cae20d909b4fb71bb727c374263, type: 3}
 --- !u!4 &1935067818
