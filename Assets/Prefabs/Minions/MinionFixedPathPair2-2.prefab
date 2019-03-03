@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2889403837389185272}
   - component: {fileID: 1853601237430367998}
   - component: {fileID: 2306211045654176654}
+  - component: {fileID: 1160436104467711254}
   m_Layer: 0
   m_Name: MinionFixedPathPair2-2
   m_TagString: Enemy
@@ -174,6 +175,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1160436104467711254
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6503396846667062680}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b1c0bd8eee158f3428dc1183af9cdebc, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &7527234427895972372
 GameObject:
   m_ObjectHideFlags: 0

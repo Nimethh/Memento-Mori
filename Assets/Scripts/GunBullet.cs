@@ -49,6 +49,8 @@ public class GunBullet : MonoBehaviour
             }
 
             collision.gameObject.GetComponent<IHealth>().TakeDamage(damage);
+            Animator anim = collision.GetComponent<Animator>();
+            anim.SetTrigger("Damaged");
             Destroy(this.gameObject);
 
         }

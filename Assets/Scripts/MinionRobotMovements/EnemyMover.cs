@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyMover : MonoBehaviour
 {
     Rigidbody2D rb;
+    SpriteRenderer sp;
 
     public float speed;
     public float damage;
@@ -19,6 +20,7 @@ public class EnemyMover : MonoBehaviour
 	void Start ()
     {
         rb = GetComponent<Rigidbody2D>();
+        sp = GetComponent<SpriteRenderer>();
         moveHorizontal = -1;
         timeBetweenShots = fireDelay;
 	}

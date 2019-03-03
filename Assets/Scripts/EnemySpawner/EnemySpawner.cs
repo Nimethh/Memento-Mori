@@ -83,9 +83,9 @@ public class EnemySpawner : MonoBehaviour
                 StartCoroutine(FixedWaveCountDown(fixedWaves[currentFixedWave]));
             }
 
-            if (nextFixedWaveCountDown <= 0 && fixedWaveState != FIXEDWAVESTATE.DONESPAWNING)
+            if (nextFixedWaveCountDown <= 0 && fixedWaveState != FIXEDWAVESTATE.DONESPAWNING)// Check wave's timer, if not spawn new wave.
             {
-                if (fixedWaveState != FIXEDWAVESTATE.SPAWNING)
+                if (fixedWaveState != FIXEDWAVESTATE.SPAWNING) // Check if we're not already spawning.
                     StartCoroutine(SpawnFixedWaves(fixedWaves[currentFixedWave]));
             }
             else
@@ -94,16 +94,16 @@ public class EnemySpawner : MonoBehaviour
         
     }
     
-    IEnumerator RandomWaveCountDown(_Wave p_wave)
+    IEnumerator RandomWaveCountDown(_Wave p_wave) // start the countdown for the random position wave.
     {
-        if (currentWave + 1 > randomWaves.Length - 1 || GameObject.FindGameObjectWithTag("ControlRobot") != null)
+        if (currentWave + 1 > randomWaves.Length - 1 || GameObject.FindGameObjectWithTag("ControlRobot") != null) // if there is a commander in the scene
         {
-            randomWaveState = RANDOMWAVESTATE.DONESPAWNING;
+            randomWaveState = RANDOMWAVESTATE.DONESPAWNING; // stop spawning more enemies
             //nextWave = 0;
         }
         else
         {
-            currentWave++;
+            currentWave++; // increase the wave index.
         }
         randomWaveState = RANDOMWAVESTATE.COUNTING;
         nextWaveCountDown = p_wave._nextWaveWait;
@@ -111,7 +111,7 @@ public class EnemySpawner : MonoBehaviour
         yield break;
     }
 
-    IEnumerator SpawnRandomWaves(_Wave p_wave)
+    IEnumerator SpawnRandomWaves(_Wave p_wave) // spawning waves at a random positions.
     {
         randomWaveState = RANDOMWAVESTATE.SPAWNING;
         Quaternion spawnRotation = Quaternion.identity;
@@ -131,16 +131,17 @@ public class EnemySpawner : MonoBehaviour
     }
 
  
-    IEnumerator FixedWaveCountDown(_FixedWave p_fixedwave)
+    IEnumerator FixedWaveCountDown(_FixedWave p_fixedwave) // start the countdown for the fixed position wave.
     {
+        // if there is a commander in the scene and if it's not outside of the bounds of the array.
         if (currentFixedWave + 1 > fixedWaves.Length - 1 || GameObject.FindGameObjectWithTag("ControlRobot") != null)
         {
-            fixedWaveState = FIXEDWAVESTATE.DONESPAWNING;
+            fixedWaveState = FIXEDWAVESTATE.DONESPAWNING; // stop spawning enemies.
             //nextfixedWave = 0;
         }
         else
         {
-            currentFixedWave++;
+            currentFixedWave++; // increase the fixed wave index.
         }
         fixedWaveState = FIXEDWAVESTATE.COUNTING;
         nextFixedWaveCountDown = p_fixedwave._nextFixedWaveWait;
@@ -148,7 +149,7 @@ public class EnemySpawner : MonoBehaviour
         yield break;
     }
 
-    IEnumerator SpawnFixedWaves(_FixedWave p_fixedWave)
+    IEnumerator SpawnFixedWaves(_FixedWave p_fixedWave) // Spawn enemies at a fixed positions.
     {
         fixedWaveState = FIXEDWAVESTATE.SPAWNING;
         Quaternion spawnRotation = Quaternion.identity;
