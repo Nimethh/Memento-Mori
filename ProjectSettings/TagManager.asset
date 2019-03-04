@@ -15,6 +15,7 @@ TagManager:
   - Weapon
   - Background
   - ControlRobot
+  - Commander
   layers:
   - Default
   - TransparentFX

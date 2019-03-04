@@ -11,10 +11,11 @@ GameObject:
   - component: {fileID: 8534032748719946224}
   - component: {fileID: 6421234484740462847}
   - component: {fileID: 4575766877408681782}
+  - component: {fileID: 3221726848106569155}
   - component: {fileID: 1738806655351386260}
   - component: {fileID: 6444461084120598096}
   - component: {fileID: 8965030346759212029}
-  - component: {fileID: 3221726848106569155}
+  - component: {fileID: 7002492129931444085}
   m_Layer: 0
   m_Name: DragonGuaranteedWeaponDrop
   m_TagString: Enemy
@@ -62,6 +63,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a39a9d5b213af374a927afc497ad8125, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3221726848106569155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8534032748719946187}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bab3dcb86f9f804439aad3093e19e17f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 500
 --- !u!50 &1738806655351386260
 Rigidbody2D:
   serializedVersion: 4
@@ -157,16 +171,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.7}
   m_EdgeRadius: 0
---- !u!114 &3221726848106569155
-MonoBehaviour:
+--- !u!95 &7002492129931444085
+Animator:
+  serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8534032748719946187}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bab3dcb86f9f804439aad3093e19e17f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 500
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b1c0bd8eee158f3428dc1183af9cdebc, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

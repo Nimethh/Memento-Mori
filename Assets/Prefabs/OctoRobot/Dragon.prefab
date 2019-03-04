@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 2152705551473130313}
   - component: {fileID: 6444461084120598096}
   - component: {fileID: 8965030346759212029}
+  - component: {fileID: 8421599006238057674}
   m_Layer: 0
   m_Name: Dragon
   m_TagString: Enemy
@@ -154,7 +155,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -170,3 +171,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.7}
   m_EdgeRadius: 0
+--- !u!95 &8421599006238057674
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8534032748719946187}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b1c0bd8eee158f3428dc1183af9cdebc, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

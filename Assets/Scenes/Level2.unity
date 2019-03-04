@@ -458,7 +458,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &283836094
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -472,57 +472,107 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   randomWaves:
-  - _name: 
-    _enemies:
-    - {fileID: 2842162685594509257, guid: e66fa377f062e8747becc8092aab7524, type: 3}
-    _numberOfEnemies: 3
-    _spawnWait: 1
-    _nextWaveWait: 10
-  - _name: 
-    _enemies:
-    - {fileID: 4185441438980989160, guid: 4e934f1f24c68964c85420d93260cb82, type: 3}
-    _numberOfEnemies: 1
-    _spawnWait: 1
-    _nextWaveWait: 20
-  - _name: 
+  - _name: Straight Left
     _enemies:
     - {fileID: 8692342588957997579, guid: 66918cae20d909b4fb71bb727c374263, type: 3}
-    _numberOfEnemies: 3
+    - {fileID: 4185441438980989160, guid: 4e934f1f24c68964c85420d93260cb82, type: 3}
+    _numberOfEnemies: 4
+    _spawnWait: 2
+    _currentWaveWait: 3
+  - _name: Straight Left Wave
+    _enemies:
+    - {fileID: 8692342588957997579, guid: 66918cae20d909b4fb71bb727c374263, type: 3}
+    - {fileID: 4185441438980989160, guid: 4e934f1f24c68964c85420d93260cb82, type: 3}
+    _numberOfEnemies: 5
+    _spawnWait: 1.5
+    _currentWaveWait: 2
+  - _name: DropBot
+    _enemies:
+    - {fileID: 2679186436022377212, guid: 268a3490120506144a6e6ed576eb58fa, type: 3}
+    _numberOfEnemies: 2
+    _spawnWait: 0
+    _currentWaveWait: 2
+  - _name: Straight Left
+    _enemies:
+    - {fileID: 8692342588957997579, guid: 66918cae20d909b4fb71bb727c374263, type: 3}
+    _numberOfEnemies: 5
     _spawnWait: 1
-    _nextWaveWait: 30
+    _currentWaveWait: 5
+  - _name: Straight Left
+    _enemies:
+    - {fileID: 2679186436022377212, guid: 268a3490120506144a6e6ed576eb58fa, type: 3}
+    _numberOfEnemies: 5
+    _spawnWait: 1
+    _currentWaveWait: 10
+  - _name: Shoots At Player
+    _enemies:
+    - {fileID: 8692342588957997579, guid: 66918cae20d909b4fb71bb727c374263, type: 3}
+    _numberOfEnemies: 10
+    _spawnWait: 1
+    _currentWaveWait: 5
+  - _name: Commander
+    _enemies:
+    - {fileID: 178612081, guid: 45255b346e77a83479db86fae5f03c55, type: 3}
+    _numberOfEnemies: 1
+    _spawnWait: 1
+    _currentWaveWait: 0
   currentWave: 0
   nextWaveCountDown: 0
   fixedWaves:
-  - _name: 
+  - _name: Line Wave
     _enemies:
-    - {fileID: 6503396846667062680, guid: c14e7bd2bb5fd09408af15569d82d59b, type: 3}
-    - {fileID: 6503396846667062680, guid: bbb9312c8b81c284397be685088c9186, type: 3}
+    - {fileID: 3758312995726762518, guid: 54c5bc9dd1b99c1409cfd5714977512b, type: 3}
+    _spawnPosition:
+    - {fileID: 8852239151091658740, guid: da106ee148aea6f40a329f5a0da9a042, type: 3}
+    _numberOfEnemies: 1
+    _spawnWait: 1
+    _currentFixedWaveWait: 10
+    _randomize: 0
+  - _name: Triangle
+    _enemies:
+    - {fileID: 273346503339014009, guid: cb54c231438aee948af1a169484c79fc, type: 3}
+    _spawnPosition:
+    - {fileID: 8852239151091658740, guid: da106ee148aea6f40a329f5a0da9a042, type: 3}
+    _numberOfEnemies: 3
+    _spawnWait: 1
+    _currentFixedWaveWait: 10
+    _randomize: 0
+  - _name: Triangle
+    _enemies:
+    - {fileID: 792523886818145556, guid: 70d0754b59d31b34081a80198f754b35, type: 3}
+    - {fileID: 3017953561701421630, guid: 358fda73f9f809c459ec709f40b41621, type: 3}
     _spawnPosition:
     - {fileID: 6231993013841224117, guid: 62a8f798e80f3e644b5cd4500a65d3c7, type: 3}
-    - {fileID: 3362369562031019362, guid: cdeb21582136b0344b92264257f3deae, type: 3}
+    - {fileID: 5643865331848824363, guid: f8d86649ab9b5e84892435c827bd5468, type: 3}
     _numberOfEnemies: 4
     _spawnWait: 1
-    _nextFixedWaveWait: 10
-  - _name: 
+    _currentFixedWaveWait: 8
+    _randomize: 0
+  - _name: Triangle
     _enemies:
-    - {fileID: 8692342588957997579, guid: 66918cae20d909b4fb71bb727c374263, type: 3}
-    - {fileID: 2842162685594509257, guid: e66fa377f062e8747becc8092aab7524, type: 3}
+    - {fileID: 792523886818145556, guid: 70d0754b59d31b34081a80198f754b35, type: 3}
     _spawnPosition:
+    - {fileID: 6231993013841224117, guid: 62a8f798e80f3e644b5cd4500a65d3c7, type: 3}
     - {fileID: 9047504251098390283, guid: e9348bbc524c1b549afc56778fb8ad01, type: 3}
-    - {fileID: 3362369562031019362, guid: cdeb21582136b0344b92264257f3deae, type: 3}
-    _numberOfEnemies: 4
-    _spawnWait: 1
-    _nextFixedWaveWait: 20
-  - _name: 
+    - {fileID: 5539097383895949801, guid: 62c234e9e5f652146b9286fad73f3c90, type: 3}
+    _numberOfEnemies: 1
+    _spawnWait: 0
+    _currentFixedWaveWait: 8
+    _randomize: 1
+  - _name: Triangle
     _enemies:
-    - {fileID: 6503396846667062680, guid: 5e7d727bd9bcf2d47bc4aee794e13da0, type: 3}
-    - {fileID: 6503396846667062680, guid: bdbcc31a9a94b1a4f816029f56fb66e5, type: 3}
+    - {fileID: 6724403054613832485, guid: d8590be21277ccb4084155f67d0574f4, type: 3}
+    - {fileID: 6724403054613832485, guid: d8590be21277ccb4084155f67d0574f4, type: 3}
     _spawnPosition:
-    - {fileID: 6231993013841224117, guid: 62a8f798e80f3e644b5cd4500a65d3c7, type: 3}
-    - {fileID: 3362369562031019362, guid: cdeb21582136b0344b92264257f3deae, type: 3}
-    _numberOfEnemies: 4
-    _spawnWait: 1
-    _nextFixedWaveWait: 30
+    - {fileID: 8048747334740802850, guid: 6ca115c0d549e944298a56df93e4b712, type: 3}
+    - {fileID: 9047504251098390283, guid: e9348bbc524c1b549afc56778fb8ad01, type: 3}
+    - {fileID: 713315786895791186, guid: d815d3660464b744dba88a1cad15051b, type: 3}
+    - {fileID: 5643865331848824363, guid: f8d86649ab9b5e84892435c827bd5468, type: 3}
+    - {fileID: 8852239151091658740, guid: da106ee148aea6f40a329f5a0da9a042, type: 3}
+    _numberOfEnemies: 1
+    _spawnWait: 1.5
+    _currentFixedWaveWait: 5
+    _randomize: 1
   currentFixedWave: 0
   nextFixedWaveCountDown: 0
   spawnValues: {x: 10, y: 4.5}
@@ -972,7 +1022,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 553442653}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -100, y: 5.73, z: 0}
+  m_LocalPosition: {x: 1, y: 4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

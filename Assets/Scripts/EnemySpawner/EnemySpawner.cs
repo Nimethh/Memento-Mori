@@ -11,7 +11,7 @@ public class _Wave
     public GameObject[] _enemies;
     public int _numberOfEnemies;
     public float _spawnWait;
-    public float _nextWaveWait;
+    public float _currentWaveWait;
 }
 
 [System.Serializable]
@@ -22,7 +22,8 @@ public class _FixedWave
     public Transform[] _spawnPosition;
     public int _numberOfEnemies;
     public float _spawnWait;
-    public float _nextFixedWaveWait;
+    public float _currentFixedWaveWait;
+    public bool _randomize;
 }
 
 public enum RANDOMWAVESTATE { COUNTING, SPAWNING, SWITCHINGWAVES, DONESPAWNING }
@@ -31,11 +32,13 @@ public enum FIXEDWAVESTATE { COUNTING, SPAWNING, SWITCHINGWAVES, DONESPAWNING }
 public class EnemySpawner : MonoBehaviour
 {
     public _Wave[] randomWaves;
+    [SerializeField]
     private int currentWave = 0;
     [SerializeField]
     private float nextWaveCountDown;
 
     public _FixedWave[] fixedWaves;
+    [SerializeField]
     private int currentFixedWave = 0;
     [SerializeField]
     private float nextFixedWaveCountDown;
@@ -43,8 +46,10 @@ public class EnemySpawner : MonoBehaviour
     private int enemyType;
     public Vector2 spawnValues;
     public GameObject minion;
-
     
+    private bool commanderIsSpawned;
+    private bool firstRandomWave;
+    private bool firstFixedWave;
 
     private RANDOMWAVESTATE randomWaveState = RANDOMWAVESTATE.COUNTING;
     private FIXEDWAVESTATE fixedWaveState = FIXEDWAVESTATE.COUNTING;
@@ -52,18 +57,27 @@ public class EnemySpawner : MonoBehaviour
 
     void Start()
     {
+        firstRandomWave = true;
+        firstFixedWave = true;
         StartCoroutine(RandomWaveCountDown(randomWaves[currentWave]));
         StartCoroutine(FixedWaveCountDown(fixedWaves[currentFixedWave]));
+        commanderIsSpawned = false;
     }
 
     void Update()
     {
+        CommanderChecker();
         // Normal Waves
-        if (randomWaves.Length != 0)// Check if we have any normal waves int the waves.
+        if (randomWaves.Length != 0)// Check if we have any normal waves in the waves array.
         {
             if (randomWaveState == RANDOMWAVESTATE.SWITCHINGWAVES && randomWaveState != RANDOMWAVESTATE.DONESPAWNING)
             {
-                StartCoroutine(RandomWaveCountDown(randomWaves[currentWave]));
+                if(currentWave > randomWaves.Length - 1)
+                {
+                    randomWaveState = RANDOMWAVESTATE.DONESPAWNING;
+                }
+                else
+                    StartCoroutine(RandomWaveCountDown(randomWaves[currentWave])); // start the countDown.
             }
 
             if (nextWaveCountDown <= 0 && randomWaveState != RANDOMWAVESTATE.DONESPAWNING) // Check wave's timer, if not spawn new wave.
@@ -80,7 +94,12 @@ public class EnemySpawner : MonoBehaviour
         {
             if(fixedWaveState == FIXEDWAVESTATE.SWITCHINGWAVES && fixedWaveState != FIXEDWAVESTATE.DONESPAWNING)
             {
-                StartCoroutine(FixedWaveCountDown(fixedWaves[currentFixedWave]));
+                if(currentFixedWave > fixedWaves.Length - 1)
+                {
+                    fixedWaveState = FIXEDWAVESTATE.DONESPAWNING;
+                }
+                else
+                    StartCoroutine(FixedWaveCountDown(fixedWaves[currentFixedWave]));
             }
 
             if (nextFixedWaveCountDown <= 0 && fixedWaveState != FIXEDWAVESTATE.DONESPAWNING)// Check wave's timer, if not spawn new wave.
@@ -93,20 +112,32 @@ public class EnemySpawner : MonoBehaviour
         }
         
     }
-    
+
     IEnumerator RandomWaveCountDown(_Wave p_wave) // start the countdown for the random position wave.
     {
-        if (currentWave + 1 > randomWaves.Length - 1 || GameObject.FindGameObjectWithTag("ControlRobot") != null) // if there is a commander in the scene
+        if (randomWaves.Length != 0)
         {
-            randomWaveState = RANDOMWAVESTATE.DONESPAWNING; // stop spawning more enemies
-            //nextWave = 0;
+            //if (currentWave + 1 > randomWaves.Length - 1 || commanderIsSpawned == true)
+            if(currentWave > randomWaves.Length - 1)
+            {
+                yield break;
+            }
+            else if (commanderIsSpawned == true)// if there is a commander in the scene
+            {
+                randomWaveState = RANDOMWAVESTATE.DONESPAWNING; // stop spawning more enemies
+            }
+            else if (firstRandomWave == true)
+            {
+                randomWaveState = RANDOMWAVESTATE.COUNTING;
+                nextWaveCountDown = p_wave._currentWaveWait;
+            }
+            else
+            {
+                currentWave++;
+                randomWaveState = RANDOMWAVESTATE.COUNTING;
+                nextWaveCountDown = p_wave._currentWaveWait;
+            }
         }
-        else
-        {
-            currentWave++; // increase the wave index.
-        }
-        randomWaveState = RANDOMWAVESTATE.COUNTING;
-        nextWaveCountDown = p_wave._nextWaveWait;
 
         yield break;
     }
@@ -125,7 +156,15 @@ public class EnemySpawner : MonoBehaviour
             yield return new WaitForSeconds(p_wave._spawnWait);
 
         }
-        randomWaveState = RANDOMWAVESTATE.SWITCHINGWAVES;
+        if (currentWave + 1 > randomWaves.Length - 1)
+        {
+            randomWaveState = RANDOMWAVESTATE.DONESPAWNING;
+        }
+        else
+        {
+            randomWaveState = RANDOMWAVESTATE.SWITCHINGWAVES;
+            firstRandomWave = false;
+        }
 
         yield break;
     }
@@ -133,19 +172,34 @@ public class EnemySpawner : MonoBehaviour
  
     IEnumerator FixedWaveCountDown(_FixedWave p_fixedwave) // start the countdown for the fixed position wave.
     {
-        // if there is a commander in the scene and if it's not outside of the bounds of the array.
-        if (currentFixedWave + 1 > fixedWaves.Length - 1 || GameObject.FindGameObjectWithTag("ControlRobot") != null)
+        //if (fixedWaves.Length != 0)
+        //{
+        if (fixedWaveState != FIXEDWAVESTATE.DONESPAWNING)
         {
-            fixedWaveState = FIXEDWAVESTATE.DONESPAWNING; // stop spawning enemies.
-            //nextfixedWave = 0;
-        }
-        else
-        {
-            currentFixedWave++; // increase the fixed wave index.
-        }
-        fixedWaveState = FIXEDWAVESTATE.COUNTING;
-        nextFixedWaveCountDown = p_fixedwave._nextFixedWaveWait;
+            if (currentFixedWave > fixedWaves.Length - 1)
+            {
+                yield break;
+            }
+            else if (commanderIsSpawned == true)
+            {
+                fixedWaveState = FIXEDWAVESTATE.DONESPAWNING; // stop spawning enemies.
+            }
+            else if (firstFixedWave == true)
+            {
+                fixedWaveState = FIXEDWAVESTATE.COUNTING;
+                nextFixedWaveCountDown = p_fixedwave._currentFixedWaveWait;
+            }
+            // if there is a commander in the scene and if it's not outside of the bounds of the array.
+            //else if (currentFixedWave + 1 > fixedWaves.Length - 1 || commanderIsSpawned == true)
 
+            else
+            {
+                currentFixedWave++;
+                fixedWaveState = FIXEDWAVESTATE.COUNTING;
+                nextFixedWaveCountDown = p_fixedwave._currentFixedWaveWait;
+            }
+        }
+        //}
         yield break;
     }
 
@@ -158,13 +212,43 @@ public class EnemySpawner : MonoBehaviour
         {
             for (int j = 0; j < p_fixedWave._enemies.Length; j++)
             {
-                Vector2 spawnPos = p_fixedWave._spawnPosition[j].position;
-                Instantiate(p_fixedWave._enemies[j], spawnPos, spawnRotation);
+                if (p_fixedWave._randomize == false)
+                {
+                    Vector2 spawnPos = p_fixedWave._spawnPosition[j].position;
+                    Instantiate(p_fixedWave._enemies[j], spawnPos, spawnRotation);
+                }
+                else
+                {
+                    int spawnPosIndex = Random.Range(0, p_fixedWave._spawnPosition.Length);
+                    Vector2 spawnPos = p_fixedWave._spawnPosition[spawnPosIndex].position;
+                    Instantiate(p_fixedWave._enemies[j], spawnPos, spawnRotation);
+                }
             }
             yield return new WaitForSeconds(p_fixedWave._spawnWait);
         }
-        fixedWaveState = FIXEDWAVESTATE.SWITCHINGWAVES;
+        if (currentFixedWave + 1 > fixedWaves.Length - 1)
+        {
+            fixedWaveState = FIXEDWAVESTATE.DONESPAWNING;
+        }
+        else
+        {
+            fixedWaveState = FIXEDWAVESTATE.SWITCHINGWAVES;
+            firstFixedWave = false;
+        }
 
         yield break;
+    }
+
+    void CommanderChecker()
+    {
+        if(GameObject.FindGameObjectWithTag("Commander") != null)
+        {
+            commanderIsSpawned = true;
+        }
+        
+        if (commanderIsSpawned == true && GameObject.FindGameObjectWithTag("Commander") == null)
+        {
+            Debug.Log("The Commander is dead");
+        }
     }
 }

@@ -472,57 +472,68 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   randomWaves:
-  - _name: 
+  - _name: Straight Left 1
     _enemies:
-    - {fileID: 2842162685594509257, guid: e66fa377f062e8747becc8092aab7524, type: 3}
-    _numberOfEnemies: 3
-    _spawnWait: 1
-    _nextWaveWait: 10
-  - _name: 
-    _enemies:
-    - {fileID: 4185441438980989160, guid: 4e934f1f24c68964c85420d93260cb82, type: 3}
+    - {fileID: 8692342588957997579, guid: 66918cae20d909b4fb71bb727c374263, type: 3}
     _numberOfEnemies: 1
-    _spawnWait: 1
-    _nextWaveWait: 20
-  - _name: 
+    _spawnWait: 0
+    _currentWaveWait: 5
+  - _name: Straight Left 2
+    _enemies:
+    - {fileID: 8692342588957997579, guid: 66918cae20d909b4fb71bb727c374263, type: 3}
+    _numberOfEnemies: 2
+    _spawnWait: 2.5
+    _currentWaveWait: 2
+  - _name: Straight Left 3
     _enemies:
     - {fileID: 8692342588957997579, guid: 66918cae20d909b4fb71bb727c374263, type: 3}
     _numberOfEnemies: 3
+    _spawnWait: 2
+    _currentWaveWait: 2
+  - _name: Straight Left 4
+    _enemies:
+    - {fileID: 8692342588957997579, guid: 66918cae20d909b4fb71bb727c374263, type: 3}
+    _numberOfEnemies: 5
     _spawnWait: 1
-    _nextWaveWait: 30
+    _currentWaveWait: 2
+  - _name: Straight Left 5
+    _enemies:
+    - {fileID: 8692342588957997579, guid: 66918cae20d909b4fb71bb727c374263, type: 3}
+    _numberOfEnemies: 10
+    _spawnWait: 1
+    _currentWaveWait: 1
+  - _name: DropBot
+    _enemies:
+    - {fileID: 2679186436022377212, guid: 268a3490120506144a6e6ed576eb58fa, type: 3}
+    _numberOfEnemies: 1
+    _spawnWait: 0
+    _currentWaveWait: 3
+  - _name: Straight Left 6
+    _enemies:
+    - {fileID: 8692342588957997579, guid: 66918cae20d909b4fb71bb727c374263, type: 3}
+    _numberOfEnemies: 15
+    _spawnWait: 1
+    _currentWaveWait: 20
+  - _name: Commander
+    _enemies:
+    - {fileID: 178612081, guid: 45255b346e77a83479db86fae5f03c55, type: 3}
+    _numberOfEnemies: 1
+    _spawnWait: 2
+    _currentWaveWait: 30
   currentWave: 0
   nextWaveCountDown: 0
   fixedWaves:
-  - _name: 
+  - _name: Arrow Wave
     _enemies:
-    - {fileID: 6503396846667062680, guid: c14e7bd2bb5fd09408af15569d82d59b, type: 3}
-    - {fileID: 6503396846667062680, guid: bbb9312c8b81c284397be685088c9186, type: 3}
+    - {fileID: 6724403054613832485, guid: d8590be21277ccb4084155f67d0574f4, type: 3}
     _spawnPosition:
-    - {fileID: 6231993013841224117, guid: 62a8f798e80f3e644b5cd4500a65d3c7, type: 3}
-    - {fileID: 3362369562031019362, guid: cdeb21582136b0344b92264257f3deae, type: 3}
+    - {fileID: 713315786895791186, guid: d815d3660464b744dba88a1cad15051b, type: 3}
+    - {fileID: 8852239151091658740, guid: da106ee148aea6f40a329f5a0da9a042, type: 3}
+    - {fileID: 5643865331848824363, guid: f8d86649ab9b5e84892435c827bd5468, type: 3}
     _numberOfEnemies: 4
     _spawnWait: 1
-    _nextFixedWaveWait: 10
-  - _name: 
-    _enemies:
-    - {fileID: 8692342588957997579, guid: 66918cae20d909b4fb71bb727c374263, type: 3}
-    - {fileID: 2842162685594509257, guid: e66fa377f062e8747becc8092aab7524, type: 3}
-    _spawnPosition:
-    - {fileID: 9047504251098390283, guid: e9348bbc524c1b549afc56778fb8ad01, type: 3}
-    - {fileID: 3362369562031019362, guid: cdeb21582136b0344b92264257f3deae, type: 3}
-    _numberOfEnemies: 4
-    _spawnWait: 1
-    _nextFixedWaveWait: 20
-  - _name: 
-    _enemies:
-    - {fileID: 6503396846667062680, guid: 5e7d727bd9bcf2d47bc4aee794e13da0, type: 3}
-    - {fileID: 6503396846667062680, guid: bdbcc31a9a94b1a4f816029f56fb66e5, type: 3}
-    _spawnPosition:
-    - {fileID: 6231993013841224117, guid: 62a8f798e80f3e644b5cd4500a65d3c7, type: 3}
-    - {fileID: 3362369562031019362, guid: cdeb21582136b0344b92264257f3deae, type: 3}
-    _numberOfEnemies: 4
-    _spawnWait: 1
-    _nextFixedWaveWait: 30
+    _currentFixedWaveWait: 65
+    _randomize: 1
   currentFixedWave: 0
   nextFixedWaveCountDown: 0
   spawnValues: {x: 10, y: 4.5}
