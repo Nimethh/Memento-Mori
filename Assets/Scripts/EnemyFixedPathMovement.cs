@@ -57,7 +57,7 @@ public class EnemyFixedPathMovement : MonoBehaviour
         {
             Instantiate(projectile, transform.position, Quaternion.identity);
             timeBetweenShots = fireDelay + Random.Range(minRandomFireDelayModifier,maxRandomFireDelayModifier);
-            Debug.Log(timeBetweenShots);
+            //Debug.Log(timeBetweenShots);
         }
         else
         {

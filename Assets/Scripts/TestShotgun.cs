@@ -7,6 +7,9 @@ public class TestShotgun : MonoBehaviour, IWeapon
     public GameObject playerHand;
 
     [SerializeField]
+    private GameObject gunBarrel;
+
+    [SerializeField]
     private float attackCooldown;
     [SerializeField]
     private float attackCooldownTimer;
@@ -29,6 +32,13 @@ public class TestShotgun : MonoBehaviour, IWeapon
     public void Start()
     {
         playerHand = GameObject.FindGameObjectWithTag("PlayerHand").gameObject;
+
+        gunBarrel = transform.Find("GunBarrel").gameObject;
+        if (gunBarrel == null)
+        {
+            Debug.Log("Did not find GunBarrel object");
+        }
+
         attackCooldown = 0.8f;
         attackCooldownTimer = 0f;
         attackIsOnCooldown = false;
@@ -86,9 +96,10 @@ public class TestShotgun : MonoBehaviour, IWeapon
                 Vector3 difference = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
                 difference.Normalize();
                 float rotationZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg; //Finding the angle in degrees
-                rotationZ = Mathf.Clamp(rotationZ, minAngle, maxAngle);
 
-                GameObject bullet = (GameObject)Instantiate(Resources.Load<GameObject>("Bullets/ShotgunBullet"), playerHand.transform.position + new Vector3(Random.Range(0.2f,0.8f), 0,0), playerHand.transform.rotation);
+                //rotationZ = Mathf.Clamp(rotationZ, minAngle, maxAngle);
+
+                GameObject bullet = (GameObject)Instantiate(Resources.Load<GameObject>("Bullets/ShotgunBullet"), gunBarrel.transform.position /*+ new Vector3(Random.Range(0.2f,0.8f), 0,0)*/, gunBarrel.transform.rotation);
                 bullet.transform.rotation = Quaternion.Euler(0f, 0f, rotationZ + randomAngle);
             }
 

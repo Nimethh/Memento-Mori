@@ -13,7 +13,8 @@ public class PlayerWeaponController : MonoBehaviour
 
     void Start()
     {
-        hasWeaponEquipped = false;   
+        hasWeaponEquipped = false;
+        EquipDefaultGun();
     }
 
     private void Update()
@@ -51,6 +52,15 @@ public class PlayerWeaponController : MonoBehaviour
 
         //Loading the weapon from the resources folder -> "Weapons" and then which weapon by its objectslug
         equippedWeapon = (GameObject)Instantiate(Resources.Load<GameObject>("Weapons/" + weaponToEquip.objectSlug), playerHand.transform.position, playerHand.transform.rotation); 
+        equippedWeapon.transform.SetParent(playerHand.transform); //Setting the weapon in our playerhand 
+        equippedWeaponInterface = equippedWeapon.GetComponent<IWeapon>();
+
+        hasWeaponEquipped = true;
+    }
+
+    public void EquipDefaultGun()
+    {
+        equippedWeapon = (GameObject)Instantiate(Resources.Load<GameObject>("Weapons/gun"), playerHand.transform.position, playerHand.transform.rotation);
         equippedWeapon.transform.SetParent(playerHand.transform); //Setting the weapon in our playerhand 
         equippedWeaponInterface = equippedWeapon.GetComponent<IWeapon>();
 

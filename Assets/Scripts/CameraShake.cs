@@ -10,7 +10,7 @@ public class CameraShake : MonoBehaviour
 {
     public IEnumerator Shake(float duration, float magnitude)
     {
-        Debug.Log("Shake!");
+        //Debug.Log("Shake!");
 
         Vector3 originalPosition = transform.localPosition;
 
