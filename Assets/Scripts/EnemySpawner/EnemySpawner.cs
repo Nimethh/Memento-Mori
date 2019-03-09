@@ -11,7 +11,7 @@ public class _Wave
     public GameObject[] _enemies;
     public int _numberOfEnemies;
     public float _spawnWait;
-    public float _currentWaveWait;
+    public float _nextWaveWait;
 }
 
 [System.Serializable]
@@ -22,7 +22,7 @@ public class _FixedWave
     public Transform[] _spawnPosition;
     public int _numberOfEnemies;
     public float _spawnWait;
-    public float _currentFixedWaveWait;
+    public float _nextFixedWaveWait;
     public bool _randomize;
 }
 
@@ -32,18 +32,22 @@ public enum FIXEDWAVESTATE { COUNTING, SPAWNING, SWITCHINGWAVES, DONESPAWNING }
 public class EnemySpawner : MonoBehaviour
 {
     public _Wave[] randomWaves;
+    public int randomWaveStartWait = 5;
     [SerializeField]
     private int currentWave = 0;
     [SerializeField]
     private float nextWaveCountDown;
 
     public _FixedWave[] fixedWaves;
+    public int fixedWaveStartWait = 5;
     [SerializeField]
     private int currentFixedWave = 0;
     [SerializeField]
     private float nextFixedWaveCountDown;
 
     private int enemyType;
+    private int transformIndex = 0;
+
     public Vector2 spawnValues;
     public GameObject minion;
     
@@ -129,13 +133,13 @@ public class EnemySpawner : MonoBehaviour
             else if (firstRandomWave == true)
             {
                 randomWaveState = RANDOMWAVESTATE.COUNTING;
-                nextWaveCountDown = p_wave._currentWaveWait;
+                nextWaveCountDown = randomWaveStartWait;
             }
             else
             {
                 currentWave++;
                 randomWaveState = RANDOMWAVESTATE.COUNTING;
-                nextWaveCountDown = p_wave._currentWaveWait;
+                nextWaveCountDown = p_wave._nextWaveWait;
             }
         }
 
@@ -187,7 +191,7 @@ public class EnemySpawner : MonoBehaviour
             else if (firstFixedWave == true)
             {
                 fixedWaveState = FIXEDWAVESTATE.COUNTING;
-                nextFixedWaveCountDown = p_fixedwave._currentFixedWaveWait;
+                nextFixedWaveCountDown = fixedWaveStartWait;
             }
             // if there is a commander in the scene and if it's not outside of the bounds of the array.
             //else if (currentFixedWave + 1 > fixedWaves.Length - 1 || commanderIsSpawned == true)
@@ -196,7 +200,7 @@ public class EnemySpawner : MonoBehaviour
             {
                 currentFixedWave++;
                 fixedWaveState = FIXEDWAVESTATE.COUNTING;
-                nextFixedWaveCountDown = p_fixedwave._currentFixedWaveWait;
+                nextFixedWaveCountDown = p_fixedwave._nextFixedWaveWait;
             }
         }
         //}
@@ -219,9 +223,13 @@ public class EnemySpawner : MonoBehaviour
                 }
                 else
                 {
-                    int spawnPosIndex = Random.Range(0, p_fixedWave._spawnPosition.Length);
-                    Vector2 spawnPos = p_fixedWave._spawnPosition[spawnPosIndex].position;
+                    if(transformIndex + 1 > p_fixedWave._spawnPosition.Length )
+                    {
+                        transformIndex = 0;
+                    }
+                    Vector2 spawnPos = p_fixedWave._spawnPosition[transformIndex].position;
                     Instantiate(p_fixedWave._enemies[j], spawnPos, spawnRotation);
+                    transformIndex++;
                 }
             }
             yield return new WaitForSeconds(p_fixedWave._spawnWait);

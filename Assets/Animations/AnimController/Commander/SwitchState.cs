@@ -4,11 +4,8 @@ using UnityEngine;
 
 public class SwitchState : StateMachineBehaviour
 {
-    public float timer;
-    private float timerCountDown;
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        timerCountDown = timer;
     }
     
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)

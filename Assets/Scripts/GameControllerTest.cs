@@ -57,7 +57,6 @@ public class GameControllerTest : MonoBehaviour
 
     void Update()
     {
-        
         if (state == SpawnState.SWITCHINGWAVES && waves.Length != 0)
         {
             WaveCompleted();
