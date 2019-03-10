@@ -50,6 +50,7 @@ public class EnemySpawner : MonoBehaviour
 
     public Vector2 spawnValues;
     public GameObject minion;
+    private SceneTransition st;
     
     private bool commanderIsSpawned;
     private bool firstRandomWave;
@@ -256,7 +257,7 @@ public class EnemySpawner : MonoBehaviour
         
         if (commanderIsSpawned == true && GameObject.FindGameObjectWithTag("Commander") == null)
         {
-            Debug.Log("The Commander is dead");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 }
