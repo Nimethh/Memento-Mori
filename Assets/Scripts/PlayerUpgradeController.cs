@@ -159,7 +159,7 @@ public class PlayerUpgradeController : MonoBehaviour
     {
         if (equippedArmUpgrade == null)
         {
-            Debug.Log("equippedArmUpgrade equals null");
+            //Debug.Log("equippedArmUpgrade equals null");
             return;
         }
 
