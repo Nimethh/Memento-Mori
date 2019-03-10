@@ -11,6 +11,7 @@ public class Wave
     public GameObject[] enemies;
     public int numberOfEnemies;
     public float spawnWait;
+    public float nextWaveWait;
 }
 
 [System.Serializable]
@@ -29,40 +30,42 @@ public enum FixedSpawnState { COUNTING, SPAWNING, SWITCHINGWAVES, DONESPAWNING }
 public class GameControllerTest : MonoBehaviour
 {
     public Wave[] waves;
-    public FixedWave[] fixedWaves;
     private int nextWave = 0;
-    private int nextFixedWave = 0;
-    private int enemyType;
     public float timeBetweenWaves;
-    public float timeBetweenFixedWaves;
     [SerializeField]
     private float nextWaveCountDown;
+
+    public FixedWave[] fixedWaves;
+    private int nextFixedWave = 0;
+    public float timeBetweenFixedWaves;
     [SerializeField]
     private float nextFixedWaveCountDown;
+
+    private int enemyType;
     public Vector2 spawnValues;
     public GameObject minion;
 
     private SpawnState state = SpawnState.COUNTING;
-    private FixedSpawnState fixedState = FixedSpawnState.COUNTING;
+    private FixedSpawnState fixedState = FixedSpawnState.SPAWNING;
 
 
     void Start()
     {
         nextWaveCountDown = timeBetweenWaves;
-        nextFixedWaveCountDown = timeBetweenFixedWaves;
+        //nextFixedWaveCountDown = timeBetweenFixedWaves;
     }
 
     void Update()
     {
-        if (state == SpawnState.SWITCHINGWAVES)
+        if (state == SpawnState.SWITCHINGWAVES && waves.Length != 0)
         {
             WaveCompleted();
         }
-        if (fixedState == FixedSpawnState.SWITCHINGWAVES && fixedWaves.Length != 0)
+        if (fixedState == FixedSpawnState.SWITCHINGWAVES && fixedWaves.Length != 0 )
         {
             FixedWaveCompleted();
         }
-        
+
         if (nextFixedWaveCountDown <= 0 && fixedState != FixedSpawnState.DONESPAWNING)
         {
             if (fixedState != FixedSpawnState.SPAWNING && fixedWaves.Length != 0 )
@@ -70,7 +73,7 @@ public class GameControllerTest : MonoBehaviour
                 StartCoroutine(SpawnFixedWaves(fixedWaves[nextFixedWave]));
             }
         }
-        else
+        else if (fixedState == FixedSpawnState.COUNTING)
             nextFixedWaveCountDown -= Time.deltaTime;
 
         if (nextWaveCountDown <= 0 && state != SpawnState.DONESPAWNING)
@@ -80,7 +83,7 @@ public class GameControllerTest : MonoBehaviour
                 StartCoroutine(SpawnWaves(waves[nextWave]));
             }
         }
-        else
+        else if(state == SpawnState.COUNTING)
             nextWaveCountDown -= Time.deltaTime;
     }
 
@@ -98,7 +101,8 @@ public class GameControllerTest : MonoBehaviour
             yield return new WaitForSeconds(p_wave.spawnWait);
 
         }
-        state = SpawnState.SWITCHINGWAVES;
+        //state = SpawnState.SWITCHINGWAVES;
+        fixedState = FixedSpawnState.SWITCHINGWAVES;
 
         yield break;
 
@@ -119,7 +123,9 @@ public class GameControllerTest : MonoBehaviour
             }
             yield return new WaitForSeconds(p_fixedWave.spawnWait);
         }
-        fixedState = FixedSpawnState.SWITCHINGWAVES;
+        //fixedState = FixedSpawnState.SWITCHINGWAVES;
+        // check if nextWave/ nextFixedWave is > 0 if so just switch the opposite wave otherwise if it's == 0 we just start counting.
+        state = SpawnState.SWITCHINGWAVES;
 
         yield break;
 
@@ -144,9 +150,10 @@ public class GameControllerTest : MonoBehaviour
     {
         fixedState = FixedSpawnState.COUNTING;
         nextFixedWaveCountDown = timeBetweenFixedWaves;
-        if (nextFixedWave + 1 > fixedWaves.Length - 1 || fixedWaves.Length == 0)
+        if (nextFixedWave + 1 > fixedWaves.Length - 1 || GameObject.FindGameObjectWithTag("ControlRobot") != null)
         {
-            nextFixedWave = 0;
+            fixedState = FixedSpawnState.DONESPAWNING;
+            //nextFixedWave = 0;
         }
         else
         {

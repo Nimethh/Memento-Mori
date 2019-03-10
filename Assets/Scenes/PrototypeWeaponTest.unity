@@ -156,7 +156,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 46387550}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -5.91, y: -0.38, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1103324953}
@@ -235,7 +235,7 @@ MonoBehaviour:
     xMin: -8
     xMax: 8
     yMin: -4.2
-    yMax: 4.2
+    yMax: 3.6
 --- !u!50 &46387556
 Rigidbody2D:
   serializedVersion: 4
@@ -301,20 +301,10 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.25532317, y: 1.1109529}
-      - {x: 0.10222262, y: 1.1166167}
-      - {x: 0, y: 1}
-      - {x: -0.2107091, y: 0.58961016}
-      - {x: -0.34448147, y: 0.4162122}
-      - {x: -0.27206632, y: 0.22485727}
-      - {x: -0.6060636, y: -0.39499164}
-      - {x: -0.48891947, y: -0.5822649}
-      - {x: -0.4175246, y: -0.32307613}
-      - {x: -0.06950587, y: -0.010059953}
-      - {x: 0.1131341, y: 0.067305446}
-      - {x: 0.013823807, y: 0.23438376}
-      - {x: 0.086275846, y: 0.4540308}
-      - {x: 0.28545442, y: 0.9193638}
+    - - {x: 0.255, y: 1.11}
+      - {x: -0.37, y: 0.36}
+      - {x: 0.04, y: -0.01}
+      - {x: 0.38, y: 0.76}
 --- !u!114 &46387559
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -452,6 +442,105 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 197288056}
   m_CullTransparentMesh: 0
+--- !u!1 &283836093
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 283836095}
+  - component: {fileID: 283836094}
+  m_Layer: 0
+  m_Name: EnemySpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &283836094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 283836093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49a33961bec84304f8ba9408ebf012f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  randomWaves:
+  - _name: 
+    _enemies:
+    - {fileID: 2842162685594509257, guid: e66fa377f062e8747becc8092aab7524, type: 3}
+    _numberOfEnemies: 3
+    _spawnWait: 1
+    _nextWaveWait: 10
+  - _name: 
+    _enemies:
+    - {fileID: 4185441438980989160, guid: 4e934f1f24c68964c85420d93260cb82, type: 3}
+    _numberOfEnemies: 1
+    _spawnWait: 1
+    _nextWaveWait: 20
+  - _name: 
+    _enemies:
+    - {fileID: 8692342588957997579, guid: 66918cae20d909b4fb71bb727c374263, type: 3}
+    _numberOfEnemies: 3
+    _spawnWait: 1
+    _nextWaveWait: 30
+  currentWave: 0
+  nextWaveCountDown: 0
+  fixedWaves:
+  - _name: 
+    _enemies:
+    - {fileID: 6503396846667062680, guid: c14e7bd2bb5fd09408af15569d82d59b, type: 3}
+    - {fileID: 6503396846667062680, guid: bbb9312c8b81c284397be685088c9186, type: 3}
+    _spawnPosition:
+    - {fileID: 6231993013841224117, guid: 62a8f798e80f3e644b5cd4500a65d3c7, type: 3}
+    - {fileID: 3362369562031019362, guid: cdeb21582136b0344b92264257f3deae, type: 3}
+    _numberOfEnemies: 4
+    _spawnWait: 1
+    _nextFixedWaveWait: 10
+  - _name: 
+    _enemies:
+    - {fileID: 8692342588957997579, guid: 66918cae20d909b4fb71bb727c374263, type: 3}
+    - {fileID: 2842162685594509257, guid: e66fa377f062e8747becc8092aab7524, type: 3}
+    _spawnPosition:
+    - {fileID: 9047504251098390283, guid: e9348bbc524c1b549afc56778fb8ad01, type: 3}
+    - {fileID: 3362369562031019362, guid: cdeb21582136b0344b92264257f3deae, type: 3}
+    _numberOfEnemies: 4
+    _spawnWait: 1
+    _nextFixedWaveWait: 20
+  - _name: 
+    _enemies:
+    - {fileID: 6503396846667062680, guid: 5e7d727bd9bcf2d47bc4aee794e13da0, type: 3}
+    - {fileID: 6503396846667062680, guid: bdbcc31a9a94b1a4f816029f56fb66e5, type: 3}
+    _spawnPosition:
+    - {fileID: 6231993013841224117, guid: 62a8f798e80f3e644b5cd4500a65d3c7, type: 3}
+    - {fileID: 3362369562031019362, guid: cdeb21582136b0344b92264257f3deae, type: 3}
+    _numberOfEnemies: 4
+    _spawnWait: 1
+    _nextFixedWaveWait: 30
+  currentFixedWave: 0
+  nextFixedWaveCountDown: 0
+  spawnValues: {x: 10, y: 4.5}
+  minion: {fileID: 4185441438980989160, guid: 4e934f1f24c68964c85420d93260cb82, type: 3}
+--- !u!4 &283836095
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 283836093}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &316630000
 GameObject:
   m_ObjectHideFlags: 0
@@ -883,7 +972,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 553442653}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.5, y: 5.73, z: 0}
+  m_LocalPosition: {x: -100, y: 5.73, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -900,6 +989,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ShotgunCrateSpawner
+      objectReference: {fileID: 0}
+    - target: {fileID: 2811396098752654924, guid: c22209c7aa56dc04ab99c2c2b0222eac,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7948838425379890143, guid: c22209c7aa56dc04ab99c2c2b0222eac,
         type: 3}
@@ -2614,6 +2708,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: RailGunCrateSpawner
       objectReference: {fileID: 0}
+    - target: {fileID: 2811396098752654924, guid: c22209c7aa56dc04ab99c2c2b0222eac,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7948838425379890143, guid: c22209c7aa56dc04ab99c2c2b0222eac,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3013,6 +3112,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: LaserCrateSpawner
       objectReference: {fileID: 0}
+    - target: {fileID: 2811396098752654924, guid: c22209c7aa56dc04ab99c2c2b0222eac,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7948838425379890143, guid: c22209c7aa56dc04ab99c2c2b0222eac,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3241,6 +3345,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: GunCrateSpawner
+      objectReference: {fileID: 0}
+    - target: {fileID: 2811396098752654924, guid: c22209c7aa56dc04ab99c2c2b0222eac,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7948838425379890143, guid: c22209c7aa56dc04ab99c2c2b0222eac,
         type: 3}
@@ -3516,110 +3625,145 @@ MonoBehaviour:
     - {fileID: 8692342588957997579, guid: 66918cae20d909b4fb71bb727c374263, type: 3}
     numberOfEnemies: 2
     spawnWait: 0.5
+    nextWaveWait: 0
   - name: 
     enemies:
     - {fileID: 8692342588957997579, guid: 66918cae20d909b4fb71bb727c374263, type: 3}
     numberOfEnemies: 4
     spawnWait: 0.5
+    nextWaveWait: 0
   - name: 
     enemies:
-    - {fileID: 2842162685594509257, guid: e66fa377f062e8747becc8092aab7524, type: 3}
+    - {fileID: 8692342588957997579, guid: 66918cae20d909b4fb71bb727c374263, type: 3}
     numberOfEnemies: 3
     spawnWait: 0.5
+    nextWaveWait: 0
   - name: 
     enemies:
-    - {fileID: 6503396846667062680, guid: 430a92c399367d6489e7b41b706f80d4, type: 3}
-    numberOfEnemies: 4
+    - {fileID: 8692342588957997579, guid: 66918cae20d909b4fb71bb727c374263, type: 3}
+    numberOfEnemies: 6
     spawnWait: 1
+    nextWaveWait: 0
   - name: 
     enemies:
-    - {fileID: 6503396846667062680, guid: 430a92c399367d6489e7b41b706f80d4, type: 3}
-    numberOfEnemies: 2
+    - {fileID: 178612081, guid: 45255b346e77a83479db86fae5f03c55, type: 3}
+    numberOfEnemies: 1
     spawnWait: 1
+    nextWaveWait: 0
+  timeBetweenWaves: 5
+  nextWaveCountDown: 0
   fixedWaves:
   - name: 
     enemies:
+    - {fileID: 8692342588957997579, guid: 66918cae20d909b4fb71bb727c374263, type: 3}
+    - {fileID: 8692342588957997579, guid: 66918cae20d909b4fb71bb727c374263, type: 3}
+    - {fileID: 8692342588957997579, guid: 66918cae20d909b4fb71bb727c374263, type: 3}
+    - {fileID: 8692342588957997579, guid: 66918cae20d909b4fb71bb727c374263, type: 3}
+    - {fileID: 8692342588957997579, guid: 66918cae20d909b4fb71bb727c374263, type: 3}
+    - {fileID: 8692342588957997579, guid: 66918cae20d909b4fb71bb727c374263, type: 3}
+    - {fileID: 8692342588957997579, guid: 66918cae20d909b4fb71bb727c374263, type: 3}
+    - {fileID: 8692342588957997579, guid: 66918cae20d909b4fb71bb727c374263, type: 3}
+    - {fileID: 8692342588957997579, guid: 66918cae20d909b4fb71bb727c374263, type: 3}
+    - {fileID: 8692342588957997579, guid: 66918cae20d909b4fb71bb727c374263, type: 3}
+    spawnPosition:
+    - {fileID: 6231993013841224117, guid: 62a8f798e80f3e644b5cd4500a65d3c7, type: 3}
+    - {fileID: 713315786895791186, guid: d815d3660464b744dba88a1cad15051b, type: 3}
+    - {fileID: 9047504251098390283, guid: e9348bbc524c1b549afc56778fb8ad01, type: 3}
+    - {fileID: 6010036005571805558, guid: f9e9844bf8c4c3e43b67e63620d2bd41, type: 3}
+    - {fileID: 8596198152803022503, guid: b7410ba102f6ca34e96078bf554513e2, type: 3}
+    - {fileID: 7454328456429544974, guid: 05fd97814e5e4b145ab5f38e7bedf721, type: 3}
+    - {fileID: 5643865331848824363, guid: f8d86649ab9b5e84892435c827bd5468, type: 3}
+    - {fileID: 3362369562031019362, guid: cdeb21582136b0344b92264257f3deae, type: 3}
+    - {fileID: 2436395434434638328, guid: f4fb229bd52169d47a271f479a38e677, type: 3}
+    - {fileID: 4794273175349023524, guid: adb9d0cb5d78a9e4db4b4a3093bdcacd, type: 3}
+    numberOfEnemies: 1
+    spawnWait: 3
+  - name: 
+    enemies:
+    - {fileID: 8692342588957997579, guid: 66918cae20d909b4fb71bb727c374263, type: 3}
+    - {fileID: 8692342588957997579, guid: 66918cae20d909b4fb71bb727c374263, type: 3}
+    - {fileID: 8692342588957997579, guid: 66918cae20d909b4fb71bb727c374263, type: 3}
+    - {fileID: 8692342588957997579, guid: 66918cae20d909b4fb71bb727c374263, type: 3}
+    - {fileID: 8692342588957997579, guid: 66918cae20d909b4fb71bb727c374263, type: 3}
+    - {fileID: 8692342588957997579, guid: 66918cae20d909b4fb71bb727c374263, type: 3}
+    - {fileID: 8692342588957997579, guid: 66918cae20d909b4fb71bb727c374263, type: 3}
+    - {fileID: 8692342588957997579, guid: 66918cae20d909b4fb71bb727c374263, type: 3}
+    - {fileID: 8692342588957997579, guid: 66918cae20d909b4fb71bb727c374263, type: 3}
+    - {fileID: 8692342588957997579, guid: 66918cae20d909b4fb71bb727c374263, type: 3}
+    spawnPosition:
+    - {fileID: 8048747334740802850, guid: 6ca115c0d549e944298a56df93e4b712, type: 3}
+    - {fileID: 7951178566559164722, guid: 93d1829e032a2a3468c177335a4fb26a, type: 3}
+    - {fileID: 8860833231235913146, guid: c26fd0e88ad0de642abd2f672ee75ccb, type: 3}
+    - {fileID: 5539097383895949801, guid: 62c234e9e5f652146b9286fad73f3c90, type: 3}
+    - {fileID: 4844919756222807, guid: 9a8e3b773b444954c905074ab52995e6, type: 3}
+    - {fileID: 2100269698434401792, guid: 536cd9bdc52f90b48959701ebac44c82, type: 3}
+    - {fileID: 7454328456429544974, guid: 05fd97814e5e4b145ab5f38e7bedf721, type: 3}
+    - {fileID: 2136517199243476310, guid: c6bcd1be314de4649ade191a2b0b6bdf, type: 3}
+    - {fileID: 5643865331848824363, guid: f8d86649ab9b5e84892435c827bd5468, type: 3}
+    - {fileID: 3364812169368044663, guid: 7206e2b798eea2f4a92a2596b7d4cf20, type: 3}
+    numberOfEnemies: 2
+    spawnWait: 3
+  - name: 
+    enemies:
     - {fileID: 6503396846667062680, guid: c14e7bd2bb5fd09408af15569d82d59b, type: 3}
     - {fileID: 6503396846667062680, guid: bbb9312c8b81c284397be685088c9186, type: 3}
+    - {fileID: 6503396846667062680, guid: 5e7d727bd9bcf2d47bc4aee794e13da0, type: 3}
+    - {fileID: 6503396846667062680, guid: bdbcc31a9a94b1a4f816029f56fb66e5, type: 3}
     spawnPosition:
-    - {fileID: 453361460573359977, guid: 62a8f798e80f3e644b5cd4500a65d3c7, type: 3}
-    - {fileID: 453361460573359977, guid: cdeb21582136b0344b92264257f3deae, type: 3}
+    - {fileID: 6231993013841224117, guid: 62a8f798e80f3e644b5cd4500a65d3c7, type: 3}
+    - {fileID: 3364812169368044663, guid: 7206e2b798eea2f4a92a2596b7d4cf20, type: 3}
+    - {fileID: 3362369562031019362, guid: cdeb21582136b0344b92264257f3deae, type: 3}
+    - {fileID: 4794273175349023524, guid: adb9d0cb5d78a9e4db4b4a3093bdcacd, type: 3}
+    numberOfEnemies: 2
+    spawnWait: 3
+  - name: 
+    enemies:
+    - {fileID: 8692342588957997579, guid: 66918cae20d909b4fb71bb727c374263, type: 3}
+    - {fileID: 8692342588957997579, guid: 66918cae20d909b4fb71bb727c374263, type: 3}
+    - {fileID: 8692342588957997579, guid: 66918cae20d909b4fb71bb727c374263, type: 3}
+    - {fileID: 8692342588957997579, guid: 66918cae20d909b4fb71bb727c374263, type: 3}
+    spawnPosition:
+    - {fileID: 2136517199243476310, guid: c6bcd1be314de4649ade191a2b0b6bdf, type: 3}
+    - {fileID: 2436395434434638328, guid: f4fb229bd52169d47a271f479a38e677, type: 3}
+    - {fileID: 3364812169368044663, guid: 7206e2b798eea2f4a92a2596b7d4cf20, type: 3}
+    - {fileID: 4794273175349023524, guid: adb9d0cb5d78a9e4db4b4a3093bdcacd, type: 3}
+    numberOfEnemies: 1
+    spawnWait: 3
+  - name: 
+    enemies:
+    - {fileID: 8692342588957997579, guid: 66918cae20d909b4fb71bb727c374263, type: 3}
+    - {fileID: 8692342588957997579, guid: 66918cae20d909b4fb71bb727c374263, type: 3}
+    - {fileID: 8692342588957997579, guid: 66918cae20d909b4fb71bb727c374263, type: 3}
+    - {fileID: 8692342588957997579, guid: 66918cae20d909b4fb71bb727c374263, type: 3}
+    - {fileID: 4185441438980989160, guid: 4e934f1f24c68964c85420d93260cb82, type: 3}
+    - {fileID: 4185441438980989160, guid: 4e934f1f24c68964c85420d93260cb82, type: 3}
+    spawnPosition:
+    - {fileID: 6231993013841224117, guid: 62a8f798e80f3e644b5cd4500a65d3c7, type: 3}
+    - {fileID: 8048747334740802850, guid: 6ca115c0d549e944298a56df93e4b712, type: 3}
+    - {fileID: 713315786895791186, guid: d815d3660464b744dba88a1cad15051b, type: 3}
+    - {fileID: 8860833231235913146, guid: c26fd0e88ad0de642abd2f672ee75ccb, type: 3}
+    - {fileID: 3364812169368044663, guid: 7206e2b798eea2f4a92a2596b7d4cf20, type: 3}
+    - {fileID: 4794273175349023524, guid: adb9d0cb5d78a9e4db4b4a3093bdcacd, type: 3}
+    numberOfEnemies: 1
+    spawnWait: 3
+  - name: 
+    enemies:
+    - {fileID: 178612081, guid: 45255b346e77a83479db86fae5f03c55, type: 3}
+    spawnPosition:
+    - {fileID: 6231993013841224117, guid: 62a8f798e80f3e644b5cd4500a65d3c7, type: 3}
+    numberOfEnemies: 1
+    spawnWait: 0.5
+  - name: 
+    enemies:
+    - {fileID: 4366882024137484700, guid: cb54c231438aee948af1a169484c79fc, type: 3}
+    spawnPosition:
+    - {fileID: 6231993013841224117, guid: 62a8f798e80f3e644b5cd4500a65d3c7, type: 3}
     numberOfEnemies: 3
-    spawnWait: 1
-  - name: 
-    enemies:
-    - {fileID: 6503396846667062680, guid: c14e7bd2bb5fd09408af15569d82d59b, type: 3}
-    - {fileID: 6503396846667062680, guid: bbb9312c8b81c284397be685088c9186, type: 3}
-    - {fileID: 6503396846667062680, guid: 5e7d727bd9bcf2d47bc4aee794e13da0, type: 3}
-    - {fileID: 6503396846667062680, guid: bdbcc31a9a94b1a4f816029f56fb66e5, type: 3}
-    spawnPosition:
-    - {fileID: 453361460573359977, guid: 62a8f798e80f3e644b5cd4500a65d3c7, type: 3}
-    - {fileID: 453361460573359977, guid: cdeb21582136b0344b92264257f3deae, type: 3}
-    - {fileID: 762215897012974558, guid: 6ca115c0d549e944298a56df93e4b712, type: 3}
-    - {fileID: 453361460573359977, guid: 223fd7dc4e7dd974f8a6f6417b8c0d56, type: 3}
-    numberOfEnemies: 2
-    spawnWait: 0.5
-  - name: 
-    enemies:
-    - {fileID: 6503396846667062680, guid: c14e7bd2bb5fd09408af15569d82d59b, type: 3}
-    - {fileID: 6503396846667062680, guid: bbb9312c8b81c284397be685088c9186, type: 3}
-    - {fileID: 6503396846667062680, guid: 5e7d727bd9bcf2d47bc4aee794e13da0, type: 3}
-    - {fileID: 6503396846667062680, guid: bdbcc31a9a94b1a4f816029f56fb66e5, type: 3}
-    spawnPosition:
-    - {fileID: 453361460573359977, guid: 62a8f798e80f3e644b5cd4500a65d3c7, type: 3}
-    - {fileID: 453361460573359977, guid: cdeb21582136b0344b92264257f3deae, type: 3}
-    - {fileID: 762215897012974558, guid: 6ca115c0d549e944298a56df93e4b712, type: 3}
-    - {fileID: 453361460573359977, guid: 223fd7dc4e7dd974f8a6f6417b8c0d56, type: 3}
-    numberOfEnemies: 2
-    spawnWait: 0.5
-  - name: 
-    enemies:
-    - {fileID: 8692342588957997579, guid: 66918cae20d909b4fb71bb727c374263, type: 3}
-    - {fileID: 8692342588957997579, guid: 66918cae20d909b4fb71bb727c374263, type: 3}
-    - {fileID: 8692342588957997579, guid: 66918cae20d909b4fb71bb727c374263, type: 3}
-    - {fileID: 8692342588957997579, guid: 66918cae20d909b4fb71bb727c374263, type: 3}
-    spawnPosition:
-    - {fileID: 762215897012974558, guid: 6ca115c0d549e944298a56df93e4b712, type: 3}
-    - {fileID: 453361460573359977, guid: 223fd7dc4e7dd974f8a6f6417b8c0d56, type: 3}
-    - {fileID: 453361460573359977, guid: e9348bbc524c1b549afc56778fb8ad01, type: 3}
-    - {fileID: 453361460573359977, guid: da106ee148aea6f40a329f5a0da9a042, type: 3}
-    numberOfEnemies: 1
-    spawnWait: 0.5
-  - name: 
-    enemies:
-    - {fileID: 8692342588957997579, guid: 66918cae20d909b4fb71bb727c374263, type: 3}
-    - {fileID: 8692342588957997579, guid: 66918cae20d909b4fb71bb727c374263, type: 3}
-    - {fileID: 8692342588957997579, guid: 66918cae20d909b4fb71bb727c374263, type: 3}
-    - {fileID: 8692342588957997579, guid: 66918cae20d909b4fb71bb727c374263, type: 3}
-    - {fileID: 4185441438980989160, guid: 4e934f1f24c68964c85420d93260cb82, type: 3}
-    - {fileID: 4185441438980989160, guid: 4e934f1f24c68964c85420d93260cb82, type: 3}
-    spawnPosition:
-    - {fileID: 453361460573359977, guid: 62a8f798e80f3e644b5cd4500a65d3c7, type: 3}
-    - {fileID: 762215897012974558, guid: 6ca115c0d549e944298a56df93e4b712, type: 3}
-    - {fileID: 762215897012974558, guid: d815d3660464b744dba88a1cad15051b, type: 3}
-    - {fileID: 762215897012974558, guid: c26fd0e88ad0de642abd2f672ee75ccb, type: 3}
-    - {fileID: 762215897012974558, guid: 44bb1772920c86d4587319d4ed357c78, type: 3}
-    - {fileID: 453361460573359977, guid: 223fd7dc4e7dd974f8a6f6417b8c0d56, type: 3}
-    numberOfEnemies: 1
-    spawnWait: 0.5
-  - name: 
-    enemies:
-    - {fileID: 8534032748719946187, guid: 436c9df983d794449b098fc203be0a00, type: 3}
-    spawnPosition:
-    - {fileID: 453361460573359977, guid: 62a8f798e80f3e644b5cd4500a65d3c7, type: 3}
-    - {fileID: 762215897012974558, guid: 6ca115c0d549e944298a56df93e4b712, type: 3}
-    - {fileID: 762215897012974558, guid: d815d3660464b744dba88a1cad15051b, type: 3}
-    - {fileID: 762215897012974558, guid: c26fd0e88ad0de642abd2f672ee75ccb, type: 3}
-    - {fileID: 762215897012974558, guid: 44bb1772920c86d4587319d4ed357c78, type: 3}
-    - {fileID: 453361460573359977, guid: 223fd7dc4e7dd974f8a6f6417b8c0d56, type: 3}
-    numberOfEnemies: 1
-    spawnWait: 0.5
-  timeBetweenWaves: 5
-  timeBetweenFixedWaves: 7
-  nextWaveCountDown: 7
-  nextFixedWaveCountDown: 5
-  spawnValues: {x: 10, y: 4}
-  minion: {fileID: 6503396846667062680, guid: 430a92c399367d6489e7b41b706f80d4, type: 3}
+    spawnWait: 3
+  timeBetweenFixedWaves: 10
+  nextFixedWaveCountDown: 0
+  spawnValues: {x: 10, y: 4.5}
+  minion: {fileID: 8692342588957997579, guid: 66918cae20d909b4fb71bb727c374263, type: 3}
 --- !u!4 &1935067818
 Transform:
   m_ObjectHideFlags: 0
@@ -4008,72 +4152,3 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2122273272}
   m_CullTransparentMesh: 0
---- !u!1001 &5742575509383762537
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 5742575509405556157, guid: 60540414fde09f54e80156e9b697a041,
-        type: 3}
-      propertyPath: m_Name
-      value: ControlRobot
-      objectReference: {fileID: 0}
-    - target: {fileID: 5742575509405556145, guid: 60540414fde09f54e80156e9b697a041,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 5742575509405556145, guid: 60540414fde09f54e80156e9b697a041,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5742575509405556145, guid: 60540414fde09f54e80156e9b697a041,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5742575509405556145, guid: 60540414fde09f54e80156e9b697a041,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5742575509405556145, guid: 60540414fde09f54e80156e9b697a041,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5742575509405556145, guid: 60540414fde09f54e80156e9b697a041,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5742575509405556145, guid: 60540414fde09f54e80156e9b697a041,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5742575509405556145, guid: 60540414fde09f54e80156e9b697a041,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 5742575509405556145, guid: 60540414fde09f54e80156e9b697a041,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5742575509405556145, guid: 60540414fde09f54e80156e9b697a041,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5742575509405556145, guid: 60540414fde09f54e80156e9b697a041,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 60540414fde09f54e80156e9b697a041, type: 3}
