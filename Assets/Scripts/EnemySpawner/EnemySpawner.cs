@@ -50,7 +50,7 @@ public class EnemySpawner : MonoBehaviour
 
     public Vector2 spawnValues;
     public GameObject minion;
-    private SceneTransition st;
+    public GameObject upgradeUI;
     
     private bool commanderIsSpawned;
     private bool firstRandomWave;
@@ -257,7 +257,8 @@ public class EnemySpawner : MonoBehaviour
         
         if (commanderIsSpawned == true && GameObject.FindGameObjectWithTag("Commander") == null)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            upgradeUI.SetActive(true);
         }
     }
 }
