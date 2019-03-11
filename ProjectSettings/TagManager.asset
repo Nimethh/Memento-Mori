@@ -31,7 +31,7 @@ TagManager:
   - 
   - 
   - PickUpWeapon
-  - 
+  - Background
   - 
   - 
   - 
@@ -54,6 +54,15 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: SadLayer
+    uniqueID: 4174635227
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: BackgroundSprites
+    uniqueID: 2626339461
+    locked: 0
+  - name: PlayerSprites
+    uniqueID: 4058952001
     locked: 0
