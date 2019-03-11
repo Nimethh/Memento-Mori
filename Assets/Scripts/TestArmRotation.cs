@@ -25,8 +25,30 @@ public class TestArmRotation : MonoBehaviour
         difference.Normalize();
 
         float rotationZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg; //Finding the angle in degrees
-        rotationZ = Mathf.Clamp(rotationZ, minAngle, maxAngle);
+        //Debug.Log(rotationZ);
+
+        //transform.rotation = Quaternion.Euler(0f, 0f, rotationZ + rotationOffset);
+        
+
+        if (rotationZ > 90)
+        {
+            rotationZ = 180 + rotationZ;
+            //transform.localScale = new Vector3(1,1,1);
+        }
+        else if (rotationZ < -90)
+        {
+            rotationZ = 180 +rotationZ;
+            //transform.localScale = new Vector3(1, 1, 1);
+        }
+        else
+        {
+            //transform.localScale = new Vector3(1,1,1);
+
+        }
+
+        //rotationZ = Mathf.Clamp(rotationZ, minAngle, maxAngle);
         transform.rotation = Quaternion.Euler(0f, 0f, rotationZ + rotationOffset);
+
 
     }
 }

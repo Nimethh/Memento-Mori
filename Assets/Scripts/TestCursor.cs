@@ -19,7 +19,7 @@ public class TestCursor : MonoBehaviour
     void Update()
     {
         Vector2 cursorPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        transform.position = cursorPos;
+        transform.position = cursorPos - new Vector2(0,+0.3f);
 
         if(Input.GetMouseButtonDown(0))
         {

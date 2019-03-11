@@ -5,6 +5,8 @@ using UnityEngine;
 public class ArmUpgradePrototype1 : MonoBehaviour, IArmUpgrade
 {
     [SerializeField]
+    private GameObject playerHand;
+    [SerializeField]
     private GameObject gunBarrel;
     [SerializeField]
     private GameObject laserBeam;
@@ -25,6 +27,11 @@ public class ArmUpgradePrototype1 : MonoBehaviour, IArmUpgrade
 
     void Start()
     {
+        playerHand = GameObject.FindGameObjectWithTag("PlayerHand").gameObject;
+
+        playerHand.GetComponent<SpriteRenderer>().enabled = false;
+
+
         gunBarrel = transform.Find("GunBarrel").gameObject;
         if(gunBarrel == null)
         {
@@ -74,9 +81,15 @@ public class ArmUpgradePrototype1 : MonoBehaviour, IArmUpgrade
             return;
         }
 
+        Vector3 difference = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+        difference.Normalize();
+        float rotationZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg; //Finding the angle in degrees
+
         Debug.Log("preformAttack - armWeapon ");
         GameObject bullet = (GameObject)Instantiate(Resources.Load<GameObject>("Bullets/GunBullet"), gunBarrel.transform.position, gunBarrel.transform.rotation);
-        bullet.transform.rotation = gunBarrel.transform.gameObject.transform.rotation;
+        //bullet.transform.rotation = gunBarrel.transform.rotation;
+        bullet.transform.rotation = Quaternion.Euler(0f, 0f, rotationZ);
+
         attackCooldownCounter = attackCooldown;
     }
 

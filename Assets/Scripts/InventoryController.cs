@@ -70,8 +70,8 @@ public class InventoryController : MonoBehaviour
             }
 
             //Change the itemName and itemIcon
-            if (Input.GetKeyDown(KeyCode.X))
-            {
+            //if (Input.GetKeyDown(KeyCode.X))
+            //{
                 IWeaponCrate weaponToEquip = upgradeCollider.GetComponent<IWeaponCrate>();
                 if(weaponToEquip == null)
                 {
@@ -84,9 +84,9 @@ public class InventoryController : MonoBehaviour
                     Destroy(upgradeCollider.gameObject);
                     upgradeCollider = null;
                 }
-            }
+        //}
 
-            return true;
+        return true;
         }
         else
         {

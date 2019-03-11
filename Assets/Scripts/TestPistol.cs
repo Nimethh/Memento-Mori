@@ -10,11 +10,16 @@ public class TestPistol : MonoBehaviour, IWeapon
     [SerializeField]
     private float attackCooldownCounter;
 
+    [SerializeField]
+    private float maxBulletSpreadAngle;
+
+
     public void Start()
     {
         playerHand = GameObject.FindGameObjectWithTag("PlayerHand").gameObject;
         attackCooldown = 0.2f;
 
+        maxBulletSpreadAngle = 2f;
     }
 
     public void Update()
@@ -32,9 +37,20 @@ public class TestPistol : MonoBehaviour, IWeapon
             return;
         }
 
-        //Debug.Log("preformAttack - pistol ");
-        GameObject bullet = (GameObject)Instantiate(Resources.Load<GameObject>("Bullets/GunBullet"), playerHand.transform.position, playerHand.transform.rotation);
-        bullet.transform.rotation = playerHand.transform.GetChild(0).gameObject.transform.rotation;
+        float randomAngle = Random.Range((-maxBulletSpreadAngle / 2), (maxBulletSpreadAngle / 2));
+
+        Vector3 difference = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+        difference.Normalize();
+        float rotationZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg; //Finding the angle in degrees
+
+        //rotationZ = Mathf.Clamp(rotationZ, minAngle, maxAngle);
+
+        GameObject bullet = (GameObject)Instantiate(Resources.Load<GameObject>("Bullets/GunBullet"), playerHand.transform.position + new Vector3(Random.Range(0.2f, 0.8f), 0, 0), playerHand.transform.rotation);
+        bullet.transform.rotation = Quaternion.Euler(0f, 0f, rotationZ + randomAngle);
+
+        ////Debug.Log("preformAttack - pistol ");
+        //GameObject bullet = (GameObject)Instantiate(Resources.Load<GameObject>("Bullets/GunBullet"), playerHand.transform.position, playerHand.transform.rotation);
+        //bullet.transform.rotation = playerHand.transform.GetChild(0).gameObject.transform.rotation;
         attackCooldownCounter = attackCooldown;
     }
 

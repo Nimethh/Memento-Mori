@@ -15,6 +15,11 @@ TagManager:
   - Weapon
   - Background
   - ControlRobot
+  - Commander
+  - DragonEgg
+  - RightArm
+  - CommanderLeftArm
+  - CommanderRightArm
   layers:
   - Default
   - TransparentFX
