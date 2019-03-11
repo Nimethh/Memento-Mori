@@ -11,6 +11,15 @@ public class PlayerUpgradeController : MonoBehaviour
     [SerializeField]
     private GameObject playerChest;
 
+    [SerializeField]
+    private bool armUpgradeEquipped;
+    [SerializeField]
+    private bool armUpgradeGrayedOut;
+    [SerializeField]
+    private bool headUpgradeEquipped;
+    [SerializeField]
+    private bool headUpgradeGrayedOut;
+    
 
     [SerializeField]
     private IUpgrade equippedHeadUpgrade;
@@ -26,6 +35,9 @@ public class PlayerUpgradeController : MonoBehaviour
     void Start()
     {
         weaponController = GetComponent<PlayerWeaponController>();
+        //SetUpHUDIcons();
+        SetUpArmHUD();
+        SetUpHeadHUD();
     }
 
     private void Update()
@@ -187,5 +199,104 @@ public class PlayerUpgradeController : MonoBehaviour
         }
 
         equippedHeadUpgrade.PreformAbility();
+    }
+
+    private void SetUpHUDIcons()
+    {
+        //setting up the icons for the upgrades
+        if (armUpgradeEquipped == true)
+        {
+            //set the sprite to be unlocked
+            EquipUpgrade("ArmUpgrade");
+            GameObject.Find("ArmUpgradeGrayedOut").SetActive(false);
+            GameObject.Find("ArmUpgradeLocked").SetActive(false);
+        }
+        else if (armUpgradeGrayedOut == true)
+        {
+            //set the sprite to be grayed out
+            GameObject.Find("ArmUpgradeLocked").SetActive(false);
+            GameObject.Find("ArmUpgradeOnEffect").SetActive(false);
+            GameObject.Find("ArmUpgradeOnCooldown").SetActive(false);
+        }
+        else
+        {
+            //set the sprite to be locked
+            GameObject.Find("ArmUpgradeGrayedOut").SetActive(false);
+            GameObject.Find("ArmUpgradeOnEffect").SetActive(false);
+            GameObject.Find("ArmUpgradeOnCooldown").SetActive(false);
+        }
+
+        //setting up the icons for the upgrades
+        if (headUpgradeEquipped == true)
+        {
+            //set the sprite to be unlocked
+            EquipUpgrade("HeadUpgrade");
+            GameObject.Find("HeadUpgradeGrayedOut").SetActive(false);
+            GameObject.Find("HeadUpgradeLocked").SetActive(false);
+        }
+        else if (headUpgradeGrayedOut == true)
+        {
+            //set the sprite to be grayed out
+            GameObject.Find("HeadUpgradeLocked").SetActive(false);
+            GameObject.Find("HeadUpgradeOnEffect").SetActive(false);
+            GameObject.Find("HeadUpgradeOnCooldown").SetActive(false);
+        }
+        else
+        {
+            //set the sprite to be locked
+            GameObject.Find("HeadUpgradeGrayedOut").SetActive(false);
+            GameObject.Find("HeadUpgradeOnEffect").SetActive(false);
+            GameObject.Find("HeadUpgradeOnCooldown").SetActive(false);
+        }
+    }
+
+    private void SetUpArmHUD()
+    {
+        if (armUpgradeEquipped == true)
+        {
+            //set the sprite to be unlocked
+            EquipUpgrade("ArmUpgrade");
+            GameObject.Find("ArmUpgradeGrayedOut").SetActive(false);
+            GameObject.Find("ArmUpgradeLocked").SetActive(false);
+        }
+        else if (armUpgradeGrayedOut == true)
+        {
+            //set the sprite to be grayed out
+            GameObject.Find("ArmUpgradeLocked").SetActive(false);
+            GameObject.Find("ArmUpgradeOnEffect").SetActive(false);
+            GameObject.Find("ArmUpgradeOnCooldown").SetActive(false);
+        }
+        else
+        {
+            //set the sprite to be locked
+            GameObject.Find("ArmUpgradeGrayedOut").SetActive(false);
+            GameObject.Find("ArmUpgradeOnEffect").SetActive(false);
+            GameObject.Find("ArmUpgradeOnCooldown").SetActive(false);
+        }
+    }
+
+    private void SetUpHeadHUD()
+    {
+        if (headUpgradeEquipped == true)
+        {
+            //set the sprite to be unlocked
+            EquipUpgrade("HeadUpgrade");
+            GameObject.Find("HeadUpgradeGrayedOut").SetActive(false);
+            GameObject.Find("HeadUpgradeLocked").SetActive(false);
+        }
+        else if (headUpgradeGrayedOut == true)
+        {
+            //set the sprite to be grayed out
+            GameObject.Find("HeadUpgradeLocked").SetActive(false);
+            GameObject.Find("HeadUpgradeOnEffect").SetActive(false);
+            GameObject.Find("HeadUpgradeOnCooldown").SetActive(false);
+        }
+        else
+        {
+            //set the sprite to be locked
+            GameObject.Find("HeadUpgradeGrayedOut").SetActive(false);
+            GameObject.Find("HeadUpgradeOnEffect").SetActive(false);
+            GameObject.Find("HeadUpgradeOnCooldown").SetActive(false);
+        }
     }
 }

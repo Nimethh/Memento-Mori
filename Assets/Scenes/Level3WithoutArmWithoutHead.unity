@@ -534,7 +534,7 @@ MonoBehaviour:
   armUpgradeEquipped: 0
   armUpgradeGrayedOut: 1
   headUpgradeEquipped: 0
-  headUpgradeGrayedOut: 0
+  headUpgradeGrayedOut: 1
   weaponController: {fileID: 0}
 --- !u!114 &46387554
 MonoBehaviour:

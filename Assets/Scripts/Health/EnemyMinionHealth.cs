@@ -5,12 +5,18 @@ using UnityEngine;
 public class EnemyMinionHealth : MonoBehaviour, IHealth
 {
     public float health;
+    //public GameObject explosion;
+   
 
     void Update()
     {
+        
         if (health <= 0)
         {
-            Destroy(gameObject);
+            Animator anim = GetComponent<Animator>();
+            anim.SetTrigger("Dead");
+            //Instantiate(explosion, transform.position, Quaternion.identity);
+            //Destroy(gameObject);
         }
     }
 
@@ -25,5 +31,10 @@ public class EnemyMinionHealth : MonoBehaviour, IHealth
     public void TakeDamage(float damage)
     {
         health = health - damage;
+    }
+
+    public void Destroy()
+    {
+        Destroy(gameObject);
     }
 }

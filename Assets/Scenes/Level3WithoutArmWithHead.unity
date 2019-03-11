@@ -533,7 +533,7 @@ MonoBehaviour:
   playerChest: {fileID: 1103560357}
   armUpgradeEquipped: 0
   armUpgradeGrayedOut: 1
-  headUpgradeEquipped: 0
+  headUpgradeEquipped: 1
   headUpgradeGrayedOut: 0
   weaponController: {fileID: 0}
 --- !u!114 &46387554
