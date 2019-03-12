@@ -148,6 +148,26 @@ public class PlayerUpgradeController : MonoBehaviour
                     }
                 }
                 break;
+            case "HeadUpgradeNew":
+                {
+                    Debug.Log("Case HeadUpgrade");
+
+                    if (equippedHeadUpgrade != null)
+                    {
+                        Destroy(playerHead.transform.GetChild(0).gameObject); //Destroy the currently equipped upgrade
+                        //Should change this to actually find the Upgrade instead of assuming it.
+                    }
+                    //Loading the weapon from the resources folder -> "Weapons" and then which weapon by its objectslug
+                    GameObject equippedHead = (GameObject)Instantiate(Resources.Load<GameObject>("Upgrades/HeadUpgradeNew"), playerHead.transform.position, playerHead.transform.rotation);
+                    equippedHead.transform.SetParent(playerHead.transform); //Setting the weapon in our playerhand 
+                    equippedHeadUpgrade = equippedHead.GetComponent<IUpgrade>();
+
+                    if (equippedHeadUpgrade == null)
+                    {
+                        Debug.Log("Could not find the IUpgrade component of EquippedHeadUpgrade, called from PlayerUpgradeController");
+                    }
+                }
+                break;
 
             default:
                 Debug.Log("Default case in EquipUpgrade, Did you check the IUpgrade's objectslug?");
@@ -230,7 +250,7 @@ public class PlayerUpgradeController : MonoBehaviour
         if (headUpgradeEquipped == true)
         {
             //set the sprite to be unlocked
-            EquipUpgrade("HeadUpgrade");
+            EquipUpgrade("HeadUpgradeNew");
             GameObject.Find("HeadUpgradeGrayedOut").SetActive(false);
             GameObject.Find("HeadUpgradeLocked").SetActive(false);
         }
@@ -280,7 +300,7 @@ public class PlayerUpgradeController : MonoBehaviour
         if (headUpgradeEquipped == true)
         {
             //set the sprite to be unlocked
-            EquipUpgrade("HeadUpgrade");
+            EquipUpgrade("HeadUpgradeNew");
             GameObject.Find("HeadUpgradeGrayedOut").SetActive(false);
             GameObject.Find("HeadUpgradeLocked").SetActive(false);
         }

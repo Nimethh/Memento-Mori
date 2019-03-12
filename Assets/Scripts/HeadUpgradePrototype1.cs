@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HeadUpgradePrototype1 : MonoBehaviour, IUpgrade
 {
@@ -19,9 +20,18 @@ public class HeadUpgradePrototype1 : MonoBehaviour, IUpgrade
     [SerializeField]
     BackgroundColorChanger backgroundChanger;
 
+    public Slider HeadOnEffectSlider;
+    public Slider HeadOnCooldownSlider;
+
+
+
+
     private void Start()
     {
         backgroundChanger = GameObject.FindGameObjectWithTag("Background").gameObject.GetComponent<BackgroundColorChanger>();
+
+        HeadOnEffectSlider = GameObject.Find("HeadUpgradeOnEffect").GetComponent<Slider>();
+        HeadOnCooldownSlider = GameObject.Find("HeadUpgradeOnCooldown").GetComponent<Slider>();
 
         abilityCooldown = 15f;
         abilityCooldownCounter = 0f;
@@ -34,13 +44,21 @@ public class HeadUpgradePrototype1 : MonoBehaviour, IUpgrade
         if (abilityCooldownCounter > 0)
         {
             abilityCooldownCounter = abilityCooldownCounter - Time.deltaTime;
+            if(slowDownTimeRemaining <= 0)
+            {
+                HeadOnCooldownSlider.maxValue = (abilityCooldown - slowDownDuration);
+                HeadOnCooldownSlider.value = (abilityCooldownCounter);// - (abilityCooldown - slowDownDuration);
+                Debug.Log("CooldownSlider value: " + HeadOnCooldownSlider.value);
+            }
         }
 
         if (slowDownTimeRemaining > 0)
         {
+            HeadOnEffectSlider.value = (slowDownTimeRemaining / slowDownDuration);
             slowDownTimeRemaining -= Time.unscaledDeltaTime; //This might be wrong.
             if (slowDownTimeRemaining <= 0)
             {
+                HeadOnEffectSlider.value = 0;
                 backgroundChanger.ChangeBackToNormal();
             }
         }

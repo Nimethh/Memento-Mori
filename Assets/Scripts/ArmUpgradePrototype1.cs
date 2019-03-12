@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class ArmUpgradePrototype1 : MonoBehaviour, IArmUpgrade
 {
@@ -10,6 +12,11 @@ public class ArmUpgradePrototype1 : MonoBehaviour, IArmUpgrade
     private GameObject gunBarrel;
     [SerializeField]
     private GameObject laserBeam;
+    [SerializeField]
+    private LaserHUDUpdater HUDUpdater;
+    [SerializeField]
+    private bool canFireLaser;
+
     [SerializeField]
     private Animator anim;
 
@@ -24,6 +31,11 @@ public class ArmUpgradePrototype1 : MonoBehaviour, IArmUpgrade
     private float laserAttackCooldown;
     [SerializeField]
     private float laserAttackCooldownCounter;
+
+    [SerializeField]
+    private Slider ArmOnEffectSlider;
+    [SerializeField]
+    private Slider ArmOnCooldownSlider;
 
     void Start()
     {
@@ -44,6 +56,8 @@ public class ArmUpgradePrototype1 : MonoBehaviour, IArmUpgrade
             Debug.Log("Did not find LaserBeam object");
         }
 
+        HUDUpdater = laserBeam.GetComponent<LaserHUDUpdater>();
+
         anim = laserBeam.GetComponent<Animator>();
         if(anim == null)
         {
@@ -53,9 +67,11 @@ public class ArmUpgradePrototype1 : MonoBehaviour, IArmUpgrade
 
         attackCooldown = 0.2f;
 
-        laserAttackCooldown = 10f;
+        laserAttackCooldown = 15f;
         laserAttackCooldownCounter = 0;
 
+        ArmOnEffectSlider = GameObject.Find("ArmUpgradeOnEffect").GetComponent<Slider>();
+        ArmOnCooldownSlider = GameObject.Find("ArmUpgradeOnCooldown").GetComponent<Slider>();
     }
 
     void Update()
@@ -71,12 +87,11 @@ public class ArmUpgradePrototype1 : MonoBehaviour, IArmUpgrade
         {
             laserAttackCooldownCounter = laserAttackCooldownCounter - Time.deltaTime;
         }
-
     }
 
     public void PreformAttack()
     {
-        if (attackCooldownCounter > 0)
+        if (attackCooldownCounter > 0 || ArmOnEffectSlider.value > 0)
         {
             return;
         }
@@ -97,7 +112,13 @@ public class ArmUpgradePrototype1 : MonoBehaviour, IArmUpgrade
     {
         Debug.Log("ArmUpgrade PreformAbility() Called");
 
-        if (laserAttackCooldownCounter > 0)
+        //if (laserAttackCooldownCounter > 0)
+        //{
+        //    return;
+        //}
+
+        canFireLaser = HUDUpdater.canFireLaser;
+        if (canFireLaser == false)
         {
             return;
         }
@@ -110,4 +131,5 @@ public class ArmUpgradePrototype1 : MonoBehaviour, IArmUpgrade
         //weeapon overheat
         attackCooldownCounter += 7.0f;
     }
+
 }
