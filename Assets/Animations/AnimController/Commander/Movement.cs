@@ -17,7 +17,7 @@ public class Movement : StateMachineBehaviour
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         movingSpot.position = new Vector2(7.0f, Random.Range(minY, maxY));
-        rand = Random.Range(0, 10);
+        rand = Random.Range(0, 8);
     }
     
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -27,25 +27,21 @@ public class Movement : StateMachineBehaviour
 
         if (Vector2.Distance(animator.transform.position, movingSpot.position) < 0.2f)
         {
-            if (rand == 0 || rand == 6)
+            if (rand == 0 || rand == 4)
             {
                 animator.SetTrigger("attack1");
             }
-            else if (rand == 1 || rand == 7)
+            else if (rand == 1 || rand == 5)
             {
                 animator.SetTrigger("attack2");
             }
-            else if (rand == 2 || rand == 8)
+            else if (rand == 2 || rand == 6)
             {
                 animator.SetTrigger("attack3");
             }
-            else if (rand == 3 || rand == 9)
-            {
-                animator.SetTrigger("attack4");
-            }
             else
             {
-                animator.SetTrigger("attack5");
+                animator.SetTrigger("attack4");
             }
         }
     }
