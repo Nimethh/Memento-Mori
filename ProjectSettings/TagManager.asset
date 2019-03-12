@@ -20,6 +20,7 @@ TagManager:
   - RightArm
   - CommanderLeftArm
   - CommanderRightArm
+  - DropBot
   layers:
   - Default
   - TransparentFX

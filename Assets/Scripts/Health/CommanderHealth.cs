@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyMinionHealth : MonoBehaviour, IHealth
+public class CommanderHealth : MonoBehaviour, IHealth
 {
     public float health;
     //public GameObject explosion;
@@ -13,12 +13,12 @@ public class EnemyMinionHealth : MonoBehaviour, IHealth
         
         if (health <= 0)
         {
-            
-            Animator anim = GetComponent<Animator>();
-            anim.SetTrigger("Dead");
-            Debug.Log("TheTriggerIsSet");
+
+            //Animator anim = GetComponent<Animator>();
+            //anim.SetTrigger("Dead");
+            //Debug.Log("TheTriggerIsSet");
             //Instantiate(explosion, transform.position, Quaternion.identity);
-            //Destroy(gameObject);
+            Destroy(gameObject);
         }
     }
 
