@@ -8,10 +8,10 @@ public class Enemy3 : MonoBehaviour
 
     //public Transform dropSpot;
     //public Transform exitSpot;
-    public Transform eggPosition;
-
-    
-    public GameObject dragonEgg;
+    //public Transform eggPosition;
+    public GameObject Dragon;
+    public Transform[] DragonPos;
+    //public GameObject dragonEgg;
     //private Transform egg;
     //Added 2019-02-13
     //private Animator anim;
@@ -56,11 +56,21 @@ public class Enemy3 : MonoBehaviour
         //}
     }
 
-    public void InstantiateEgg()
+    //public void InstantiateEgg()
+    //{
+    //    Instantiate(dragonEgg, eggPosition.position, Quaternion.identity);
+    //}
+
+    public void InstantiateDragons()
     {
-        Instantiate(dragonEgg, eggPosition.position, Quaternion.identity);
+        Debug.Log("CallingInstantiateDragons");
+        for (int i = 0; i < DragonPos.Length; i++)
+        {
+            Instantiate(Dragon, DragonPos[i].transform.position, Quaternion.identity);
+            
+        }
     }
-    
+
     //public void DetachFromParent()
     //{
     //    egg = GameObject.FindGameObjectWithTag("DragonEgg").transform;
@@ -68,5 +78,9 @@ public class Enemy3 : MonoBehaviour
     //    //anim = GetComponent<Animator>();
     //    //anim.SetBool("noParent", true);
     //}
+    public void Destroy()
+    {
+        Destroy(gameObject);
+    }
 
 }

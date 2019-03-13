@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerWeaponController : MonoBehaviour
 {
+    [SerializeField]
+    private bool shouldSpawnDefaultGun;
 
     public GameObject playerHand;
     public GameObject equippedWeapon { get; set; }
@@ -14,7 +16,10 @@ public class PlayerWeaponController : MonoBehaviour
     void Start()
     {
         hasWeaponEquipped = false;
-        EquipDefaultGun();
+        if (shouldSpawnDefaultGun)
+        {
+            EquipDefaultGun();
+        }
     }
 
     private void Update()
