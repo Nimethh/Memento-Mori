@@ -6,7 +6,12 @@ public class EnemyMinionHealth : MonoBehaviour, IHealth
 {
     public float health;
     //public GameObject explosion;
-   
+   private AudioSource aS;
+
+    void Start()
+    {
+        aS = GetComponent<AudioSource>();
+    }
 
     void Update()
     {
@@ -16,7 +21,6 @@ public class EnemyMinionHealth : MonoBehaviour, IHealth
             
             Animator anim = GetComponent<Animator>();
             anim.SetTrigger("Dead");
-            Debug.Log("TheTriggerIsSet");
             //Instantiate(explosion, transform.position, Quaternion.identity);
             //Destroy(gameObject);
         }
@@ -28,11 +32,14 @@ public class EnemyMinionHealth : MonoBehaviour, IHealth
         health = health - damage;
         //healthBar.maxValue = maxHealth;
         //healthBar.value = currentHealth;
+        aS.Play();
+
     }
 
     public void TakeDamage(float damage)
     {
         health = health - damage;
+        aS.Play();
     }
 
     public void Destroy()

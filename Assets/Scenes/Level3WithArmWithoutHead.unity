@@ -1376,7 +1376,7 @@ RectTransform:
   m_Children:
   - {fileID: 1156382977}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1764,198 +1764,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: -20}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &283836093
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 283836095}
-  - component: {fileID: 283836094}
-  m_Layer: 0
-  m_Name: EnemySpawner
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &283836094
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 283836093}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49a33961bec84304f8ba9408ebf012f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  randomWaves:
-  - _name: Straight Left 1
-    _enemies:
-    - {fileID: 8692342588957997579, guid: 66918cae20d909b4fb71bb727c374263, type: 3}
-    _numberOfEnemies: 4
-    _spawnWait: 2
-    _nextWaveWait: 5
-  - _name: Straight Left 2
-    _enemies:
-    - {fileID: 8692342588957997579, guid: 66918cae20d909b4fb71bb727c374263, type: 3}
-    _numberOfEnemies: 6
-    _spawnWait: 2
-    _nextWaveWait: 3
-  - _name: Straight Left 3
-    _enemies:
-    - {fileID: 8692342588957997579, guid: 66918cae20d909b4fb71bb727c374263, type: 3}
-    _numberOfEnemies: 8
-    _spawnWait: 2
-    _nextWaveWait: 3
-  - _name: Straight Left 4
-    _enemies:
-    - {fileID: 8692342588957997579, guid: 66918cae20d909b4fb71bb727c374263, type: 3}
-    _numberOfEnemies: 7
-    _spawnWait: 1
-    _nextWaveWait: 3
-  - _name: Straight Left 5
-    _enemies:
-    - {fileID: 8692342588957997579, guid: 66918cae20d909b4fb71bb727c374263, type: 3}
-    _numberOfEnemies: 10
-    _spawnWait: 1
-    _nextWaveWait: 3
-  - _name: Straight Left 6
-    _enemies:
-    - {fileID: 8692342588957997579, guid: 66918cae20d909b4fb71bb727c374263, type: 3}
-    _numberOfEnemies: 15
-    _spawnWait: 1
-    _nextWaveWait: 3
-  - _name: Straight Left 7
-    _enemies:
-    - {fileID: 8692342588957997579, guid: 66918cae20d909b4fb71bb727c374263, type: 3}
-    _numberOfEnemies: 15
-    _spawnWait: 1
-    _nextWaveWait: 3
-  - _name: Straight Left 8
-    _enemies:
-    - {fileID: 8692342588957997579, guid: 66918cae20d909b4fb71bb727c374263, type: 3}
-    _numberOfEnemies: 15
-    _spawnWait: 2
-    _nextWaveWait: 3
-  - _name: Straight Left 9
-    _enemies:
-    - {fileID: 8692342588957997579, guid: 66918cae20d909b4fb71bb727c374263, type: 3}
-    _numberOfEnemies: 15
-    _spawnWait: 2
-    _nextWaveWait: 3
-  randomWaveStartWait: 5
-  currentWave: 0
-  nextWaveCountDown: 0
-  fixedWaves:
-  - _name: Pair
-    _enemies:
-    - {fileID: 3017953561701421630, guid: 358fda73f9f809c459ec709f40b41621, type: 3}
-    _spawnPosition:
-    - {fileID: 713315786895791186, guid: d815d3660464b744dba88a1cad15051b, type: 3}
-    - {fileID: 4844919756222807, guid: 9a8e3b773b444954c905074ab52995e6, type: 3}
-    - {fileID: 6902957505891641354, guid: 44bb1772920c86d4587319d4ed357c78, type: 3}
-    _numberOfEnemies: 3
-    _spawnWait: 1
-    _nextFixedWaveWait: 3
-    _randomize: 1
-  - _name: Drop Bot
-    _enemies:
-    - {fileID: 2679186436022377212, guid: c31297e082d8a9a41a262b1312ef2eb8, type: 3}
-    _spawnPosition:
-    - {fileID: 6231993013841224117, guid: 62a8f798e80f3e644b5cd4500a65d3c7, type: 3}
-    _numberOfEnemies: 2
-    _spawnWait: 4
-    _nextFixedWaveWait: 4
-    _randomize: 0
-  - _name: Big Triangle
-    _enemies:
-    - {fileID: 3758312995726762518, guid: 54c5bc9dd1b99c1409cfd5714977512b, type: 3}
-    _spawnPosition:
-    - {fileID: 8860833231235913146, guid: c26fd0e88ad0de642abd2f672ee75ccb, type: 3}
-    - {fileID: 7454328456429544974, guid: 05fd97814e5e4b145ab5f38e7bedf721, type: 3}
-    _numberOfEnemies: 2
-    _spawnWait: 2
-    _nextFixedWaveWait: 8
-    _randomize: 1
-  - _name: Pair and Triangle
-    _enemies:
-    - {fileID: 6724403054613832485, guid: d8590be21277ccb4084155f67d0574f4, type: 3}
-    - {fileID: 3017953561701421630, guid: 358fda73f9f809c459ec709f40b41621, type: 3}
-    _spawnPosition:
-    - {fileID: 713315786895791186, guid: d815d3660464b744dba88a1cad15051b, type: 3}
-    - {fileID: 8852239151091658740, guid: da106ee148aea6f40a329f5a0da9a042, type: 3}
-    - {fileID: 9047504251098390283, guid: e9348bbc524c1b549afc56778fb8ad01, type: 3}
-    - {fileID: 6902957505891641354, guid: 44bb1772920c86d4587319d4ed357c78, type: 3}
-    - {fileID: 3364812169368044663, guid: 7206e2b798eea2f4a92a2596b7d4cf20, type: 3}
-    - {fileID: 6231993013841224117, guid: 62a8f798e80f3e644b5cd4500a65d3c7, type: 3}
-    _numberOfEnemies: 4
-    _spawnWait: 4
-    _nextFixedWaveWait: 7
-    _randomize: 1
-  - _name: Drop Bot
-    _enemies:
-    - {fileID: 2679186436022377212, guid: c31297e082d8a9a41a262b1312ef2eb8, type: 3}
-    _spawnPosition:
-    - {fileID: 6231993013841224117, guid: 62a8f798e80f3e644b5cd4500a65d3c7, type: 3}
-    _numberOfEnemies: 2
-    _spawnWait: 3
-    _nextFixedWaveWait: 10
-    _randomize: 0
-  - _name: Small Triangle
-    _enemies:
-    - {fileID: 6724403054613832485, guid: d8590be21277ccb4084155f67d0574f4, type: 3}
-    _spawnPosition:
-    - {fileID: 8048747334740802850, guid: 6ca115c0d549e944298a56df93e4b712, type: 3}
-    - {fileID: 9047504251098390283, guid: e9348bbc524c1b549afc56778fb8ad01, type: 3}
-    - {fileID: 7454328456429544974, guid: 05fd97814e5e4b145ab5f38e7bedf721, type: 3}
-    - {fileID: 3364812169368044663, guid: 7206e2b798eea2f4a92a2596b7d4cf20, type: 3}
-    _numberOfEnemies: 5
-    _spawnWait: 4
-    _nextFixedWaveWait: 8
-    _randomize: 1
-  - _name: DropBot
-    _enemies:
-    - {fileID: 2679186436022377212, guid: c31297e082d8a9a41a262b1312ef2eb8, type: 3}
-    _spawnPosition:
-    - {fileID: 6231993013841224117, guid: 62a8f798e80f3e644b5cd4500a65d3c7, type: 3}
-    _numberOfEnemies: 3
-    _spawnWait: 4
-    _nextFixedWaveWait: 40
-    _randomize: 1
-  - _name: Commander
-    _enemies:
-    - {fileID: 6301676553011909822, guid: db121ee958646f34898d5af1cd96b531, type: 3}
-    _spawnPosition:
-    - {fileID: 4844919756222807, guid: 9a8e3b773b444954c905074ab52995e6, type: 3}
-    _numberOfEnemies: 1
-    _spawnWait: 4
-    _nextFixedWaveWait: 10
-    _randomize: 0
-  fixedWaveStartWait: 15
-  currentFixedWave: 0
-  nextFixedWaveCountDown: 0
-  spawnValues: {x: 10, y: 4.5}
-  minion: {fileID: 4185441438980989160, guid: 4e934f1f24c68964c85420d93260cb82, type: 3}
-  upgradeUI: {fileID: 0}
---- !u!4 &283836095
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 283836093}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 12
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &291817054
 GameObject:
   m_ObjectHideFlags: 0
@@ -2579,7 +2387,7 @@ RectTransform:
   - {fileID: 431291603}
   - {fileID: 119506818}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -3236,7 +3044,7 @@ PrefabInstance:
     - target: {fileID: 255818028461437270, guid: cb7b4268c27af41178f47d447aee534e,
         type: 3}
       propertyPath: m_RootOrder
-      value: 17
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 255818028461437270, guid: cb7b4268c27af41178f47d447aee534e,
         type: 3}
@@ -7996,6 +7804,189 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1179343053}
   m_CullTransparentMesh: 0
+--- !u!1 &1202274276
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1202274278}
+  - component: {fileID: 1202274277}
+  m_Layer: 0
+  m_Name: EnemySpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1202274277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1202274276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49a33961bec84304f8ba9408ebf012f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  randomWaves:
+  - _name: Straight Left 1
+    _enemies:
+    - {fileID: 8692342588957997579, guid: 66918cae20d909b4fb71bb727c374263, type: 3}
+    _numberOfEnemies: 4
+    _spawnWait: 2
+    _nextWaveWait: 5
+  - _name: Straight Left 2
+    _enemies:
+    - {fileID: 8692342588957997579, guid: 66918cae20d909b4fb71bb727c374263, type: 3}
+    _numberOfEnemies: 6
+    _spawnWait: 2
+    _nextWaveWait: 3
+  - _name: Straight Left 3
+    _enemies:
+    - {fileID: 8692342588957997579, guid: 66918cae20d909b4fb71bb727c374263, type: 3}
+    _numberOfEnemies: 8
+    _spawnWait: 2
+    _nextWaveWait: 3
+  - _name: Straight Left 4
+    _enemies:
+    - {fileID: 8692342588957997579, guid: 66918cae20d909b4fb71bb727c374263, type: 3}
+    _numberOfEnemies: 7
+    _spawnWait: 1
+    _nextWaveWait: 3
+  - _name: Straight Left 5
+    _enemies:
+    - {fileID: 8692342588957997579, guid: 66918cae20d909b4fb71bb727c374263, type: 3}
+    _numberOfEnemies: 10
+    _spawnWait: 1
+    _nextWaveWait: 3
+  - _name: Straight Left 6
+    _enemies:
+    - {fileID: 8692342588957997579, guid: 66918cae20d909b4fb71bb727c374263, type: 3}
+    _numberOfEnemies: 15
+    _spawnWait: 1
+    _nextWaveWait: 3
+  - _name: Straight Left 7
+    _enemies:
+    - {fileID: 8692342588957997579, guid: 66918cae20d909b4fb71bb727c374263, type: 3}
+    _numberOfEnemies: 15
+    _spawnWait: 1
+    _nextWaveWait: 3
+  randomWaveStartWait: 5
+  currentWave: 0
+  nextWaveCountDown: 0
+  fixedWaves:
+  - _name: Line
+    _enemies:
+    - {fileID: 792523886818145556, guid: 70d0754b59d31b34081a80198f754b35, type: 3}
+    _spawnPosition:
+    - {fileID: 6231993013841224117, guid: 62a8f798e80f3e644b5cd4500a65d3c7, type: 3}
+    - {fileID: 8860833231235913146, guid: c26fd0e88ad0de642abd2f672ee75ccb, type: 3}
+    - {fileID: 8852239151091658740, guid: da106ee148aea6f40a329f5a0da9a042, type: 3}
+    _numberOfEnemies: 5
+    _spawnWait: 2
+    _nextFixedWaveWait: 3
+    _randomize: 1
+  - _name: Drop Bot
+    _enemies:
+    - {fileID: 2679186436022377212, guid: c31297e082d8a9a41a262b1312ef2eb8, type: 3}
+    _spawnPosition:
+    - {fileID: 6231993013841224117, guid: 62a8f798e80f3e644b5cd4500a65d3c7, type: 3}
+    _numberOfEnemies: 2
+    _spawnWait: 3
+    _nextFixedWaveWait: 4
+    _randomize: 0
+  - _name: Big Triangle
+    _enemies:
+    - {fileID: 3758312995726762518, guid: 54c5bc9dd1b99c1409cfd5714977512b, type: 3}
+    _spawnPosition:
+    - {fileID: 8860833231235913146, guid: c26fd0e88ad0de642abd2f672ee75ccb, type: 3}
+    - {fileID: 7454328456429544974, guid: 05fd97814e5e4b145ab5f38e7bedf721, type: 3}
+    _numberOfEnemies: 2
+    _spawnWait: 2
+    _nextFixedWaveWait: 8
+    _randomize: 1
+  - _name: ZigZag
+    _enemies:
+    - {fileID: 273346503339014009, guid: 03302800f8cd6a64a85cd2a8e3f36067, type: 3}
+    _spawnPosition:
+    - {fileID: 6231993013841224117, guid: 62a8f798e80f3e644b5cd4500a65d3c7, type: 3}
+    _numberOfEnemies: 4
+    _spawnWait: 4
+    _nextFixedWaveWait: 7
+    _randomize: 1
+  - _name: Drop Bot
+    _enemies:
+    - {fileID: 2679186436022377212, guid: c31297e082d8a9a41a262b1312ef2eb8, type: 3}
+    _spawnPosition:
+    - {fileID: 6231993013841224117, guid: 62a8f798e80f3e644b5cd4500a65d3c7, type: 3}
+    _numberOfEnemies: 2
+    _spawnWait: 3
+    _nextFixedWaveWait: 10
+    _randomize: 0
+  - _name: Small Triangle
+    _enemies:
+    - {fileID: 6724403054613832485, guid: d8590be21277ccb4084155f67d0574f4, type: 3}
+    _spawnPosition:
+    - {fileID: 8048747334740802850, guid: 6ca115c0d549e944298a56df93e4b712, type: 3}
+    - {fileID: 9047504251098390283, guid: e9348bbc524c1b549afc56778fb8ad01, type: 3}
+    - {fileID: 7454328456429544974, guid: 05fd97814e5e4b145ab5f38e7bedf721, type: 3}
+    - {fileID: 3364812169368044663, guid: 7206e2b798eea2f4a92a2596b7d4cf20, type: 3}
+    _numberOfEnemies: 6
+    _spawnWait: 4
+    _nextFixedWaveWait: 8
+    _randomize: 1
+  - _name: DropBot
+    _enemies:
+    - {fileID: 2679186436022377212, guid: c31297e082d8a9a41a262b1312ef2eb8, type: 3}
+    _spawnPosition:
+    - {fileID: 6231993013841224117, guid: 62a8f798e80f3e644b5cd4500a65d3c7, type: 3}
+    _numberOfEnemies: 3
+    _spawnWait: 4
+    _nextFixedWaveWait: 40
+    _randomize: 1
+  - _name: ZigZag
+    _enemies:
+    - {fileID: 273346503339014009, guid: 03302800f8cd6a64a85cd2a8e3f36067, type: 3}
+    _spawnPosition:
+    - {fileID: 6231993013841224117, guid: 62a8f798e80f3e644b5cd4500a65d3c7, type: 3}
+    _numberOfEnemies: 5
+    _spawnWait: 6
+    _nextFixedWaveWait: 10
+    _randomize: 0
+  - _name: DropBot
+    _enemies:
+    - {fileID: 2679186436022377212, guid: c31297e082d8a9a41a262b1312ef2eb8, type: 3}
+    _spawnPosition:
+    - {fileID: 6231993013841224117, guid: 62a8f798e80f3e644b5cd4500a65d3c7, type: 3}
+    _numberOfEnemies: 5
+    _spawnWait: 4
+    _nextFixedWaveWait: 10
+    _randomize: 0
+  fixedWaveStartWait: 15
+  currentFixedWave: 0
+  nextFixedWaveCountDown: 0
+  spawnValues: {x: 10, y: 4.5}
+  minion: {fileID: 4185441438980989160, guid: 4e934f1f24c68964c85420d93260cb82, type: 3}
+  upgradeUI: {fileID: 0}
+--- !u!4 &1202274278
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1202274276}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 17
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1214904032
 GameObject:
   m_ObjectHideFlags: 0
@@ -9704,7 +9695,7 @@ RectTransform:
   m_Children:
   - {fileID: 1700477808}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -12738,7 +12729,7 @@ PrefabInstance:
     - target: {fileID: 5822490645452790863, guid: 03e1bdf9095724b7292d731d109b9b78,
         type: 3}
       propertyPath: m_RootOrder
-      value: 16
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 5822490645452790863, guid: 03e1bdf9095724b7292d731d109b9b78,
         type: 3}

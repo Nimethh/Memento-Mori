@@ -24,8 +24,7 @@ public class DropBotHealth : MonoBehaviour, IHealth
 
             //Debug.Log("TheTriggerIsSet");
             //Debug.Log(anim.transform.position);
-
-            Debug.Log("Instantiating" + anim.gameObject.transform.position);
+            
             Instantiate(explosion, anim.gameObject.transform.position, anim.gameObject.transform.rotation);
             Destroy(gameObject);
         }

@@ -56,6 +56,11 @@ public class EnemySpawner : MonoBehaviour
     private bool firstRandomWave;
     private bool firstFixedWave;
 
+    public static bool commanderIsDead = false;
+
+    [SerializeField]
+    private float timePassed;
+
     private RANDOMWAVESTATE randomWaveState = RANDOMWAVESTATE.COUNTING;
     private FIXEDWAVESTATE fixedWaveState = FIXEDWAVESTATE.COUNTING;
 
@@ -71,6 +76,7 @@ public class EnemySpawner : MonoBehaviour
 
     void Update()
     {
+        timePassed += Time.deltaTime;
         CommanderChecker();
         // Normal Waves
         if (randomWaves.Length != 0)// Check if we have any normal waves in the waves array.
@@ -258,6 +264,7 @@ public class EnemySpawner : MonoBehaviour
         if (commanderIsSpawned == true && GameObject.FindGameObjectWithTag("Commander") == null)
         {
             //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            //commanderIsDead = true;
             upgradeUI.SetActive(true);
         }
     }
