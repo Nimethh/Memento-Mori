@@ -47,7 +47,7 @@ public class TestGun : MonoBehaviour, IWeapon
         specialAttackActiveCounter = 0f;
         attackCooldown = 0.1f;
 
-        maxBulletSpreadAngle = 5f;
+        maxBulletSpreadAngle = 2f;
     }
 
     public void Update()

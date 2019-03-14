@@ -13,29 +13,33 @@ public class Movement : StateMachineBehaviour
     public float speed;
 
     private int rand;
+    private int prevRand;
 
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         movingSpot.position = new Vector2(7.0f, Random.Range(minY, maxY));
-        rand = Random.Range(0, 8);
+        rand = Random.Range(0, 4);
+        while(prevRand == rand)
+        {
+            rand = Random.Range(0, 4);
+        }
     }
     
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         animator.transform.position = Vector2.MoveTowards(animator.transform.position, movingSpot.position, speed * Time.deltaTime);
        
-
         if (Vector2.Distance(animator.transform.position, movingSpot.position) < 0.2f)
         {
-            if (rand == 0 || rand == 4)
+            if (rand == 0)
             {
                 animator.SetTrigger("attack1");
             }
-            else if (rand == 1 || rand == 5)
+            else if (rand == 1)
             {
                 animator.SetTrigger("attack2");
             }
-            else if (rand == 2 || rand == 6)
+            else if (rand == 2)
             {
                 animator.SetTrigger("attack3");
             }
@@ -48,7 +52,7 @@ public class Movement : StateMachineBehaviour
 
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        
+        prevRand = rand;
     }
-    
+
 }

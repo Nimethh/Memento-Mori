@@ -10,7 +10,7 @@ public class LaserDamage : MonoBehaviour
 
     void Start()
     {
-        damage = 400f;
+        damage = 800f;
         col = GetComponent<Collider2D>();
         if(col == null)
         {

@@ -25,14 +25,14 @@ public class CommanderHealth : MonoBehaviour, IHealth
 
     public void TakeDamage(int damage)
     {
-        health = health - damage;
+        health = health - (damage / 3);
         //healthBar.maxValue = maxHealth;
         //healthBar.value = currentHealth;
     }
 
     public void TakeDamage(float damage)
     {
-        health = health - damage;
+        health = health - (damage / 3 );
     }
 
     public void Destroy()

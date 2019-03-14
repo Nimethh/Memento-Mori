@@ -23,7 +23,7 @@ public class UpgradePanel : MonoBehaviour
 
     void Start()
     {
-        //GameObject.Find("UpgradePanel").SetActive(false);
+        GameObject.Find("UpgradePanel").SetActive(false);
         upgradeBehaviorUI.SetActive(false);
         armUpgradeUI.SetActive(false);
         headUpgradeUI.SetActive(false);

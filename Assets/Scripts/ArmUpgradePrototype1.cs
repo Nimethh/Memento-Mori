@@ -65,7 +65,7 @@ public class ArmUpgradePrototype1 : MonoBehaviour, IArmUpgrade
         }
 
 
-        attackCooldown = 0.2f;
+        attackCooldown = 0.1f;
 
         laserAttackCooldown = 15f;
         laserAttackCooldownCounter = 0;

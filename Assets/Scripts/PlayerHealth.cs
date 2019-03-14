@@ -32,10 +32,10 @@ public class PlayerHealth : MonoBehaviour, IHealth
     void Start()
     {
         anim = GetComponent<Animator>();
-        lives = 30;
+        lives = 0;
         isInvulnerable = false;
         invulnerabilityTime = 3f;
-        maxHealth = 100;
+        maxHealth = 200;
         currentHealth = maxHealth;
         healthBar.value = currentHealth;
 
