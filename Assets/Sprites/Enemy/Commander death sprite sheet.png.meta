@@ -1,0 +1,414 @@
+fileFormatVersion: 2
+guid: 12cf232dc45c143b3bd184444d1444bf
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Commander death sprite sheet_0
+    21300002: Commander death sprite sheet_1
+    21300004: Commander death sprite sheet_2
+    21300006: Commander death sprite sheet_3
+    21300008: Commander death sprite sheet_4
+    21300010: Commander death sprite sheet_5
+    21300012: Commander death sprite sheet_6
+    21300014: Commander death sprite sheet_7
+    21300016: Commander death sprite sheet_8
+    21300018: Commander death sprite sheet_9
+    21300020: Commander death sprite sheet_10
+    21300022: Commander death sprite sheet_11
+    21300024: Commander death sprite sheet_12
+    21300026: Commander death sprite sheet_13
+    21300028: Commander death sprite sheet_14
+  externalObjects: {}
+  serializedVersion: 7
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 600
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Commander death sprite sheet_0
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 6174
+        width: 1139
+        height: 1927
+      alignment: 9
+      pivot: {x: 0.30006334, y: 0.7036571}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fd0037b29c804c81a74f0936d33be22
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Commander death sprite sheet_1
+      rect:
+        serializedVersion: 2
+        x: 1590
+        y: 6166
+        width: 1494
+        height: 1936
+      alignment: 9
+      pivot: {x: 0.22817695, y: 0.69866467}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23c5ee0e0223240648e24e0df601ea8b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Commander death sprite sheet_2
+      rect:
+        serializedVersion: 2
+        x: 3232
+        y: 6126
+        width: 1498
+        height: 1936
+      alignment: 9
+      pivot: {x: 0.23191534, y: 0.70120996}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8826f9390c3b84464b0c63beb22cbd82
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Commander death sprite sheet_3
+      rect:
+        serializedVersion: 2
+        x: 4912
+        y: 6138
+        width: 1152
+        height: 1943
+      alignment: 9
+      pivot: {x: 0.3026352, y: 0.69865656}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abe0a8e99b3b34b768317bb9202254d9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Commander death sprite sheet_4
+      rect:
+        serializedVersion: 2
+        x: 6506
+        y: 6158
+        width: 1487
+        height: 1927
+      alignment: 9
+      pivot: {x: 0.22887847, y: 0.7011678}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02b3079de26b84689bb132a19d8df7c4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Commander death sprite sheet_5
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 4064
+        width: 1144
+        height: 1942
+      alignment: 9
+      pivot: {x: 0.29448542, y: 0.70286626}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07a06a01ab5b4422188e76b6e9be61b4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Commander death sprite sheet_6
+      rect:
+        serializedVersion: 2
+        x: 1664
+        y: 3942
+        width: 1841
+        height: 1892
+      alignment: 9
+      pivot: {x: 0.37229297, y: 0.6947932}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42a2a77fa71dc4707b92ac4144ca06dc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Commander death sprite sheet_7
+      rect:
+        serializedVersion: 2
+        x: 3578
+        y: 4096
+        width: 1743
+        height: 1746
+      alignment: 9
+      pivot: {x: 0.45989847, y: 0.6892459}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b42a1602217a4d18a87f1642fbe8473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Commander death sprite sheet_8
+      rect:
+        serializedVersion: 2
+        x: 5638
+        y: 4155
+        width: 2064
+        height: 1734
+      alignment: 9
+      pivot: {x: 0.5461795, y: 0.6795619}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b93c6c8a9b0824c46aac5d50fee15667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Commander death sprite sheet_9
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 2083
+        width: 2076
+        height: 1839
+      alignment: 9
+      pivot: {x: 0.66528505, y: 0.74878114}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d59950cbd978a4ca78a56d324a82bb4c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Commander death sprite sheet_10
+      rect:
+        serializedVersion: 2
+        x: 2256
+        y: 1995
+        width: 1969
+        height: 1935
+      alignment: 9
+      pivot: {x: 0.6387681, y: 0.70359993}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 844b1931aa864415ca42c46ecf768f49
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Commander death sprite sheet_11
+      rect:
+        serializedVersion: 2
+        x: 4302
+        y: 1354
+        width: 1696
+        height: 2572
+      alignment: 9
+      pivot: {x: 0.5899192, y: 0.58152866}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3130d98132a794f5b9b1b83a56c2685b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Commander death sprite sheet_12
+      rect:
+        serializedVersion: 2
+        x: 6122
+        y: 1354
+        width: 1542
+        height: 2572
+      alignment: 9
+      pivot: {x: 0.54944974, y: 0.5790581}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b6141766b57a4ab7981f8d26289d6cc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Commander death sprite sheet_13
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 7
+        width: 1157
+        height: 1983
+      alignment: 9
+      pivot: {x: 0.3471166, y: 0.8396509}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c1bd040ff72c4223b690837b8ec346e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Commander death sprite sheet_14
+      rect:
+        serializedVersion: 2
+        x: 1686
+        y: 14
+        width: 2140
+        height: 1939
+      alignment: 9
+      pivot: {x: 0.67485136, y: 0.766659}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d6cb5741347a42b4b6272aae2e30c7b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 28e64f5fd99764db1ba6482fa75e5be3
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
