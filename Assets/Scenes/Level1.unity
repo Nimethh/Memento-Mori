@@ -483,7 +483,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &283836094
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3161,6 +3161,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameOverMenuCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 4435166574014525257, guid: f8fbc9ebbeab131429e9e9095dbb7f5f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4435166574014525262, guid: f8fbc9ebbeab131429e9e9095dbb7f5f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3497,6 +3502,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CameraHolder
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822490645452790860, guid: 03e1bdf9095724b7292d731d109b9b78,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5822490645452790863, guid: 03e1bdf9095724b7292d731d109b9b78,
         type: 3}
@@ -4242,6 +4252,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HUD
       objectReference: {fileID: 0}
+    - target: {fileID: 1079522661086365517, guid: ff78af721b55f4b2ebc088dcfe465e22,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1079522661086365505, guid: ff78af721b55f4b2ebc088dcfe465e22,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4476,6 +4491,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Upgrade
       objectReference: {fileID: 0}
+    - target: {fileID: 1220223590882379656, guid: d1db6258b30ae854a979e6bcdab50842,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1220223591142131839, guid: d1db6258b30ae854a979e6bcdab50842,
         type: 3}
       propertyPath: m_IsActive
@@ -4623,6 +4643,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PauseMenuCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 4435166574014525257, guid: 5cfd0acc5b5530540bbc8f063bde3b7f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4435166574014525262, guid: 5cfd0acc5b5530540bbc8f063bde3b7f,
         type: 3}

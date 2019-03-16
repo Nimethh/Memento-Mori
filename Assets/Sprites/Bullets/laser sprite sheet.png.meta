@@ -44,6 +44,10 @@ TextureImporter:
     21300078: laser sprite sheet_39
     21300080: laser sprite sheet_40
     21300082: laser sprite sheet_41
+    21300084: laser sprite sheet_42
+    21300086: laser sprite sheet_43
+    21300088: laser sprite sheet_44
+    21300090: laser sprite sheet_45
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -469,9 +473,9 @@ TextureImporter:
       name: laser sprite sheet_17
       rect:
         serializedVersion: 2
-        x: 372
+        x: 644
         y: 2580
-        width: 3407
+        width: 3135
         height: 536
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -489,9 +493,9 @@ TextureImporter:
       name: laser sprite sheet_18
       rect:
         serializedVersion: 2
-        x: 372
+        x: 648
         y: 1994
-        width: 3407
+        width: 3135
         height: 542
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -509,9 +513,9 @@ TextureImporter:
       name: laser sprite sheet_19
       rect:
         serializedVersion: 2
-        x: 372
+        x: 646
         y: 1614
-        width: 3407
+        width: 3135
         height: 340
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -529,9 +533,9 @@ TextureImporter:
       name: laser sprite sheet_20
       rect:
         serializedVersion: 2
-        x: 372
+        x: 643
         y: 1314
-        width: 3407
+        width: 3136
         height: 224
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
