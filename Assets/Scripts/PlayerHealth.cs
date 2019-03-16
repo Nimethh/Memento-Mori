@@ -24,10 +24,11 @@ public class PlayerHealth : MonoBehaviour, IHealth
 
     [SerializeField]
     private int maxHealth;
-    [SerializeField]
-    private float currentHealth;
+    public float currentHealth;
     [SerializeField]
     private Slider healthBar;
+    [SerializeField]
+    private GameObject gameOverPanel;
 
     void Start()
     {
@@ -49,7 +50,7 @@ public class PlayerHealth : MonoBehaviour, IHealth
             if (lives == 0)
             {
                 //Debug.Log("GameOver");
-                SceneManager.LoadScene("DeathScreen");
+                //SceneManager.LoadScene("DeathScreen");
 
             }
             else
@@ -88,7 +89,6 @@ public class PlayerHealth : MonoBehaviour, IHealth
             currentHealth = currentHealth - damage;
             healthBar.maxValue = maxHealth;
             healthBar.value = currentHealth;
-
             StartCoroutine(cameraShake.Shake(0.2f, 0.1f));
 
         }
@@ -111,4 +111,5 @@ public class PlayerHealth : MonoBehaviour, IHealth
 
         }
     }
+    
 }

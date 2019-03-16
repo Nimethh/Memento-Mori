@@ -24,6 +24,7 @@ public class UpgradePanel : MonoBehaviour
     void Start()
     {
         GameObject.Find("UpgradePanel").SetActive(false);
+        upgradeAquiredUI.SetActive(false);
         upgradeBehaviorUI.SetActive(false);
         armUpgradeUI.SetActive(false);
         headUpgradeUI.SetActive(false);
@@ -48,9 +49,21 @@ public class UpgradePanel : MonoBehaviour
             //    else
             //        headUpgradeUI.SetActive(true);
             //}
-            if(goToNextLevel == true && Input.GetMouseButtonDown(0))
+
+            Time.timeScale = 0.0f;
+
+            if (goToNextLevel == true && Input.GetMouseButtonDown(0))
             {
-                SceneManager.LoadScene("Level2With");
+                if (SceneManager.GetActiveScene().name == "Level1")
+                {
+                    SceneManager.LoadScene("Level2With");
+                    Time.timeScale = 1.0f;
+                }
+                else if(SceneManager.GetActiveScene().name == "Level2With")
+                {
+                    SceneManager.LoadScene("Level3WithArmWithHead");
+                    Time.timeScale = 1.0f;
+                }
             }
 
             if (upgradeAquired == true && Input.GetMouseButtonDown(0))
@@ -96,7 +109,13 @@ public class UpgradePanel : MonoBehaviour
                     }
                 }
                 else
+                {
                     headUpgradeUI.SetActive(true);
+                    if(Input.GetMouseButtonDown(0))
+                    {
+                        goToNextLevel = true;
+                    }
+                }
             }
 
             ChangeToUpgradeBehavior();
