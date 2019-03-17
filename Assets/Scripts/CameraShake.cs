@@ -12,12 +12,19 @@ public class CameraShake : MonoBehaviour
     {
         //Debug.Log("Shake!");
 
+
         Vector3 originalPosition = transform.localPosition;
 
         float elapsed = 0.0f;
 
         while(elapsed < duration)
         {
+
+            if (Time.timeScale == 0)
+            {
+                yield break;
+            }
+
             float x = Random.Range(-1, 1) * magnitude;
             float y = Random.Range(-1, 1) * magnitude;
 
