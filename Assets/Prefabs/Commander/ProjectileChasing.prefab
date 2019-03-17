@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1335255233331152560}
   - component: {fileID: 6847498406299432249}
   - component: {fileID: 4738119906885948574}
-  - component: {fileID: 3387781519053423647}
+  - component: {fileID: 7768281085956437050}
   - component: {fileID: 8486427309463711077}
   m_Layer: 0
   m_Name: ProjectileChasing
@@ -148,7 +148,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   damage: 10
---- !u!114 &3387781519053423647
+--- !u!114 &7768281085956437050
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -157,10 +157,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 3476799222084589752}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a6162458088f154486d7ba5997577dc, type: 3}
+  m_Script: {fileID: 11500000, guid: c3529ea8cd9e5934fbf6c473a246f284, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+  explosion: {fileID: 971642017978944085, guid: 03a46f7532a873242a5523dd02f817c7,
+    type: 3}
 --- !u!95 &8486427309463711077
 Animator:
   serializedVersion: 3

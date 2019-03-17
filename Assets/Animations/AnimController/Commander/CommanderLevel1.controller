@@ -91,6 +91,8 @@ MonoBehaviour:
   minY: -3
   maxY: 3.5
   speed: 1.5
+  rand: 0
+  prevRand: 0
 --- !u!114 &114193670911398378
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -620,13 +622,13 @@ AnimatorStateMachine:
     m_Position: {x: 960, y: 48, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102194079099699778}
-    m_Position: {x: 960, y: 156, z: 0}
+    m_Position: {x: 924, y: 840, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102587188350529166}
-    m_Position: {x: 588, y: 420, z: 0}
+    m_Position: {x: 840, y: 192, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102880254085419182}
-    m_Position: {x: 840, y: 300, z: 0}
+    m_Position: {x: 624, y: 372, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []

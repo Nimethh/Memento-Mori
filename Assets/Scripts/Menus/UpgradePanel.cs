@@ -33,6 +33,10 @@ public class UpgradePanel : MonoBehaviour
     {
         if (GameObject.Find("UpgradePanel") == true)
         {
+            if(upgradeAquired == true)
+            {
+                upgradeAquiredUI.SetActive(true);
+            }
             //ChangeToArmUpgradeUI();
             //StartCoroutine(Wait());
             //if (goToNextLevel == true)

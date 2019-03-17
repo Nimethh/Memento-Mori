@@ -2118,7 +2118,7 @@ PrefabInstance:
     - target: {fileID: 1220223591142131835, guid: d1db6258b30ae854a979e6bcdab50842,
         type: 3}
       propertyPath: upgradeAquired
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1220223591142131835, guid: d1db6258b30ae854a979e6bcdab50842,
         type: 3}
