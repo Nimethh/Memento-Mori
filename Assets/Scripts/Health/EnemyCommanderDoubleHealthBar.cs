@@ -16,8 +16,6 @@ public class EnemyCommanderDoubleHealthBar : MonoBehaviour, IHealth
 
     void Start()
     {
-        //aS = GetComponent<AudioSource>();
-        health = 3000;
         healthBarRight.maxValue = health;
         healthBarLeft.maxValue = health;
         healthBarRight.value = health;
@@ -34,7 +32,7 @@ public class EnemyCommanderDoubleHealthBar : MonoBehaviour, IHealth
             //Animator anim = GetComponent<Animator>();
             //anim.SetTrigger("Dead");
             //Instantiate(explosion, transform.position, Quaternion.identity);
-            //Destroy(gameObject);
+            Destroy(gameObject);
         }
     }
 
