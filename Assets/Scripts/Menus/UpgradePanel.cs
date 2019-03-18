@@ -3,18 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
 public class UpgradePanel : MonoBehaviour
 {
     [SerializeField]
-    private bool upgradeAquired = false;
+    private bool upgradeAquiredBool = false;
     [SerializeField]
-    private bool upgradeBehavior = false;
+    private bool upgradeBehaviorBool = false;
     [SerializeField]
-    private bool armUpgrade = false;
+    private bool armUpgradeBool = false;
     [SerializeField]
-    private bool headUpgrade = false;
+    private bool headUpgradeBool = false;
     [SerializeField]
-    private bool goToNextLevel = false;
+    private bool goToNextLevelBool = false;
 
     public GameObject upgradeAquiredUI;
     public GameObject upgradeBehaviorUI;
@@ -33,117 +34,99 @@ public class UpgradePanel : MonoBehaviour
     {
         if (GameObject.Find("UpgradePanel") == true)
         {
-            if(upgradeAquired == true)
+            if (goToNextLevelBool == true)
             {
-                upgradeAquiredUI.SetActive(true);
-            }
-            //ChangeToArmUpgradeUI();
-            //StartCoroutine(Wait());
-            //if (goToNextLevel == true)
-            //{
-            //    SceneManager.LoadScene("Level2With");
-            //}
-
-            //if (armUpgrade == true || headUpgrade == true)
-            //{
-            //    if (SceneManager.GetActiveScene().name == "Level1")
-            //    {
-            //        SceneManager.LoadScene("Level2With");
-            //    }
-            //    else
-            //        headUpgradeUI.SetActive(true);
-            //}
-
-            Time.timeScale = 0.0f;
-
-            if (goToNextLevel == true && Input.GetMouseButtonDown(0))
-            {
-                if (SceneManager.GetActiveScene().name == "Level1")
-                {
-                    SceneManager.LoadScene("Level2With");
-                    Time.timeScale = 1.0f;
-                }
-                else if(SceneManager.GetActiveScene().name == "Level2With")
-                {
-                    SceneManager.LoadScene("Level3WithArmWithHead");
-                    Time.timeScale = 1.0f;
-                }
+                ChangeScenes();
             }
 
-            if (upgradeAquired == true && Input.GetMouseButtonDown(0))
+            ActivatePanel();
+
+
+            if (armUpgradeBool == true && upgradeBehaviorBool == false && upgradeAquiredBool == false)
             {
-                Debug.Log("upgradeAquired is true");
-                upgradeAquiredUI.SetActive(false);
-                upgradeBehaviorUI.SetActive(true);
-                upgradeAquired = false;
-                //StartCoroutine(Wait());
-            }
-            if (upgradeBehavior == true && Input.GetMouseButtonDown(0))
-            {
-                Debug.Log("upgradeBehavior is true");
-                upgradeBehaviorUI.SetActive(false);
-                upgradeBehavior = false;
                 if(Input.GetMouseButtonDown(0))
                 {
-                    armUpgrade = true;
+                    goToNextLevelBool = true;
                 }
-                //if(Input.GetMouseButtonDown(0))
-                //{
-                //    if (SceneManager.GetActiveScene().name == "Level1")
-                //    {
-                //        armUpgradeUI.SetActive(true);
-                //        //if (Input.GetMouseButtonDown(0))
-                //        //{
-                //        //    SceneManager.LoadScene("Level2With");
-                //        //}
-                //    }
-                //    else
-                //        headUpgradeUI.SetActive(true);
-                //}
             }
-            if (armUpgrade == true || headUpgrade == true)
+            else if (headUpgradeBool == true && upgradeBehaviorBool == false && upgradeAquiredBool == false)
             {
-                if (SceneManager.GetActiveScene().name == "Level1")
+                if (Input.GetMouseButtonDown(0))
                 {
-                    armUpgradeUI.SetActive(true);
-                    if (Input.GetMouseButtonDown(0))
-                    {
-                        Debug.Log("Go TO another scene");
-                        goToNextLevel = true;
-                    }
-                }
-                else
-                {
-                    headUpgradeUI.SetActive(true);
-                    if(Input.GetMouseButtonDown(0))
-                    {
-                        goToNextLevel = true;
-                    }
+                    goToNextLevelBool = true;
                 }
             }
-
-            ChangeToUpgradeBehavior();
+            else if (upgradeBehaviorBool == true && upgradeAquiredBool == false)
+            {
+                if (Input.GetMouseButtonDown(0))
+                {
+                    UpdateBools();
+                }
+            }
+            else if (upgradeAquiredBool == true)
+            {
+                if (Input.GetMouseButtonDown(0))
+                {
+                    UpdateBools();
+                }
+            }
             
         }
-        
-    }
-    IEnumerator Wait()
-    {
-        yield return new WaitForSeconds(2.0f);
+
     }
 
-    void ChangeToUpgradeBehavior()
+    void UpdateBools()
     {
-        if(upgradeAquired == false && armUpgrade != true)
+        if(upgradeAquiredBool == true)
         {
-            upgradeBehavior = true;
+            upgradeAquiredBool = false;
+        }
+        else if(upgradeBehaviorBool == true)
+        {
+            upgradeBehaviorBool = false;
+        }
+        else if(armUpgradeBool == true)
+        {
+            armUpgradeBool = false;
+        }
+        else if(headUpgradeBool == true)
+        {
+            headUpgradeBool = false;
         }
     }
-    void ChangeToArmUpgradeUI()
+
+    void ActivatePanel()
     {
-        if(upgradeBehavior == false && upgradeAquired == false)
+        if (armUpgradeBool == true && upgradeBehaviorBool == false && upgradeAquiredBool == false)
         {
-            armUpgrade = true;
+            upgradeBehaviorUI.SetActive(false);
+            armUpgradeUI.SetActive(true);
+        }
+        else if (headUpgradeBool == true && upgradeBehaviorBool == false && upgradeAquiredBool == false)
+        {
+            upgradeAquiredUI.SetActive(false);
+            headUpgradeUI.SetActive(true);
+        }
+        else if (upgradeBehaviorBool == true && upgradeAquiredBool == false)
+        {
+            upgradeAquiredUI.SetActive(false);
+            upgradeBehaviorUI.SetActive(true);
+        }
+        else if (upgradeAquiredBool == true)
+        {
+            upgradeAquiredUI.SetActive(true);
+        }
+    }
+
+    void ChangeScenes()
+    {
+        if(SceneManager.GetActiveScene().name == "Level1")
+        {
+            SceneManager.LoadScene("Level2With");
+        }
+        else if(SceneManager.GetActiveScene().name == "Level2With")
+        {
+            SceneManager.LoadScene("Level3WithArmWithHead");
         }
     }
 }

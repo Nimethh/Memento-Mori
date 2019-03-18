@@ -2005,11 +2005,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1220223591142131839, guid: d1db6258b30ae854a979e6bcdab50842,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1220223590882379652, guid: d1db6258b30ae854a979e6bcdab50842,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2123,6 +2118,41 @@ PrefabInstance:
     - target: {fileID: 1220223591142131835, guid: d1db6258b30ae854a979e6bcdab50842,
         type: 3}
       propertyPath: headUpgrade
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1220223591142131835, guid: d1db6258b30ae854a979e6bcdab50842,
+        type: 3}
+      propertyPath: upgradeAquiredBool
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1220223591142131835, guid: d1db6258b30ae854a979e6bcdab50842,
+        type: 3}
+      propertyPath: headUpgradeBool
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1220223591142131835, guid: d1db6258b30ae854a979e6bcdab50842,
+        type: 3}
+      propertyPath: upgradeAquiredUI
+      value: 
+      objectReference: {fileID: 1012178105}
+    - target: {fileID: 1220223591142131835, guid: d1db6258b30ae854a979e6bcdab50842,
+        type: 3}
+      propertyPath: upgradeBehaviorUI
+      value: 
+      objectReference: {fileID: 1012178104}
+    - target: {fileID: 1220223591142131835, guid: d1db6258b30ae854a979e6bcdab50842,
+        type: 3}
+      propertyPath: armUpgradeUI
+      value: 
+      objectReference: {fileID: 1012178103}
+    - target: {fileID: 1220223591142131835, guid: d1db6258b30ae854a979e6bcdab50842,
+        type: 3}
+      propertyPath: headUpgradeUI
+      value: 
+      objectReference: {fileID: 1012178102}
+    - target: {fileID: 1220223591142131839, guid: d1db6258b30ae854a979e6bcdab50842,
+        type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1220223591000489415, guid: d1db6258b30ae854a979e6bcdab50842,
@@ -2310,6 +2340,30 @@ PrefabInstance:
 --- !u!1 &1012178101 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1220223591142131839, guid: d1db6258b30ae854a979e6bcdab50842,
+    type: 3}
+  m_PrefabInstance: {fileID: 1012178100}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1012178102 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1220223591808212338, guid: d1db6258b30ae854a979e6bcdab50842,
+    type: 3}
+  m_PrefabInstance: {fileID: 1012178100}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1012178103 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1220223590808544055, guid: d1db6258b30ae854a979e6bcdab50842,
+    type: 3}
+  m_PrefabInstance: {fileID: 1012178100}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1012178104 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1220223592320075506, guid: d1db6258b30ae854a979e6bcdab50842,
+    type: 3}
+  m_PrefabInstance: {fileID: 1012178100}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1012178105 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1220223591876447992, guid: d1db6258b30ae854a979e6bcdab50842,
     type: 3}
   m_PrefabInstance: {fileID: 1012178100}
   m_PrefabAsset: {fileID: 0}
@@ -4560,5 +4614,20 @@ PrefabInstance:
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 78018217}
+    - target: {fileID: 1425342563604648884, guid: fb7598ca908333b469b2ac21a06773a5,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1425342563588193288, guid: fb7598ca908333b469b2ac21a06773a5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1425342563832633046, guid: fb7598ca908333b469b2ac21a06773a5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fb7598ca908333b469b2ac21a06773a5, type: 3}

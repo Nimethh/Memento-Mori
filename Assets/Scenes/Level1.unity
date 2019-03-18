@@ -4601,6 +4601,41 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1220223591142131835, guid: d1db6258b30ae854a979e6bcdab50842,
+        type: 3}
+      propertyPath: upgradeAquiredBool
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1220223591142131835, guid: d1db6258b30ae854a979e6bcdab50842,
+        type: 3}
+      propertyPath: upgradeBehaviorBool
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1220223591142131835, guid: d1db6258b30ae854a979e6bcdab50842,
+        type: 3}
+      propertyPath: armUpgradeBool
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1220223591142131835, guid: d1db6258b30ae854a979e6bcdab50842,
+        type: 3}
+      propertyPath: upgradeAquiredUI
+      value: 
+      objectReference: {fileID: 1220223592384306050}
+    - target: {fileID: 1220223591142131835, guid: d1db6258b30ae854a979e6bcdab50842,
+        type: 3}
+      propertyPath: upgradeBehaviorUI
+      value: 
+      objectReference: {fileID: 1220223592384306049}
+    - target: {fileID: 1220223591142131835, guid: d1db6258b30ae854a979e6bcdab50842,
+        type: 3}
+      propertyPath: armUpgradeUI
+      value: 
+      objectReference: {fileID: 1220223592384306048}
+    - target: {fileID: 1220223591142131835, guid: d1db6258b30ae854a979e6bcdab50842,
+        type: 3}
+      propertyPath: headUpgradeUI
+      value: 
+      objectReference: {fileID: 1220223592384306047}
     - target: {fileID: 1220223591142131839, guid: d1db6258b30ae854a979e6bcdab50842,
         type: 3}
       propertyPath: m_IsActive
@@ -4812,6 +4847,30 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1db6258b30ae854a979e6bcdab50842, type: 3}
+--- !u!1 &1220223592384306047 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1220223591808212338, guid: d1db6258b30ae854a979e6bcdab50842,
+    type: 3}
+  m_PrefabInstance: {fileID: 1220223592384306046}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1220223592384306048 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1220223590808544055, guid: d1db6258b30ae854a979e6bcdab50842,
+    type: 3}
+  m_PrefabInstance: {fileID: 1220223592384306046}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1220223592384306049 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1220223592320075506, guid: d1db6258b30ae854a979e6bcdab50842,
+    type: 3}
+  m_PrefabInstance: {fileID: 1220223592384306046}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1220223592384306050 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1220223591876447992, guid: d1db6258b30ae854a979e6bcdab50842,
+    type: 3}
+  m_PrefabInstance: {fileID: 1220223592384306046}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4435166575338823496
 PrefabInstance:
   m_ObjectHideFlags: 0
