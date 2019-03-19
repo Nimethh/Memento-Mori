@@ -748,7 +748,7 @@ MonoBehaviour:
   nextFixedWaveCountDown: 0
   spawnValues: {x: 10, y: 4.5}
   minion: {fileID: 4185441438980989160, guid: 4e934f1f24c68964c85420d93260cb82, type: 3}
-  upgradeUI: {fileID: 0}
+  upgradeUI: {fileID: 1306160192}
   timePassed: 0
 --- !u!4 &283836095
 Transform:
@@ -3139,6 +3139,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1db6258b30ae854a979e6bcdab50842, type: 3}
+--- !u!1 &1306160192 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1220223591142131839, guid: d1db6258b30ae854a979e6bcdab50842,
+    type: 3}
+  m_PrefabInstance: {fileID: 1306160191}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1372311975
 GameObject:
   m_ObjectHideFlags: 0

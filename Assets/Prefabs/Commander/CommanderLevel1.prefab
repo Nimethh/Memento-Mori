@@ -690,7 +690,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcb35ee94d6af83449a052925c296262, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 0.5
+  rotationSpeed: 0.7
 --- !u!1 &6301676551483960176
 GameObject:
   m_ObjectHideFlags: 0
@@ -782,7 +782,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectile: {fileID: 5052760423970094829, guid: ef0dfef26eecc7042ad77628520db291,
     type: 3}
-  fireDelay: 0.05
+  fireDelay: 0.03
 --- !u!1 &6301676551598549647
 GameObject:
   m_ObjectHideFlags: 0
@@ -1814,7 +1814,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77178d05842a71d41a180fbc1809ae6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 7500
+  health: 8000
   healthBarRight: {fileID: 5731465912792811238}
   healthBarLeft: {fileID: 60451312663845358}
 --- !u!1 &6301676553186896467

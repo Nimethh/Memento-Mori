@@ -10,7 +10,7 @@ public class PlayerWeaponController : MonoBehaviour
     public GameObject playerHand;
     public GameObject equippedWeapon { get; set; }
     public IWeapon equippedWeaponInterface;
-
+    
     public bool hasWeaponEquipped;
 
     void Start()

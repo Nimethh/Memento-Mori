@@ -16,6 +16,7 @@ public class LaserDamage : MonoBehaviour
         {
             Debug.Log("No collider found on gameObject");
         }
+
     }
 
 

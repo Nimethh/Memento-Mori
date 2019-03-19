@@ -223,7 +223,6 @@ MonoBehaviour:
   maxHealth: 0
   currentHealth: 0
   healthBar: {fileID: 395951427}
-  gameOverPanel: {fileID: 0}
 --- !u!114 &46387555
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -573,6 +572,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Upgrade
       objectReference: {fileID: 0}
+    - target: {fileID: 1220223591142131839, guid: d1db6258b30ae854a979e6bcdab50842,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1220223590882379652, guid: d1db6258b30ae854a979e6bcdab50842,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -688,11 +692,6 @@ PrefabInstance:
       propertyPath: upgradeAquired
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1220223591142131839, guid: d1db6258b30ae854a979e6bcdab50842,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1db6258b30ae854a979e6bcdab50842, type: 3}
 --- !u!1 &277237935 stripped
@@ -717,7 +716,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &283836094
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3773,7 +3772,6 @@ MonoBehaviour:
   maxHealth: 0
   currentHealth: 0
   healthBar: {fileID: 1895369085}
-  gameOverPanel: {fileID: 0}
 --- !u!114 &1372311978
 MonoBehaviour:
   m_ObjectHideFlags: 0

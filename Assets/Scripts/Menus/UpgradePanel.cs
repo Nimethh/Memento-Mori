@@ -34,6 +34,7 @@ public class UpgradePanel : MonoBehaviour
     {
         if (GameObject.Find("UpgradePanel") == true)
         {
+            Time.timeScale = 0.0f;
             if (goToNextLevelBool == true)
             {
                 ChangeScenes();

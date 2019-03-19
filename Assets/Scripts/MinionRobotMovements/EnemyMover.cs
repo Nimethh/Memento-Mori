@@ -16,7 +16,6 @@ public class EnemyMover : MonoBehaviour
 
     private float timeBetweenShots;
     public float fireDelay;
-    private AudioSource shootingSound;
 
 	void Start ()
     {
@@ -24,7 +23,6 @@ public class EnemyMover : MonoBehaviour
         sp = GetComponent<SpriteRenderer>();
         moveHorizontal = -1;
         timeBetweenShots = fireDelay;
-        shootingSound = GetComponent<AudioSource>();
 	}
 
     public void Update()
@@ -32,7 +30,6 @@ public class EnemyMover : MonoBehaviour
        if(timeBetweenShots <= 0)
         {
             Instantiate(projectile, shootingSpot.position, shootingSpot.rotation);
-            shootingSound.Play();
             timeBetweenShots = fireDelay;
         }
        else

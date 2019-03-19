@@ -20,16 +20,13 @@ public class PlayerHealth : MonoBehaviour, IHealth
     private float invulnerabilityCounter;
     [SerializeField]
     private float invulnerabilityTime;
-
-
+    
     [SerializeField]
     private int maxHealth;
     public float currentHealth;
     [SerializeField]
     private Slider healthBar;
-    [SerializeField]
-    private GameObject gameOverPanel;
-
+    
     void Start()
     {
         anim = GetComponent<Animator>();
@@ -39,7 +36,7 @@ public class PlayerHealth : MonoBehaviour, IHealth
         maxHealth = 200;
         currentHealth = maxHealth;
         healthBar.value = currentHealth;
-
+        
     }
 
     void Update()
@@ -90,7 +87,7 @@ public class PlayerHealth : MonoBehaviour, IHealth
             healthBar.maxValue = maxHealth;
             healthBar.value = currentHealth;
             StartCoroutine(cameraShake.Shake(0.2f, 0.1f));
-
+            FindObjectOfType<AudioManager>().Play("PlayerDamaged");
         }
     }
 
@@ -106,9 +103,8 @@ public class PlayerHealth : MonoBehaviour, IHealth
             currentHealth = currentHealth - damage;
             healthBar.maxValue = maxHealth;
             healthBar.value = currentHealth;
-
             StartCoroutine(cameraShake.Shake(0.2f, 0.1f));
-
+            FindObjectOfType<AudioManager>().Play("PlayerDamaged");
         }
     }
     

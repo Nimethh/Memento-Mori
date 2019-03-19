@@ -15,14 +15,13 @@ public class GunBullet : MonoBehaviour
 
     private Rigidbody2D rigid;
 
-
     void Start()
     {
         //transform = GetComponent<Transform>();
         rigid = GetComponent<Rigidbody2D>();
         speed = 20f;
         rigid.velocity = transform.right * speed;
-
+        FindObjectOfType<AudioManager>().Play("PlayerAttack");
     }
 
     void Update()
@@ -53,6 +52,7 @@ public class GunBullet : MonoBehaviour
             if (collision.gameObject.tag == "Enemy")
             {
                 Animator anim = collision.GetComponent<Animator>();
+                anim.ResetTrigger("Damaged");
                 anim.SetTrigger("Damaged");
             }
             Destroy(this.gameObject);

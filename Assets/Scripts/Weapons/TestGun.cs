@@ -6,8 +6,6 @@ public class TestGun : MonoBehaviour, IWeapon
 {
     public GameObject playerHand;
 
-    public AudioSource aS;
-
     [SerializeField]
     private GameObject gunBarrel;
 
@@ -32,7 +30,6 @@ public class TestGun : MonoBehaviour, IWeapon
     public void Start()
     {
         playerHand = GameObject.FindGameObjectWithTag("PlayerHand").gameObject;
-        aS = GetComponent<AudioSource>();
 
         //playerHand.GetComponent<SpriteRenderer>().enabled = false;
 
@@ -78,7 +75,7 @@ public class TestGun : MonoBehaviour, IWeapon
         {
             return;
         }
-        aS.Play();
+
         float randomAngle = Random.Range((-maxBulletSpreadAngle / 2), (maxBulletSpreadAngle / 2));
 
         Vector3 difference = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;

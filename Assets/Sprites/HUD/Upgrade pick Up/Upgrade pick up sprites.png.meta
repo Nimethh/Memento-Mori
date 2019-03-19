@@ -14,6 +14,8 @@ TextureImporter:
     21300018: Upgrade pick up sprites_9
     21300020: Upgrade pick up sprites_10
     21300022: Upgrade pick up sprites_11
+    21300024: Upgrade pick up sprites_12
+    21300026: Upgrade pick up sprites_13
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -99,12 +101,12 @@ TextureImporter:
       name: Upgrade pick up sprites_0
       rect:
         serializedVersion: 2
-        x: 1552
-        y: 3322
-        width: 916
-        height: 376
+        x: 1894
+        y: 3346
+        width: 541
+        height: 160
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -124,7 +126,7 @@ TextureImporter:
         width: 1430
         height: 674
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -144,7 +146,7 @@ TextureImporter:
         width: 2014
         height: 390
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -164,7 +166,7 @@ TextureImporter:
         width: 1501
         height: 743
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -184,7 +186,7 @@ TextureImporter:
         width: 235
         height: 236
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -204,7 +206,7 @@ TextureImporter:
         width: 243
         height: 235
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -224,7 +226,7 @@ TextureImporter:
         width: 2125
         height: 583
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -244,7 +246,7 @@ TextureImporter:
         width: 440
         height: 418
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -264,7 +266,7 @@ TextureImporter:
         width: 399
         height: 421
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -284,7 +286,7 @@ TextureImporter:
         width: 292
         height: 424
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -304,7 +306,7 @@ TextureImporter:
         width: 2356
         height: 566
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -324,13 +326,53 @@ TextureImporter:
         width: 42
         height: 59
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: 8f6e4b06b4fe5dd48b0d1ffd6776df3f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Upgrade pick up sprites_12
+      rect:
+        serializedVersion: 2
+        x: 2049
+        y: 3519
+        width: 175
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2000637ef2cc4c04b88f434906950241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Upgrade pick up sprites_13
+      rect:
+        serializedVersion: 2
+        x: 1545
+        y: 3311
+        width: 275
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e9e540d0c0838c408ab57a85c9e49de
       vertices: []
       indices: 
       edges: []

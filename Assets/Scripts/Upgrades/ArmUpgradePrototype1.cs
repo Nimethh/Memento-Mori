@@ -36,7 +36,7 @@ public class ArmUpgradePrototype1 : MonoBehaviour, IArmUpgrade
     private Slider ArmOnEffectSlider;
     [SerializeField]
     private Slider ArmOnCooldownSlider;
-
+    
     void Start()
     {
         playerHand = GameObject.FindGameObjectWithTag("PlayerHand").gameObject;
@@ -116,6 +116,8 @@ public class ArmUpgradePrototype1 : MonoBehaviour, IArmUpgrade
         //{
         //    return;
         //}
+
+        FindObjectOfType<AudioManager>().Play("PlayerLaser");
 
         canFireLaser = HUDUpdater.canFireLaser;
         if (canFireLaser == false)

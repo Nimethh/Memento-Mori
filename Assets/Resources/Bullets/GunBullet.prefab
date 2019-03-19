@@ -127,7 +127,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.4, y: 0.15}
+  m_Size: {x: 0.3, y: 0.1}
   m_Direction: 1
 --- !u!114 &694646941440823684
 MonoBehaviour:
@@ -144,6 +144,8 @@ MonoBehaviour:
   speed: 0.3
   damage: 50
   lifetime: 5
+  audioManager: {fileID: 8530738874696882839, guid: 05aa262b4971206449803a46fdddd249,
+    type: 3}
 --- !u!50 &5613026986831919824
 Rigidbody2D:
   serializedVersion: 4

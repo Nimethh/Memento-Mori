@@ -192,13 +192,13 @@ AnimationClip:
   - curve:
     - time: 0
       value: {fileID: 21300010, guid: a122a9b7951fdaf499c14189a7f7248b, type: 3}
-    - time: 1.15
+    - time: 1.1166667
       value: {fileID: 21300006, guid: dc6ca701f39415d4db2332ef3db7254e, type: 3}
-    - time: 1.1666666
+    - time: 1.15
       value: {fileID: 21300004, guid: dc6ca701f39415d4db2332ef3db7254e, type: 3}
     - time: 1.1833333
-      value: {fileID: 21300002, guid: dc6ca701f39415d4db2332ef3db7254e, type: 3}
-    - time: 1.2
+      value: {fileID: 21300000, guid: dc6ca701f39415d4db2332ef3db7254e, type: 3}
+    - time: 1.2166667
       value: {fileID: 21300002, guid: dc6ca701f39415d4db2332ef3db7254e, type: 3}
     attribute: m_Sprite
     path: DragonEggNew
@@ -247,7 +247,7 @@ AnimationClip:
     - {fileID: 21300010, guid: a122a9b7951fdaf499c14189a7f7248b, type: 3}
     - {fileID: 21300006, guid: dc6ca701f39415d4db2332ef3db7254e, type: 3}
     - {fileID: 21300004, guid: dc6ca701f39415d4db2332ef3db7254e, type: 3}
-    - {fileID: 21300002, guid: dc6ca701f39415d4db2332ef3db7254e, type: 3}
+    - {fileID: 21300000, guid: dc6ca701f39415d4db2332ef3db7254e, type: 3}
     - {fileID: 21300002, guid: dc6ca701f39415d4db2332ef3db7254e, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
@@ -766,7 +766,14 @@ AnimationClip:
   m_HasGenericRootTransform: 1
   m_HasMotionFloatCurves: 0
   m_Events:
-  - time: 1.2
+  - time: 1.0666667
+    functionName: PlaySound
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 1.1833333
     functionName: InstantiateDragons
     data: 
     objectReferenceParameter: {fileID: 0}

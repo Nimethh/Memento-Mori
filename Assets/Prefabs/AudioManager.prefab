@@ -1,0 +1,146 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8530738874696882832
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8530738874696882838}
+  - component: {fileID: 8530738874696882839}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8530738874696882838
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8530738874696882832}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8530738874696882839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8530738874696882832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22423b9cd773909489cc256511bbe0ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundFX:
+  - name: Background
+    clip: {fileID: 8300000, guid: 4ed5871cd33494d48a6a3532dc6ac585, type: 3}
+    volume: 0.6
+    loop: 1
+    aS: {fileID: 0}
+  - name: PlayerDamaged
+    clip: {fileID: 8300000, guid: 872cb1e9692bbbe4d86522e0ba81c151, type: 3}
+    volume: 0.6
+    loop: 0
+    aS: {fileID: 0}
+  - name: PlayerAttack
+    clip: {fileID: 8300000, guid: 9f7d5960bc14665409aa78a306d3e89e, type: 3}
+    volume: 0.6
+    loop: 0
+    aS: {fileID: 0}
+  - name: PlayerLaser
+    clip: {fileID: 8300000, guid: 9f5bc73181469934892792f8321d5688, type: 3}
+    volume: 0.6
+    loop: 0
+    aS: {fileID: 0}
+  - name: MinionDamaged
+    clip: {fileID: 8300000, guid: d4c4b919d419743428eb8a8f799082a6, type: 3}
+    volume: 0.6
+    loop: 0
+    aS: {fileID: 0}
+  - name: MinionDestroyed
+    clip: {fileID: 0}
+    volume: 0.6
+    loop: 0
+    aS: {fileID: 0}
+  - name: MinionAttack
+    clip: {fileID: 8300000, guid: ee67e4cd209e9cc45af206f19bc3e02a, type: 3}
+    volume: 0.4
+    loop: 0
+    aS: {fileID: 0}
+  - name: DropBotDamaged
+    clip: {fileID: 8300000, guid: 21d6f8539a416c441aca2740f6e00a31, type: 3}
+    volume: 0.7
+    loop: 0
+    aS: {fileID: 0}
+  - name: DropBotSwoosh
+    clip: {fileID: 8300000, guid: 163c18c59a7faca4cb3c2d50cb19eac2, type: 3}
+    volume: 0.8
+    loop: 0
+    aS: {fileID: 0}
+  - name: DropBotDestroyed
+    clip: {fileID: 0}
+    volume: 60
+    loop: 0
+    aS: {fileID: 0}
+  - name: CommanderLaser
+    clip: {fileID: 8300000, guid: 7bb2aca233289f74f88b5706c35c3221, type: 3}
+    volume: 60
+    loop: 0
+    aS: {fileID: 0}
+  - name: CommanderChasingBullets
+    clip: {fileID: 8300000, guid: f40d7249226fca04799324e9148071f0, type: 3}
+    volume: 60
+    loop: 0
+    aS: {fileID: 0}
+  - name: CommanderBullets
+    clip: {fileID: 0}
+    volume: 60
+    loop: 0
+    aS: {fileID: 0}
+  - name: CommanderDamaged
+    clip: {fileID: 0}
+    volume: 60
+    loop: 0
+    aS: {fileID: 0}
+  - name: CommanderDestroyed
+    clip: {fileID: 0}
+    volume: 60
+    loop: 0
+    aS: {fileID: 0}
+  - name: ControlLaser
+    clip: {fileID: 0}
+    volume: 60
+    loop: 0
+    aS: {fileID: 0}
+  - name: ControlSlash
+    clip: {fileID: 0}
+    volume: 60
+    loop: 0
+    aS: {fileID: 0}
+  - name: ControlEyeDestroyed
+    clip: {fileID: 0}
+    volume: 60
+    loop: 0
+    aS: {fileID: 0}
+  - name: ControlDamaged
+    clip: {fileID: 0}
+    volume: 60
+    loop: 0
+    aS: {fileID: 0}
+  - name: ControlCharge
+    clip: {fileID: 0}
+    volume: 60
+    loop: 0
+    aS: {fileID: 0}
