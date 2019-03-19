@@ -328,7 +328,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   image: {fileID: 1467080247}
-  videoToPlay: {fileID: 32900000, guid: 1ae2f9e9ea6bce84d96fb553d6e26e8e, type: 3}
+  videoToPlay: {fileID: 32900000, guid: 56f505e97ee28c3428acdc8265339552, type: 3}
 --- !u!114 &1467080247
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -6,7 +6,6 @@ public class EnemyMinionHealth : MonoBehaviour, IHealth
 {
     public float health;
     public GameObject explosion;
-    
     void Update()
     {
         Animator anim = GetComponent<Animator>();

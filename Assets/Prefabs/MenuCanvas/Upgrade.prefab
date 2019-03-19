@@ -65,7 +65,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.8627451}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.8}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -631,11 +631,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07488fdb42f024a49a62dd229514b255, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  upgradeAquired: 1
-  upgradeBehavior: 0
-  armUpgrade: 0
-  headUpgrade: 0
-  goToNextLevel: 0
+  upgradeAquiredBool: 0
+  upgradeBehaviorBool: 0
+  armUpgradeBool: 0
+  headUpgradeBool: 0
+  goToNextLevelBool: 0
   upgradeAquiredUI: {fileID: 1220223591876447992}
   upgradeBehaviorUI: {fileID: 1220223592320075506}
   armUpgradeUI: {fileID: 1220223590808544055}
@@ -1840,7 +1840,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.8627451}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.8}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -2437,7 +2437,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.8627451}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.8}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -3992,7 +3992,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.8627451}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.8}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
