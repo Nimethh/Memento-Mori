@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 397362662924118547}
   - component: {fileID: 6816882786652403484}
   - component: {fileID: 922775923705559895}
+  - component: {fileID: 1444463039997082237}
   m_Layer: 0
   m_Name: CommanderDeath
-  m_TagString: Untagged
+  m_TagString: Commander
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -99,3 +100,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1444463039997082237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8435691582931927732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b33c88d032e8943c09a0064cddda7178, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fallDelay: 1
+  fallLength: 4
+  explosion: {fileID: 6255627362423548592, guid: 2a6e1a6d2c1a342f0bd434b9b7d28747,
+    type: 3}
+  fallEndPosition: {x: 3, y: -6, z: 7.5}

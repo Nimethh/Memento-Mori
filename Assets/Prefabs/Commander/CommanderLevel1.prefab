@@ -1307,6 +1307,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 7500
+  deadPrefab: {fileID: 8435691582931927732, guid: f4efce8aeaf5341ccbbe2ad5a5a81e27,
+    type: 3}
 --- !u!1 &6301676553186896467
 GameObject:
   m_ObjectHideFlags: 0

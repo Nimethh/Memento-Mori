@@ -6,7 +6,7 @@ public class CommanderHealth : MonoBehaviour, IHealth
 {
     public float health;
     //public GameObject explosion;
-   
+    public GameObject deadPrefab;
 
     void Update()
     {
@@ -18,6 +18,7 @@ public class CommanderHealth : MonoBehaviour, IHealth
             //anim.SetTrigger("Dead");
             //Debug.Log("TheTriggerIsSet");
             //Instantiate(explosion, transform.position, Quaternion.identity);
+            Instantiate(deadPrefab, transform.position, transform.rotation);
             Destroy(gameObject);
         }
     }
