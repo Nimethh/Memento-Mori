@@ -96,7 +96,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 9
-  damage: 20
+  damage: 10
 --- !u!114 &6847498406299432249
 MonoBehaviour:
   m_ObjectHideFlags: 0
