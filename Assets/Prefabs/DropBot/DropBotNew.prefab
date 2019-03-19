@@ -81,6 +81,8 @@ MonoBehaviour:
   - {fileID: 4428011805490528584}
   - {fileID: 4428011804661580419}
   - {fileID: 4428011805463316544}
+  audioManager: {fileID: 8530738874696882839, guid: 05aa262b4971206449803a46fdddd249,
+    type: 3}
 --- !u!114 &927370221907309006
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -93,8 +95,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47a024d511622bc41ba52f7c0c6eddd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 200
+  health: 400
   explosion: {fileID: 971642017978944085, guid: 03a46f7532a873242a5523dd02f817c7,
+    type: 3}
+  audioManager: {fileID: 8530738874696882839, guid: 05aa262b4971206449803a46fdddd249,
     type: 3}
 --- !u!50 &1841996848546473684
 Rigidbody2D:

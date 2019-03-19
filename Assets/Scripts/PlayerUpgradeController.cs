@@ -30,7 +30,7 @@ public class PlayerUpgradeController : MonoBehaviour
 
     [SerializeField]
     private PlayerWeaponController weaponController;
-
+    
 
     void Start()
     {
@@ -183,7 +183,6 @@ public class PlayerUpgradeController : MonoBehaviour
             Debug.Log("equippedArmUpgrade equals null");
             return;
         }
-
         equippedArmUpgrade.PreformAbility();
     }
 

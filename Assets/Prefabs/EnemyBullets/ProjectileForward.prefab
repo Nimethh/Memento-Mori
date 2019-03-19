@@ -109,6 +109,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   damage: 20
+  audioManager: {fileID: 8530738874696882839, guid: 05aa262b4971206449803a46fdddd249,
+    type: 3}
 --- !u!50 &8953680172460271524
 Rigidbody2D:
   serializedVersion: 4

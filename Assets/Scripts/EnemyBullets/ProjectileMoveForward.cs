@@ -16,6 +16,7 @@ public class ProjectileMoveForward : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         moveHorizontal = -1;
+        FindObjectOfType<AudioManager>().Play("MinionAttack");
     }
 
 

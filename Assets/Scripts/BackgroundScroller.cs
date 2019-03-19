@@ -9,16 +9,12 @@ public class BackgroundScroller : MonoBehaviour
     private float quadLength;
     [SerializeField]
     private float scrollingSpeed;
-
-    private AudioSource aS;
-
+    
     private Vector3 startPosition;
 
 	void Start ()
     {
         startPosition = transform.position;
-        aS = GetComponent<AudioSource>();
-        aS.Play();
 	}
 	
 	void Update ()

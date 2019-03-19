@@ -20,25 +20,23 @@ public class PlayerHealth : MonoBehaviour, IHealth
     private float invulnerabilityCounter;
     [SerializeField]
     private float invulnerabilityTime;
-
-
+    
     [SerializeField]
     private int maxHealth;
-    [SerializeField]
-    private float currentHealth;
+    public float currentHealth;
     [SerializeField]
     private Slider healthBar;
-
+    
     void Start()
     {
         anim = GetComponent<Animator>();
-        lives = 30;
+        lives = 0;
         isInvulnerable = false;
         invulnerabilityTime = 3f;
-        maxHealth = 100;
+        maxHealth = 200;
         currentHealth = maxHealth;
         healthBar.value = currentHealth;
-
+        
     }
 
     void Update()
@@ -49,7 +47,7 @@ public class PlayerHealth : MonoBehaviour, IHealth
             if (lives == 0)
             {
                 //Debug.Log("GameOver");
-                SceneManager.LoadScene("DeathScreen");
+                //SceneManager.LoadScene("DeathScreen");
 
             }
             else
@@ -88,9 +86,8 @@ public class PlayerHealth : MonoBehaviour, IHealth
             currentHealth = currentHealth - damage;
             healthBar.maxValue = maxHealth;
             healthBar.value = currentHealth;
-
             StartCoroutine(cameraShake.Shake(0.2f, 0.1f));
-
+            FindObjectOfType<AudioManager>().Play("PlayerDamaged");
         }
     }
 
@@ -106,9 +103,9 @@ public class PlayerHealth : MonoBehaviour, IHealth
             currentHealth = currentHealth - damage;
             healthBar.maxValue = maxHealth;
             healthBar.value = currentHealth;
-
             StartCoroutine(cameraShake.Shake(0.2f, 0.1f));
-
+            FindObjectOfType<AudioManager>().Play("PlayerDamaged");
         }
     }
+    
 }

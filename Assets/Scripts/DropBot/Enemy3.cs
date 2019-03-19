@@ -16,7 +16,6 @@ public class Enemy3 : MonoBehaviour
     //Added 2019-02-13
     //private Animator anim;
 
-
     void Start()
     {
       
@@ -81,6 +80,11 @@ public class Enemy3 : MonoBehaviour
     public void Destroy()
     {
         Destroy(gameObject);
+    }
+
+    public void PlaySound()
+    {
+        FindObjectOfType<AudioManager>().Play("DropBotSwoosh");
     }
 
 }

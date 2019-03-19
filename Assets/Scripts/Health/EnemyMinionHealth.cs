@@ -5,24 +5,15 @@ using UnityEngine;
 public class EnemyMinionHealth : MonoBehaviour, IHealth
 {
     public float health;
-    //public GameObject explosion;
-   private AudioSource aS;
-
-    void Start()
-    {
-        aS = GetComponent<AudioSource>();
-    }
-
+    public GameObject explosion;
     void Update()
     {
-        
+        Animator anim = GetComponent<Animator>();
         if (health <= 0)
         {
-            
-            Animator anim = GetComponent<Animator>();
-            anim.SetTrigger("Dead");
-            //Instantiate(explosion, transform.position, Quaternion.identity);
-            //Destroy(gameObject);
+            Instantiate(explosion, transform.position, Quaternion.identity);
+            //FindObjectOfType<AudioManager>().Play("MinionDestroyed");
+            Destroy(gameObject);
         }
     }
 
@@ -30,16 +21,14 @@ public class EnemyMinionHealth : MonoBehaviour, IHealth
     public void TakeDamage(int damage)
     {
         health = health - damage;
-        //healthBar.maxValue = maxHealth;
-        //healthBar.value = currentHealth;
-        aS.Play();
+        FindObjectOfType<AudioManager>().Play("MinionDamaged");
 
     }
 
     public void TakeDamage(float damage)
     {
         health = health - damage;
-        aS.Play();
+        FindObjectOfType<AudioManager>().Play("MinionDamaged");
     }
 
     public void Destroy()

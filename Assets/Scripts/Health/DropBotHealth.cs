@@ -7,25 +7,15 @@ public class DropBotHealth : MonoBehaviour, IHealth
     public float health;
     public GameObject explosion;
     private Transform animPos;
-
-
+    
     void Update()
     {
         Animator anim = GetComponent<Animator>();
 
         if (health <= 0)
         {
-
-            //if (anim == null)
-            //{
-            //    Debug.Log("The Animator is null");
-            //}
-            //anim.SetTrigger("Dead");
-
-            //Debug.Log("TheTriggerIsSet");
-            //Debug.Log(anim.transform.position);
-            
             Instantiate(explosion, anim.gameObject.transform.position, anim.gameObject.transform.rotation);
+            //FindObjectOfType<AudioManager>().Play("DropBotDestroyed");
             Destroy(gameObject);
         }
     }
@@ -34,13 +24,13 @@ public class DropBotHealth : MonoBehaviour, IHealth
     public void TakeDamage(int damage)
     {
         health = health - damage;
-        //healthBar.maxValue = maxHealth;
-        //healthBar.value = currentHealth;
+        FindObjectOfType<AudioManager>().Play("DropBotDamaged");
     }
 
     public void TakeDamage(float damage)
     {
         health = health - damage;
+        FindObjectOfType<AudioManager>().Play("DropBotDamaged");
     }
 
     public void Destroy()

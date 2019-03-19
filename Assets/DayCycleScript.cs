@@ -12,6 +12,8 @@ public class DayCycleScript : MonoBehaviour
     [Header("Timing")]
     //public float speed = 4f;
     public float timeUntilCommander = 10f;
+    //Added 2019-03-18
+    public float time;
 
     private Vector3 initialPos = new Vector3();
     private Vector3 tmpPos = new Vector3();
@@ -29,13 +31,20 @@ public class DayCycleScript : MonoBehaviour
         initialPos.Set(transform.position.x, transform.position.y, transform.position.z);
         lightComponent = this.GetComponent<Light>();
         hdLight = this.GetComponent<HDAdditionalLightData>();
+
+        //Added 2019-03-18
+        time = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Time.frameCount % 2 == 0) {
-            float time = (Time.time < timeUntilCommander ? Time.time : timeUntilCommander);
+
+        //if (Time.frameCount % 2 == 0) {
+        //float time = (Time.time < timeUntilCommander ? Time.time : timeUntilCommander);
+            //Added 2019-03-18
+            time = (time > timeUntilCommander ? time : time + Time.deltaTime);
+
             float timeRange = time / timeUntilCommander;
             float timeSin = Mathf.Sin(timeRange * Mathf.PI);
             float timeCos = Mathf.Cos(timeRange * Mathf.PI);
@@ -45,12 +54,12 @@ public class DayCycleScript : MonoBehaviour
             float waveY = timeSin;
             tmpPos.Set(waveX * scaleX, waveY * scaleY, 0f);
 
-            tmpPos.Set(initialPos.x + tmpPos.x, initialPos.x + tmpPos.y, initialPos.z);
+            tmpPos.Set(initialPos.x + tmpPos.x, initialPos.y + tmpPos.y, initialPos.z);
             transform.position = tmpPos;
 
             // Set the sun color and intensity
             lightComponent.colorTemperature = Mathf.Lerp(sunDownColorTemperature, sunUpColorTemperature, timeSin);
             hdLight.intensity = Mathf.Lerp(sunDownBrightnessLux, sunUpBrightnessLux, timeSin);
-        }
+        //}
     }
 }

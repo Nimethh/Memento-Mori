@@ -40,8 +40,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4207417194129036987}
   - component: {fileID: 1909657679686469768}
-  - component: {fileID: 4420356046029213162}
   - component: {fileID: 2864511177125387872}
+  - component: {fileID: 1945430221455537911}
   - component: {fileID: 628108008086355155}
   - component: {fileID: 8563842057537198753}
   - component: {fileID: 7415305309979959494}
@@ -87,18 +87,6 @@ MonoBehaviour:
     type: 3}
   shootingSpot: {fileID: 7103800246842417355}
   fireDelay: 2
---- !u!114 &4420356046029213162
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8692342588957997579}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a39a9d5b213af374a927afc497ad8125, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2864511177125387872
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -112,6 +100,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+  explosion: {fileID: 971642017978944085, guid: c0c5fdb8c3d08e246954fa581ac68b53,
+    type: 3}
+  audioManager: {fileID: 8530738874696882839, guid: 05aa262b4971206449803a46fdddd249,
+    type: 3}
+--- !u!114 &1945430221455537911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8692342588957997579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d44102fc32ada324aa3a4cadfe3fa80f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosion: {fileID: 971642017978944085, guid: c0c5fdb8c3d08e246954fa581ac68b53,
+    type: 3}
 --- !u!50 &628108008086355155
 Rigidbody2D:
   serializedVersion: 4

@@ -10,7 +10,7 @@ public class PlayerWeaponController : MonoBehaviour
     public GameObject playerHand;
     public GameObject equippedWeapon { get; set; }
     public IWeapon equippedWeaponInterface;
-
+    
     public bool hasWeaponEquipped;
 
     void Start()
@@ -29,12 +29,10 @@ public class PlayerWeaponController : MonoBehaviour
             PreformWeaponAttack();
         }
 
-
-
-        if (Input.GetMouseButtonDown(1))
-        {
-            PreformWeaponSpecialAttack();
-        }
+        //if (Input.GetMouseButtonDown(1))
+        //{
+        //    PreformWeaponSpecialAttack();
+        //}
     }
 
     private void FixedUpdate()
