@@ -62,7 +62,7 @@ public class Enemy3 : MonoBehaviour
 
     public void InstantiateDragons()
     {
-        Debug.Log("CallingInstantiateDragons");
+        //Debug.Log("CallingInstantiateDragons");
         for (int i = 0; i < DragonPos.Length; i++)
         {
             Instantiate(Dragon, DragonPos[i].transform.position, Quaternion.identity);

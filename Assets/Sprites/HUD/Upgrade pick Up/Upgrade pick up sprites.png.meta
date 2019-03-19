@@ -16,6 +16,8 @@ TextureImporter:
     21300022: Upgrade pick up sprites_11
     21300024: Upgrade pick up sprites_12
     21300026: Upgrade pick up sprites_13
+    21300028: Upgrade pick up sprites_14
+    21300030: Upgrade pick up sprites_15
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -101,10 +103,10 @@ TextureImporter:
       name: Upgrade pick up sprites_0
       rect:
         serializedVersion: 2
-        x: 1894
-        y: 3346
-        width: 541
-        height: 160
+        x: 1552
+        y: 3322
+        width: 253
+        height: 347
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -341,10 +343,10 @@ TextureImporter:
       name: Upgrade pick up sprites_12
       rect:
         serializedVersion: 2
-        x: 2049
-        y: 3519
-        width: 175
-        height: 167
+        x: 1906
+        y: 3352
+        width: 149
+        height: 147
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -352,7 +354,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2000637ef2cc4c04b88f434906950241
+      spriteID: c3bf14dc4d90ca547b73e93f97715c46
       vertices: []
       indices: 
       edges: []
@@ -361,10 +363,10 @@ TextureImporter:
       name: Upgrade pick up sprites_13
       rect:
         serializedVersion: 2
-        x: 1545
-        y: 3311
-        width: 275
-        height: 372
+        x: 2089
+        y: 3352
+        width: 149
+        height: 147
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -372,7 +374,47 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9e9e540d0c0838c408ab57a85c9e49de
+      spriteID: 3d7ffe351aa6f3440bb95fcf07764aa2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Upgrade pick up sprites_14
+      rect:
+        serializedVersion: 2
+        x: 2272
+        y: 3352
+        width: 149
+        height: 147
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a46c82636621b114f9461be7cc5e7fc5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Upgrade pick up sprites_15
+      rect:
+        serializedVersion: 2
+        x: 2065
+        y: 3526
+        width: 149
+        height: 147
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 484844d890720f348bb4fdf7314e22c5
       vertices: []
       indices: 
       edges: []
