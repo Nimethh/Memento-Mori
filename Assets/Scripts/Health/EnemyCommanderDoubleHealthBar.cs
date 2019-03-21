@@ -7,7 +7,6 @@ public class EnemyCommanderDoubleHealthBar : MonoBehaviour, IHealth
 {
     public float health;
     //public GameObject explosion;
-   private AudioSource aS;
 
     [SerializeField]
     private Slider healthBarRight;
@@ -28,7 +27,7 @@ public class EnemyCommanderDoubleHealthBar : MonoBehaviour, IHealth
         
         if (health <= 0)
         {
-            
+
             //Animator anim = GetComponent<Animator>();
             //anim.SetTrigger("Dead");
             //Instantiate(explosion, transform.position, Quaternion.identity);
@@ -40,23 +39,32 @@ public class EnemyCommanderDoubleHealthBar : MonoBehaviour, IHealth
     public void TakeDamage(int damage)
     {
         health = health - damage;
-        //healthBar.maxValue = maxHealth;
-        //healthBar.value = currentHealth;
-        //aS.Play();
+
         healthBarRight.value = health;
         healthBarLeft.value = health;
+        FindObjectOfType<AudioManager>().Play("CommanderDamaged");
     }
 
     public void TakeDamage(float damage)
     {
         health = health - damage;
-        //aS.Play();
         healthBarRight.value = health;
         healthBarLeft.value = health;
+        FindObjectOfType<AudioManager>().Play("CommanderDamaged");
     }
 
     public void Destroy()
     {
         Destroy(gameObject);
+    }
+
+    public void PlayLaserSound()
+    {
+        FindObjectOfType<AudioManager>().Play("CommanderLaser");
+    }
+
+    public void PlayDeathSound()
+    {
+        FindObjectOfType<AudioManager>().Play("CommanderDestroyed");
     }
 }
