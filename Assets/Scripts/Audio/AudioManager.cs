@@ -19,6 +19,7 @@ public class Audio
     public AudioSource aS;
 }
 
+//followed tutorial from brackeys.
 public class AudioManager : MonoBehaviour
 {
     public Audio[] soundFX;

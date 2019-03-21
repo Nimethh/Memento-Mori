@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &8530738874696882832
+--- !u!1 &4566382146623099202
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,8 +8,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8530738874696882838}
-  - component: {fileID: 8530738874696882839}
+  - component: {fileID: 4566382146623099204}
+  - component: {fileID: 4566382146623099205}
   m_Layer: 0
   m_Name: AudioManager
   m_TagString: Untagged
@@ -17,13 +17,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8530738874696882838
+--- !u!4 &4566382146623099204
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8530738874696882832}
+  m_GameObject: {fileID: 4566382146623099202}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -31,13 +31,13 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8530738874696882839
+--- !u!114 &4566382146623099205
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8530738874696882832}
+  m_GameObject: {fileID: 4566382146623099202}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 22423b9cd773909489cc256511bbe0ba, type: 3}
@@ -65,7 +65,7 @@ MonoBehaviour:
     loop: 0
     aS: {fileID: 0}
   - name: MinionDamaged
-    clip: {fileID: 8300000, guid: d4c4b919d419743428eb8a8f799082a6, type: 3}
+    clip: {fileID: 8300000, guid: 56c37715683e6134a92410170887f471, type: 3}
     volume: 0.6
     loop: 0
     aS: {fileID: 0}
@@ -80,7 +80,7 @@ MonoBehaviour:
     loop: 0
     aS: {fileID: 0}
   - name: DropBotDamaged
-    clip: {fileID: 8300000, guid: 21d6f8539a416c441aca2740f6e00a31, type: 3}
+    clip: {fileID: 8300000, guid: 56c37715683e6134a92410170887f471, type: 3}
     volume: 0.7
     loop: 0
     aS: {fileID: 0}
@@ -96,27 +96,27 @@ MonoBehaviour:
     aS: {fileID: 0}
   - name: CommanderLaser
     clip: {fileID: 8300000, guid: 7bb2aca233289f74f88b5706c35c3221, type: 3}
-    volume: 60
+    volume: 0.5
     loop: 0
     aS: {fileID: 0}
   - name: CommanderChasingBullets
     clip: {fileID: 8300000, guid: f40d7249226fca04799324e9148071f0, type: 3}
-    volume: 60
+    volume: 0.5
     loop: 0
     aS: {fileID: 0}
   - name: CommanderBullets
-    clip: {fileID: 0}
-    volume: 60
+    clip: {fileID: 8300000, guid: afe93d59551fc864ea1dec1ba64d18ec, type: 3}
+    volume: 0.5
     loop: 0
     aS: {fileID: 0}
   - name: CommanderDamaged
-    clip: {fileID: 0}
-    volume: 60
+    clip: {fileID: 8300000, guid: 16882403fcb720f4f89ce97aa116c663, type: 3}
+    volume: 0.5
     loop: 0
     aS: {fileID: 0}
   - name: CommanderDestroyed
-    clip: {fileID: 0}
-    volume: 60
+    clip: {fileID: 8300000, guid: ddd3268fe16bb40428dc33d9ae329ca3, type: 3}
+    volume: 0.5
     loop: 0
     aS: {fileID: 0}
   - name: ControlLaser

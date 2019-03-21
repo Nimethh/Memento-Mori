@@ -11,7 +11,7 @@ public class LaserLerp : MonoBehaviour
     {
         player = GameObject.Find("Player");
     }
-    
+
     void Update()
     {
         Vector3 direction = player.transform.position - transform.position;
@@ -21,6 +21,6 @@ public class LaserLerp : MonoBehaviour
         Quaternion Zrot = Quaternion.Euler(0, 0, rotationZ);
         //Quaternion.RotateTowards(transform.rotation, Zrot, rotationSpeed * Time.deltaTime);
         transform.rotation = Quaternion.Lerp(transform.rotation, Zrot, rotationSpeed * Time.deltaTime);
-            //transform.rotation = Quaternion.Euler(0, 0, rotationZ);
+        //transform.rotation = Quaternion.Euler(0, 0, rotationZ);
     }
 }
