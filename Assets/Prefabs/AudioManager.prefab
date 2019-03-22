@@ -70,7 +70,7 @@ MonoBehaviour:
     loop: 0
     aS: {fileID: 0}
   - name: MinionDestroyed
-    clip: {fileID: 0}
+    clip: {fileID: 8300000, guid: f6176740879489e45ac65b687774d76f, type: 3}
     volume: 0.6
     loop: 0
     aS: {fileID: 0}
@@ -90,7 +90,7 @@ MonoBehaviour:
     loop: 0
     aS: {fileID: 0}
   - name: DropBotDestroyed
-    clip: {fileID: 0}
+    clip: {fileID: 8300000, guid: f6176740879489e45ac65b687774d76f, type: 3}
     volume: 60
     loop: 0
     aS: {fileID: 0}
@@ -119,28 +119,33 @@ MonoBehaviour:
     volume: 0.5
     loop: 0
     aS: {fileID: 0}
+  - name: CommanderMusic
+    clip: {fileID: 8300000, guid: fa4de3dbcff9e694992bacdf9e535758, type: 3}
+    volume: 1
+    loop: 1
+    aS: {fileID: 0}
   - name: ControlLaser
-    clip: {fileID: 0}
-    volume: 60
+    clip: {fileID: 8300000, guid: 77b25106362b6824593ab5464f24b617, type: 3}
+    volume: 0.7
     loop: 0
     aS: {fileID: 0}
   - name: ControlSlash
-    clip: {fileID: 0}
-    volume: 60
+    clip: {fileID: 8300000, guid: 651792bf177246c46b78aa94457adce1, type: 3}
+    volume: 0.6
     loop: 0
     aS: {fileID: 0}
   - name: ControlEyeDestroyed
-    clip: {fileID: 0}
-    volume: 60
+    clip: {fileID: 8300000, guid: e1381a8db03af3845a0be6ef49bc4597, type: 3}
+    volume: 0.6
     loop: 0
     aS: {fileID: 0}
   - name: ControlDamaged
-    clip: {fileID: 0}
-    volume: 60
+    clip: {fileID: 8300000, guid: 4516195eab49f444197c64eae8c33300, type: 3}
+    volume: 0.7
     loop: 0
     aS: {fileID: 0}
   - name: ControlCharge
-    clip: {fileID: 0}
-    volume: 60
+    clip: {fileID: 8300000, guid: 86900c3f630862d49be558eec5c7da5d, type: 3}
+    volume: 0.7
     loop: 0
     aS: {fileID: 0}

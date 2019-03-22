@@ -78,6 +78,7 @@ public class EnemySpawner : MonoBehaviour
     {
         timePassed += Time.deltaTime;
         CommanderChecker();
+
         // Normal Waves
         if (randomWaves.Length != 0)// Check if we have any normal waves in the waves array.
         {
@@ -256,16 +257,23 @@ public class EnemySpawner : MonoBehaviour
 
     void CommanderChecker()
     {
-        if(GameObject.FindGameObjectWithTag("Commander") != null)
+        if (commanderIsSpawned == false && GameObject.FindGameObjectWithTag("Commander") != null)
         {
             commanderIsSpawned = true;
+            StopAllCoroutines();
+            FindObjectOfType<AudioManager>().Play("CommanderMusic");
         }
-        
+
         if (commanderIsSpawned == true && GameObject.FindGameObjectWithTag("Commander") == null)
         {
             //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             //commanderIsDead = true;
             upgradeUI.SetActive(true);
         }
+    }
+
+    public bool IsCommanderSpawned()
+    {
+        return commanderIsSpawned;
     }
 }

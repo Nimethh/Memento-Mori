@@ -23,12 +23,14 @@ public class Audio
 public class AudioManager : MonoBehaviour
 {
     public Audio[] soundFX;
+    private EnemySpawner eS;
+    private bool commanderMusicIsPlaying = false;
 
     void Start()
     {
         Play("Background");
+        eS = GameObject.Find("EnemySpawner").GetComponent<EnemySpawner>();
     }
-
     void Awake()
     {
         foreach(Audio aud in soundFX)
@@ -37,6 +39,24 @@ public class AudioManager : MonoBehaviour
             aud.aS.clip = aud.clip;
             aud.aS.volume = aud.volume;
             aud.aS.loop = aud.loop;
+        }
+    }
+
+    void Update()
+    {
+        if (eS.IsCommanderSpawned() == true)
+        {
+            if (commanderMusicIsPlaying == false)
+            {
+                foreach (Audio aud in soundFX)
+                {
+                    if (aud.name == "Background")
+                    {
+                        aud.aS.volume = 0.0f;
+                    }
+                }
+                commanderMusicIsPlaying = true;
+            }
         }
     }
 

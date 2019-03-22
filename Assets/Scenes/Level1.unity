@@ -2609,6 +2609,75 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1168458462}
   m_CullTransparentMesh: 0
+--- !u!1001 &1174825215
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4566382146623099202, guid: 05aa262b4971206449803a46fdddd249,
+        type: 3}
+      propertyPath: m_Name
+      value: AudioManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 4566382146623099204, guid: 05aa262b4971206449803a46fdddd249,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4566382146623099204, guid: 05aa262b4971206449803a46fdddd249,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4566382146623099204, guid: 05aa262b4971206449803a46fdddd249,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4566382146623099204, guid: 05aa262b4971206449803a46fdddd249,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4566382146623099204, guid: 05aa262b4971206449803a46fdddd249,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4566382146623099204, guid: 05aa262b4971206449803a46fdddd249,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4566382146623099204, guid: 05aa262b4971206449803a46fdddd249,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4566382146623099204, guid: 05aa262b4971206449803a46fdddd249,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4566382146623099204, guid: 05aa262b4971206449803a46fdddd249,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4566382146623099204, guid: 05aa262b4971206449803a46fdddd249,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4566382146623099204, guid: 05aa262b4971206449803a46fdddd249,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 05aa262b4971206449803a46fdddd249, type: 3}
 --- !u!1 &1242174209 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1220223591142131839, guid: d1db6258b30ae854a979e6bcdab50842,
@@ -3480,6 +3549,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8763240880489466966, guid: f8fbc9ebbeab131429e9e9095dbb7f5f,
+        type: 3}
+      propertyPath: playerHP
+      value: 
+      objectReference: {fileID: 46387554}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8fbc9ebbeab131429e9e9095dbb7f5f, type: 3}
 --- !u!1 &1705114047
@@ -5033,72 +5107,3 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5cfd0acc5b5530540bbc8f063bde3b7f, type: 3}
---- !u!1001 &4566382145444339385
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4566382146623099202, guid: 05aa262b4971206449803a46fdddd249,
-        type: 3}
-      propertyPath: m_Name
-      value: AudioManager
-      objectReference: {fileID: 0}
-    - target: {fileID: 4566382146623099204, guid: 05aa262b4971206449803a46fdddd249,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4566382146623099204, guid: 05aa262b4971206449803a46fdddd249,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4566382146623099204, guid: 05aa262b4971206449803a46fdddd249,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4566382146623099204, guid: 05aa262b4971206449803a46fdddd249,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4566382146623099204, guid: 05aa262b4971206449803a46fdddd249,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4566382146623099204, guid: 05aa262b4971206449803a46fdddd249,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4566382146623099204, guid: 05aa262b4971206449803a46fdddd249,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4566382146623099204, guid: 05aa262b4971206449803a46fdddd249,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 4566382146623099204, guid: 05aa262b4971206449803a46fdddd249,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4566382146623099204, guid: 05aa262b4971206449803a46fdddd249,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4566382146623099204, guid: 05aa262b4971206449803a46fdddd249,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 05aa262b4971206449803a46fdddd249, type: 3}
