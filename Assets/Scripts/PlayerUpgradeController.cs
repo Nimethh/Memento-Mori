@@ -318,4 +318,14 @@ public class PlayerUpgradeController : MonoBehaviour
             GameObject.Find("HeadUpgradeOnCooldown").SetActive(false);
         }
     }
+
+    public bool ArmUpgradeIsEquipped()
+    {
+        return armUpgradeEquipped;
+    }
+
+    public bool HeadUpgradeIsEquipped()
+    {
+        return headUpgradeEquipped;
+    }
 }

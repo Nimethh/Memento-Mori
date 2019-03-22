@@ -35,17 +35,17 @@ public class UpgradePanel : MonoBehaviour
         if (GameObject.Find("UpgradePanel") == true)
         {
             Time.timeScale = 0.0f;
-            if (goToNextLevelBool == true)
-            {
-                ChangeScenes();
-            }
+            //if (goToNextLevelBool == true)
+            //{
+            //    ChangeScenes();
+            //}
 
             ActivatePanel();
 
 
             if (armUpgradeBool == true && upgradeBehaviorBool == false && upgradeAquiredBool == false)
             {
-                if(Input.GetMouseButtonDown(0))
+                if (Input.GetMouseButtonDown(0))
                 {
                     goToNextLevelBool = true;
                 }
@@ -71,7 +71,7 @@ public class UpgradePanel : MonoBehaviour
                     UpdateBools();
                 }
             }
-            
+
         }
 
     }
@@ -119,15 +119,15 @@ public class UpgradePanel : MonoBehaviour
         }
     }
 
-    void ChangeScenes()
-    {
-        if(SceneManager.GetActiveScene().name == "Level1")
-        {
-            SceneManager.LoadScene("Level2With");
-        }
-        else if(SceneManager.GetActiveScene().name == "Level2With")
-        {
-            SceneManager.LoadScene("Level3WithArmWithHead");
-        }
-    }
+    //void ChangeScenes()
+    //{
+    //    if(SceneManager.GetActiveScene().name == "Level1")
+    //    {
+    //        SceneManager.LoadScene("Level2With");
+    //    }
+    //    else if(SceneManager.GetActiveScene().name == "Level2With")
+    //    {
+    //        SceneManager.LoadScene("Level3WithArmWithHead");
+    //    }
+    //}
 }

@@ -10,18 +10,34 @@ public class TestCursor : MonoBehaviour
     [SerializeField]
     public Sprite cursorRed;
 
+    [SerializeField]
+    private PlayerUpgradeController upgradeController;
+
     void Start()
     {
         Cursor.visible = false;
         renderer = GetComponent<SpriteRenderer>();
+        upgradeController = GameObject.Find("Player").GetComponent<PlayerUpgradeController>();
     }
 
     void Update()
     {
-        Vector2 cursorPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        transform.position = cursorPos - new Vector2(0,+0.3f);
+        if(GameObject.Find("UpgradePanel") == true)
+        {
+            Cursor.visible = true;
+        }
 
-        if(Input.GetMouseButtonDown(0))
+        Vector2 cursorPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        if (upgradeController.ArmUpgradeIsEquipped() == true)
+        {
+            transform.position = cursorPos - new Vector2(0, +0.4f);
+        }
+        else
+        {
+            transform.position = cursorPos;
+        }
+
+        if (Input.GetMouseButtonDown(0))
         {
             renderer.sprite = cursorRed;
         }
