@@ -10,7 +10,7 @@ public class MainMenu : MonoBehaviour
 
     public void NewGame()
     {
-        SceneManager.LoadScene("Level1");
+        SceneManager.LoadScene("Intro");
     }
 
     public void Back()
@@ -21,8 +21,9 @@ public class MainMenu : MonoBehaviour
 
     public void Credits()
     {
-        mainMenu.SetActive(false);
-        credits.SetActive(true);
+        SceneManager.LoadScene("Credits");
+        //mainMenu.SetActive(false);
+        //credits.SetActive(true);
     }
 
     public void Quit()
