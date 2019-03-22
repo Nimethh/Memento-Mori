@@ -4,28 +4,30 @@ using UnityEngine;
 
 public class HealthProxy : MonoBehaviour, IHealth
 {
-    private GameObject _proxiedHealthHolder;
-    public GameObject proxiedHealthHolder {
-        get { return _proxiedHealthHolder; }
-        set {
-            _proxiedHealthHolder = value;
-            proxiedHealth = value.GetComponent<IHealth>();
-        }
-    }
-    private IHealth proxiedHealth;
+    public GameObject proxiedHealthHolder;
+    public bool active = true;
 
     public void TakeDamage(int damage)
     {
+        if(!active) return;
+
+        IHealth proxiedHealth = proxiedHealthHolder.GetComponent<IHealth>();
         proxiedHealth.TakeDamage(damage);
     }
 
     public void TakeDamage(float damage)
     {
+        if(!active) return;
+        
+        IHealth proxiedHealth = proxiedHealthHolder.GetComponent<IHealth>();
         proxiedHealth.TakeDamage(damage);
     }
 
     public float GetHealth()
     {
+        if(!active) return -1;
+        
+        IHealth proxiedHealth = proxiedHealthHolder.GetComponent<IHealth>();
         return proxiedHealth.GetHealth();
     }
 }
