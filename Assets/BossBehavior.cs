@@ -140,9 +140,8 @@ public class BossBehavior : MonoBehaviour
         switch(Mathf.RoundToInt(attackCounter / 2) % 3) {
             // Slashes its arms at the player
             case 0:
-                // if(!attackActive)
-                //    StartCoroutine(PerformAttack1Stage1());
-                attackCounter++;
+                if(!attackActive)
+                   StartCoroutine(PerformAttack1Stage1());
                 break;
 
             // Spews a lot of small, slow bullets
@@ -187,7 +186,7 @@ public class BossBehavior : MonoBehaviour
         attackActive = true;
 
         animator.StopPlayback();
-        animator.Play("CR_WiggleLegs", 0);
+        animator.Play("CR_WiggleLegs", 1);
         animator.Play("CR_WiggleFangs", 0);
         // TODO: make sure the above code works
 
