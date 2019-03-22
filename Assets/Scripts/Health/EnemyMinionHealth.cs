@@ -12,7 +12,7 @@ public class EnemyMinionHealth : MonoBehaviour, IHealth
         if (health <= 0)
         {
             Instantiate(explosion, transform.position, Quaternion.identity);
-            //FindObjectOfType<AudioManager>().Play("MinionDestroyed");
+            FindObjectOfType<AudioManager>().Play("MinionDestroyed");
             Destroy(gameObject);
         }
     }
