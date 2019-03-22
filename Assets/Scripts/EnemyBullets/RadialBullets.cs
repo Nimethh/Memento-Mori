@@ -23,6 +23,19 @@ public class RadialBullets : MonoBehaviour
     private float timeBetweenShots;
     public float speed;
 
+    [SerializeField]
+    private int numberOfEnemies;
+    [SerializeField]
+    private GameObject[] enemies;
+    [SerializeField]
+    private Transform[] spawnPos;
+
+    [SerializeField]
+    private GameObject orb;
+    [SerializeField]
+    private Transform shootingPos;
+
+
     void Start()
     {
         timeBetweenShots = fireDelay;
@@ -60,5 +73,28 @@ public class RadialBullets : MonoBehaviour
 
             angle += nextAngle;
         }
+    }
+
+    IEnumerator SpawnEnemies()
+    {
+        for (int i = 0; i < numberOfEnemies; i++)
+        {
+            for (int j = 0; j < enemies.Length; j++)
+            {
+                Instantiate(enemies[j], spawnPos[j].position, Quaternion.identity);
+                yield return new WaitForSeconds(1f);
+            }
+        }
+        yield break;
+    }
+
+    void startCoroutine()
+    {
+        StartCoroutine(SpawnEnemies());
+    }
+
+    public void InstantiateOrb()
+    {
+        Instantiate(orb, shootingPos.position, Quaternion.identity);
     }
 }
