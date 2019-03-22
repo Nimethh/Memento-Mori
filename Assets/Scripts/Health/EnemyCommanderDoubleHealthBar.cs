@@ -55,6 +55,11 @@ public class EnemyCommanderDoubleHealthBar : MonoBehaviour, IHealth
         healthBarLeft.value = health;
     }
 
+    public float GetHealth()
+    {
+        return health;
+    }
+
     public void Destroy()
     {
         Destroy(gameObject);

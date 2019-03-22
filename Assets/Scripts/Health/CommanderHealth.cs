@@ -35,6 +35,11 @@ public class CommanderHealth : MonoBehaviour, IHealth
         health = health - (damage / 3 );
     }
 
+    public float GetHealth()
+    {
+        return health;
+    }
+
     public void Destroy()
     {
         Destroy(gameObject);

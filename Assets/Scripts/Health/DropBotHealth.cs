@@ -33,6 +33,11 @@ public class DropBotHealth : MonoBehaviour, IHealth
         FindObjectOfType<AudioManager>().Play("DropBotDamaged");
     }
 
+    public float GetHealth()
+    {
+        return health;
+    }
+
     public void Destroy()
     {
         Destroy(gameObject);

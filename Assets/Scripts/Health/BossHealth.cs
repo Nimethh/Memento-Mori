@@ -42,6 +42,11 @@ public class BossHealth : MonoBehaviour, IHealth
         FindObjectOfType<AudioManager>().Play("MinionDamaged");
     }
 
+    public float GetHealth()
+    {
+        return health;
+    }
+
     public void EnterSecondStage() {
         isSecondStage = true;
         health = secondStageHealth;

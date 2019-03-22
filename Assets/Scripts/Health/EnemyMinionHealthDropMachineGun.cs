@@ -29,4 +29,9 @@ public class EnemyMinionHealthDropMachineGun : MonoBehaviour, IHealth
     {
         health = health - damage;
     }
+
+    public float GetHealth()
+    {
+        return health;
+    }
 }
