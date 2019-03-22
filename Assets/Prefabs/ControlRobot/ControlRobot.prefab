@@ -1687,6 +1687,7 @@ GameObject:
   - component: {fileID: 991381013759143451}
   - component: {fileID: 490424569691270105}
   - component: {fileID: 1746629198083218998}
+  - component: {fileID: 307579564150811691}
   m_Layer: 0
   m_Name: ControlRobot
   m_TagString: ControlRobot
@@ -1725,6 +1726,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 10000
   secondStageHealth: 5000
+  isSecondStage: 0
 --- !u!95 &490424569691270105
 Animator:
   serializedVersion: 3
@@ -1792,6 +1794,35 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &307579564150811691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5742575509405556157}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2884144d251c40719ee08f41af21a97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackInterval: 10
+  a2s1bulletPrefab: {fileID: 5052760423970094829, guid: ef0dfef26eecc7042ad77628520db291,
+    type: 3}
+  a2s1numberBullets: 30
+  a2s1spawnDuration: 2.5
+  a2s1waitDuration: 5
+  a2s1angleSpread: 45
+  a1s2bulletPrefab: {fileID: 0}
+  a1s2numberBullets: 32
+  a1s2attackLength: 4
+  a2s2minionPrefab: {fileID: 0}
+  a2s2numberMinions: 3
+  a2s2spawnInterval: 0.5
+  a3s2bulletPrefab: {fileID: 0}
+  a3s2numberBullets: 16
+  a3s2waveInterval: 2
+  a3s2numberWaves: 3
 --- !u!1 &6067314867008134929
 GameObject:
   m_ObjectHideFlags: 0
