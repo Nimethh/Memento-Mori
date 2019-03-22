@@ -224,7 +224,6 @@ MonoBehaviour:
   maxHealth: 0
   currentHealth: 0
   healthBar: {fileID: 1541625047}
-  gameOverPanel: {fileID: 0}
 --- !u!114 &46387555
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3215,7 +3214,6 @@ MonoBehaviour:
   maxHealth: 0
   currentHealth: 0
   healthBar: {fileID: 1895369085}
-  gameOverPanel: {fileID: 0}
 --- !u!114 &1372311978
 MonoBehaviour:
   m_ObjectHideFlags: 0
