@@ -789,7 +789,7 @@ MonoBehaviour:
     _randomize: 1
   - _name: Commander
     _enemies:
-    - {fileID: 6301676553011909822, guid: db121ee958646f34898d5af1cd96b531, type: 3}
+    - {fileID: 8146258539244370531, guid: 0c70e0770bba259479650e00f5508501, type: 3}
     _spawnPosition:
     - {fileID: 4844919756222807, guid: 9a8e3b773b444954c905074ab52995e6, type: 3}
     _numberOfEnemies: 1

@@ -35,12 +35,15 @@ public class AudioManager : MonoBehaviour
     {
         Play("Background");
 
-        if (SceneManager.GetActiveScene().name == "Level1" || SceneManager.GetActiveScene().name == "Level2With" || SceneManager.GetActiveScene().name == "Level2Without")
-            eS = GameObject.Find("EnemySpawner").GetComponent<EnemySpawner>();
+        if (SceneManager.GetActiveScene().name != "MainMenu")
+        {
+            if (SceneManager.GetActiveScene().name == "Level1" || SceneManager.GetActiveScene().name == "Level2With" || SceneManager.GetActiveScene().name == "Level2Without")
+                eS = GameObject.Find("EnemySpawner").GetComponent<EnemySpawner>();
 
-        upgradeController = GameObject.Find("Player").GetComponent<PlayerUpgradeController>();
+            upgradeController = GameObject.Find("Player").GetComponent<PlayerUpgradeController>();
 
-        headUpgradeCoolDown = headUpgradeTimer;
+            headUpgradeCoolDown = headUpgradeTimer;
+        }
     }
     void Awake()
     {
@@ -55,35 +58,38 @@ public class AudioManager : MonoBehaviour
 
     void Update()
     {
-        if (SceneManager.GetActiveScene().name == "Level1" || SceneManager.GetActiveScene().name == "Level2With" || SceneManager.GetActiveScene().name == "Level2Without")
+        if (SceneManager.GetActiveScene().name != "MainMenu")
         {
-            if (eS.IsCommanderSpawned() == true)
+            if (SceneManager.GetActiveScene().name == "Level1" || SceneManager.GetActiveScene().name == "Level2With" || SceneManager.GetActiveScene().name == "Level2Without")
             {
-                if (commanderMusicIsPlaying == false)
+                if (eS.IsCommanderSpawned() == true)
                 {
-                    foreach (Audio aud in soundFX)
+                    if (commanderMusicIsPlaying == false)
                     {
-                        if (aud.name == "Background")
+                        foreach (Audio aud in soundFX)
                         {
-                            aud.aS.volume = 0.0f;
+                            if (aud.name == "Background")
+                            {
+                                aud.aS.volume = 0.0f;
+                            }
                         }
+                        commanderMusicIsPlaying = true;
                     }
-                    commanderMusicIsPlaying = true;
                 }
             }
-        }
 
-        if(upgradeController.HeadUpgradeIsEquipped() == true)
-        {
-            
-            if(headUpgradeCoolDown <= 0.0f)
+            if (upgradeController.HeadUpgradeIsEquipped() == true)
             {
-                Play("HeadUpgradeSound");
-                headUpgradeCoolDown = headUpgradeTimer;
-            }
-            else
-            {
-                headUpgradeCoolDown -= Time.deltaTime;
+
+                if (headUpgradeCoolDown <= 0.0f)
+                {
+                    Play("HeadUpgradeSound");
+                    headUpgradeCoolDown = headUpgradeTimer;
+                }
+                else
+                {
+                    headUpgradeCoolDown -= Time.deltaTime;
+                }
             }
         }
     }

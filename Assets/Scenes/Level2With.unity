@@ -607,43 +607,13 @@ MonoBehaviour:
     _spawnWait: 4
     _nextFixedWaveWait: 7
     _randomize: 1
-  - _name: Drop Bot
-    _enemies:
-    - {fileID: 3802106360820196763, guid: ed4a736280625fd4ca45091ec4162611, type: 3}
-    _spawnPosition:
-    - {fileID: 2136517199243476310, guid: c6bcd1be314de4649ade191a2b0b6bdf, type: 3}
-    _numberOfEnemies: 2
-    _spawnWait: 3
-    _nextFixedWaveWait: 10
-    _randomize: 0
-  - _name: Small Triangle
-    _enemies:
-    - {fileID: 6724403054613832485, guid: d8590be21277ccb4084155f67d0574f4, type: 3}
-    _spawnPosition:
-    - {fileID: 8048747334740802850, guid: 6ca115c0d549e944298a56df93e4b712, type: 3}
-    - {fileID: 9047504251098390283, guid: e9348bbc524c1b549afc56778fb8ad01, type: 3}
-    - {fileID: 7454328456429544974, guid: 05fd97814e5e4b145ab5f38e7bedf721, type: 3}
-    - {fileID: 3364812169368044663, guid: 7206e2b798eea2f4a92a2596b7d4cf20, type: 3}
-    _numberOfEnemies: 5
-    _spawnWait: 4
-    _nextFixedWaveWait: 8
-    _randomize: 1
-  - _name: DropBot
-    _enemies:
-    - {fileID: 2679186436022377212, guid: c31297e082d8a9a41a262b1312ef2eb8, type: 3}
-    _spawnPosition:
-    - {fileID: 6231993013841224117, guid: 62a8f798e80f3e644b5cd4500a65d3c7, type: 3}
-    _numberOfEnemies: 3
-    _spawnWait: 4
-    _nextFixedWaveWait: 40
-    _randomize: 1
   - _name: Commander
     _enemies:
     - {fileID: 8146258539244370531, guid: 0c70e0770bba259479650e00f5508501, type: 3}
     _spawnPosition:
-    - {fileID: 4844919756222807, guid: 9a8e3b773b444954c905074ab52995e6, type: 3}
-    _numberOfEnemies: 1
-    _spawnWait: 4
+    - {fileID: 9047504251098390283, guid: e9348bbc524c1b549afc56778fb8ad01, type: 3}
+    _numberOfEnemies: 2
+    _spawnWait: 3
     _nextFixedWaveWait: 10
     _randomize: 0
   fixedWaveStartWait: 15
@@ -1715,6 +1685,11 @@ PrefabInstance:
       propertyPath: m_isInputParsingRequired
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4845698935417871960, guid: d1db6258b30ae854a979e6bcdab50842,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Level3WithArmWithHead
+      objectReference: {fileID: 0}
     - target: {fileID: 1220223590882379657, guid: d1db6258b30ae854a979e6bcdab50842,
         type: 3}
       propertyPath: m_BlockingMask.m_Bits
@@ -1794,11 +1769,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: Level3WithArmWithoutHead
-      objectReference: {fileID: 0}
-    - target: {fileID: 4845698935417871960, guid: d1db6258b30ae854a979e6bcdab50842,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: Level3WithArmWithHead
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1db6258b30ae854a979e6bcdab50842, type: 3}
