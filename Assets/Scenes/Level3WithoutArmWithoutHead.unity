@@ -1092,6 +1092,11 @@ PrefabInstance:
       propertyPath: armUpgradeEquipped
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1425342564370256412, guid: fb7598ca908333b469b2ac21a06773a5,
+        type: 3}
+      propertyPath: shouldSpawnDefaultGun
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fb7598ca908333b469b2ac21a06773a5, type: 3}
 --- !u!114 &855696109 stripped
