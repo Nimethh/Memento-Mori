@@ -116,6 +116,7 @@ public class BossBehavior : MonoBehaviour
 
     [HeaderAttribute("Attack 2, stage 1")]
     public GameObject a2s1bulletPrefab;
+    public GameObject a2s1bulletOrigin;
     public int a2s1numberBullets = 30;
     public float a2s1spawnDuration = 2.5f;
     public float a2s1waitDuration = 5f;
@@ -148,7 +149,7 @@ public class BossBehavior : MonoBehaviour
             case 1:
                 // TODO: set the position to that of the mouth
                 if(!attackActive)
-                    StartCoroutine(PerformAttack2Stage1(a2s1numberBullets, a2s1bulletPrefab, a2s1angleSpread, a2s1spawnDuration, transform.position));
+                    StartCoroutine(PerformAttack2Stage1(a2s1numberBullets, a2s1bulletPrefab, a2s1angleSpread, a2s1spawnDuration, a2s1bulletOrigin.transform.position));
                 break;
 
             // Charges at the player
