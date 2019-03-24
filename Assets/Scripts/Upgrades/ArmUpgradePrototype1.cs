@@ -117,8 +117,7 @@ public class ArmUpgradePrototype1 : MonoBehaviour, IArmUpgrade
         //    return;
         //}
 
-        FindObjectOfType<AudioManager>().Play("PlayerLaser");
-
+        
         canFireLaser = HUDUpdater.canFireLaser;
         if (canFireLaser == false)
         {

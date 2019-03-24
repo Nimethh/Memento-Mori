@@ -69,7 +69,10 @@ public class EnemySpawner : MonoBehaviour
     {
         firstRandomWave = true;
         firstFixedWave = true;
-        StartCoroutine(RandomWaveCountDown(randomWaves[currentWave]));
+        if (randomWaves.Length != 0)
+        {
+            StartCoroutine(RandomWaveCountDown(randomWaves[currentWave]));
+        }
         StartCoroutine(FixedWaveCountDown(fixedWaves[currentFixedWave]));
         commanderIsSpawned = false;
     }
