@@ -22,7 +22,7 @@ public class TestCursor : MonoBehaviour
 
     void Update()
     {
-        if(GameObject.Find("UpgradePanel") == true)
+        if(GameObject.Find("AugmentationPanel") == true)
         {
             Cursor.visible = true;
         }

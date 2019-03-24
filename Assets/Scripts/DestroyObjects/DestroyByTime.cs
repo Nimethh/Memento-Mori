@@ -6,11 +6,7 @@ public class DestroyByTime : MonoBehaviour
 {
     [SerializeField]
     private float lifeTime;
-
-    void Start()
-    {
-        lifeTime = 20.0f;
-    }
+    
     void Update()
     {
         if (lifeTime <= 0)

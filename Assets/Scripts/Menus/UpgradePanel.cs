@@ -24,7 +24,7 @@ public class UpgradePanel : MonoBehaviour
 
     void Start()
     {
-        GameObject.Find("UpgradePanel").SetActive(false);
+        GameObject.Find("AugmentationPanel").SetActive(false);
         upgradeAquiredUI.SetActive(false);
         upgradeBehaviorUI.SetActive(false);
         armUpgradeUI.SetActive(false);
@@ -32,7 +32,7 @@ public class UpgradePanel : MonoBehaviour
     }
     void Update()
     {
-        if (GameObject.Find("UpgradePanel") == true)
+        if (GameObject.Find("AugmentationPanel") == true)
         {
             Time.timeScale = 0.0f;
             //if (goToNextLevelBool == true)

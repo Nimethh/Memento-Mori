@@ -52,7 +52,6 @@ public class GunBullet : MonoBehaviour
             if (collision.gameObject.tag == "Enemy")
             {
                 Animator anim = collision.GetComponent<Animator>();
-                anim.ResetTrigger("Damaged");
                 anim.SetTrigger("Damaged");
             }
             Destroy(this.gameObject);

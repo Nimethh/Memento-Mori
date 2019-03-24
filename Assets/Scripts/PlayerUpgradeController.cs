@@ -21,9 +21,6 @@ public class PlayerUpgradeController : MonoBehaviour
     private bool headUpgradeGrayedOut;
 
     [SerializeField]
-    private GameObject playerEyePatch;
-
-    [SerializeField]
     private IUpgrade equippedHeadUpgrade;
     [SerializeField]
     private IUpgrade equippedChestUpgrade;
@@ -43,11 +40,9 @@ public class PlayerUpgradeController : MonoBehaviour
         if (headUpgradeEquipped == true)
         {
             GameObject.Find("Eye").SetActive(true);
-            //playerEyePatch.SetActive(true);
         }
         else
             GameObject.Find("Eye").SetActive(false);
-            //playerEyePatch.SetActive(false);
     }
 
     private void Update()
