@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LaserDamage : MonoBehaviour
 {
-
+    [SerializeField]
     private float damage;
     private Collider2D col;
 
@@ -22,7 +22,8 @@ public class LaserDamage : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Enemy")
+        if (collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "DropBot" ||
+            collision.gameObject.tag == "Commander" || collision.gameObject.tag == "ControlRobot")
         {
             if (collision.gameObject.GetComponent<IHealth>() == null)
             {

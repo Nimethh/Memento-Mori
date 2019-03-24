@@ -11,7 +11,7 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/DeathScreen.unity
     guid: 00fc4af6d4fef6243ae39802cb0f5a78
   - enabled: 0
@@ -33,14 +33,47 @@ EditorBuildSettings:
     path: Assets/Scenes/Level1.unity
     guid: 4349da47b945d7344950c04800925925
   - enabled: 1
+    path: Assets/Scenes/Level1M.unity
+    guid: 759be7ebea53bb045b2804c5658f2858
+  - enabled: 1
     path: Assets/Scenes/Level2With.unity
     guid: 031755c69cb081c438bb59b0df7922b4
-  - enabled: 0
+  - enabled: 1
+    path: Assets/Scenes/Level2WithM.unity
+    guid: bbd4e9a17859598418bfb05e02c97e67
+  - enabled: 1
     path: Assets/Scenes/Level2Without.unity
     guid: 5e1554769112bed49a9bc4a3a0c75dba
   - enabled: 1
     path: Assets/Scenes/Level3WithArmWithHead.unity
     guid: 5d21cba3595b0a94d8010449c41a0b51
+  - enabled: 1
+    path: Assets/Scenes/Level3WithArmWithoutHead.unity
+    guid: f0bce0ab0a4858847b313decf6fc88f2
+  - enabled: 1
+    path: Assets/Scenes/Level3WithoutArmWithHead.unity
+    guid: e51f4f26540d7bc4d9bb619995180b68
+  - enabled: 1
+    path: Assets/Scenes/Level3WithoutArmWithoutHead.unity
+    guid: 5e2c4ea5443274e46bb43ccd84c91754
+  - enabled: 1
+    path: Assets/Scenes/EpilogueAugKill.unity
+    guid: 37fa1e6c502a43240b199233b9064cb6
+  - enabled: 1
+    path: Assets/Scenes/EpilogueNoAugEMP.unity
+    guid: f3b92992143dfb84db15fdb1bc3b270d
+  - enabled: 1
+    path: Assets/Scenes/EpilogueNoAugKill.unity
+    guid: 368781138a312334c9a370bdf0fbebe6
+  - enabled: 1
+    path: Assets/Scenes/Epilogue.unity
+    guid: 6b5b0696065b8e748a6358b33fbec86d
+  - enabled: 1
+    path: Assets/Scenes/Intro.unity
+    guid: 3b20a68014419cd4289b3f3a910e75ba
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: 38f5fd2455b53b84a9c93740111b668f
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000

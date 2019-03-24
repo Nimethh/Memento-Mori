@@ -19,7 +19,6 @@ public class PlayerUpgradeController : MonoBehaviour
     private bool headUpgradeEquipped;
     [SerializeField]
     private bool headUpgradeGrayedOut;
-    
 
     [SerializeField]
     private IUpgrade equippedHeadUpgrade;
@@ -38,11 +37,17 @@ public class PlayerUpgradeController : MonoBehaviour
         //SetUpHUDIcons();
         SetUpArmHUD();
         SetUpHeadHUD();
+        if (headUpgradeEquipped == true)
+        {
+            GameObject.Find("Eye").SetActive(true);
+        }
+        else
+            GameObject.Find("Eye").SetActive(false);
     }
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Q))
+        if(Input.GetKeyDown(KeyCode.R))
         {
             PreformChestAbility();
         }
@@ -51,9 +56,8 @@ public class PlayerUpgradeController : MonoBehaviour
         {
             PreformArmAbility();
         }
-
-
-        if (Input.GetKeyDown(KeyCode.R))
+        
+        if (Input.GetKeyDown(KeyCode.Q))
         {
             PreformHeadAbility();
         }
@@ -317,5 +321,15 @@ public class PlayerUpgradeController : MonoBehaviour
             GameObject.Find("HeadUpgradeOnEffect").SetActive(false);
             GameObject.Find("HeadUpgradeOnCooldown").SetActive(false);
         }
+    }
+
+    public bool ArmUpgradeIsEquipped()
+    {
+        return armUpgradeEquipped;
+    }
+
+    public bool HeadUpgradeIsEquipped()
+    {
+        return headUpgradeEquipped;
     }
 }

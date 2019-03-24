@@ -15,7 +15,7 @@ public class DropBotHealth : MonoBehaviour, IHealth
         if (health <= 0)
         {
             Instantiate(explosion, anim.gameObject.transform.position, anim.gameObject.transform.rotation);
-            //FindObjectOfType<AudioManager>().Play("DropBotDestroyed");
+            FindObjectOfType<AudioManager>().Play("DropBotDestroyed");
             Destroy(gameObject);
         }
     }

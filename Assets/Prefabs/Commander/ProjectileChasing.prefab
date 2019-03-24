@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 5258170200082517372}
   - component: {fileID: 1335255233331152560}
   - component: {fileID: 6847498406299432249}
-  - component: {fileID: 4738119906885948574}
+  - component: {fileID: 2632018302449324008}
   - component: {fileID: 7768281085956437050}
   - component: {fileID: 8486427309463711077}
+  - component: {fileID: 9017363003336759219}
   m_Layer: 0
   m_Name: ProjectileChasing
   m_TagString: Enemy
@@ -134,7 +135,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a39a9d5b213af374a927afc497ad8125, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &4738119906885948574
+--- !u!114 &2632018302449324008
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -143,7 +144,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3476799222084589752}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c071cca314c0e5a4e8549cacb0d7abf2, type: 3}
+  m_Script: {fileID: 11500000, guid: 3beb7c08bd7b0cf46ba01c64ca8f50fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
@@ -182,3 +183,16 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &9017363003336759219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3476799222084589752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 383c605c127df054f9be7976bf83b34c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifeTime: 10
