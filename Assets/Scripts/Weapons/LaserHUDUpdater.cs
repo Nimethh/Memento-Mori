@@ -28,4 +28,9 @@ public class LaserHUDUpdater : MonoBehaviour
         ArmOnEffectSlider.value = effectValue;
         ArmOnCooldownSlider.value = cooldownValue;
     }
+
+    public void LaserSound()
+    {
+        FindObjectOfType<AudioManager>().Play("PlayerLaser");
+    }
 }

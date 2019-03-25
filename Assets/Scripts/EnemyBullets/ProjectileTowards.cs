@@ -20,6 +20,7 @@ public class ProjectileTowards : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("PlayerCube");
         playerPos = new Vector2(player.transform.position.x, player.transform.position.y);
         moveHorizontal = -1;
+        FindObjectOfType<AudioManager>().Play("CommanderBullets");
     }
 
     void Update()

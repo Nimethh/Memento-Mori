@@ -15,6 +15,7 @@ public class Projectile : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         moveHorizontal = -1;
+        FindObjectOfType<AudioManager>().Play("CommanderBullets");
     }
 
     void Update()

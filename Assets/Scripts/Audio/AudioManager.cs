@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 using System;
+using UnityEngine.SceneManagement;
 
 [System.Serializable]
 public class Audio
@@ -19,15 +20,31 @@ public class Audio
     public AudioSource aS;
 }
 
+//followed tutorial from brackeys.
 public class AudioManager : MonoBehaviour
 {
     public Audio[] soundFX;
+    private EnemySpawner eS;
+    private bool commanderMusicIsPlaying = false;
+    private PlayerUpgradeController upgradeController;
+    [SerializeField]
+    private float headUpgradeTimer = 15.0f;
+    private float headUpgradeCoolDown;
 
     void Start()
     {
         Play("Background");
-    }
 
+        if (SceneManager.GetActiveScene().name != "MainMenu")
+        {
+            if (SceneManager.GetActiveScene().name == "Level1" || SceneManager.GetActiveScene().name == "Level2With" || SceneManager.GetActiveScene().name == "Level2Without")
+                eS = GameObject.Find("EnemySpawner").GetComponent<EnemySpawner>();
+
+            upgradeController = GameObject.Find("Player").GetComponent<PlayerUpgradeController>();
+
+            headUpgradeCoolDown = headUpgradeTimer;
+        }
+    }
     void Awake()
     {
         foreach(Audio aud in soundFX)
@@ -36,6 +53,44 @@ public class AudioManager : MonoBehaviour
             aud.aS.clip = aud.clip;
             aud.aS.volume = aud.volume;
             aud.aS.loop = aud.loop;
+        }
+    }
+
+    void Update()
+    {
+        if (SceneManager.GetActiveScene().name != "MainMenu")
+        {
+            if (SceneManager.GetActiveScene().name == "Level1" || SceneManager.GetActiveScene().name == "Level2With" || SceneManager.GetActiveScene().name == "Level2Without")
+            {
+                if (eS.IsCommanderSpawned() == true)
+                {
+                    if (commanderMusicIsPlaying == false)
+                    {
+                        foreach (Audio aud in soundFX)
+                        {
+                            if (aud.name == "Background")
+                            {
+                                aud.aS.volume = 0.0f;
+                            }
+                        }
+                        commanderMusicIsPlaying = true;
+                    }
+                }
+            }
+
+            if (upgradeController.HeadUpgradeIsEquipped() == true)
+            {
+
+                if (headUpgradeCoolDown <= 0.0f)
+                {
+                    Play("HeadUpgradeSound");
+                    headUpgradeCoolDown = headUpgradeTimer;
+                }
+                else
+                {
+                    headUpgradeCoolDown -= Time.deltaTime;
+                }
+            }
         }
     }
 
