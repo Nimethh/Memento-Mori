@@ -306,7 +306,7 @@ public class BossBehavior : MonoBehaviour
 
         for(int i = 0; i < nBullets; i++) {
             rot = Quaternion.AngleAxis(angleAccumulator, Vector3.forward);
-            Instantiate(bulletPrefab, transform.position, rot);
+            Instantiate(bulletPrefab, orb.transform.position, rot);
 
             angleAccumulator += angleInterval;
             yield return new WaitForSeconds(timeInterval);
@@ -340,7 +340,7 @@ public class BossBehavior : MonoBehaviour
         for(int j = 0; j < nWaves; j++) {
             for(int i = 0; i < nBullets; i++) {
                 rot = Quaternion.AngleAxis(angleInterval * i, Vector3.forward);
-                Instantiate(bulletPrefab, transform.position, rot);
+                Instantiate(bulletPrefab, orb.transform.position, rot);
             }
             // Wait for next wave
             yield return new WaitForSeconds(waveInterval);
