@@ -2332,10 +2332,10 @@ MonoBehaviour:
   a2s2minionPrefab: {fileID: 0}
   a2s2numberMinions: 3
   a2s2spawnInterval: 0.5
-  a3s2bulletPrefab: {fileID: 3476799222084589752, guid: 75a5cdc9aad29f344ba7b7465b0d9539,
+  a3s2bulletPrefab: {fileID: 1050740222076522585, guid: 731838460b6e5499286e6827990ef546,
     type: 3}
-  a3s2numberBullets: 16
-  a3s2waveInterval: 2
+  a3s2numberBullets: 10
+  a3s2waveInterval: 1
   a3s2numberWaves: 3
 --- !u!1 &6067314867008134929
 GameObject:

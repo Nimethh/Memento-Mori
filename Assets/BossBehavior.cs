@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -148,7 +148,6 @@ public class BossBehavior : MonoBehaviour
 
             // Spews a lot of small, slow bullets
             case 1:
-                // TODO: set the position to that of the mouth
                 if(!attackActive)
                     StartCoroutine(PerformAttack2Stage1(a2s1numberBullets, a2s1bulletPrefab, a2s1angleSpread, a2s1spawnDuration, a2s1bulletOrigin.transform.position));
                 break;
