@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -50,12 +50,12 @@ public class BossBehavior : MonoBehaviour
 
             case BossState.Transformation:
                 // Set the animation and ensure it's running
-                if(!stateInfo.IsName("CR_Transform")) {
+                if(!stateInfo.IsName("CR_Transformation")) {
                     // TODO: Lock player movement
 
                     // Start animation
                     animator.StopPlayback();
-                    animator.Play("CR_Transform", 0);
+                    animator.Play("CR_Transformation", 0);
 
                     // Set orb visual properties (Z-neutral, perfectly spherical)
                     orb.transform.position = new Vector3(orb.transform.position.x, orb.transform.position.y, 0);

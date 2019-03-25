@@ -18,7 +18,6 @@ public class CommanderHealth : MonoBehaviour, IHealth
         }
     }
 
-
     public void TakeDamage(int damage)
     {
         health = health - damage;
