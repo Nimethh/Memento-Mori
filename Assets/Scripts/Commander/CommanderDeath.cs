@@ -18,6 +18,7 @@ public class CommanderDeath : MonoBehaviour
         animation = GetComponent<Animator>();
         startTime = -1f;
         afterFallTriggered = false;
+        FindObjectOfType<AudioManager>().Play("CommanderDestroyed");
     }
 
     // Update is called once per frame
@@ -25,9 +26,8 @@ public class CommanderDeath : MonoBehaviour
     {
         // Play death sound
 
-
         // Final fall
-        if(animation.GetCurrentAnimatorStateInfo(0).IsName("DeathFall")) {
+        if (animation.GetCurrentAnimatorStateInfo(0).IsName("DeathFall")) {
             if(startTime < 0) {
                 startTime = Time.time;
             }
@@ -63,5 +63,10 @@ public class CommanderDeath : MonoBehaviour
                 }
             }
         }
+    }
+    
+    public void PlayDeathSound()
+    {
+        FindObjectOfType<AudioManager>().Play("CommanderDestroyed");
     }
 }

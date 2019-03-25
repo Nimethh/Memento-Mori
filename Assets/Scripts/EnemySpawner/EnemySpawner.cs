@@ -264,7 +264,6 @@ public class EnemySpawner : MonoBehaviour
         {
             commanderIsSpawned = true;
             StopAllCoroutines();
-            FindObjectOfType<AudioManager>().Play("CommanderMusic");
         }
 
         if (commanderIsSpawned == true && GameObject.FindGameObjectWithTag("Commander") == null)

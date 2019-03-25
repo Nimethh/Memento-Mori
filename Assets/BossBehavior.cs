@@ -170,7 +170,6 @@ public class BossBehavior : MonoBehaviour
         // Set the animation and ensure it's running
         animator.StopPlayback();
         animator.Play("CR_SlashAttack", 0);
-
         AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
 
         // Wait for animation to end
@@ -218,6 +217,7 @@ public class BossBehavior : MonoBehaviour
         animator.StopPlayback();
         animator.Play("CR_ChargeAttack", 0);
         AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
+        FindObjectOfType<AudioManager>().Play("ControlCharge");
 
         // Wait for animation to end
         yield return new WaitForSeconds(stateInfo.length);
@@ -349,5 +349,15 @@ public class BossBehavior : MonoBehaviour
         attackCounter++;
         attackTimer = Time.time + attackInterval;
         attackActive = false;
+    }
+
+    public void PlaySlashAudio()
+    {
+        FindObjectOfType<AudioManager>().Play("ControlSlash");
+    }
+
+    public void PlayDeathSound()
+    {
+        FindObjectOfType<AudioManager>().Play("ControlEyeDestroyed");
     }
 }

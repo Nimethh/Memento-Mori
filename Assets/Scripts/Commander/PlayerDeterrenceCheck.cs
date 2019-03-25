@@ -16,7 +16,7 @@ public class PlayerDeterrenceCheck : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(player.transform.position.x > transform.position.x)
+        if(player.transform.position.x > transform.position.x - 2)
         {
             deterrenceObject.SetActive(true);
         }

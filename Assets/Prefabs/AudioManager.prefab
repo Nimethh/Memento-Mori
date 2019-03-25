@@ -46,7 +46,7 @@ MonoBehaviour:
   soundFX:
   - name: Background
     clip: {fileID: 8300000, guid: 4ed5871cd33494d48a6a3532dc6ac585, type: 3}
-    volume: 0.6
+    volume: 0.315
     loop: 1
     aS: {fileID: 0}
   - name: PlayerDamaged
@@ -56,7 +56,7 @@ MonoBehaviour:
     aS: {fileID: 0}
   - name: PlayerAttack
     clip: {fileID: 8300000, guid: 9f7d5960bc14665409aa78a306d3e89e, type: 3}
-    volume: 0.6
+    volume: 0.118
     loop: 0
     aS: {fileID: 0}
   - name: PlayerLaser
@@ -130,7 +130,7 @@ MonoBehaviour:
     loop: 0
     aS: {fileID: 0}
   - name: ControlSlash
-    clip: {fileID: 8300000, guid: 651792bf177246c46b78aa94457adce1, type: 3}
+    clip: {fileID: 8300000, guid: 25a0a745532dc1d489ba5a4f8f6ea87c, type: 3}
     volume: 0.6
     loop: 0
     aS: {fileID: 0}

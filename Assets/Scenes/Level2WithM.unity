@@ -642,7 +642,7 @@ MonoBehaviour:
     - {fileID: 4844919756222807, guid: 9a8e3b773b444954c905074ab52995e6, type: 3}
     _numberOfEnemies: 1
     _spawnWait: 0
-    _nextFixedWaveWait: 4
+    _nextFixedWaveWait: 2
     _randomize: 0
   - _name: DropBotMiddle
     _enemies:

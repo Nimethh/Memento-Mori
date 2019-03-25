@@ -39,7 +39,7 @@ public class BossHealth : MonoBehaviour, IHealth
             health -= damage * Mathf.Lerp(0.1f, 1f, Mathf.Sqrt(lerpIndex)); // square root makes sure the progression is slower
         }
         
-        FindObjectOfType<AudioManager>().Play("MinionDamaged");
+        FindObjectOfType<AudioManager>().Play("ControlDamaged");
     }
 
     public float GetHealth()

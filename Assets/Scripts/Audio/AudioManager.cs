@@ -37,7 +37,8 @@ public class AudioManager : MonoBehaviour
 
         if (SceneManager.GetActiveScene().name != "MainMenu")
         {
-            if (SceneManager.GetActiveScene().name == "Level1" || SceneManager.GetActiveScene().name == "Level2With" || SceneManager.GetActiveScene().name == "Level2Without")
+            if (SceneManager.GetActiveScene().name == "Level1" || SceneManager.GetActiveScene().name == "Level2With" || SceneManager.GetActiveScene().name == "Level2Without" ||
+                SceneManager.GetActiveScene().name == "Level1M" || SceneManager.GetActiveScene().name == "Level2WithM" || SceneManager.GetActiveScene().name == "Level2WithoutM")
                 eS = GameObject.Find("EnemySpawner").GetComponent<EnemySpawner>();
 
             upgradeController = GameObject.Find("Player").GetComponent<PlayerUpgradeController>();
@@ -60,7 +61,8 @@ public class AudioManager : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().name != "MainMenu")
         {
-            if (SceneManager.GetActiveScene().name == "Level1" || SceneManager.GetActiveScene().name == "Level2With" || SceneManager.GetActiveScene().name == "Level2Without")
+            if (SceneManager.GetActiveScene().name == "Level1" || SceneManager.GetActiveScene().name == "Level2With" || SceneManager.GetActiveScene().name == "Level2Without" ||
+                SceneManager.GetActiveScene().name == "Level1M" || SceneManager.GetActiveScene().name == "Level2WithM" || SceneManager.GetActiveScene().name == "Level2WithoutM")
             {
                 if (eS.IsCommanderSpawned() == true)
                 {
@@ -70,13 +72,16 @@ public class AudioManager : MonoBehaviour
                         {
                             if (aud.name == "Background")
                             {
+                                Debug.Log("Found the background");
                                 aud.aS.volume = 0.0f;
                             }
                         }
+                        Play("CommanderMusic");
                         commanderMusicIsPlaying = true;
                     }
                 }
             }
+            
 
             if (upgradeController.HeadUpgradeIsEquipped() == true)
             {

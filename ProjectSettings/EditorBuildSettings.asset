@@ -45,6 +45,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Level2Without.unity
     guid: 5e1554769112bed49a9bc4a3a0c75dba
   - enabled: 1
+    path: Assets/Scenes/Level2WithoutM.unity
+    guid: 92cd3c771ca6625479b259b28f52b143
+  - enabled: 1
     path: Assets/Scenes/Level3WithArmWithHead.unity
     guid: 5d21cba3595b0a94d8010449c41a0b51
   - enabled: 1

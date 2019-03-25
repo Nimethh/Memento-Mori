@@ -48,8 +48,4 @@ public class CommanderHealth : MonoBehaviour, IHealth
         FindObjectOfType<AudioManager>().Play("CommanderLaser");
     }
 
-    public void PlayDeathSound()
-    {
-        FindObjectOfType<AudioManager>().Play("CommanderDestroyed");
-    }
 }
