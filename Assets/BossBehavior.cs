@@ -181,6 +181,9 @@ public class BossBehavior : MonoBehaviour
         attackCounter++;
         attackTimer = Time.time + attackInterval;
         attackActive = false;
+
+        // Give sign for next attack starting
+        animator.Play("CR_WiggleLegs", 1);
     }
 
     private IEnumerator PerformAttack2Stage1(int nBullets, GameObject bullet, float angleSpread, float duration, Vector3 position) {
@@ -189,7 +192,6 @@ public class BossBehavior : MonoBehaviour
         animator.StopPlayback();
         animator.Play("CR_WiggleLegs", 1);
         animator.Play("CR_WiggleFangs", 0);
-        // TODO: make sure the above code works
 
         Quaternion rot;
         
@@ -204,6 +206,9 @@ public class BossBehavior : MonoBehaviour
         attackCounter++;
         attackTimer = Time.time + attackInterval;
         attackActive = false;
+
+        // Give sign for next attack starting
+        animator.Play("CR_WinkBig", 2);
     }
 
     private IEnumerator PerformAttack3Stage1() {        
@@ -222,6 +227,9 @@ public class BossBehavior : MonoBehaviour
         attackCounter++;
         attackTimer = Time.time + attackInterval;
         attackActive = false;
+
+        // Give sign for next attack starting
+        animator.Play("CR_WinkSmall", 2);
     }
 
 
