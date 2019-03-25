@@ -666,7 +666,7 @@ MonoBehaviour:
     _randomize: 0
   - _name: Comander
     _enemies:
-    - {fileID: 8146258539244370531, guid: 0c70e0770bba259479650e00f5508501, type: 3}
+    - {fileID: 8146258539244370531, guid: ca8394566b5d2db4b93b378a520ca117, type: 3}
     _spawnPosition:
     - {fileID: 4844919756222807, guid: 9a8e3b773b444954c905074ab52995e6, type: 3}
     _numberOfEnemies: 1
@@ -2401,6 +2401,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: AudioManager
       objectReference: {fileID: 0}
+    - target: {fileID: 4566382146623099205, guid: 05aa262b4971206449803a46fdddd249,
+        type: 3}
+      propertyPath: soundFX.Array.data[0].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 9972c151fbede9d40b034aba890db9e4, type: 3}
     - target: {fileID: 4566382146623099204, guid: 05aa262b4971206449803a46fdddd249,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2456,11 +2461,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4566382146623099205, guid: 05aa262b4971206449803a46fdddd249,
-        type: 3}
-      propertyPath: soundFX.Array.data[0].clip
-      value: 
-      objectReference: {fileID: 8300000, guid: 9972c151fbede9d40b034aba890db9e4, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 05aa262b4971206449803a46fdddd249, type: 3}
 --- !u!1 &1555964615

@@ -728,6 +728,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ControlRobot
       objectReference: {fileID: 0}
+    - target: {fileID: 5742575509405556157, guid: 60540414fde09f54e80156e9b697a041,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5742575509405556145, guid: 60540414fde09f54e80156e9b697a041,
         type: 3}
       propertyPath: m_LocalPosition.x
