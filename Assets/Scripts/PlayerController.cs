@@ -14,15 +14,18 @@ public class PlayerController : MonoBehaviour
 
     public Boundary boundary;
 
+    [SerializeField]
+    private CommanderHealth commanderHealthScript;
+    
     Rigidbody2D rb;
-	// Use this for initialization
+
 	void Start ()
     {
         rb = GetComponent<Rigidbody2D>();
 	}
-	
-	// Update is called once per frame
-	void FixedUpdate ()
+    
+
+    void FixedUpdate ()
     {
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
@@ -30,6 +33,6 @@ public class PlayerController : MonoBehaviour
 
         rb.velocity = movement * speed;
         rb.position = new Vector2(Mathf.Clamp(rb.position.x, boundary.xMin, boundary.xMax),
-                                  Mathf.Clamp(rb.position.y, boundary.yMin, boundary.yMax) );
+                                  Mathf.Clamp(rb.position.y, boundary.yMin, boundary.yMax));
 	}
 }

@@ -51,7 +51,7 @@ public class EnemySpawner : MonoBehaviour
     public Vector2 spawnValues;
     public GameObject minion;
     public GameObject upgradeUI;
-    
+
     private bool commanderIsSpawned;
     private bool firstRandomWave;
     private bool firstFixedWave;

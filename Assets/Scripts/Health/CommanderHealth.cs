@@ -47,5 +47,4 @@ public class CommanderHealth : MonoBehaviour, IHealth
     {
         FindObjectOfType<AudioManager>().Play("CommanderLaser");
     }
-
 }

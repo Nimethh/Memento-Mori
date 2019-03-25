@@ -550,6 +550,9 @@ MonoBehaviour:
     xMax: 8
     yMin: -4.2
     yMax: 3.6
+  commanderHealthScript: {fileID: 5074394061298470411, guid: 0c70e0770bba259479650e00f5508501,
+    type: 3}
+  freezePlayer: 0
 --- !u!114 &1425342564370256414
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -13,6 +13,7 @@ public class CommanderDeath : MonoBehaviour
     private Animator animation;
     private float startTime;
     private bool afterFallTriggered;
+
     void Start()
     {
         animation = GetComponent<Animator>();
@@ -69,4 +70,5 @@ public class CommanderDeath : MonoBehaviour
     {
         FindObjectOfType<AudioManager>().Play("CommanderDestroyed");
     }
+    
 }
