@@ -47,4 +47,9 @@ public class SplittingBullet : MonoBehaviour,IHealth
     {
         health = health - damage;
     }
+
+    public float GetHealth()
+    {
+        return health;
+    }
 }

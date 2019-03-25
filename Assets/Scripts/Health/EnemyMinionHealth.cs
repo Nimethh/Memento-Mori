@@ -31,6 +31,11 @@ public class EnemyMinionHealth : MonoBehaviour, IHealth
         FindObjectOfType<AudioManager>().Play("MinionDamaged");
     }
 
+    public float GetHealth()
+    {
+        return health;
+    }
+
     public void Destroy()
     {
         Destroy(gameObject);

@@ -5,15 +5,11 @@ using UnityEngine;
 public class CommanderHealth : MonoBehaviour, IHealth
 {
     public float health;
-    //public GameObject explosion;
-   
 
     void Update()
     {
-        
         if (health <= 0)
         {
-
             //Animator anim = GetComponent<Animator>();
             //anim.SetTrigger("Dead");
             //Debug.Log("TheTriggerIsSet");
@@ -22,21 +18,35 @@ public class CommanderHealth : MonoBehaviour, IHealth
         }
     }
 
-
     public void TakeDamage(int damage)
     {
-        health = health - (damage / 3);
-        //healthBar.maxValue = maxHealth;
-        //healthBar.value = currentHealth;
+        health = health - damage;
+        FindObjectOfType<AudioManager>().Play("CommanderDamaged");
     }
 
     public void TakeDamage(float damage)
     {
-        health = health - (damage / 3 );
+        health = health - damage;
+        FindObjectOfType<AudioManager>().Play("CommanderDamaged");
+    }
+
+    public float GetHealth()
+    {
+        return health;
     }
 
     public void Destroy()
     {
         Destroy(gameObject);
+    }
+
+    public void PlayLaserSound()
+    {
+        FindObjectOfType<AudioManager>().Play("CommanderLaser");
+    }
+
+    public void PlayDeathSound()
+    {
+        FindObjectOfType<AudioManager>().Play("CommanderDestroyed");
     }
 }
