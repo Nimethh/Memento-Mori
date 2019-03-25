@@ -67,6 +67,7 @@ public class BossBehavior : MonoBehaviour
 
                     ClearAttackState();
                     health.EnterSecondStage();
+                    orb.GetComponent<HealthProxy>().active = true;
                     state = BossState.SecondStage;
 
                     // TODO: Unlock player movement
