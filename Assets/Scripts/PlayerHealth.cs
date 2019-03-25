@@ -107,5 +107,10 @@ public class PlayerHealth : MonoBehaviour, IHealth
             FindObjectOfType<AudioManager>().Play("PlayerDamaged");
         }
     }
+
+    public float GetHealth()
+    {
+        return currentHealth;
+    }
     
 }

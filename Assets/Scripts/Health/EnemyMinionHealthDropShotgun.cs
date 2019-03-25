@@ -29,4 +29,9 @@ public class EnemyMinionHealthDropShotgun : MonoBehaviour, IHealth
     {
         health = health - damage;
     }
+
+    public float GetHealth()
+    {
+        return health;
+    }
 }

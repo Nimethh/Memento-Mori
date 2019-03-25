@@ -30,4 +30,9 @@ public class ProjectileHealth : MonoBehaviour, IHealth
     {
         health = health - damage;
     }
+
+    public float GetHealth()
+    {
+        return health;
+    }
 }

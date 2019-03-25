@@ -53,6 +53,11 @@ public class EnemyCommanderDoubleHealthBar : MonoBehaviour, IHealth
         FindObjectOfType<AudioManager>().Play("CommanderDamaged");
     }
 
+    public float GetHealth()
+    {
+        return health;
+    }
+
     public void Destroy()
     {
         Destroy(gameObject);
