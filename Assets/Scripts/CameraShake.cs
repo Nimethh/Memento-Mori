@@ -19,14 +19,15 @@ public class CameraShake : MonoBehaviour
 
         while(elapsed < duration)
         {
-
             if (Time.timeScale == 0)
             {
                 yield break;
             }
 
-            float x = Random.Range(-1, 1) * magnitude;
-            float y = Random.Range(-1, 1) * magnitude;
+            float scale = Mathf.Lerp(magnitude, 0, elapsed / duration);
+            
+            float x = Random.Range(-1, 1) * scale;
+            float y = Random.Range(-1, 1) * scale;
 
             transform.localPosition = new Vector3(x, y, originalPosition.z);
 
