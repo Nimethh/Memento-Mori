@@ -112,6 +112,26 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &45220099 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1425342564370256418, guid: fb7598ca908333b469b2ac21a06773a5,
+    type: 3}
+  m_PrefabInstance: {fileID: 1012269700}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &45220100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 45220099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 790dcfe7cf52c47e4af78df526726ad4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movJoystick: {fileID: 1340399540}
+  shootJoystick: {fileID: 1105375339}
 --- !u!1 &118258299
 GameObject:
   m_ObjectHideFlags: 0
@@ -1758,6 +1778,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1096177794}
   m_CullTransparentMesh: 0
+--- !u!114 &1105375339 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6589889340426327214, guid: ff78af721b55f4b2ebc088dcfe465e22,
+    type: 3}
+  m_PrefabInstance: {fileID: 1079522661120385112}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45977bbae16431c46a013576a1aea384, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1168458462
 GameObject:
   m_ObjectHideFlags: 0
@@ -2013,6 +2045,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -113659843, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1340399540 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7862089936670880630, guid: ff78af721b55f4b2ebc088dcfe465e22,
+    type: 3}
+  m_PrefabInstance: {fileID: 1079522661120385112}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45977bbae16431c46a013576a1aea384, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1382129366
@@ -3405,6 +3449,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1289181531385160698, guid: ff78af721b55f4b2ebc088dcfe465e22,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1079522661086365517, guid: ff78af721b55f4b2ebc088dcfe465e22,
         type: 3}
       propertyPath: m_Name
@@ -3645,6 +3694,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: -238.79
       objectReference: {fileID: 0}
+    - target: {fileID: 7947203856114595852, guid: ff78af721b55f4b2ebc088dcfe465e22,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ff78af721b55f4b2ebc088dcfe465e22, type: 3}
 --- !u!1001 &1220223592384306046
@@ -3668,6 +3722,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1679644425023324422, guid: d1db6258b30ae854a979e6bcdab50842,
+        type: 3}
+      propertyPath: nextSceneNameWith
+      value: Level2With
+      objectReference: {fileID: 0}
+    - target: {fileID: 1679644425023324422, guid: d1db6258b30ae854a979e6bcdab50842,
+        type: 3}
+      propertyPath: nextSceneNameWithout
+      value: Level2Without
       objectReference: {fileID: 0}
     - target: {fileID: 1220223590882379652, guid: d1db6258b30ae854a979e6bcdab50842,
         type: 3}
@@ -4054,16 +4118,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1679644425023324422, guid: d1db6258b30ae854a979e6bcdab50842,
-        type: 3}
-      propertyPath: nextSceneNameWith
-      value: Level2With
-      objectReference: {fileID: 0}
-    - target: {fileID: 1679644425023324422, guid: d1db6258b30ae854a979e6bcdab50842,
-        type: 3}
-      propertyPath: nextSceneNameWithout
-      value: Level2Without
       objectReference: {fileID: 0}
     - target: {fileID: 1220223591208796446, guid: d1db6258b30ae854a979e6bcdab50842,
         type: 3}
