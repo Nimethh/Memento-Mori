@@ -11,11 +11,16 @@ public class TestArmRotation : MonoBehaviour
     [SerializeField]
     private float maxAngle;
 
+    private Joystick shootJoystick;
 
     private void Start()
     {
         minAngle = -70;
         maxAngle = 50;
+
+        PlayerMobileControls mobileControls = GameObject.Find("Player").GetComponent<PlayerMobileControls>();
+        if(mobileControls != null)
+            shootJoystick = mobileControls.shootJoystick;
     }
 
     void Update()
@@ -24,10 +29,18 @@ public class TestArmRotation : MonoBehaviour
         if (Time.timeScale == 0)
             return;
 
-        Vector3 difference = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
-        difference.Normalize();
+        Vector2 direction;
+        float rotationZ;
 
-        float rotationZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg; //Finding the angle in degrees
+        if(shootJoystick != null) {
+            direction = shootJoystick.Direction;
+        } else {
+            direction = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+        }
+
+        direction.Normalize();
+
+        rotationZ = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg; //Finding the angle in degrees
         //Debug.Log(rotationZ);
 
         //transform.rotation = Quaternion.Euler(0f, 0f, rotationZ + rotationOffset);

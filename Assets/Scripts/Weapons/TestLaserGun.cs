@@ -51,7 +51,7 @@ public class TestLaserGun : MonoBehaviour, IWeapon
         }
     }
 
-    public void PreformAttack()
+    public void PreformAttack(float angle)
     {
         if(attackCooldownCounter > 0)
         {

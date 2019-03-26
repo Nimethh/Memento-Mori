@@ -14,6 +14,9 @@ public class PlayerController : MonoBehaviour
 
     public Boundary boundary;
 
+    // Mobile controls
+    private Joystick movJoystick;
+
     [SerializeField]
     private CommanderHealth commanderHealthScript;
     
@@ -22,6 +25,10 @@ public class PlayerController : MonoBehaviour
 	void Start ()
     {
         rb = GetComponent<Rigidbody2D>();
+        
+        PlayerMobileControls mobileControls = GetComponent<PlayerMobileControls>();
+        if(mobileControls != null)
+            movJoystick = mobileControls.movJoystick;
 	}
     
 
@@ -29,7 +36,15 @@ public class PlayerController : MonoBehaviour
     {
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
-        Vector2 movement = new Vector2(moveHorizontal, moveVertical);
+        Vector2 movement;
+        
+        if(movJoystick != null) {
+            movement = new Vector2(movJoystick.Horizontal, movJoystick.Vertical);
+        } else {
+            movement = new Vector2(moveHorizontal, moveVertical);
+        }
+
+        movement.Normalize();
 
         rb.velocity = movement * speed;
         rb.position = new Vector2(Mathf.Clamp(rb.position.x, boundary.xMin, boundary.xMax),

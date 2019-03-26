@@ -83,7 +83,7 @@ public class TestShotgun : MonoBehaviour, IWeapon
     }
 
 
-    public void PreformAttack()
+    public void PreformAttack(float rotationZ)
     {
         //Debug.Log("preformAttack - shotgun");
 
@@ -92,10 +92,6 @@ public class TestShotgun : MonoBehaviour, IWeapon
             for (int i = 0; i < numberOfBullets; i++)
             {
                 float randomAngle = Random.Range((-maxBulletSpreadAngle / 2), (maxBulletSpreadAngle / 2));
-
-                Vector3 difference = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
-                difference.Normalize();
-                float rotationZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg; //Finding the angle in degrees
 
                 //rotationZ = Mathf.Clamp(rotationZ, minAngle, maxAngle);
 

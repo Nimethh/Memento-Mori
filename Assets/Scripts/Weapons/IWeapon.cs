@@ -4,7 +4,7 @@ using UnityEngine;
 
 public interface IWeapon 
 {
-    void PreformAttack();
+    void PreformAttack(float angle);
     void PreformSpecialAttack();
 
 }

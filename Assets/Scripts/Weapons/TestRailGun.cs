@@ -108,7 +108,7 @@ private void Update()
         }
     }
 
-    public void PreformAttack()
+    public void PreformAttack(float angle)
     {
 
         increaseChargeTimer = true;

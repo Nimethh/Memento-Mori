@@ -30,7 +30,7 @@ public class TestPistol : MonoBehaviour, IWeapon
         }
     }
 
-    public void PreformAttack()
+    public void PreformAttack(float rotationZ)
     {
         if (attackCooldownCounter > 0)
         {
@@ -38,10 +38,6 @@ public class TestPistol : MonoBehaviour, IWeapon
         }
 
         float randomAngle = Random.Range((-maxBulletSpreadAngle / 2), (maxBulletSpreadAngle / 2));
-
-        Vector3 difference = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
-        difference.Normalize();
-        float rotationZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg; //Finding the angle in degrees
 
         //rotationZ = Mathf.Clamp(rotationZ, minAngle, maxAngle);
 

@@ -13,6 +13,8 @@ public class PlayerWeaponController : MonoBehaviour
     
     public bool hasWeaponEquipped;
 
+    private Joystick shootJoystick;
+
     void Start()
     {
         hasWeaponEquipped = false;
@@ -20,14 +22,18 @@ public class PlayerWeaponController : MonoBehaviour
         {
             EquipDefaultGun();
         }
+
+        PlayerMobileControls mobileControls = GetComponent<PlayerMobileControls>();
+        if(mobileControls != null)
+            shootJoystick = mobileControls.shootJoystick;
     }
 
     private void Update()
     {
-        if(Input.GetMouseButtonDown(0))
-        {
-            PreformWeaponAttack();
-        }
+        // if(Input.GetMouseButtonDown(0))
+        // {
+        //     PreformWeaponAttack();
+        // }
 
         //if (Input.GetMouseButtonDown(1))
         //{
@@ -37,8 +43,15 @@ public class PlayerWeaponController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        //Added 2019-02-14
-        if (Input.GetMouseButton(0))
+        bool shooting;
+
+        if(shootJoystick != null)
+            shooting = shootJoystick.Direction.sqrMagnitude > 0;
+        else
+            shooting = Input.GetMouseButton(0);
+
+
+        if (shooting)
         {
             PreformWeaponAttack();
         }
@@ -90,7 +103,19 @@ public class PlayerWeaponController : MonoBehaviour
             return;
         }
 
-        equippedWeaponInterface.PreformAttack();
+        Vector2 direction;
+        float rotationZ;
+
+        if(shootJoystick != null) {
+            direction = shootJoystick.Direction;
+        } else {
+            direction = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+        }
+
+        direction.Normalize();
+
+        rotationZ = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg; //Finding the angle in degrees
+        equippedWeaponInterface.PreformAttack(rotationZ);
     }
 
     public void PreformWeaponSpecialAttack()
