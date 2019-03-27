@@ -457,7 +457,6 @@ MonoBehaviour:
   minion: {fileID: 4185441438980989160, guid: 4e934f1f24c68964c85420d93260cb82, type: 3}
   upgradeUI: {fileID: 1242174209}
   timePassed: 0
-  freezePlayer: 0
 --- !u!4 &283836095
 Transform:
   m_ObjectHideFlags: 0
@@ -2907,11 +2906,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: CameraHolder
       objectReference: {fileID: 0}
-    - target: {fileID: 5822490645452790860, guid: 03e1bdf9095724b7292d731d109b9b78,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5822490645452790863, guid: 03e1bdf9095724b7292d731d109b9b78,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2968,12 +2962,22 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1152026496, guid: 03e1bdf9095724b7292d731d109b9b78, type: 3}
-      propertyPath: timeUntilCommander
-      value: 45
+      propertyPath: sunUpBrightnessLux
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 1152026496, guid: 03e1bdf9095724b7292d731d109b9b78, type: 3}
       propertyPath: sunDownBrightnessLux
-      value: 450
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822490646247926723, guid: 03e1bdf9095724b7292d731d109b9b78,
+        type: 3}
+      propertyPath: m_Intensity
+      value: 75
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822490646247926720, guid: 03e1bdf9095724b7292d731d109b9b78,
+        type: 3}
+      propertyPath: displayLightIntensity
+      value: 300
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03e1bdf9095724b7292d731d109b9b78, type: 3}
@@ -3230,45 +3234,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 255818029350390252, guid: cb7b4268c27af41178f47d447aee534e,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 255818028826522710, guid: cb7b4268c27af41178f47d447aee534e,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 255818028826522710, guid: cb7b4268c27af41178f47d447aee534e,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 255818027529401302, guid: cb7b4268c27af41178f47d447aee534e,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 255818028213824762, guid: cb7b4268c27af41178f47d447aee534e,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 255818028267267816, guid: cb7b4268c27af41178f47d447aee534e,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 255818028544255874, guid: cb7b4268c27af41178f47d447aee534e,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 255818028836188092, guid: cb7b4268c27af41178f47d447aee534e,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cb7b4268c27af41178f47d447aee534e, type: 3}
@@ -3720,6 +3689,16 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1679644425023324422, guid: d1db6258b30ae854a979e6bcdab50842,
+        type: 3}
+      propertyPath: nextSceneNameWith
+      value: Level2With
+      objectReference: {fileID: 0}
+    - target: {fileID: 1679644425023324422, guid: d1db6258b30ae854a979e6bcdab50842,
+        type: 3}
+      propertyPath: nextSceneNameWithout
+      value: Level2Without
+      objectReference: {fileID: 0}
     - target: {fileID: 1220223590882379652, guid: d1db6258b30ae854a979e6bcdab50842,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3904,16 +3883,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_isInputParsingRequired
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1679644425023324422, guid: d1db6258b30ae854a979e6bcdab50842,
-        type: 3}
-      propertyPath: nextSceneNameWith
-      value: Level2With
-      objectReference: {fileID: 0}
-    - target: {fileID: 1679644425023324422, guid: d1db6258b30ae854a979e6bcdab50842,
-        type: 3}
-      propertyPath: nextSceneNameWithout
-      value: Level2Without
       objectReference: {fileID: 0}
     - target: {fileID: 1220223590808544055, guid: d1db6258b30ae854a979e6bcdab50842,
         type: 3}

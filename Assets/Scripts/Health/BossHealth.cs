@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -65,6 +65,11 @@ public class BossHealth : MonoBehaviour, IHealth
     public float GetHealth()
     {
         return health;
+    }
+
+    public void Die()
+    {
+        health = 0;
     }
 
     public void EnterSecondStage() {

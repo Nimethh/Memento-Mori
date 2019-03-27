@@ -28,7 +28,7 @@ public class AudioManager : MonoBehaviour
     private bool commanderMusicIsPlaying = false;
     private PlayerUpgradeController upgradeController;
     [SerializeField]
-    private float headUpgradeTimer = 15.0f;
+    private float headUpgradeTimer;
     private float headUpgradeCoolDown;
 
     void Start()

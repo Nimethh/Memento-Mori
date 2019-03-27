@@ -87,18 +87,18 @@ public class BossBehavior : MonoBehaviour
 
             case BossState.Death:
                 // Set the animation and ensure it's running
-                if(!stateInfo.IsName("CR_Death")) {
-                    // Stop all attacks
-                    StopAllCoroutines();
+                //if(!stateInfo.IsName("CR_Death")) {
+                //    // Stop all attacks
+                //    StopAllCoroutines();
 
-                    // TODO: Lock player movement
+                //    // TODO: Lock player movement
 
-                    animator.StopPlayback();
-                    animator.Play("CR_Death", 0);
-                }
-                // Destroy boss GameObjet after the animation has finished running
-                else if(stateInfo.normalizedTime >= 1) {
-                    animator.StopPlayback();
+                //    animator.StopPlayback();
+                //    animator.Play("CR_Death", 0);
+                //}
+                //// Destroy boss GameObjet after the animation has finished running
+                //else if(stateInfo.normalizedTime >= 1) {
+                //    animator.StopPlayback();
                     // Destroy(gameObject);
 
                     if(GameObject.Find("ControlRobot/EMPListener").GetComponent<EMPListener>().activated) {
@@ -106,7 +106,7 @@ public class BossBehavior : MonoBehaviour
                     } else {
                         SceneManager.LoadScene(secondEndingScene);
                     }
-                }
+                //}
                 break;
         }
     }

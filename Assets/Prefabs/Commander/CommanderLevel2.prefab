@@ -45,7 +45,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectile: {fileID: 3476799222084589752, guid: feb7f1c50f5f3ba459b0797b04eb5572,
     type: 3}
-  fireDelay: 0.3
+  fireDelay: 0.2
 --- !u!1 &480673506840066181
 GameObject:
   m_ObjectHideFlags: 0

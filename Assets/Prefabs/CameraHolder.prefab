@@ -378,13 +378,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scaleX: 10
   scaleY: 7
-  timeUntilCommander: 30
+  timeUntilCommander: 45
   time: 0
-  initialPos: {x: 0, y: 0, z: 0}
   sunDownColorTemperature: 1900
-  sunDownBrightnessLux: 550
+  sunDownBrightnessLux: 200
   sunUpColorTemperature: 5000
-  sunUpBrightnessLux: 350
+  sunUpBrightnessLux: 250
 --- !u!1 &5822490646402062190
 GameObject:
   m_ObjectHideFlags: 0
