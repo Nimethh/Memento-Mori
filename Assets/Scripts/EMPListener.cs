@@ -18,6 +18,7 @@ public class EMPListener : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.R))
         {
+            GameObject.Find("ControlRobot").GetComponent<BossHealth>().Die();
             activated = true;
         }
     }

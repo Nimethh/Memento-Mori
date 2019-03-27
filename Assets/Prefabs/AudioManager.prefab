@@ -150,8 +150,8 @@ MonoBehaviour:
     loop: 0
     aS: {fileID: 0}
   - name: HeadUpgradeSound
-    clip: {fileID: 8300000, guid: ce193795e8a0b364d93e3bc0e9323f44, type: 3}
-    volume: 0.5
+    clip: {fileID: 8300000, guid: 990fd167f5513294ea8ba011c5569c27, type: 3}
+    volume: 1
     loop: 0
     aS: {fileID: 0}
   headUpgradeTimer: 15
