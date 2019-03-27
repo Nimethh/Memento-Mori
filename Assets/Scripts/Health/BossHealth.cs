@@ -52,7 +52,7 @@ public class BossHealth : MonoBehaviour, IHealth
             float healthNormalized = health / secondStageHealth;
             float lerpIndex = Mathf.Max((healthNormalized - 0.5f) * 2f, 0f);
 
-            health -= damage * Mathf.Lerp(0.1f, 1f, Mathf.Sqrt(lerpIndex)); // square root makes sure the progression is slower
+            health -= damage * Mathf.Lerp(0.2f, 1f, Mathf.Sqrt(lerpIndex)); // square root makes sure the progression is slower
         }
         
         FindObjectOfType<AudioManager>().Play("ControlDamaged");
