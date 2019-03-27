@@ -3372,6 +3372,38 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &307579564150811691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5742575509405556157}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2884144d251c40719ee08f41af21a97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackInterval: 2
+  a2s1bulletPrefab: {fileID: 5052760423970094829, guid: ef0dfef26eecc7042ad77628520db291,
+    type: 3}
+  a2s1bulletOrigin: {fileID: 2892152458002446937}
+  a2s1numberBullets: 40
+  a2s1spawnDuration: 3
+  a2s1waitDuration: 5
+  a2s1angleSpread: 45
+  a1s2bulletPrefab: {fileID: 5052760423970094829, guid: ef0dfef26eecc7042ad77628520db291,
+    type: 3}
+  a1s2numberBullets: 96
+  a1s2attackLength: 4.5
+  a2s2minionPrefab: {fileID: 0}
+  a2s2numberMinions: 3
+  a2s2spawnInterval: 0.5
+  a3s2bulletPrefab: {fileID: 1050740222076522585, guid: 731838460b6e5499286e6827990ef546,
+    type: 3}
+  a3s2numberBullets: 10
+  a3s2waveInterval: 1
+  a3s2numberWaves: 3
 --- !u!1 &6067314867008134929
 GameObject:
   m_ObjectHideFlags: 0
@@ -4409,52 +4441,52 @@ PrefabInstance:
     - target: {fileID: 8652821789502073010, guid: 23d697821e7266d47a6807be930b4d26,
         type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8652821789502073010, guid: 23d697821e7266d47a6807be930b4d26,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8652821789502073010, guid: 23d697821e7266d47a6807be930b4d26,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6712294231327980640, guid: 23d697821e7266d47a6807be930b4d26,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6712294231327980640, guid: 23d697821e7266d47a6807be930b4d26,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3268303619731139545, guid: 23d697821e7266d47a6807be930b4d26,
         type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3268303619731139545, guid: 23d697821e7266d47a6807be930b4d26,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3268303619731139545, guid: 23d697821e7266d47a6807be930b4d26,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2104881928112798748, guid: 23d697821e7266d47a6807be930b4d26,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2104881928112798748, guid: 23d697821e7266d47a6807be930b4d26,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 23d697821e7266d47a6807be930b4d26, type: 3}

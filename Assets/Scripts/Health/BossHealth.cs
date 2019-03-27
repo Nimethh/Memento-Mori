@@ -46,6 +46,10 @@ public class BossHealth : MonoBehaviour, IHealth
     // During its second stage, it gets progressively harder to deal damage (with hardest starting at 50% of damage)
     public void TakeDamage(float damage)
     {
+        // Debuff for laser
+        if(damage < 50f && Time.frameCount % 2 != 0)
+            return;
+
         if(!isSecondStage)
             health -= damage;
         else {
