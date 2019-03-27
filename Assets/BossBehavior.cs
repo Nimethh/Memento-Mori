@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -71,6 +71,8 @@ public class BossBehavior : MonoBehaviour
                     state = BossState.SecondStage;
 
                     // TODO: Unlock player movement
+
+                    orb.transform.localPosition = new Vector3(-2.4f, 1.2f, 0);
                 } 
                 break;
 
