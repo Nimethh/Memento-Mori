@@ -1,6 +1,7 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BossBehavior : MonoBehaviour
 {
@@ -12,6 +13,10 @@ public class BossBehavior : MonoBehaviour
         get { return _state; }
         private set { this._state = value; }
     }
+
+    // Ending data
+    public string firstEndingScene;
+    public string secondEndingScene;
 
     // Objects
     private GameObject orb;
@@ -89,7 +94,13 @@ public class BossBehavior : MonoBehaviour
                 // Destroy boss GameObjet after the animation has finished running
                 else if(stateInfo.normalizedTime >= 1) {
                     animator.StopPlayback();
-                    Destroy(gameObject);
+                    // Destroy(gameObject);
+
+                    if(GameObject.Find("ControlRobot/EMPListener").GetComponent<EMPListener>().activated) {
+                        SceneManager.LoadScene(firstEndingScene);
+                    } else {
+                        SceneManager.LoadScene(secondEndingScene);
+                    }
                 }
                 break;
         }

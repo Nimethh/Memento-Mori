@@ -1,20 +1,36 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class BossHealth : MonoBehaviour, IHealth
 {
+    private bool isEmpActive = false;
+
+    private GameObject EMPListener;
+
     public float health;
     public float secondStageHealth;
     public bool isSecondStage = false;
+
+    void Start()
+    {
+        EMPListener = GameObject.Find("EMPListener");
+        EMPListener.SetActive(false);
+    }
+
     void Update()
     {
         Animator anim = GetComponent<Animator>();
-        if (health <= 0)
+        if (health <= 0 && isSecondStage)
         {
             //Instantiate(explosion, transform.position, Quaternion.identity);
             //FindObjectOfType<AudioManager>().Play("MinionDestroyed");
             //Destroy(gameObject);
+        }
+        if(!isEmpActive && isSecondStage && health <= secondStageHealth* 0.25f)
+        {
+            isEmpActive = true;
+            EMPListener.SetActive(true);
         }
     }
 
