@@ -43,7 +43,14 @@ public class AudioManager : MonoBehaviour
 
             upgradeController = GameObject.Find("Player").GetComponent<PlayerUpgradeController>();
 
-            headUpgradeCoolDown = headUpgradeTimer;
+            //headUpgradeCoolDown = headUpgradeTimer;
+        }
+        if (SceneManager.GetActiveScene().name != "MainMenu")
+        {
+            if (SceneManager.GetActiveScene().name == "Level3WithArmWithHead" || SceneManager.GetActiveScene().name == "Level3WithoutArmWithHead")
+            {
+                Play("HeadUpgradeSound");
+            }
         }
     }
     void Awake()
@@ -83,19 +90,19 @@ public class AudioManager : MonoBehaviour
             }
             
 
-            if (upgradeController.HeadUpgradeIsEquipped() == true)
-            {
+            //if (upgradeController.HeadUpgradeIsEquipped() == true)
+            //{
 
-                if (headUpgradeCoolDown <= 0.0f)
-                {
-                    Play("HeadUpgradeSound");
-                    headUpgradeCoolDown = headUpgradeTimer;
-                }
-                else
-                {
-                    headUpgradeCoolDown -= Time.deltaTime;
-                }
-            }
+            //    if (headUpgradeCoolDown <= 0.0f)
+            //    {
+            //        Play("HeadUpgradeSound");
+            //        headUpgradeCoolDown = headUpgradeTimer;
+            //    }
+            //    else
+            //    {
+            //        headUpgradeCoolDown -= Time.deltaTime;
+            //    }
+            //}
         }
     }
 

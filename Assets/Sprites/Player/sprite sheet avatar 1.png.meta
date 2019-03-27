@@ -3,6 +3,11 @@ guid: 9d34610e1c342414a8922561fb03511a
 TextureImporter:
   fileIDToRecycleName:
     21300000: sprite sheet avatar 1_0
+    21300002: sprite sheet avatar 1_1
+    21300004: sprite sheet avatar 1_2
+    21300006: sprite sheet avatar 1_3
+    21300008: sprite sheet avatar 1_4
+    21300010: sprite sheet avatar 1_5
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -93,13 +98,113 @@ TextureImporter:
         width: 206
         height: 236
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: 04b401fdaf0166e42a9c2ee691c41c3b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite sheet avatar 1_1
+      rect:
+        serializedVersion: 2
+        x: 3562
+        y: 91
+        width: 435
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7054f0a641fdea74294a4749283365b8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite sheet avatar 1_2
+      rect:
+        serializedVersion: 2
+        x: 3561
+        y: 1140
+        width: 435
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36a73ab2e7dbe6b49a0a6a2852496523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite sheet avatar 1_3
+      rect:
+        serializedVersion: 2
+        x: 3561
+        y: 877
+        width: 435
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2960fca26aa3f904c9b96d14727adb7f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite sheet avatar 1_4
+      rect:
+        serializedVersion: 2
+        x: 3561
+        y: 616
+        width: 435
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 777cfb26039597042a3906d0870bb25f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite sheet avatar 1_5
+      rect:
+        serializedVersion: 2
+        x: 3561
+        y: 355
+        width: 435
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4365d081c1bc66f42af190ccf21bce44
       vertices: []
       indices: 
       edges: []
