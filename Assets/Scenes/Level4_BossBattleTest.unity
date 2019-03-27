@@ -1117,5 +1117,35 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 1.318
       objectReference: {fileID: 0}
+    - target: {fileID: 4119929489473539739, guid: 60540414fde09f54e80156e9b697a041,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4119929489473539739, guid: 60540414fde09f54e80156e9b697a041,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4119929489988809505, guid: 60540414fde09f54e80156e9b697a041,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4119929489988809505, guid: 60540414fde09f54e80156e9b697a041,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2028955676567771258, guid: 60540414fde09f54e80156e9b697a041,
+        type: 3}
+      propertyPath: m_Name
+      value: OrbShell
+      objectReference: {fileID: 0}
+    - target: {fileID: 2028955676567771258, guid: 60540414fde09f54e80156e9b697a041,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 60540414fde09f54e80156e9b697a041, type: 3}

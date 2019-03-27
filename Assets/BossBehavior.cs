@@ -77,7 +77,9 @@ public class BossBehavior : MonoBehaviour
 
                     // TODO: Unlock player movement
 
+                    // Set final modifiers for the orb
                     orb.transform.localPosition = new Vector3(-2.4f, 1.2f, 0);
+                    GameObject.Find("Orb/OrbShell").SetActive(false);
                 } 
                 break;
 
