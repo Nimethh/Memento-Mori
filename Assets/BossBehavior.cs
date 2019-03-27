@@ -76,6 +76,10 @@ public class BossBehavior : MonoBehaviour
                     state = BossState.SecondStage;
 
                     // TODO: Unlock player movement
+
+                    // Set final modifiers for the orb
+                    orb.transform.localPosition = new Vector3(-2.4f, 1.2f, 0);
+                    GameObject.Find("Orb/OrbShell").SetActive(false);
                 } 
                 break;
 
@@ -86,6 +90,9 @@ public class BossBehavior : MonoBehaviour
             case BossState.Death:
                 // Set the animation and ensure it's running
                 if(!stateInfo.IsName("CR_Death")) {
+                    // Stop all attacks
+                    StopAllCoroutines();
+
                     // TODO: Lock player movement
 
                     animator.StopPlayback();
@@ -310,7 +317,7 @@ public class BossBehavior : MonoBehaviour
         attackActive = true;
 
         float timeInterval = totalLength / nBullets;
-        float angleInterval = 360f / nBullets;
+        float angleInterval = 1080f / nBullets;
 
         float angleAccumulator = 0;
         Quaternion rot = new Quaternion();
@@ -319,7 +326,7 @@ public class BossBehavior : MonoBehaviour
             rot = Quaternion.AngleAxis(angleAccumulator, Vector3.forward);
             Instantiate(bulletPrefab, orb.transform.position, rot);
 
-            angleAccumulator += angleInterval;
+            angleAccumulator += angleInterval * 1.5f;
             yield return new WaitForSeconds(timeInterval);
         }
 
@@ -350,7 +357,7 @@ public class BossBehavior : MonoBehaviour
 
         for(int j = 0; j < nWaves; j++) {
             for(int i = 0; i < nBullets; i++) {
-                rot = Quaternion.AngleAxis(angleInterval * i, Vector3.forward);
+                rot = Quaternion.AngleAxis(angleInterval * i + (angleInterval / 2 * j), Vector3.forward);
                 Instantiate(bulletPrefab, orb.transform.position, rot);
             }
             // Wait for next wave
