@@ -836,12 +836,12 @@ GameObject:
   - component: {fileID: 1079522661205204256}
   - component: {fileID: 1079522661205204257}
   m_Layer: 5
-  m_Name: ShieldUpgradeOnEffectCoolDown
+  m_Name: EMPCooldown
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1079522661205204256
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1360,7 +1360,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0.3500001, y: -0.8150001}
   m_SizeDelta: {x: 1.1000003, y: 1.5699998}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -3485,7 +3485,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -4, y: -27}
+  m_AnchoredPosition: {x: -2.9999983, y: -26.549995}
   m_SizeDelta: {x: 12, y: 12}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1079522662565381718
@@ -3516,7 +3516,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300008, guid: 890b7c6b8f4d60b4880139366080074d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bfbefd802afea33449eba023c8c3e1c2, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3558,7 +3558,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0.3500001, y: -0.8150001}
   m_SizeDelta: {x: 1.1000003, y: 1.5699998}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -3816,7 +3816,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0.3500001, y: -0.8150001}
   m_SizeDelta: {x: 1.1000003, y: 1.5699998}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -3853,7 +3853,7 @@ MonoBehaviour:
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 1
-  m_FillAmount: 0
+  m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
@@ -4291,7 +4291,7 @@ GameObject:
   - component: {fileID: 1079522662961271383}
   - component: {fileID: 1079522662961271368}
   m_Layer: 5
-  m_Name: ShieldUpgradeOnEffect
+  m_Name: EMPOnEffects
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4363,7 +4363,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -4529,7 +4529,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1079522663067767922
 RectTransform:
   m_ObjectHideFlags: 0

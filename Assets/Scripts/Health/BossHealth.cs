@@ -1,12 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BossHealth : MonoBehaviour, IHealth
 {
     private bool isEmpActive = false;
 
     private GameObject EMPListener;
+
+    [SerializeField]
+    private Slider EMPslider;
 
     public float health;
     public float secondStageHealth;
@@ -16,6 +20,9 @@ public class BossHealth : MonoBehaviour, IHealth
     {
         EMPListener = GameObject.Find("EMPListener");
         EMPListener.SetActive(false);
+        EMPslider = GameObject.Find("EMPCooldown").GetComponent<Slider>();
+        EMPslider.maxValue = secondStageHealth * 0.75f;
+        EMPslider.value = EMPslider.maxValue;
     }
 
     void Update()
@@ -57,6 +64,7 @@ public class BossHealth : MonoBehaviour, IHealth
             float lerpIndex = Mathf.Max((healthNormalized - 0.5f) * 2f, 0f);
 
             health -= damage * Mathf.Lerp(0.2f, 1f, Mathf.Sqrt(lerpIndex)); // square root makes sure the progression is slower
+            EMPslider.value -= damage * Mathf.Lerp(0.2f, 1f, Mathf.Sqrt(lerpIndex));
         }
         
         FindObjectOfType<AudioManager>().Play("ControlDamaged");
