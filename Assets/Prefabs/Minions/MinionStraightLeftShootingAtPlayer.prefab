@@ -64,6 +64,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 150
+  explosion: {fileID: 971642017978944085, guid: c0c5fdb8c3d08e246954fa581ac68b53,
+    type: 3}
 --- !u!114 &3692881207730367438
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -93,7 +95,7 @@ MonoBehaviour:
   projectile: {fileID: 3476799222084589752, guid: 5ed5038db99c38648b5de563d911b293,
     type: 3}
   shootingSpot: {fileID: 5055750441418732349}
-  fireDelay: 0.5
+  fireDelay: 2
 --- !u!50 &1136726036147446015
 Rigidbody2D:
   serializedVersion: 4
@@ -132,7 +134,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.7266667, y: 1.2366667}
+    oldSize: {x: 1.3075, y: 0.6925}
     newSize: {x: 2.072, y: 1.484}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -178,7 +180,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f72fdce20bb4a0a48b979fab58057d4a, type: 3}
+  m_Sprite: {fileID: 21300004, guid: 265b8ff7f98f45e449130f54500d88b2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

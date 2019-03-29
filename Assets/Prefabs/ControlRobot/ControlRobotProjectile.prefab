@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 343585932776924440}
   - component: {fileID: 4362428449975634872}
   - component: {fileID: 6829495825884085725}
-  - component: {fileID: 1115616116015823283}
+  - component: {fileID: 1996836614198109332}
   m_Layer: 0
   m_Name: ControlRobotProjectile
   m_TagString: Untagged
@@ -119,7 +119,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1115616116015823283
+--- !u!114 &1996836614198109332
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -128,7 +128,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6625110231647311868}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 835e1c32ac18ef844b9cf71210e11ec7, type: 3}
+  m_Script: {fileID: 11500000, guid: 0bd2c240f6b8eda40945fa11a93f3056, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 20
+  damage: 0

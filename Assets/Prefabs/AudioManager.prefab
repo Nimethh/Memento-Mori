@@ -116,7 +116,7 @@ MonoBehaviour:
     aS: {fileID: 0}
   - name: CommanderDestroyed
     clip: {fileID: 8300000, guid: ddd3268fe16bb40428dc33d9ae329ca3, type: 3}
-    volume: 0.5
+    volume: 0.8
     loop: 0
     aS: {fileID: 0}
   - name: CommanderMusic
@@ -136,7 +136,7 @@ MonoBehaviour:
     aS: {fileID: 0}
   - name: ControlEyeDestroyed
     clip: {fileID: 8300000, guid: e1381a8db03af3845a0be6ef49bc4597, type: 3}
-    volume: 0.6
+    volume: 0.8
     loop: 0
     aS: {fileID: 0}
   - name: ControlDamaged

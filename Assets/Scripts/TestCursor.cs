@@ -26,9 +26,13 @@ public class TestCursor : MonoBehaviour
 
     void Update()
     {
-        if(GameObject.Find("AugmentationPanel") == true || GameObject.Find("GameOverMenu") == true || GameObject.Find("PauseMenu") == true || SceneManager.GetActiveScene().name == "MainMenu" )
+        if (GameObject.Find("AugmentationPanel") == true || GameObject.Find("GameOverMenu") == true || GameObject.Find("PauseMenu") == true || SceneManager.GetActiveScene().name == "MainMenu")
         {
             Cursor.visible = true;
+        }
+        else
+        {
+            Cursor.visible = false;
         }
 
         if (SceneManager.GetActiveScene().name != "MainMenu")

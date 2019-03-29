@@ -129,6 +129,11 @@ PrefabInstance:
       propertyPath: soundFX.Array.data[0].clip
       value: 
       objectReference: {fileID: 8300000, guid: dd7b2ff00a05b25489cd15e55145a423, type: 3}
+    - target: {fileID: 4566382146623099205, guid: 05aa262b4971206449803a46fdddd249,
+        type: 3}
+      propertyPath: soundFX.Array.data[0].volume
+      value: 0.178
+      objectReference: {fileID: 0}
     - target: {fileID: 4566382146623099204, guid: 05aa262b4971206449803a46fdddd249,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2327,16 +2332,6 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1079522661411368973, guid: ff78af721b55f4b2ebc088dcfe465e22,
-        type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1079522661411368973, guid: ff78af721b55f4b2ebc088dcfe465e22,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1079522662991071369, guid: ff78af721b55f4b2ebc088dcfe465e22,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -2423,6 +2418,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1079522662573507799, guid: ff78af721b55f4b2ebc088dcfe465e22,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1079522661411368973, guid: ff78af721b55f4b2ebc088dcfe465e22,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1079522661411368973, guid: ff78af721b55f4b2ebc088dcfe465e22,
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -2586,6 +2591,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7492640755716095637, guid: 940e162a9c44b4e309ff02021ea5cc2f,
+        type: 3}
+      propertyPath: displayLightIntensity
+      value: 250
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978527253651559125, guid: 940e162a9c44b4e309ff02021ea5cc2f,
+        type: 3}
+      propertyPath: sunDownBrightnessLux
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978527253651559125, guid: 940e162a9c44b4e309ff02021ea5cc2f,
+        type: 3}
+      propertyPath: sunUpBrightnessLux
+      value: 150
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 940e162a9c44b4e309ff02021ea5cc2f, type: 3}
